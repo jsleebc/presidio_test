@@ -21,6 +21,10 @@ pip install -r requirements.txt
 ```
 
 ### 1. 개별 테스트 실행
+모든 테스트는 presidio_analyzer/predefined_recognizers 디렉토리에서 실행되어야 합니다:
+```bash
+cd ~/presidio_test/presidio-analyzer/presidio_analyzer/predefined_recognizers
+```
 각각의 인식기 테스트를 개별적으로 실행할 수 있습니다:
 ```bash
 # 신용카드 번호 인식기 테스트
@@ -34,13 +38,21 @@ python kr_test_driverlicense.py
 ```
 
 ### 2. 전체 테스트 실행 및 결과 종합
+
+모든 테스트는 presidio_analyzer/predefined_recognizers 디렉토리에서 실행되어야 합니다:
+```bash
+cd ~/presidio_test/presidio-analyzer/presidio_analyzer/predefined_recognizers
+```
 모든 테스트를 한 번에 실행하고 결과를 종합하여 볼 수 있습니다:
 ```bash
-python run_all_evaluations.py
+python kr_run_all_evaluations.py
 ```
 
 ## 결과 확인
-
+모든 테스트는 presidio_analyzer/predefined_recognizers 디렉토리에서 실행되어야 합니다:
+```bash
+cd ~/presidio_test/presidio-analyzer/presidio_analyzer/predefined_recognizers
+```
 - 각 테스트의 결과는 `tests` 디렉토리 아래에 JSON 파일로 저장됩니다.
 - 전체 평가 결과는 `evaluation_summary.json` 파일에서 확인할 수 있습니다.
 - 결과에는 다음과 같은 메트릭이 포함됩니다:
