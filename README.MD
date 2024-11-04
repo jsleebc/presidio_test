@@ -8,13 +8,18 @@
 
 ### 2. 가상환경 생성 및 활성화
 
-# 가상환경 생성 (Python 3.8 기준)
+# 가상환경 생성 (Python 3.9.15 기준)
 conda create -n presidio python=3.9.15
 
-# 가상환경 활성화
+# 가상환경 활성화 및 환경설정
 conda activate presidio
 ```
 
+```bash
+# spacy 모델설치
+python -m spacy download ko_core_news_lg
+python -m spacy download en_core_web_lg
+```
 ### 3. 필수 라이브러리 설치
 # requirements.txt 설치
 pip install -r requirements.txt
