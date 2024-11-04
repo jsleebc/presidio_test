@@ -1,0 +1,6232 @@
+{
+  "metadata": {
+    "total_cases": 1000,
+    "valid_cases": 800,
+    "invalid_cases": 200,
+    "template_count": 20
+  },
+  "templates": [
+    "카드번호는 {number}입니다.",
+    "신용카드: {number}",
+    "CARD NUMBER: {number}",
+    "카드 번호: {number}",
+    "결제카드 번호는 {number}입니다.",
+    "해당 고객의 카드번호는 {number}로 확인됩니다.",
+    "카드정보: {number}",
+    "Credit Card: {number}",
+    "카드번호 {number}로 결제되었습니다.",
+    "카드번호({number})로 조회해주세요.",
+    "고객님의 카드번호는 {number}입니다.",
+    "결제수단: {number}",
+    "Payment method: {number}",
+    "카드번호 확인: {number}",
+    "등록된 카드: {number}",
+    "결제카드: {number}",
+    "카드번호 입력: {number}",
+    "카드 일련번호: {number}",
+    "Card No: {number}",
+    "결제정보: {number}"
+  ],
+  "test_cases": [
+    {
+      "text": "CARD NUMBER: 9350673696944488",
+      "card_number": "9350673696944488",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 5513401022984909로 확인됩니다.",
+      "card_number": "5513401022984909",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드번호 확인: 9333038972084445",
+      "card_number": "9333038972084445",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제수단: 9459617525271639",
+      "card_number": "9459617525271639",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9429669857537225",
+      "card_number": "9429669857537225",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9164109695988289",
+      "card_number": "9164109695988289",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "결제정보: 9334955914738532",
+      "card_number": "9334955914738532",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "신용카드: 9380332878885423",
+      "card_number": "9380332878885423",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드 번호: 5273249176715367",
+      "card_number": "5273249176715367",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호는 9487737537427262입니다.",
+      "card_number": "9487737537427262",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Credit Card: 9105262317754522",
+      "card_number": "9105262317754522",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드정보: 9104054280996060",
+      "card_number": "9104054280996060",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "신용카드: 9574114365221361",
+      "card_number": "9574114365221361",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제수단: 9209697508459982",
+      "card_number": "9209697508459982",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제수단: 9257k65347815726",
+      "card_number": "9257k65347815726",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드 일련번호: 9334160009415119",
+      "card_number": "9334160009415119",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제카드 번호는 9471775013793698입니다.",
+      "card_number": "9471775013793698",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 94773012991980741",
+      "card_number": "94773012991980741",
+      "is_valid": false,
+      "template": "결제정보: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Credit Card: 5489872559443164",
+      "card_number": "5489872559443164",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드정보: 9182431404442111",
+      "card_number": "9182431404442111",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호는 9295569139928641입니다.",
+      "card_number": "9295569139928641",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 4310390342345693",
+      "card_number": "4310390342345693",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 8055096063704754로 확인됩니다.",
+      "card_number": "8055096063704754",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제수단: 9101687059361900",
+      "card_number": "9101687059361900",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "신용카드: 9595835726851513",
+      "card_number": "9595835726851513",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제정보: 9179831103402628",
+      "card_number": "9179831103402628",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9252590413514171",
+      "card_number": "9252590413514171",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호는 9267256129858624입니다.",
+      "card_number": "9267256129858624",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 입력: 52218454581377758",
+      "card_number": "52218454581377758",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제수단: 9538717718490478",
+      "card_number": "9538717718490478",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드정보: 9339949697527985",
+      "card_number": "9339949697527985",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "등록된 카드: 9506078536043066",
+      "card_number": "9506078536043066",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "Payment method: 9191728434897639",
+      "card_number": "9191728434897639",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호는 9350992960896525입니다.",
+      "card_number": "9350992960896525",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호는 9377670F26002780입니다.",
+      "card_number": "9377670F26002780",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 카드번호는 9545855304369010입니다.",
+      "card_number": "9545855304369010",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "Credit Card: 4035740873983608",
+      "card_number": "4035740873983608",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드 일련번호: 4523912304017763",
+      "card_number": "4523912304017763",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호 9346191917635873로 결제되었습니다.",
+      "card_number": "9346191917635873",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "등록된 카드: 9232128677134579",
+      "card_number": "9232128677134579",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드 일련번호: 4217567711466127",
+      "card_number": "4217567711466127",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9598065405909138입니다.",
+      "card_number": "9598065405909138",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "Card No: 4837021070102311",
+      "card_number": "4837021070102311",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제카드: 9453283121859990",
+      "card_number": "9453283121859990",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드 일련번호: 92490060968513150",
+      "card_number": "92490060968513150",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호 9436050359896C09로 결제되었습니다.",
+      "card_number": "9436050359896C09",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 915197043992444로 결제되었습니다.",
+      "card_number": "915197043992444",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "등록된 카드: 4229944627214956",
+      "card_number": "4229944627214956",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드 일련번호: 6401217439261004",
+      "card_number": "6401217439261004",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호 9520881775880698로 결제되었습니다.",
+      "card_number": "9520881775880698",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "Payment method: 9286126163944126",
+      "card_number": "9286126163944126",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9389687986576763로 확인됩니다.",
+      "card_number": "9389687986576763",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드정보: 9405310575439752",
+      "card_number": "9405310575439752",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호 9558770144920118로 결제되었습니다.",
+      "card_number": "9558770144920118",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호는 4410979791527122입니다.",
+      "card_number": "4410979791527122",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "등록된 카드: 5414305316281726",
+      "card_number": "5414305316281726",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 9502968635842547로 결제되었습니다.",
+      "card_number": "9502968635842547",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호(9361309190493717)로 조회해주세요.",
+      "card_number": "9361309190493717",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Credit Card: 9516563310100982",
+      "card_number": "9516563310100982",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드정보: 5262195091556027",
+      "card_number": "5262195091556027",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9598774351902589",
+      "card_number": "9598774351902589",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "신용카드: 9530815278251476",
+      "card_number": "9530815278251476",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제수단: 95915S7927665249",
+      "card_number": "95915S7927665249",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 확인: 9417247022667336",
+      "card_number": "9417247022667336",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호 9221305858973651로 결제되었습니다.",
+      "card_number": "9221305858973651",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "신용카드: 4279375086817097",
+      "card_number": "4279375086817097",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드정보: 9533984662833195",
+      "card_number": "9533984662833195",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제수단: 9243019833514571",
+      "card_number": "9243019833514571",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9332472427319372",
+      "card_number": "9332472427319372",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "Payment method: 9353460783599343",
+      "card_number": "9353460783599343",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 일련번호: 4891601281972785",
+      "card_number": "4891601281972785",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드 번호: 9252686898085453",
+      "card_number": "9252686898085453",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "신용카드: 9537362502093740",
+      "card_number": "9537362502093740",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드 일련번호: 4365575861869792",
+      "card_number": "4365575861869792",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호(5337128407968686)로 조회해주세요.",
+      "card_number": "5337128407968686",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호 입력: 9459002127772245",
+      "card_number": "9459002127772245",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호는 9527942485379380입니다.",
+      "card_number": "9527942485379380",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 9463314256094901",
+      "card_number": "9463314256094901",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Card No: 9579024225544537",
+      "card_number": "9579024225544537",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9530536739539826",
+      "card_number": "9530536739539826",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "Card No: 9559653565689041",
+      "card_number": "9559653565689041",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9215286479604271입니다.",
+      "card_number": "9215286479604271",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 카드: 9427196101498386",
+      "card_number": "9427196101498386",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호는 9382977205674813입니다.",
+      "card_number": "9382977205674813",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드정보: 9540935620949334",
+      "card_number": "9540935620949334",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "Credit Card: 9476142387977735",
+      "card_number": "9476142387977735",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "Credit Card: 952433831063106",
+      "card_number": "952433831063106",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Card No: 5529217124383002",
+      "card_number": "5529217124383002",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호는 4576744278742282입니다.",
+      "card_number": "4576744278742282",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 2215656961978385로 결제되었습니다.",
+      "card_number": "2215656961978385",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Card No: 9414079961224O12",
+      "card_number": "9414079961224O12",
+      "is_valid": false,
+      "template": "Card No: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Payment method: 5498221995193380",
+      "card_number": "5498221995193380",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호(9466930314110038)로 조회해주세요.",
+      "card_number": "9466930314110038",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호 94774135480384215로 결제되었습니다.",
+      "card_number": "94774135480384215",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제카드 번호는 9307640371893185입니다.",
+      "card_number": "9307640371893185",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 확인: 9385239151541703",
+      "card_number": "9385239151541703",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9254488138540506로 확인됩니다.",
+      "card_number": "9254488138540506",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Card No: 9555170644450927",
+      "card_number": "9555170644450927",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호 확인: 5199607288780192",
+      "card_number": "5199607288780192",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9539199776760903입니다.",
+      "card_number": "9539199776760903",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 9401672750106844",
+      "card_number": "9401672750106844",
+      "is_valid": false,
+      "template": "결제정보: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Payment method: 949606965650E004",
+      "card_number": "949606965650E004",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 카드번호는 5171922455583515로 확인됩니다.",
+      "card_number": "5171922455583515",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Payment method: 9361445183581819",
+      "card_number": "9361445183581819",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9143925051109038입니다.",
+      "card_number": "9143925051109038",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 입력: 9314132366243767",
+      "card_number": "9314132366243767",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드정보: 9187624567841310",
+      "card_number": "9187624567841310",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드 번호: 4027643472316077",
+      "card_number": "4027643472316077",
+      "is_valid": false,
+      "template": "카드 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호는 9410319798298922입니다.",
+      "card_number": "9410319798298922",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 9552364149529110",
+      "card_number": "9552364149529110",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9540899165599575로 확인됩니다.",
+      "card_number": "9540899165599575",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Payment method: 5230986138834735",
+      "card_number": "5230986138834735",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9430627991518961",
+      "card_number": "9430627991518961",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "결제정보: 5195988775587439",
+      "card_number": "5195988775587439",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "결제카드: 9472378737348706",
+      "card_number": "9472378737348706",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Card No: 9218896396944241",
+      "card_number": "9218896396944241",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드 번호: 9287844883286078",
+      "card_number": "9287844883286078",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9459037946605135",
+      "card_number": "9459037946605135",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "Payment method: 9419614000847834",
+      "card_number": "9419614000847834",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9377970295519979",
+      "card_number": "9377970295519979",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 4350522438296221",
+      "card_number": "4350522438296221",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드번호는 4330260845701369입니다.",
+      "card_number": "4330260845701369",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "신용카드: 9178100293358425",
+      "card_number": "9178100293358425",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 4203148356734305로 확인됩니다.",
+      "card_number": "4203148356734305",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드 일련번호: 5557978810250483",
+      "card_number": "5557978810250483",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9478156560951118",
+      "card_number": "9478156560951118",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제카드 번호는 95400252m5620191입니다.",
+      "card_number": "95400252m5620191",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Card No: 5170468954687929",
+      "card_number": "5170468954687929",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호 확인: 95695473952391835",
+      "card_number": "95695473952391835",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "등록된 카드: 93593791263504z0",
+      "card_number": "93593791263504z0",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Card No: 9185984402900578",
+      "card_number": "9185984402900578",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드정보: 4103317347992881",
+      "card_number": "4103317347992881",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제카드: 9447836692844631",
+      "card_number": "9447836692844631",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제수단: 9481031005733500",
+      "card_number": "9481031005733500",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9525979191245804입니다.",
+      "card_number": "9525979191245804",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 입력: 9415770365257086",
+      "card_number": "9415770365257086",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "Payment method: 9507007072066081",
+      "card_number": "9507007072066081",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9295280434097468",
+      "card_number": "9295280434097468",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9506380142980800",
+      "card_number": "9506380142980800",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 4761802582575049",
+      "card_number": "4761802582575049",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드정보: 5284420439085271",
+      "card_number": "5284420439085271",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드정보: 9534250253888785",
+      "card_number": "9534250253888785",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9591223621023906",
+      "card_number": "9591223621023906",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9395419171395888로 확인됩니다.",
+      "card_number": "9395419171395888",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드번호 확인: 9433628696381462",
+      "card_number": "9433628696381462",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9449977618636046입니다.",
+      "card_number": "9449977618636046",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 5363773415946047",
+      "card_number": "5363773415946047",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "등록된 카드: 5586267392664575",
+      "card_number": "5586267392664575",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드 번호: 5100218116838869",
+      "card_number": "5100218116838869",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드정보: 9472123909754764",
+      "card_number": "9472123909754764",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호는 9346346513649914입니다.",
+      "card_number": "9346346513649914",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Credit Card: 9114180651756707",
+      "card_number": "9114180651756707",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "해당 고객의 카드번호는 4233527007047817로 확인됩니다.",
+      "card_number": "4233527007047817",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 카드번호는 9439083302578438입니다.",
+      "card_number": "9439083302578438",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 9226133850455666",
+      "card_number": "9226133850455666",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9436381998822455입니다.",
+      "card_number": "9436381998822455",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드정보: 9414520391786728",
+      "card_number": "9414520391786728",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9361940929871763",
+      "card_number": "9361940929871763",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 4941891878552682로 확인됩니다.",
+      "card_number": "4941891878552682",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드번호 확인: 9502639415875227",
+      "card_number": "9502639415875227",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "등록된 카드: 5222980656712290",
+      "card_number": "5222980656712290",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9241549906347246입니다.",
+      "card_number": "9241549906347246",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 5430402314366979",
+      "card_number": "5430402314366979",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제수단: 9207668145655763",
+      "card_number": "9207668145655763",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9546246592290754",
+      "card_number": "9546246592290754",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "등록된 카드: 9143264518506739",
+      "card_number": "9143264518506739",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제카드: 9187077347502118",
+      "card_number": "9187077347502118",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제카드: 9366890777955363",
+      "card_number": "9366890777955363",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Credit Card: 9284660680855920",
+      "card_number": "9284660680855920",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호 9520837837556163로 결제되었습니다.",
+      "card_number": "9520837837556163",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "결제카드 번호는 5564334069086759입니다.",
+      "card_number": "5564334069086759",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 9287871536618472",
+      "card_number": "9287871536618472",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9392019949647603",
+      "card_number": "9392019949647603",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호(5285006818808364)로 조회해주세요.",
+      "card_number": "5285006818808364",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호(9404173176589321)로 조회해주세요.",
+      "card_number": "9404173176589321",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드: 9260660622049333",
+      "card_number": "9260660622049333",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제수단: 9450018082645902",
+      "card_number": "9450018082645902",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9115231142060585",
+      "card_number": "9115231142060585",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "신용카드: 9485509034208269",
+      "card_number": "9485509034208269",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "등록된 카드: 9517751747861974",
+      "card_number": "9517751747861974",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드 번호: 9549015783967687",
+      "card_number": "9549015783967687",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호(3704249225340040)로 조회해주세요.",
+      "card_number": "3704249225340040",
+      "is_valid": false,
+      "template": "카드번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호 입력: 9486377259764468",
+      "card_number": "9486377259764468",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제카드: 9574329371590994",
+      "card_number": "9574329371590994",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드정보: 4865062623388806",
+      "card_number": "4865062623388806",
+      "is_valid": false,
+      "template": "카드정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호는 4280234N46798643입니다.",
+      "card_number": "4280234N46798643",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제수단: 9114551924904440",
+      "card_number": "9114551924904440",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드정보: 9478416554693822",
+      "card_number": "9478416554693822",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제수단: 5273681913739856",
+      "card_number": "5273681913739856",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제수단: 9376999150506459",
+      "card_number": "9376999150506459",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "Card No: 9472764626942222",
+      "card_number": "9472764626942222",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9408156860970143",
+      "card_number": "9408156860970143",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9336664542713333",
+      "card_number": "9336664542713333",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 9516799101849706로 결제되었습니다.",
+      "card_number": "9516799101849706",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호 입력: 9298930005012380",
+      "card_number": "9298930005012380",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9501593630731676",
+      "card_number": "9501593630731676",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "등록된 카드: 9433886325622850",
+      "card_number": "9433886325622850",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드 번호: 9122068847063840",
+      "card_number": "9122068847063840",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드정보: 9362823071665028",
+      "card_number": "9362823071665028",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제정보: 9110972893501310",
+      "card_number": "9110972893501310",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Credit Card: 5563083264971429",
+      "card_number": "5563083264971429",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "등록된 카드: 9186997889212001",
+      "card_number": "9186997889212001",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "신용카드: 9104347809818181",
+      "card_number": "9104347809818181",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "Credit Card: 9388985646870803",
+      "card_number": "9388985646870803",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "Card No: 9214468276927474",
+      "card_number": "9214468276927474",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "Credit Card: 9571839840067186",
+      "card_number": "9571839840067186",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9550977524210279",
+      "card_number": "9550977524210279",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 7848894167404225로 결제되었습니다.",
+      "card_number": "7848894167404225",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호(9295891208590007)로 조회해주세요.",
+      "card_number": "9295891208590007",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Credit Card: 4988233085824758",
+      "card_number": "4988233085824758",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호(4768376537324863)로 조회해주세요.",
+      "card_number": "4768376537324863",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드 번호는 9374122371785784입니다.",
+      "card_number": "9374122371785784",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호는 9466833019804865입니다.",
+      "card_number": "9466833019804865",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 카드: 9562042452850509",
+      "card_number": "9562042452850509",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 9386280401755668로 결제되었습니다.",
+      "card_number": "9386280401755668",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "결제카드: 9309720323311797",
+      "card_number": "9309720323311797",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9230432666555253",
+      "card_number": "9230432666555253",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9359789814711004",
+      "card_number": "9359789814711004",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제카드: 5553849805338498",
+      "card_number": "5553849805338498",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Credit Card: 2055716384498618",
+      "card_number": "2055716384498618",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제수단: 5497201564551805",
+      "card_number": "5497201564551805",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제카드: 9556129685031896",
+      "card_number": "9556129685031896",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9427766595684087",
+      "card_number": "9427766595684087",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호 9127483456646287로 결제되었습니다.",
+      "card_number": "9127483456646287",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "Credit Card: 9296060591774227",
+      "card_number": "9296060591774227",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "Credit Card: 9426990655955606",
+      "card_number": "9426990655955606",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "결제카드 번호는 4022343434875530입니다.",
+      "card_number": "4022343434875530",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드 번호: 9457305986379982",
+      "card_number": "9457305986379982",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 4525301430875336",
+      "card_number": "4525301430875336",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드정보: 9244581909617462",
+      "card_number": "9244581909617462",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "신용카드: 54535780600m8730",
+      "card_number": "54535780600m8730",
+      "is_valid": false,
+      "template": "신용카드: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9107161435945657로 확인됩니다.",
+      "card_number": "9107161435945657",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드 번호는 9565980635767421입니다.",
+      "card_number": "9565980635767421",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9385075512501816로 확인됩니다.",
+      "card_number": "9385075512501816",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "등록된 카드: 954784012190874",
+      "card_number": "954784012190874",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드 일련번호: k533431054647767",
+      "card_number": "k533431054647767",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9566670210039712로 확인됩니다.",
+      "card_number": "9566670210039712",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "신용카드: 91104958024477715",
+      "card_number": "91104958024477715",
+      "is_valid": false,
+      "template": "신용카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제수단: 5514533133386720",
+      "card_number": "5514533133386720",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "등록된 카드: 9432678983342330",
+      "card_number": "9432678983342330",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드 번호: 9429509790244598",
+      "card_number": "9429509790244598",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "등록된 카드: 958v445939299782",
+      "card_number": "958v445939299782",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Card No: 4007709160233400",
+      "card_number": "4007709160233400",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 4442714182070007로 확인됩니다.",
+      "card_number": "4442714182070007",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드 일련번호: 911879109s337172",
+      "card_number": "911879109s337172",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호는 5301915264783220입니다.",
+      "card_number": "5301915264783220",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 카드번호는 9413307486146617입니다.",
+      "card_number": "9413307486146617",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 9443506002718775",
+      "card_number": "9443506002718775",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 5319277639722288",
+      "card_number": "5319277639722288",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "결제카드: 5585833610992014",
+      "card_number": "5585833610992014",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "신용카드: 9453840405615974",
+      "card_number": "9453840405615974",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드번호 9590922188140174로 결제되었습니다.",
+      "card_number": "9590922188140174",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "Credit Card: 5337741101595173",
+      "card_number": "5337741101595173",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호(9428108216265617)로 조회해주세요.",
+      "card_number": "9428108216265617",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제정보: 9112M62376609768",
+      "card_number": "9112M62376609768",
+      "is_valid": false,
+      "template": "결제정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9369613229938770로 확인됩니다.",
+      "card_number": "9369613229938770",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Payment method: 9460379445450150",
+      "card_number": "9460379445450150",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Card No: 4101851781875360",
+      "card_number": "4101851781875360",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호 입력: 5395723598631314",
+      "card_number": "5395723598631314",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9205108673911405",
+      "card_number": "9205108673911405",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "신용카드: 9493877608561292",
+      "card_number": "9493877608561292",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9344086427869040",
+      "card_number": "9344086427869040",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "신용카드: 9453695865076160",
+      "card_number": "9453695865076160",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제정보: 9253683480794229",
+      "card_number": "9253683480794229",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Payment method: 4936984928629897",
+      "card_number": "4936984928629897",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 카드: 9123545480752457",
+      "card_number": "9123545480752457",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 9566567317273212로 결제되었습니다.",
+      "card_number": "9566567317273212",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드 일련번호: 5298515957134361",
+      "card_number": "5298515957134361",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드 일련번호: 912542910689208",
+      "card_number": "912542910689208",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제수단: 4166753648791313",
+      "card_number": "4166753648791313",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호(9289969302866719)로 조회해주세요.",
+      "card_number": "9289969302866719",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드정보: 9457779005736440",
+      "card_number": "9457779005736440",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드정보: 5128108488797124",
+      "card_number": "5128108488797124",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제카드 번호는 4795631133494032입니다.",
+      "card_number": "4795631133494032",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9135859830694665",
+      "card_number": "9135859830694665",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Payment method: 9399342846391866",
+      "card_number": "9399342846391866",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "결제카드: 4648199526114897",
+      "card_number": "4648199526114897",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Credit Card: 5386217595718225",
+      "card_number": "5386217595718225",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호는 945914327153129입니다.",
+      "card_number": "945914327153129",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제정보: 9422826711343912",
+      "card_number": "9422826711343912",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "결제정보: 9424752117002407",
+      "card_number": "9424752117002407",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9345824123574988입니다.",
+      "card_number": "9345824123574988",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 카드번호는 4846068616145519입니다.",
+      "card_number": "4846068616145519",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 4517943403860249",
+      "card_number": "4517943403860249",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Card No: 9503542025001763",
+      "card_number": "9503542025001763",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제카드 번호는 4138608570580594입니다.",
+      "card_number": "4138608570580594",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드 일련번호: 4335980208760356",
+      "card_number": "4335980208760356",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "결제카드: 7348350016372048",
+      "card_number": "7348350016372048",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 카드번호는 9553084480579719입니다.",
+      "card_number": "9553084480579719",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 4692560380336147",
+      "card_number": "4692560380336147",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Card No: 9507226649380102",
+      "card_number": "9507226649380102",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제수단: 9491827003378992",
+      "card_number": "9491827003378992",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제정보: 9583515623710327",
+      "card_number": "9583515623710327",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "등록된 카드: 9164000015069571",
+      "card_number": "9164000015069571",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9577396294798133입니다.",
+      "card_number": "9577396294798133",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(9205680803978512)로 조회해주세요.",
+      "card_number": "9205680803978512",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드정보: 93021086572240744",
+      "card_number": "93021086572240744",
+      "is_valid": false,
+      "template": "카드정보: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Card No: 9540053337903188",
+      "card_number": "9540053337903188",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9395135677150144입니다.",
+      "card_number": "9395135677150144",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9336894258728023",
+      "card_number": "9336894258728023",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 4196483835913181",
+      "card_number": "4196483835913181",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드번호(4537528855389841)로 조회해주세요.",
+      "card_number": "4537528855389841",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드 일련번호: 9281443795390221",
+      "card_number": "9281443795390221",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "결제수단: 9307684766990694",
+      "card_number": "9307684766990694",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드 번호: 3959369997639062",
+      "card_number": "3959369997639062",
+      "is_valid": false,
+      "template": "카드 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호 입력: 9443080178446561",
+      "card_number": "9443080178446561",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9554143508396362입니다.",
+      "card_number": "9554143508396362",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "Credit Card: 9545489243958988",
+      "card_number": "9545489243958988",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 5235167600783180입니다.",
+      "card_number": "5235167600783180",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(9485793700682078)로 조회해주세요.",
+      "card_number": "9485793700682078",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드정보: 5494881361717312",
+      "card_number": "5494881361717312",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제수단: 4257932052550692",
+      "card_number": "4257932052550692",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "등록된 카드: 9175760831567655",
+      "card_number": "9175760831567655",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9431464647031531",
+      "card_number": "9431464647031531",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호 입력: 933617029614413",
+      "card_number": "933617029614413",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호 입력: 9238147086569302",
+      "card_number": "9238147086569302",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드 번호: 5352022075291739",
+      "card_number": "5352022075291739",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "등록된 카드: 9158260299734047",
+      "card_number": "9158260299734047",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제정보: 9109424215323372",
+      "card_number": "9109424215323372",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드 번호: 9265402278352363",
+      "card_number": "9265402278352363",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9067932484659702",
+      "card_number": "9067932484659702",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제카드: 9549384539801891",
+      "card_number": "9549384539801891",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 3085033599907248로 확인됩니다.",
+      "card_number": "3085033599907248",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Credit Card: 9463429113708384",
+      "card_number": "9463429113708384",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "Card No: 9429051525578750",
+      "card_number": "9429051525578750",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드 일련번호: 440594509c597857",
+      "card_number": "440594509c597857",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제카드: 9498034070836440",
+      "card_number": "9498034070836440",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Credit Card: 9145598100592906",
+      "card_number": "9145598100592906",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "Credit Card: 9146078436149415",
+      "card_number": "9146078436149415",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호(9463764499194282)로 조회해주세요.",
+      "card_number": "9463764499194282",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "해당 고객의 카드번호는 5360006022353577로 확인됩니다.",
+      "card_number": "5360006022353577",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드: 4154441229977949",
+      "card_number": "4154441229977949",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Card No: 9203197387027642",
+      "card_number": "9203197387027642",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제카드: 9425728196739753",
+      "card_number": "9425728196739753",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제수단: 9485019450867259",
+      "card_number": "9485019450867259",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "등록된 카드: 9481688437018865",
+      "card_number": "9481688437018865",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호(9502799175262980)로 조회해주세요.",
+      "card_number": "9502799175262980",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호 입력: 9574334474826146",
+      "card_number": "9574334474826146",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "Credit Card: 9597401044977361",
+      "card_number": "9597401044977361",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "등록된 카드: 9539094458700923",
+      "card_number": "9539094458700923",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드 번호: 9259077613347753",
+      "card_number": "9259077613347753",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호는 5272131070037414입니다.",
+      "card_number": "5272131070037414",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 입력: 5252050832448749",
+      "card_number": "5252050832448749",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "Payment method: 9527504810281135",
+      "card_number": "9527504810281135",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Payment method: 9586289497742025",
+      "card_number": "9586289497742025",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 확인: 4728616730452451",
+      "card_number": "4728616730452451",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제수단: 9499217969995371",
+      "card_number": "9499217969995371",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "Credit Card: 2542616874485633",
+      "card_number": "2542616874485633",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "신용카드: 9142502060881906",
+      "card_number": "9142502060881906",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드정보: 9357494181989570",
+      "card_number": "9357494181989570",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제정보: 9544953917218301",
+      "card_number": "9544953917218301",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9201289142566196로 확인됩니다.",
+      "card_number": "9201289142566196",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 카드번호는 4516519315283786입니다.",
+      "card_number": "4516519315283786",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호는 9151951570675902입니다.",
+      "card_number": "9151951570675902",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 확인: 950939393064l696",
+      "card_number": "950939393064l696",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Card No: 4041033047589209",
+      "card_number": "4041033047589209",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 4489123680307932입니다.",
+      "card_number": "4489123680307932",
+      "is_valid": false,
+      "template": "고객님의 카드번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 카드번호는 4837487080827736입니다.",
+      "card_number": "4837487080827736",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 933789047074842로 결제되었습니다.",
+      "card_number": "933789047074842",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호 9191272489118898로 결제되었습니다.",
+      "card_number": "9191272489118898",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "해당 고객의 카드번호는 9126801924163067로 확인됩니다.",
+      "card_number": "9126801924163067",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드번호 입력: 9330645063r56188",
+      "card_number": "9330645063r56188",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 확인: 9146874195687037",
+      "card_number": "9146874195687037",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드정보: 9225993209088232",
+      "card_number": "9225993209088232",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제수단: 9252113128727648",
+      "card_number": "9252113128727648",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "Payment method: 9403010129460187",
+      "card_number": "9403010129460187",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "결제카드: 9375802533908502",
+      "card_number": "9375802533908502",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "신용카드: 9425074576516325",
+      "card_number": "9425074576516325",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드 번호: 9325111744077771",
+      "card_number": "9325111744077771",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "결제수단: 9290056997426319",
+      "card_number": "9290056997426319",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 5459617260656480",
+      "card_number": "5459617260656480",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호(9310915335379108)로 조회해주세요.",
+      "card_number": "9310915335379108",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "고객님의 카드번호는 9536878582402940입니다.",
+      "card_number": "9536878582402940",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "신용카드: 5497690433600887",
+      "card_number": "5497690433600887",
+      "is_valid": false,
+      "template": "신용카드: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Card No: 4893256320392434",
+      "card_number": "4893256320392434",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "Payment method: 9354789201302172",
+      "card_number": "9354789201302172",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 번호: 9515463844588318",
+      "card_number": "9515463844588318",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호 9103010209420526로 결제되었습니다.",
+      "card_number": "9103010209420526",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호 확인: 9568986643619856",
+      "card_number": "9568986643619856",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호는 9358488674204041입니다.",
+      "card_number": "9358488674204041",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 9208067989087135",
+      "card_number": "9208067989087135",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Payment method: 9164599049174331",
+      "card_number": "9164599049174331",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9348141406851191입니다.",
+      "card_number": "9348141406851191",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드 일련번호: 4709834147155221",
+      "card_number": "4709834147155221",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호 9566015263840824로 결제되었습니다.",
+      "card_number": "9566015263840824",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드 일련번호: 9198133877570673",
+      "card_number": "9198133877570673",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드 번호: 9516768123603250",
+      "card_number": "9516768123603250",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "Card No: 9258575188105341",
+      "card_number": "9258575188105341",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 4752112426905945",
+      "card_number": "4752112426905945",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호(5327274388290435)로 조회해주세요.",
+      "card_number": "5327274388290435",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드 번호는 4080926886334540입니다.",
+      "card_number": "4080926886334540",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호는 8847473028368185입니다.",
+      "card_number": "8847473028368185",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Card No: 9426393560792018",
+      "card_number": "9426393560792018",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드정보: 9544305473453501",
+      "card_number": "9544305473453501",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호는 3658036099265558입니다.",
+      "card_number": "3658036099265558",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "CARD NUMBER: 9573684276749768",
+      "card_number": "9573684276749768",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9498390992790928",
+      "card_number": "9498390992790928",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "등록된 카드: 9520894957601246",
+      "card_number": "9520894957601246",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9154248933451718입니다.",
+      "card_number": "9154248933451718",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 9414450535375461",
+      "card_number": "9414450535375461",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9183327657056724입니다.",
+      "card_number": "9183327657056724",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "신용카드: 9518405725702952",
+      "card_number": "9518405725702952",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제정보: 4520301844195367",
+      "card_number": "4520301844195367",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9557348894450858",
+      "card_number": "9557348894450858",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드번호(9380526989440784)로 조회해주세요.",
+      "card_number": "9380526989440784",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제수단: 9211786722648128",
+      "card_number": "9211786722648128",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제카드: 9498021704778254",
+      "card_number": "9498021704778254",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드 번호: 9499332132382215",
+      "card_number": "9499332132382215",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9131390352202350",
+      "card_number": "9131390352202350",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드정보: 9260905908552538",
+      "card_number": "9260905908552538",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제정보: 9334014033139949",
+      "card_number": "9334014033139949",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드번호 93135194089995817로 결제되었습니다.",
+      "card_number": "93135194089995817",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호는 9409118817828583입니다.",
+      "card_number": "9409118817828583",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드 일련번호: 4156517206453919",
+      "card_number": "4156517206453919",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "결제수단: 9583524857472232",
+      "card_number": "9583524857472232",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "신용카드: 9541054026947535",
+      "card_number": "9541054026947535",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 8503507564542078입니다.",
+      "card_number": "8503507564542078",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드 일련번호: 9337464200082405",
+      "card_number": "9337464200082405",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "결제수단: 5341550322756207",
+      "card_number": "5341550322756207",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호(9347969925162728)로 조회해주세요.",
+      "card_number": "9347969925162728",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "해당 고객의 카드번호는 4507090004481917로 확인됩니다.",
+      "card_number": "4507090004481917",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 카드번호는 9248089H03381897입니다.",
+      "card_number": "9248089H03381897",
+      "is_valid": false,
+      "template": "고객님의 카드번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 9563690504612944로 결제되었습니다.",
+      "card_number": "9563690504612944",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "해당 고객의 카드번호는 9587334174387972로 확인됩니다.",
+      "card_number": "9587334174387972",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드: 4653353143878226",
+      "card_number": "4653353143878226",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호(9240830533081585)로 조회해주세요.",
+      "card_number": "9240830533081585",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드: 5183885133470130",
+      "card_number": "5183885133470130",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9361254832906280",
+      "card_number": "9361254832906280",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "Credit Card: 9192466628779623",
+      "card_number": "9192466628779623",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9513187857488197입니다.",
+      "card_number": "9513187857488197",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 4015908177899795",
+      "card_number": "4015908177899795",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 3477280575066816로 확인됩니다.",
+      "card_number": "3477280575066816",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호 입력: 9111951512280869",
+      "card_number": "9111951512280869",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9421219248313577입니다.",
+      "card_number": "9421219248313577",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드 번호는 9535218900559975입니다.",
+      "card_number": "9535218900559975",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "Card No: 9322679985218471",
+      "card_number": "9322679985218471",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제수단: 9116649092202619",
+      "card_number": "9116649092202619",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 9209495798897809로 결제되었습니다.",
+      "card_number": "9209495798897809",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "결제카드: 5199127377403762",
+      "card_number": "5199127377403762",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호는 926485385415114u입니다.",
+      "card_number": "926485385415114u",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "신용카드: 9449658617779892",
+      "card_number": "9449658617779892",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "등록된 카드: 4212909638633766",
+      "card_number": "4212909638633766",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9158486199935415입니다.",
+      "card_number": "9158486199935415",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "등록된 카드: 1553652229916549",
+      "card_number": "1553652229916549",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 카드번호는 9507413849645191입니다.",
+      "card_number": "9507413849645191",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9105277794845411",
+      "card_number": "9105277794845411",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호는 9399226426926946입니다.",
+      "card_number": "9399226426926946",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 9417528765340367",
+      "card_number": "9417528765340367",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "Payment method: 9432477251967153",
+      "card_number": "9432477251967153",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 번호: 5553691117367553",
+      "card_number": "5553691117367553",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "Payment method: 9584072121628303",
+      "card_number": "9584072121628303",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 9574354676521452로 결제되었습니다.",
+      "card_number": "9574354676521452",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제카드: 9432465415555022",
+      "card_number": "9432465415555022",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Payment method: 9587307100963488",
+      "card_number": "9587307100963488",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Credit Card: 9129980462573072",
+      "card_number": "9129980462573072",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드 번호: 9597314070477356",
+      "card_number": "9597314070477356",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호는 9532475786973281입니다.",
+      "card_number": "9532475786973281",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Card No: 9501390006030431",
+      "card_number": "9501390006030431",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9130142592610681입니다.",
+      "card_number": "9130142592610681",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "Card No: 9244270366663710",
+      "card_number": "9244270366663710",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호는 9266641271192511입니다.",
+      "card_number": "9266641271192511",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 카드: 9459616378142012",
+      "card_number": "9459616378142012",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제카드: 4521393210338241",
+      "card_number": "4521393210338241",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 4103912009189550",
+      "card_number": "4103912009189550",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9375903116980015로 확인됩니다.",
+      "card_number": "9375903116980015",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Payment method: 4644268536353326",
+      "card_number": "4644268536353326",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드정보: 9511782187932709",
+      "card_number": "9511782187932709",
+      "is_valid": false,
+      "template": "카드정보: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "등록된 카드: 9237594618810384",
+      "card_number": "9237594618810384",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제수단: 4405830773758993",
+      "card_number": "4405830773758993",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9411502015694937",
+      "card_number": "9411502015694937",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "신용카드: 9475080565597951",
+      "card_number": "9475080565597951",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드번호 9223761208619734로 결제되었습니다.",
+      "card_number": "9223761208619734",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 확인: 9469356941184112",
+      "card_number": "9469356941184112",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제정보: 9503724480632817",
+      "card_number": "9503724480632817",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9467401421007227",
+      "card_number": "9467401421007227",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9228511499480a91입니다.",
+      "card_number": "9228511499480a91",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호는 9216172284815568입니다.",
+      "card_number": "9216172284815568",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드 번호: 9409996027637054",
+      "card_number": "9409996027637054",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 955185800671236",
+      "card_number": "955185800671236",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "CARD NUMBER: 9423844426603249",
+      "card_number": "9423844426603249",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "신용카드: 9197878577928511",
+      "card_number": "9197878577928511",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "Card No: 5527927245801250",
+      "card_number": "5527927245801250",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제수단: 9507005459465926",
+      "card_number": "9507005459465926",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "Card No: 9442650895108222",
+      "card_number": "9442650895108222",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9548148W60969407입니다.",
+      "card_number": "9548148W60969407",
+      "is_valid": false,
+      "template": "고객님의 카드번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제수단: 9250920983261162",
+      "card_number": "9250920983261162",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9217336520967975",
+      "card_number": "9217336520967975",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드 일련번호: 7186422338285893",
+      "card_number": "7186422338285893",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Credit Card: 2309066964504456",
+      "card_number": "2309066964504456",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드정보: 9101102834974670",
+      "card_number": "9101102834974670",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호는 9205466514310520입니다.",
+      "card_number": "9205466514310520",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 9599016760876056",
+      "card_number": "9599016760876056",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "신용카드: 9306004528640596",
+      "card_number": "9306004528640596",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 4875744593475178입니다.",
+      "card_number": "4875744593475178",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 카드번호는 9448111650221480로 확인됩니다.",
+      "card_number": "9448111650221480",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드번호 입력: 9s85185810333447",
+      "card_number": "9s85185810333447",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 확인: 5529573844810504",
+      "card_number": "5529573844810504",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호(95160597394491347)로 조회해주세요.",
+      "card_number": "95160597394491347",
+      "is_valid": false,
+      "template": "카드번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호는 9569434111822271입니다.",
+      "card_number": "9569434111822271",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 카드번호는 9126623486378440입니다.",
+      "card_number": "9126623486378440",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 8730795144022428",
+      "card_number": "8730795144022428",
+      "is_valid": false,
+      "template": "결제정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Payment method: 9309094065793699",
+      "card_number": "9309094065793699",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 일련번호: 446492907562223",
+      "card_number": "446492907562223",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Payment method: 942222860994332",
+      "card_number": "942222860994332",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "CARD NUMBER: 957694785753613",
+      "card_number": "957694785753613",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제정보: 9149798412066013",
+      "card_number": "9149798412066013",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "결제카드: 9178701807542626",
+      "card_number": "9178701807542626",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Payment method: 9359318146901875",
+      "card_number": "9359318146901875",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9271659127883813",
+      "card_number": "9271659127883813",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호(5342282906521638)로 조회해주세요.",
+      "card_number": "5342282906521638",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드: 921437859242280",
+      "card_number": "921437859242280",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드정보: 9377681711031743",
+      "card_number": "9377681711031743",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9058633666262527",
+      "card_number": "9058633666262527",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 카드: 9469520582563203",
+      "card_number": "9469520582563203",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "Payment method: 9489641799641447",
+      "card_number": "9489641799641447",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제수단: 9504301071897882",
+      "card_number": "9504301071897882",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9554639960660815",
+      "card_number": "9554639960660815",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9112515941752928",
+      "card_number": "9112515941752928",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드 번호: 9562042507464918",
+      "card_number": "9562042507464918",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9320069965090458",
+      "card_number": "9320069965090458",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호(948855686448661)로 조회해주세요.",
+      "card_number": "948855686448661",
+      "is_valid": false,
+      "template": "카드번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Payment method: 9451611521575828",
+      "card_number": "9451611521575828",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Credit Card: 9348686289298315",
+      "card_number": "9348686289298315",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9477886687637188",
+      "card_number": "9477886687637188",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호는 9572675535522666입니다.",
+      "card_number": "9572675535522666",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 9290611237681576",
+      "card_number": "9290611237681576",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호(9132077311051916)로 조회해주세요.",
+      "card_number": "9132077311051916",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드: 5347431472765310",
+      "card_number": "5347431472765310",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9555302569474042",
+      "card_number": "9555302569474042",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호는 9505985818198544입니다.",
+      "card_number": "9505985818198544",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Card No: 7416346065576577",
+      "card_number": "7416346065576577",
+      "is_valid": false,
+      "template": "Card No: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "신용카드: 4493966146382682",
+      "card_number": "4493966146382682",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9488709200037842입니다.",
+      "card_number": "9488709200037842",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 4617482057412139",
+      "card_number": "4617482057412139",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Card No: 4444574990709255",
+      "card_number": "4444574990709255",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호는 9536313287758750입니다.",
+      "card_number": "9536313287758750",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 9160190591801739",
+      "card_number": "9160190591801739",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드정보: 9551502233116085",
+      "card_number": "9551502233116085",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제정보: 9161668075158790",
+      "card_number": "9161668075158790",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9397038007149554로 확인됩니다.",
+      "card_number": "9397038007149554",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Credit Card: 9525494730626597",
+      "card_number": "9525494730626597",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드 일련번호: 5432460900477525",
+      "card_number": "5432460900477525",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호는 5255121678625224입니다.",
+      "card_number": "5255121678625224",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9183651720554286",
+      "card_number": "9183651720554286",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9401191233169062",
+      "card_number": "9401191233169062",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호 5101293206618588로 결제되었습니다.",
+      "card_number": "5101293206618588",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "고객님의 카드번호는 4740532135356037입니다.",
+      "card_number": "4740532135356037",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(9551818470930883)로 조회해주세요.",
+      "card_number": "9551818470930883",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Credit Card: 9146185905628132",
+      "card_number": "9146185905628132",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호는 9401766310376209입니다.",
+      "card_number": "9401766310376209",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 9418096696820815",
+      "card_number": "9418096696820815",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 일련번호: 946268418110540p",
+      "card_number": "946268418110540p",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제수단: 490033208114208",
+      "card_number": "490033208114208",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드 번호: 9134434586126154",
+      "card_number": "9134434586126154",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9220951003982724",
+      "card_number": "9220951003982724",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제수단: 9297326805728849",
+      "card_number": "9297326805728849",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "신용카드: 9304328820475159",
+      "card_number": "9304328820475159",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "Card No: 9284075170562680",
+      "card_number": "9284075170562680",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9198114675110136입니다.",
+      "card_number": "9198114675110136",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 카드: 9590687818972482",
+      "card_number": "9590687818972482",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9374366187207034",
+      "card_number": "9374366187207034",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드정보: 5253955263384164",
+      "card_number": "5253955263384164",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 93143486153010462",
+      "card_number": "93143486153010462",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제카드 번호는 9427539949857364입니다.",
+      "card_number": "9427539949857364",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(9355922754128624)로 조회해주세요.",
+      "card_number": "9355922754128624",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Credit Card: 9584410703897450",
+      "card_number": "9584410703897450",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "결제카드: 9427316548708763",
+      "card_number": "9427316548708763",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Card No: 9511008131064772",
+      "card_number": "9511008131064772",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9405770403655608",
+      "card_number": "9405770403655608",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "결제카드: 9581656164238658",
+      "card_number": "9581656164238658",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드정보: 5127665275913512",
+      "card_number": "5127665275913512",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제카드: 9519871378901987",
+      "card_number": "9519871378901987",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드 일련번호: 9458253552681424",
+      "card_number": "9458253552681424",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9510363635586007로 확인됩니다.",
+      "card_number": "9510363635586007",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드 번호는 9150375008221710입니다.",
+      "card_number": "9150375008221710",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호는 4266544178020912입니다.",
+      "card_number": "4266544178020912",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "신용카드: 9473833694086821",
+      "card_number": "9473833694086821",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "Credit Card: 1189769563433501",
+      "card_number": "1189769563433501",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "해당 고객의 카드번호는 531156203243057로 확인됩니다.",
+      "card_number": "531156203243057",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호 9287897042883052로 결제되었습니다.",
+      "card_number": "9287897042883052",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "CARD NUMBER: 95622416P6591540",
+      "card_number": "95622416P6591540",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호(9565858523594975)로 조회해주세요.",
+      "card_number": "9565858523594975",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드: 489036g191088868",
+      "card_number": "489036g191088868",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Card No: 9287613907357383",
+      "card_number": "9287613907357383",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호(9591385796496983)로 조회해주세요.",
+      "card_number": "9591385796496983",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드 번호: 929y264033723700",
+      "card_number": "929y264033723700",
+      "is_valid": false,
+      "template": "카드 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드 일련번호: 9458182363201314",
+      "card_number": "9458182363201314",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "Payment method: 9174150872099027",
+      "card_number": "9174150872099027",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Payment method: 5403779944352294",
+      "card_number": "5403779944352294",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 번호: 94184314926327282",
+      "card_number": "94184314926327282",
+      "is_valid": false,
+      "template": "카드 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제카드: 922672174406230",
+      "card_number": "922672174406230",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제카드: 9397904805465585",
+      "card_number": "9397904805465585",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호(476608696373186)로 조회해주세요.",
+      "card_number": "476608696373186",
+      "is_valid": false,
+      "template": "카드번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제카드: 9240148034656924",
+      "card_number": "9240148034656924",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호(9295646742499879)로 조회해주세요.",
+      "card_number": "9295646742499879",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "신용카드: 9582708232627336",
+      "card_number": "9582708232627336",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "Payment method: 4904724187585687",
+      "card_number": "4904724187585687",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "CARD NUMBER: 9158473752909465",
+      "card_number": "9158473752909465",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "등록된 카드: 7047121896592487",
+      "card_number": "7047121896592487",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "신용카드: 9566262592208410",
+      "card_number": "9566262592208410",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "Card No: 5219184123061705",
+      "card_number": "5219184123061705",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9274046880473957입니다.",
+      "card_number": "9274046880473957",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 확인: 9476395111446431",
+      "card_number": "9476395111446431",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "등록된 카드: 4335557789087126",
+      "card_number": "4335557789087126",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "Card No: 5104738033872086",
+      "card_number": "5104738033872086",
+      "is_valid": false,
+      "template": "Card No: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드 번호: 9505240925x41876",
+      "card_number": "9505240925x41876",
+      "is_valid": false,
+      "template": "카드 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "CARD NUMBER: 9197784749884551",
+      "card_number": "9197784749884551",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제카드 번호는 4190541811611735입니다.",
+      "card_number": "4190541811611735",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 95124414714563176",
+      "card_number": "95124414714563176",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드 번호: 916007266809900",
+      "card_number": "916007266809900",
+      "is_valid": false,
+      "template": "카드 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호 확인: 9231003765186586",
+      "card_number": "9231003765186586",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "신용카드: 9333864891508119",
+      "card_number": "9333864891508119",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제정보: 9193562574377294",
+      "card_number": "9193562574377294",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드번호 9380585202000817로 결제되었습니다.",
+      "card_number": "9380585202000817",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호 확인: 9413143104273065",
+      "card_number": "9413143104273065",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제수단: 925215321283o529",
+      "card_number": "925215321283o529",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제카드: 9403193126220232",
+      "card_number": "9403193126220232",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호 4852403958906007로 결제되었습니다.",
+      "card_number": "4852403958906007",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "해당 고객의 카드번호는 4095456420453203로 확인됩니다.",
+      "card_number": "4095456420453203",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드 번호는 9430639827753209입니다.",
+      "card_number": "9430639827753209",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드 번호는 9354044674533311입니다.",
+      "card_number": "9354044674533311",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9204366568088710",
+      "card_number": "9204366568088710",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드정보: 4531609286958721",
+      "card_number": "4531609286958721",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드 번호: 9255167236862638",
+      "card_number": "9255167236862638",
+      "is_valid": false,
+      "template": "카드 번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 4688740536873765로 결제되었습니다.",
+      "card_number": "4688740536873765",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드 일련번호: 9443243036201996",
+      "card_number": "9443243036201996",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 5198062660586290로 확인됩니다.",
+      "card_number": "5198062660586290",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Card No: 9201977558352040",
+      "card_number": "9201977558352040",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "신용카드: 9473205231655840",
+      "card_number": "9473205231655840",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드번호 9300615258030801로 결제되었습니다.",
+      "card_number": "9300615258030801",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "Credit Card: 9456333268712572",
+      "card_number": "9456333268712572",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "결제카드: 9347710388849702",
+      "card_number": "9347710388849702",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 5519691290936425입니다.",
+      "card_number": "5519691290936425",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 9518622709257163로 결제되었습니다.",
+      "card_number": "9518622709257163",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "결제수단: 9534671606071276",
+      "card_number": "9534671606071276",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 확인: 4936863784640202",
+      "card_number": "4936863784640202",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제카드 번호는 9543105112007945입니다.",
+      "card_number": "9543105112007945",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(9405315388896593)로 조회해주세요.",
+      "card_number": "9405315388896593",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Card No: 5513647101161825",
+      "card_number": "5513647101161825",
+      "is_valid": false,
+      "template": "Card No: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제카드: 9599529441793086",
+      "card_number": "9599529441793086",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Credit Card: 9360575782967562",
+      "card_number": "9360575782967562",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9541564671565903",
+      "card_number": "9541564671565903",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "결제카드: 513510936418492",
+      "card_number": "513510936418492",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드정보: 9234762932480779",
+      "card_number": "9234762932480779",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제정보: 6054107761089212",
+      "card_number": "6054107761089212",
+      "is_valid": false,
+      "template": "결제정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드정보: 9L84798654646078",
+      "card_number": "9L84798654646078",
+      "is_valid": false,
+      "template": "카드정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제카드: 4992611006664730",
+      "card_number": "4992611006664730",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9504949308284439",
+      "card_number": "9504949308284439",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드번호 입력: 4690487607737521",
+      "card_number": "4690487607737521",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9221368971005132입니다.",
+      "card_number": "9221368971005132",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 카드: 958537423s198013",
+      "card_number": "958537423s198013",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제정보: 9427935275804634",
+      "card_number": "9427935275804634",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드정보: 9357783315314758",
+      "card_number": "9357783315314758",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드 번호: 9304196329071302",
+      "card_number": "9304196329071302",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "결제카드 번호는 4726383762770423입니다.",
+      "card_number": "4726383762770423",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드정보: 9282176841874199",
+      "card_number": "9282176841874199",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 4077042495987713입니다.",
+      "card_number": "4077042495987713",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드 번호: 4179415375322036",
+      "card_number": "4179415375322036",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 5244265790197846",
+      "card_number": "5244265790197846",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "Card No: 9539339108763213",
+      "card_number": "9539339108763213",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호는 9406102708809285입니다.",
+      "card_number": "9406102708809285",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9342820711081074",
+      "card_number": "9342820711081074",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드 일련번호: 5431871034N71450",
+      "card_number": "5431871034N71450",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 9349289712061431로 결제되었습니다.",
+      "card_number": "9349289712061431",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "결제수단: 4467276963705284",
+      "card_number": "4467276963705284",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제카드: 9447015035269455",
+      "card_number": "9447015035269455",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9276123030223984입니다.",
+      "card_number": "9276123030223984",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(9580472595067471)로 조회해주세요.",
+      "card_number": "9580472595067471",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "CARD NUMBER: 5307041068074098",
+      "card_number": "5307041068074098",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드번호(9486212767976280)로 조회해주세요.",
+      "card_number": "9486212767976280",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "결제카드 번호는 95123271738615180입니다.",
+      "card_number": "95123271738615180",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제카드 번호는 9593979036953130입니다.",
+      "card_number": "9593979036953130",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "신용카드: 9311911781780534",
+      "card_number": "9311911781780534",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "Card No: 9479835639488560",
+      "card_number": "9479835639488560",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "신용카드: 9549807952325113",
+      "card_number": "9549807952325113",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9518581441027377입니다.",
+      "card_number": "9518581441027377",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "CARD NUMBER: 9580140745816433",
+      "card_number": "9580140745816433",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Payment method: 944549320256132",
+      "card_number": "944549320256132",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Credit Card: 4992928546745674",
+      "card_number": "4992928546745674",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9117980769382700입니다.",
+      "card_number": "9117980769382700",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "CARD NUMBER: 4511617818083317",
+      "card_number": "4511617818083317",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드정보: 9506204980202376",
+      "card_number": "9506204980202376",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9289363092686315",
+      "card_number": "9289363092686315",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "카드번호 5427879113466127로 결제되었습니다.",
+      "card_number": "5427879113466127",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제카드 번호는 9529852796580527입니다.",
+      "card_number": "9529852796580527",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 카드: 9374973424643564",
+      "card_number": "9374973424643564",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호는 4699338902536418입니다.",
+      "card_number": "4699338902536418",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 카드번호는 4477213030328277입니다.",
+      "card_number": "4477213030328277",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "Credit Card: 1274137063557423",
+      "card_number": "1274137063557423",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9220333336592092로 확인됩니다.",
+      "card_number": "9220333336592092",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드 번호: 9420828803200457",
+      "card_number": "9420828803200457",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "결제카드: 9492477781910274",
+      "card_number": "9492477781910274",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제수단: 9568571332778781",
+      "card_number": "9568571332778781",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9290439w14921266",
+      "card_number": "9290439w14921266",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 카드번호는 5543761533633202로 확인됩니다.",
+      "card_number": "5543761533633202",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Credit Card: 9478958753725228",
+      "card_number": "9478958753725228",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "결제카드 번호는 943210136L896323입니다.",
+      "card_number": "943210136L896323",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Credit Card: 4158002559609050",
+      "card_number": "4158002559609050",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9334955321447982",
+      "card_number": "9334955321447982",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "Payment method: 9326336142341938",
+      "card_number": "9326336142341938",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "신용카드: 4323908767040906",
+      "card_number": "4323908767040906",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9240475898912337",
+      "card_number": "9240475898912337",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "Credit Card: 9399140245243815",
+      "card_number": "9399140245243815",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호 9278871881010193로 결제되었습니다.",
+      "card_number": "9278871881010193",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "등록된 카드: 9568601267173532",
+      "card_number": "9568601267173532",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "Payment method: 5552593587893590",
+      "card_number": "5552593587893590",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9501373537396257입니다.",
+      "card_number": "9501373537396257",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 4158287321682010",
+      "card_number": "4158287321682010",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Card No: 9179439003028723",
+      "card_number": "9179439003028723",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드정보: 9302472312231951",
+      "card_number": "9302472312231951",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "등록된 카드: 5506822417104291",
+      "card_number": "5506822417104291",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "Credit Card: 5436938726756863",
+      "card_number": "5436938726756863",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호(9216790927473600)로 조회해주세요.",
+      "card_number": "9216790927473600",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호 9308297284694900로 결제되었습니다.",
+      "card_number": "9308297284694900",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "Payment method: 9533264073038563",
+      "card_number": "9533264073038563",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "등록된 카드: 5396529033592121",
+      "card_number": "5396529033592121",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9496080311296093",
+      "card_number": "9496080311296093",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9528562935759053",
+      "card_number": "9528562935759053",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "신용카드: 9556649345763083",
+      "card_number": "9556649345763083",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "등록된 카드: 9406360127361771",
+      "card_number": "9406360127361771",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "Payment method: 9381627901502757",
+      "card_number": "9381627901502757",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9179298015039916",
+      "card_number": "9179298015039916",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드정보: 9453511786312149",
+      "card_number": "9453511786312149",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9140343546583003",
+      "card_number": "9140343546583003",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 5180797620045593로 결제되었습니다.",
+      "card_number": "5180797620045593",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호 확인: 9463509282909176",
+      "card_number": "9463509282909176",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "Credit Card: 93269093099O8893",
+      "card_number": "93269093099O8893",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드 일련번호: 9129984266549049",
+      "card_number": "9129984266549049",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "Payment method: 4995895281837049",
+      "card_number": "4995895281837049",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Card No: 5442679829948690",
+      "card_number": "5442679829948690",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호는 9574285355453635입니다.",
+      "card_number": "9574285355453635",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제카드: 9412976552755302",
+      "card_number": "9412976552755302",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9426293694259101로 확인됩니다.",
+      "card_number": "9426293694259101",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제수단: 4351795420595623",
+      "card_number": "4351795420595623",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9358946053859727입니다.",
+      "card_number": "9358946053859727",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9504850678853482",
+      "card_number": "9504850678853482",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 481863060597201입니다.",
+      "card_number": "481863060597201",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Payment method: 92966995p2198621",
+      "card_number": "92966995p2198621",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 카드번호는 4556025503724335입니다.",
+      "card_number": "4556025503724335",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(4973556169183502)로 조회해주세요.",
+      "card_number": "4973556169183502",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호 입력: 9524751978565337",
+      "card_number": "9524751978565337",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호(9387655131860921)로 조회해주세요.",
+      "card_number": "9387655131860921",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Card No: 9201596652124103",
+      "card_number": "9201596652124103",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드정보: 9587747642984347",
+      "card_number": "9587747642984347",
+      "is_valid": false,
+      "template": "카드정보: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Credit Card: 9465931327195256",
+      "card_number": "9465931327195256",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드 일련번호: 9589230438892955",
+      "card_number": "9589230438892955",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9598421992096104",
+      "card_number": "9598421992096104",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드 번호: 5402098914836702",
+      "card_number": "5402098914836702",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9521535131422798로 확인됩니다.",
+      "card_number": "9521535131422798",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Credit Card: 9203400356902120",
+      "card_number": "9203400356902120",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드정보: 5204761810420885",
+      "card_number": "5204761810420885",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제정보: 4412563701706591",
+      "card_number": "4412563701706591",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9113647221559589",
+      "card_number": "9113647221559589",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제카드: 9475312448979985",
+      "card_number": "9475312448979985",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9540486839675740로 확인됩니다.",
+      "card_number": "9540486839675740",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드: 9127575835556267",
+      "card_number": "9127575835556267",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호(496553419047520)로 조회해주세요.",
+      "card_number": "496553419047520",
+      "is_valid": false,
+      "template": "카드번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "고객님의 카드번호는 4811528245854659입니다.",
+      "card_number": "4811528245854659",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 입력: 4637354361587673",
+      "card_number": "4637354361587673",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Payment method: 4415196214466028",
+      "card_number": "4415196214466028",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9284737812631229로 확인됩니다.",
+      "card_number": "9284737812631229",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "등록된 카드: 9148836915631057",
+      "card_number": "9148836915631057",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 입력: 3947610116297117",
+      "card_number": "3947610116297117",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "CARD NUMBER: 9402279808486612",
+      "card_number": "9402279808486612",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "Payment method: 9332548129770721",
+      "card_number": "9332548129770721",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "결제카드: 9470724238873829",
+      "card_number": "9470724238873829",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9441506807382092입니다.",
+      "card_number": "9441506807382092",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드정보: 9549832849192518",
+      "card_number": "9549832849192518",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드 번호: 9352667567703039",
+      "card_number": "9352667567703039",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "Payment method: 3968942275747376",
+      "card_number": "3968942275747376",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Payment method: 947000608252027",
+      "card_number": "947000608252027",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제수단: 4659322171495539",
+      "card_number": "4659322171495539",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제카드: 6781247161273114",
+      "card_number": "6781247161273114",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9484280560c66053로 확인됩니다.",
+      "card_number": "9484280560c66053",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호는 9112687691582100입니다.",
+      "card_number": "9112687691582100",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 542407153809437",
+      "card_number": "542407153809437",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제수단: 933019803357389",
+      "card_number": "933019803357389",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드 번호: 5543967310003622",
+      "card_number": "5543967310003622",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호(9361118337163889)로 조회해주세요.",
+      "card_number": "9361118337163889",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "해당 고객의 카드번호는 9139162120929065로 확인됩니다.",
+      "card_number": "9139162120929065",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드: 9337318512592974",
+      "card_number": "9337318512592974",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 531233806m680847입니다.",
+      "card_number": "531233806m680847",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제정보: 9249330862366641",
+      "card_number": "9249330862366641",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Credit Card: 5111899359626421",
+      "card_number": "5111899359626421",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드번호는 4138186937043762입니다.",
+      "card_number": "4138186937043762",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 9227035599358821",
+      "card_number": "9227035599358821",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9107908486844050",
+      "card_number": "9107908486844050",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제정보: 5346706136781865",
+      "card_number": "5346706136781865",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9419695y19205774",
+      "card_number": "9419695y19205774",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드 일련번호: 4916779662015183",
+      "card_number": "4916779662015183",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9565453007890451입니다.",
+      "card_number": "9565453007890451",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9354248064712670",
+      "card_number": "9354248064712670",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드정보: 6766205391078840",
+      "card_number": "6766205391078840",
+      "is_valid": false,
+      "template": "카드정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 카드: 9230448989969238",
+      "card_number": "9230448989969238",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 확인: 5409648006154589",
+      "card_number": "5409648006154589",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9319785952956228입니다.",
+      "card_number": "9319785952956228",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "신용카드: 94085448329711274",
+      "card_number": "94085448329711274",
+      "is_valid": false,
+      "template": "신용카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드 번호: 9260898277722891",
+      "card_number": "9260898277722891",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9560393707593507",
+      "card_number": "9560393707593507",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호 확인: 4526083772076850",
+      "card_number": "4526083772076850",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "Credit Card: 9108094711887351",
+      "card_number": "9108094711887351",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9443571397292415",
+      "card_number": "9443571397292415",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "결제정보: 4681091572022504",
+      "card_number": "4681091572022504",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드 일련번호: 5458960455197567",
+      "card_number": "5458960455197567",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드 번호: 5549245486306366",
+      "card_number": "5549245486306366",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "Payment method: 9320702638706411",
+      "card_number": "9320702638706411",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Card No: 4936217812438084",
+      "card_number": "4936217812438084",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9380885816827062로 확인됩니다.",
+      "card_number": "9380885816827062",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드번호 확인: 9207647509985651",
+      "card_number": "9207647509985651",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제수단: 9532023863213484",
+      "card_number": "9532023863213484",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 924458736361999v",
+      "card_number": "924458736361999v",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 9327326399179643로 결제되었습니다.",
+      "card_number": "9327326399179643",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호는 9409201813064642입니다.",
+      "card_number": "9409201813064642",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 확인: 95274059L7530809",
+      "card_number": "95274059L7530809",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 카드번호는 9484105130492682입니다.",
+      "card_number": "9484105130492682",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9401882822037229",
+      "card_number": "9401882822037229",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Payment method: 9408336969358206",
+      "card_number": "9408336969358206",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "결제정보: 9144333842085477",
+      "card_number": "9144333842085477",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Credit Card: 5889290483403663",
+      "card_number": "5889290483403663",
+      "is_valid": false,
+      "template": "Credit Card: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 카드: 9596633796467156",
+      "card_number": "9596633796467156",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제수단: 4754354347693675",
+      "card_number": "4754354347693675",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 확인: 9565698227588240",
+      "card_number": "9565698227588240",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "등록된 카드: 9369973899136422",
+      "card_number": "9369973899136422",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드정보: 9137679114685223",
+      "card_number": "9137679114685223",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "Payment method: 9478685112884707",
+      "card_number": "9478685112884707",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "결제수단: 9232697638683891",
+      "card_number": "9232697638683891",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Payment method: 5522199372048503",
+      "card_number": "5522199372048503",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 입력: 9426406150303176",
+      "card_number": "9426406150303176",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제수단: 5244948438483922",
+      "card_number": "5244948438483922",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "Payment method: 5348605595857349",
+      "card_number": "5348605595857349",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호는 9183570365648072입니다.",
+      "card_number": "9183570365648072",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 카드번호는 2306221532788292로 확인됩니다.",
+      "card_number": "2306221532788292",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드번호 5423517578798143로 결제되었습니다.",
+      "card_number": "5423517578798143",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호 6734022183628750로 결제되었습니다.",
+      "card_number": "6734022183628750",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드 일련번호: 9563R80712648359",
+      "card_number": "9563R80712648359",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제카드: 9491442142130567",
+      "card_number": "9491442142130567",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "결제수단: 92458886595212685",
+      "card_number": "92458886595212685",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호 9315469952981180로 결제되었습니다.",
+      "card_number": "9315469952981180",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드정보: 9568560367557749",
+      "card_number": "9568560367557749",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 4181259542454513",
+      "card_number": "4181259542454513",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9533249130368574로 확인됩니다.",
+      "card_number": "9533249130368574",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드번호 확인: 9478141841270461",
+      "card_number": "9478141841270461",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "Card No: 9473345809197179",
+      "card_number": "9473345809197179",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제정보: 9174036361076362",
+      "card_number": "9174036361076362",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드 일련번호: 4816128646349865",
+      "card_number": "4816128646349865",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호는 9565459362821312입니다.",
+      "card_number": "9565459362821312",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제수단: 9163933455751251",
+      "card_number": "9163933455751251",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호는 9599913969003450입니다.",
+      "card_number": "9599913969003450",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드 일련번호: 9532266265247945",
+      "card_number": "9532266265247945",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드번호는 9407647843830777입니다.",
+      "card_number": "9407647843830777",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 카드번호는 52498261300167830로 확인됩니다.",
+      "card_number": "52498261300167830",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "결제수단: 9411085542997106",
+      "card_number": "9411085542997106",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9471200741935942",
+      "card_number": "9471200741935942",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Card No: 9359512570707960",
+      "card_number": "9359512570707960",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "Payment method: 4027972021461400",
+      "card_number": "4027972021461400",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제카드: 94670238748467763",
+      "card_number": "94670238748467763",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드정보: 9184601424440836",
+      "card_number": "9184601424440836",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "Payment method: 9518077099184933",
+      "card_number": "9518077099184933",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "Payment method: 9170935723084358",
+      "card_number": "9170935723084358",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 5594575101539676로 결제되었습니다.",
+      "card_number": "5594575101539676",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "등록된 카드: 9288130562697291",
+      "card_number": "9288130562697291",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제정보: z362347591465206",
+      "card_number": "z362347591465206",
+      "is_valid": false,
+      "template": "결제정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 카드번호는 5238929865928603입니다.",
+      "card_number": "5238929865928603",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 입력: 955560310735116",
+      "card_number": "955560310735116",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9429048519303658로 확인됩니다.",
+      "card_number": "9429048519303658",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제정보: 5567591743149967",
+      "card_number": "5567591743149967",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 47725696t8624916입니다.",
+      "card_number": "47725696t8624916",
+      "is_valid": false,
+      "template": "고객님의 카드번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Payment method: 1656949755525886",
+      "card_number": "1656949755525886",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Payment method: 9368582604486708",
+      "card_number": "9368582604486708",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 94251289206135580",
+      "card_number": "94251289206135580",
+      "is_valid": false,
+      "template": "CARD NUMBER: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Payment method: 9496562744773764",
+      "card_number": "9496562744773764",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "등록된 카드: 5342886144147822",
+      "card_number": "5342886144147822",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 4829636582127017로 결제되었습니다.",
+      "card_number": "4829636582127017",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "카드번호 94986393169328599로 결제되었습니다.",
+      "card_number": "94986393169328599",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드 번호: 9134717417297446",
+      "card_number": "9134717417297446",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "결제정보: 9445807116062524",
+      "card_number": "9445807116062524",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "Payment method: 53593662234813767",
+      "card_number": "53593662234813767",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Credit Card: 9206290727893232",
+      "card_number": "9206290727893232",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9311909577136978로 확인됩니다.",
+      "card_number": "9311909577136978",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제수단: 5105049772471447",
+      "card_number": "5105049772471447",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "Card No: 9325057145555917",
+      "card_number": "9325057145555917",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "결제수단: 9120304331607848",
+      "card_number": "9120304331607848",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호(9160695403980323)로 조회해주세요.",
+      "card_number": "9160695403980323",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "CARD NUMBER: 9510599488643821",
+      "card_number": "9510599488643821",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9387346341501691입니다.",
+      "card_number": "9387346341501691",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 입력: 8050671309449723",
+      "card_number": "8050671309449723",
+      "is_valid": false,
+      "template": "카드번호 입력: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 카드번호는 4918260852298630입니다.",
+      "card_number": "4918260852298630",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 카드번호는 9215927041955481로 확인됩니다.",
+      "card_number": "9215927041955481",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "결제카드: 9467596191055049",
+      "card_number": "9467596191055049",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9318185275975396",
+      "card_number": "9318185275975396",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "Payment method: 9493437561759986",
+      "card_number": "9493437561759986",
+      "is_valid": false,
+      "template": "Payment method: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "고객님의 카드번호는 9133828757621540입니다.",
+      "card_number": "9133828757621540",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호(9134635117344872)로 조회해주세요.",
+      "card_number": "9134635117344872",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "고객님의 카드번호는 1372462142394007입니다.",
+      "card_number": "1372462142394007",
+      "is_valid": false,
+      "template": "고객님의 카드번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제카드 번호는 9344421867487195입니다.",
+      "card_number": "9344421867487195",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "Credit Card: 4978015434894703",
+      "card_number": "4978015434894703",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드 번호: 9195304259687236",
+      "card_number": "9195304259687236",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드정보: 5590782337532988",
+      "card_number": "5590782337532988",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9531981727473019",
+      "card_number": "9531981727473019",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 9409406551599530로 확인됩니다.",
+      "card_number": "9409406551599530",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "신용카드: 9508005647562880",
+      "card_number": "9508005647562880",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드 일련번호: 957529324905706",
+      "card_number": "957529324905706",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호 입력: 9522527949725578",
+      "card_number": "9522527949725578",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "Credit Card: 9113871188127442",
+      "card_number": "9113871188127442",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "결제카드: 949v222319659062",
+      "card_number": "949v222319659062",
+      "is_valid": false,
+      "template": "결제카드: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 입력: 9338698160389792",
+      "card_number": "9338698160389792",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9266454108312371",
+      "card_number": "9266454108312371",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "신용카드: 9531059437231389",
+      "card_number": "9531059437231389",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드번호(5525324840017676)로 조회해주세요.",
+      "card_number": "5525324840017676",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "신용카드: 9514737123329184",
+      "card_number": "9514737123329184",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "카드번호는 9573196616575563입니다.",
+      "card_number": "9573196616575563",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 확인: 9597300179229905",
+      "card_number": "9597300179229905",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "등록된 카드: 9545376418352172",
+      "card_number": "9545376418352172",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9454811433573880",
+      "card_number": "9454811433573880",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 확인: 4738803149870956",
+      "card_number": "4738803149870956",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호(5480465439420798)로 조회해주세요.",
+      "card_number": "5480465439420798",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호 입력: 9350318959353148",
+      "card_number": "9350318959353148",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9470889044098984",
+      "card_number": "9470889044098984",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호는 3498239975758043입니다.",
+      "card_number": "3498239975758043",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드정보: 9516993886568041",
+      "card_number": "9516993886568041",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9336681393666600",
+      "card_number": "9336681393666600",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제정보: 9187869428888295",
+      "card_number": "9187869428888295",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "결제수단: 4893939387995906",
+      "card_number": "4893939387995906",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "카드번호(9573182539018451)로 조회해주세요.",
+      "card_number": "9573182539018451",
+      "is_valid": true,
+      "template": "카드번호({number})로 조회해주세요."
+    },
+    {
+      "text": "카드번호 확인: 9216333939336521",
+      "card_number": "9216333939336521",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9480135188348019입니다.",
+      "card_number": "9480135188348019",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드 번호는 5457741363925559입니다.",
+      "card_number": "5457741363925559",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 카드번호는 9428838313096610입니다.",
+      "card_number": "9428838313096610",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 카드: 924601516093w069",
+      "card_number": "924601516093w069",
+      "is_valid": false,
+      "template": "등록된 카드: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 카드번호는 9363254556938749입니다.",
+      "card_number": "9363254556938749",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제정보: 9418552489281698",
+      "card_number": "9418552489281698",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 95599132956621M6로 확인됩니다.",
+      "card_number": "95599132956621M6",
+      "is_valid": false,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "결제카드: 9591273603747642",
+      "card_number": "9591273603747642",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 4331568922970056로 확인됩니다.",
+      "card_number": "4331568922970056",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "카드정보: 4481180580553907",
+      "card_number": "4481180580553907",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9425877831890305",
+      "card_number": "9425877831890305",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "카드번호는 4184148043565255입니다.",
+      "card_number": "4184148043565255",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "Payment method: 5198258102847881",
+      "card_number": "5198258102847881",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9111284352468752",
+      "card_number": "9111284352468752",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "결제카드: 4975333856380397",
+      "card_number": "4975333856380397",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "Credit Card: 9195397498317177",
+      "card_number": "9195397498317177",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "결제카드: 9110919801834218",
+      "card_number": "9110919801834218",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 4404714463961268입니다.",
+      "card_number": "4404714463961268",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "결제카드: 9468404694916008",
+      "card_number": "9468404694916008",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드정보: 9212044995668251",
+      "card_number": "9212044995668251",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "Payment method: 9353766280460353",
+      "card_number": "9353766280460353",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9504467918471916",
+      "card_number": "9504467918471916",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "결제수단: 9568417777418833",
+      "card_number": "9568417777418833",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드번호 확인: 9574035879118159",
+      "card_number": "9574035879118159",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제수단: 9198a75766089443",
+      "card_number": "9198a75766089443",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Payment method: 9153587968589699",
+      "card_number": "9153587968589699",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드 일련번호: 4364175218397331",
+      "card_number": "4364175218397331",
+      "is_valid": true,
+      "template": "카드 일련번호: {number}"
+    },
+    {
+      "text": "카드정보: 9397533415592395",
+      "card_number": "9397533415592395",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "Payment method: 9522699246805377",
+      "card_number": "9522699246805377",
+      "is_valid": true,
+      "template": "Payment method: {number}"
+    },
+    {
+      "text": "카드번호 입력: 9396900434839456",
+      "card_number": "9396900434839456",
+      "is_valid": true,
+      "template": "카드번호 입력: {number}"
+    },
+    {
+      "text": "Credit Card: 9417563803025043",
+      "card_number": "9417563803025043",
+      "is_valid": true,
+      "template": "Credit Card: {number}"
+    },
+    {
+      "text": "카드 일련번호: 6671837561143260",
+      "card_number": "6671837561143260",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "결제카드 번호는 2039037320854726입니다.",
+      "card_number": "2039037320854726",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "카드 일련번호: 9154294153708K07",
+      "card_number": "9154294153708K07",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드번호 확인: 9304208546820625",
+      "card_number": "9304208546820625",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "해당 고객의 카드번호는 5142083819931332로 확인됩니다.",
+      "card_number": "5142083819931332",
+      "is_valid": true,
+      "template": "해당 고객의 카드번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "등록된 카드: 9509462038883210",
+      "card_number": "9509462038883210",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호는 9252210328156238입니다.",
+      "card_number": "9252210328156238",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드정보: 5359532473334785",
+      "card_number": "5359532473334785",
+      "is_valid": true,
+      "template": "카드정보: {number}"
+    },
+    {
+      "text": "결제정보: 9454275900094152",
+      "card_number": "9454275900094152",
+      "is_valid": true,
+      "template": "결제정보: {number}"
+    },
+    {
+      "text": "카드번호는 9287492846297525입니다.",
+      "card_number": "9287492846297525",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드 일련번호: 933428226470g219",
+      "card_number": "933428226470g219",
+      "is_valid": false,
+      "template": "카드 일련번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "등록된 카드: 9384195886410674",
+      "card_number": "9384195886410674",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "등록된 카드: 4591274355696616",
+      "card_number": "4591274355696616",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "카드번호는 9195709685022065입니다.",
+      "card_number": "9195709685022065",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 확인: 4765017579932121",
+      "card_number": "4765017579932121",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "결제수단: 9308294866027047",
+      "card_number": "9308294866027047",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제카드: 9255568286918510",
+      "card_number": "9255568286918510",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "카드번호 45231477885175211로 결제되었습니다.",
+      "card_number": "45231477885175211",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "카드번호는 9555831467745715입니다.",
+      "card_number": "9555831467745715",
+      "is_valid": true,
+      "template": "카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 9515361203270356로 결제되었습니다.",
+      "card_number": "9515361203270356",
+      "is_valid": false,
+      "template": "카드번호 {number}로 결제되었습니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "카드 번호: 9210930173258174",
+      "card_number": "9210930173258174",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호는 3364491014660197입니다.",
+      "card_number": "3364491014660197",
+      "is_valid": false,
+      "template": "카드번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Card No: 9194367410010490",
+      "card_number": "9194367410010490",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9268102871564458",
+      "card_number": "9268102871564458",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "카드번호 확인: 452176909s225444",
+      "card_number": "452176909s225444",
+      "is_valid": false,
+      "template": "카드번호 확인: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "카드 번호: 9569556900924361",
+      "card_number": "9569556900924361",
+      "is_valid": true,
+      "template": "카드 번호: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9166792436562287",
+      "card_number": "9166792436562287",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "CARD NUMBER: 9550529526429157",
+      "card_number": "9550529526429157",
+      "is_valid": true,
+      "template": "CARD NUMBER: {number}"
+    },
+    {
+      "text": "결제카드: 9374927944039414",
+      "card_number": "9374927944039414",
+      "is_valid": true,
+      "template": "결제카드: {number}"
+    },
+    {
+      "text": "등록된 카드: 9205270967296859",
+      "card_number": "9205270967296859",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제카드 번호는 9223548680588118입니다.",
+      "card_number": "9223548680588118",
+      "is_valid": true,
+      "template": "결제카드 번호는 {number}입니다."
+    },
+    {
+      "text": "Card No: 9546655242512278",
+      "card_number": "9546655242512278",
+      "is_valid": true,
+      "template": "Card No: {number}"
+    },
+    {
+      "text": "카드번호 확인: 9383111509350081",
+      "card_number": "9383111509350081",
+      "is_valid": true,
+      "template": "카드번호 확인: {number}"
+    },
+    {
+      "text": "등록된 카드: 9158544092018587",
+      "card_number": "9158544092018587",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "결제수단: 93324938420608626",
+      "card_number": "93324938420608626",
+      "is_valid": false,
+      "template": "결제수단: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "등록된 카드: 9516758195923991",
+      "card_number": "9516758195923991",
+      "is_valid": true,
+      "template": "등록된 카드: {number}"
+    },
+    {
+      "text": "신용카드: 5244281223876401",
+      "card_number": "5244281223876401",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "고객님의 카드번호는 9395736437060992입니다.",
+      "card_number": "9395736437060992",
+      "is_valid": true,
+      "template": "고객님의 카드번호는 {number}입니다."
+    },
+    {
+      "text": "카드번호 9378934568403856로 결제되었습니다.",
+      "card_number": "9378934568403856",
+      "is_valid": true,
+      "template": "카드번호 {number}로 결제되었습니다."
+    },
+    {
+      "text": "신용카드: 922687958352242",
+      "card_number": "922687958352242",
+      "is_valid": false,
+      "template": "신용카드: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "신용카드: 4614283857326591",
+      "card_number": "4614283857326591",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    },
+    {
+      "text": "결제수단: 9550644494376999",
+      "card_number": "9550644494376999",
+      "is_valid": true,
+      "template": "결제수단: {number}"
+    },
+    {
+      "text": "결제카드 번호는 4628080529988864입니다.",
+      "card_number": "4628080529988864",
+      "is_valid": false,
+      "template": "결제카드 번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "신용카드: 5535917199420983",
+      "card_number": "5535917199420983",
+      "is_valid": true,
+      "template": "신용카드: {number}"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "individual_metrics": [
+    {
+      "accuracy": 0.96,
+      "precision": 0.9523809523809523,
+      "recall": 1.0,
+      "f1": 0.975609756097561,
+      "recognizer": "driverlicense"
+    },
+    {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "recognizer": "passport"
+    },
+    {
+      "accuracy": 0.9569138276553106,
+      "precision": 0.9489916963226572,
+      "recall": 1.0,
+      "f1": 0.9738283627510651,
+      "true_positive": 800,
+      "true_negative": 155,
+      "false_positive": 43,
+      "false_negative": 0,
+      "specificity": 0.7828282828282829,
+      "recognizer": "email"
+    },
+    {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "recognizer": "creditcard"
+    },
+    {
+      "accuracy": 0.964,
+      "precision": 0.9569377990430622,
+      "recall": 1.0,
+      "f1": 0.9779951100244498,
+      "recognizer": "rrn"
+    },
+    {
+      "accuracy": 0.918,
+      "precision": 0.9263657957244655,
+      "recall": 0.975,
+      "f1": 0.9500609013398295,
+      "true_negative": 138,
+      "false_positive": 62,
+      "false_negative": 20,
+      "true_positive": 780,
+      "specificity": 0.69,
+      "recognizer": "phone"
+    }
+  ],
+  "average_metrics": {
+    "accuracy": 0.9664856379425518,
+    "precision": 0.9641127072451895,
+    "recall": 0.9958333333333332,
+    "f1": 0.9795823550354842
+  }
+}

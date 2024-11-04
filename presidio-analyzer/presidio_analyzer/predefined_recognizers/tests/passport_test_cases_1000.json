@@ -1,0 +1,6232 @@
+{
+  "metadata": {
+    "total_cases": 1000,
+    "valid_cases": 800,
+    "invalid_cases": 200,
+    "template_count": 20
+  },
+  "templates": [
+    "여권번호는 {number}입니다.",
+    "내 여권번호는 {number}예요.",
+    "여권: {number}",
+    "PASSPORT NUMBER: {number}",
+    "여권 번호: {number}",
+    "본인의 여권번호는 {number}입니다.",
+    "해당 고객의 여권번호는 {number}로 확인됩니다.",
+    "여권정보: {number}",
+    "여권발급번호: {number}",
+    "여권 발급 번호: {number}",
+    "PASSPORT: {number}",
+    "Korean Passport: {number}",
+    "여권번호 {number}로 발급되었습니다.",
+    "여권번호가 {number}인 여권을 신청합니다.",
+    "여권번호 {number}에 대한 재발급을 신청합니다.",
+    "{number} 번호로 발급된 여권입니다.",
+    "여권번호({number})로 조회해주세요.",
+    "고객님의 여권번호는 {number}입니다.",
+    "여권번호는 {number}이며,",
+    "새로 발급받은 여권번호는 {number}입니다."
+  ],
+  "test_cases": [
+    {
+      "text": "여권번호는 RR6477723이며,",
+      "passport_number": "RR6477723",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권발급번호: MM5111523",
+      "passport_number": "MM5111523",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "Korean Passport: MM2191821",
+      "passport_number": "MM2191821",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "PASSPORT: RW9586489",
+      "passport_number": "RW9586489",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호는 ML4984194입니다.",
+      "passport_number": "ML4984194",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "MF3623533 번호로 발급된 여권입니다.",
+      "passport_number": "MF3623533",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 MG8969464입니다.",
+      "passport_number": "MG8969464",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: M513352259",
+      "passport_number": "M513352259",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호가 RO8678172인 여권을 신청합니다.",
+      "passport_number": "RO8678172",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "M94114410 번호로 발급된 여권입니다.",
+      "passport_number": "M94114410",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 RH1569021이며,",
+      "passport_number": "RH1569021",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권발급번호: RL5645358",
+      "passport_number": "RL5645358",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 MT8555604입니다.",
+      "passport_number": "MT8555604",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "RN3769766 번호로 발급된 여권입니다.",
+      "passport_number": "RN3769766",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "MD4467567 번호로 발급된 여권입니다.",
+      "passport_number": "MD4467567",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 R03208587이며,",
+      "passport_number": "R03208587",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호 RK89690583로 발급되었습니다.",
+      "passport_number": "RK89690583",
+      "is_valid": false,
+      "template": "여권번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호는 RF28636743입니다.",
+      "passport_number": "RF28636743",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "PASSPORT: RK4752403",
+      "passport_number": "RK4752403",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권발급번호: RW8674093",
+      "passport_number": "RW8674093",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권번호가 ML6173635인 여권을 신청합니다.",
+      "passport_number": "ML6173635",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권 번호: M498457h8",
+      "passport_number": "M498457h8",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "R05736u86 번호로 발급된 여권입니다.",
+      "passport_number": "R05736u86",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권: RC3380784",
+      "passport_number": "RC3380784",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호가 RA2046537인 여권을 신청합니다.",
+      "passport_number": "RA2046537",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "고객님의 여권번호는 MD6335745입니다.",
+      "passport_number": "MD6335745",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: MU5583322",
+      "passport_number": "MU5583322",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: MQ8549853",
+      "passport_number": "MQ8549853",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호 MF2978722로 발급되었습니다.",
+      "passport_number": "MF2978722",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호 RK5180328로 발급되었습니다.",
+      "passport_number": "RK5180328",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "내 여권번호는 RK4748981예요.",
+      "passport_number": "RK4748981",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "본인의 여권번호는 MW3202623입니다.",
+      "passport_number": "MW3202623",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 M51917265입니다.",
+      "passport_number": "M51917265",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호(X19693131)로 조회해주세요.",
+      "passport_number": "X19693131",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RJ4985266입니다.",
+      "passport_number": "RJ4985266",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: ML3441425",
+      "passport_number": "ML3441425",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권정보: RZ7172384",
+      "passport_number": "RZ7172384",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권발급번호: ME6546328",
+      "passport_number": "ME6546328",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권번호 RN8267665로 발급되었습니다.",
+      "passport_number": "RN8267665",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호는 RF2996895입니다.",
+      "passport_number": "RF2996895",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: C15019824",
+      "passport_number": "C15019824",
+      "is_valid": false,
+      "template": "여권정보: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "본인의 여권번호는 MV0744h26입니다.",
+      "passport_number": "MV0744h26",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권 번호: CP7098793",
+      "passport_number": "CP7098793",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "내 여권번호는 R57250141예요.",
+      "passport_number": "R57250141",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권 번호: RR6600930",
+      "passport_number": "RR6600930",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 R78385277입니다.",
+      "passport_number": "R78385277",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 M57150292로 확인됩니다.",
+      "passport_number": "M57150292",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 M33514136로 확인됩니다.",
+      "passport_number": "M33514136",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호 MT4154690로 발급되었습니다.",
+      "passport_number": "MT4154690",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "MJ8399080 번호로 발급된 여권입니다.",
+      "passport_number": "MJ8399080",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "내 여권번호는 RI5270629예요.",
+      "passport_number": "RI5270629",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "R35638156 번호로 발급된 여권입니다.",
+      "passport_number": "R35638156",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 MU0385910로 확인됩니다.",
+      "passport_number": "MU0385910",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RQ688004로 확인됩니다.",
+      "passport_number": "RQ688004",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "PASSPORT: RW41032451",
+      "passport_number": "RW41032451",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호는 RY4417557입니다.",
+      "passport_number": "RY4417557",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: RN9719837",
+      "passport_number": "RN9719837",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 RQ1829685입니다.",
+      "passport_number": "RQ1829685",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 RF4436432인 여권을 신청합니다.",
+      "passport_number": "RF4436432",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "RL1968644 번호로 발급된 여권입니다.",
+      "passport_number": "RL1968644",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권: RX2310636",
+      "passport_number": "RX2310636",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권 발급 번호: RN7187337",
+      "passport_number": "RN7187337",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호(MG0025320)로 조회해주세요.",
+      "passport_number": "MG0025320",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Korean Passport: RZ2019411",
+      "passport_number": "RZ2019411",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권: RR4352747",
+      "passport_number": "RR4352747",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권 번호: M59666484",
+      "passport_number": "M59666484",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권정보: RA6646373",
+      "passport_number": "RA6646373",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호는 RC6782956이며,",
+      "passport_number": "RC6782956",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "Korean Passport: M71381383",
+      "passport_number": "M71381383",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 ML2941373입니다.",
+      "passport_number": "ML2941373",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: RI7223021",
+      "passport_number": "RI7223021",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호는 MT7174677이며,",
+      "passport_number": "MT7174677",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 R3059191입니다.",
+      "passport_number": "R3059191",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "고객님의 여권번호는 M22131881입니다.",
+      "passport_number": "M22131881",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호(R40665482)로 조회해주세요.",
+      "passport_number": "R40665482",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권번호(MW5870937)로 조회해주세요.",
+      "passport_number": "MW5870937",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권정보: R85359296",
+      "passport_number": "R85359296",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호는 MF6486014입니다.",
+      "passport_number": "MF6486014",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 M11234579로 확인됩니다.",
+      "passport_number": "M11234579",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권발급번호: Rb6715829",
+      "passport_number": "Rb6715829",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "Korean Passport: MX3990822",
+      "passport_number": "MX3990822",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호(R00951916)로 조회해주세요.",
+      "passport_number": "R00951916",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Korean Passport: MM2081649",
+      "passport_number": "MM2081649",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호는 M23333413이며,",
+      "passport_number": "M23333413",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MS9380762로 확인됩니다.",
+      "passport_number": "MS9380762",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호는 RX2420594이며,",
+      "passport_number": "RX2420594",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권: RJ7743209",
+      "passport_number": "RJ7743209",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MT9308435입니다.",
+      "passport_number": "MT9308435",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호 RN0607072로 발급되었습니다.",
+      "passport_number": "RN0607072",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "MD7454601 번호로 발급된 여권입니다.",
+      "passport_number": "MD7454601",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 RC2144488이며,",
+      "passport_number": "RC2144488",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권정보: RY6528475",
+      "passport_number": "RY6528475",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호(RM3868811)로 조회해주세요.",
+      "passport_number": "RM3868811",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "RN7925726 번호로 발급된 여권입니다.",
+      "passport_number": "RN7925726",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "RZ9559730 번호로 발급된 여권입니다.",
+      "passport_number": "RZ9559730",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호가 RE2156512인 여권을 신청합니다.",
+      "passport_number": "RE2156512",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권 발급 번호: M02823009",
+      "passport_number": "M02823009",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권정보: RM7483199",
+      "passport_number": "RM7483199",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권: RY1575564",
+      "passport_number": "RY1575564",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권 번호: M72557642",
+      "passport_number": "M72557642",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권정보: R48555415",
+      "passport_number": "R48555415",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RU4003248로 확인됩니다.",
+      "passport_number": "RU4003248",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권: R36729576",
+      "passport_number": "R36729576",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "내 여권번호는 MX6525782예요.",
+      "passport_number": "MX6525782",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권 발급 번호: RS7720029",
+      "passport_number": "RS7720029",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호 RA835247에 대한 재발급을 신청합니다.",
+      "passport_number": "RA835247",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "Korean Passport: MZ6198759",
+      "passport_number": "MZ6198759",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "Korean Passport: R97512038",
+      "passport_number": "R97512038",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호 R84200229로 발급되었습니다.",
+      "passport_number": "R84200229",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권 발급 번호: RP6111858",
+      "passport_number": "RP6111858",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호는 MK8693178입니다.",
+      "passport_number": "MK8693178",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: RS7702061",
+      "passport_number": "RS7702061",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권정보: RR3487792",
+      "passport_number": "RR3487792",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호(RY4645192)로 조회해주세요.",
+      "passport_number": "RY4645192",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권 발급 번호: My4699373",
+      "passport_number": "My4699373",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호 RM2750889에 대한 재발급을 신청합니다.",
+      "passport_number": "RM2750889",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "본인의 여권번호는 MC5077478입니다.",
+      "passport_number": "MC5077478",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: MQ3263134",
+      "passport_number": "MQ3263134",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권 발급 번호: MVu533964",
+      "passport_number": "MVu533964",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권: R07487964",
+      "passport_number": "R07487964",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 RC0715479입니다.",
+      "passport_number": "RC0715479",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 R69282396에 대한 재발급을 신청합니다.",
+      "passport_number": "R69282396",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RO3325891입니다.",
+      "passport_number": "RO3325891",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: M30490387",
+      "passport_number": "M30490387",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 MG5178076입니다.",
+      "passport_number": "MG5178076",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 R6540761입니다.",
+      "passport_number": "R6540761",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: M21210514",
+      "passport_number": "M21210514",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "RW5825742 번호로 발급된 여권입니다.",
+      "passport_number": "RW5825742",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호(RN9897955)로 조회해주세요.",
+      "passport_number": "RN9897955",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권번호 RF2356617에 대한 재발급을 신청합니다.",
+      "passport_number": "RF2356617",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호가 TT4123463인 여권을 신청합니다.",
+      "passport_number": "TT4123463",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권 번호: RQ3567581",
+      "passport_number": "RQ3567581",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권정보: R43467223",
+      "passport_number": "R43467223",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "RQ7376390 번호로 발급된 여권입니다.",
+      "passport_number": "RQ7376390",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권: MX12668268",
+      "passport_number": "MX12668268",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권 번호: MZ7247032",
+      "passport_number": "MZ7247032",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권: RV7578478",
+      "passport_number": "RV7578478",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "내 여권번호는 M4t357232예요.",
+      "passport_number": "M4t357232",
+      "is_valid": false,
+      "template": "내 여권번호는 {number}예요.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: MF1653969",
+      "passport_number": "MF1653969",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "RG1069940 번호로 발급된 여권입니다.",
+      "passport_number": "RG1069940",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호 M2064613에 대한 재발급을 신청합니다.",
+      "passport_number": "M2064613",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권정보: MR003619",
+      "passport_number": "MR003619",
+      "is_valid": false,
+      "template": "여권정보: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권: MS0472111",
+      "passport_number": "MS0472111",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MM8539810입니다.",
+      "passport_number": "MM8539810",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 RJ3824641에 대한 재발급을 신청합니다.",
+      "passport_number": "RJ3824641",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RE5741655입니다.",
+      "passport_number": "RE5741655",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 여권번호는 R96009164입니다.",
+      "passport_number": "R96009164",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: M36006074",
+      "passport_number": "M36006074",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 ME9470628입니다.",
+      "passport_number": "ME9470628",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 MH4385513입니다.",
+      "passport_number": "MH4385513",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: Rx0027722",
+      "passport_number": "Rx0027722",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "고객님의 여권번호는 MR6905104입니다.",
+      "passport_number": "MR6905104",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Passport: M35013109",
+      "passport_number": "M35013109",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호(R92264604)로 조회해주세요.",
+      "passport_number": "R92264604",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권번호 MP3939605로 발급되었습니다.",
+      "passport_number": "MP3939605",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권 번호: MQ9383018",
+      "passport_number": "MQ9383018",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 MD7989262입니다.",
+      "passport_number": "MD7989262",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 RB87i0581인 여권을 신청합니다.",
+      "passport_number": "RB87i0581",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호는 R37538522입니다.",
+      "passport_number": "R37538522",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 RX2571704이며,",
+      "passport_number": "RX2571704",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호(Ry8087403)로 조회해주세요.",
+      "passport_number": "Ry8087403",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호 RZ3017010에 대한 재발급을 신청합니다.",
+      "passport_number": "RZ3017010",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권: RI5786687",
+      "passport_number": "RI5786687",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권 번호: M21950252",
+      "passport_number": "M21950252",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권: R88430277",
+      "passport_number": "R88430277",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 M41928862입니다.",
+      "passport_number": "M41928862",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권발급번호: RR8830076",
+      "passport_number": "RR8830076",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "RD6918868 번호로 발급된 여권입니다.",
+      "passport_number": "RD6918868",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 MR5106430이며,",
+      "passport_number": "MR5106430",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호(M42d39414)로 조회해주세요.",
+      "passport_number": "M42d39414",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "본인의 여권번호는 RC7671781입니다.",
+      "passport_number": "RC7671781",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: MO8294575",
+      "passport_number": "MO8294575",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "내 여권번호는 MT6322138예요.",
+      "passport_number": "MT6322138",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호는 RG8622270입니다.",
+      "passport_number": "RG8622270",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: MG8386346",
+      "passport_number": "MG8386346",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권발급번호: MF7263085",
+      "passport_number": "MF7263085",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "Me3877220 번호로 발급된 여권입니다.",
+      "passport_number": "Me3877220",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권발급번호: RY2828981",
+      "passport_number": "RY2828981",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "본인의 여권번호는 RE8402537입니다.",
+      "passport_number": "RE8402537",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: MK6949745",
+      "passport_number": "MK6949745",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호가 M19845702인 여권을 신청합니다.",
+      "passport_number": "M19845702",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호는 MV7152301이며,",
+      "passport_number": "MV7152301",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "PASSPORT: MK6338208",
+      "passport_number": "MK6338208",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호(R80441738)로 조회해주세요.",
+      "passport_number": "R80441738",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권발급번호: RH9833254",
+      "passport_number": "RH9833254",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 M594325224입니다.",
+      "passport_number": "M594325224",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RL1000753로 확인됩니다.",
+      "passport_number": "RL1000753",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호가 MS6372947인 여권을 신청합니다.",
+      "passport_number": "MS6372947",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호는 R20229099이며,",
+      "passport_number": "R20229099",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호(MP5973281)로 조회해주세요.",
+      "passport_number": "MP5973281",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권정보: RI6391662",
+      "passport_number": "RI6391662",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권발급번호: MK3816015",
+      "passport_number": "MK3816015",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "RQ0601237 번호로 발급된 여권입니다.",
+      "passport_number": "RQ0601237",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "내 여권번호는 RT253088예요.",
+      "passport_number": "RT253088",
+      "is_valid": false,
+      "template": "내 여권번호는 {number}예요.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호 R85489252로 발급되었습니다.",
+      "passport_number": "R85489252",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RA9402291",
+      "passport_number": "RA9402291",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권 발급 번호: MM2661825",
+      "passport_number": "MM2661825",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 MT3257055입니다.",
+      "passport_number": "MT3257055",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: M97614467",
+      "passport_number": "M97614467",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호(RC8918065)로 조회해주세요.",
+      "passport_number": "RC8918065",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권발급번호: R18192177",
+      "passport_number": "R18192177",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "본인의 여권번호는 RA4666506입니다.",
+      "passport_number": "RA4666506",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RN2195867로 확인됩니다.",
+      "passport_number": "RN2195867",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호가 M87981911인 여권을 신청합니다.",
+      "passport_number": "M87981911",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권 번호: R248275x5",
+      "passport_number": "R248275x5",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권정보: RT13w6348",
+      "passport_number": "RT13w6348",
+      "is_valid": false,
+      "template": "여권정보: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호는 R57612150입니다.",
+      "passport_number": "R57612150",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "내 여권번호는 MI1255643예요.",
+      "passport_number": "MI1255643",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권: MN2781465",
+      "passport_number": "MN2781465",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권정보: L06880299",
+      "passport_number": "L06880299",
+      "is_valid": false,
+      "template": "여권정보: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권 번호: R02371446",
+      "passport_number": "R02371446",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RB4016610로 확인됩니다.",
+      "passport_number": "RB4016610",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호가 MC6016610인 여권을 신청합니다.",
+      "passport_number": "MC6016610",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "PASSPORT: ME8862049",
+      "passport_number": "ME8862049",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "본인의 여권번호는 GI7362243입니다.",
+      "passport_number": "GI7362243",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권: RP4995911",
+      "passport_number": "RP4995911",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "PASSPORT: M04252654",
+      "passport_number": "M04252654",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 RL7290749입니다.",
+      "passport_number": "RL7290749",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권발급번호: RI0932890",
+      "passport_number": "RI0932890",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "PASSPORT: MP5830056",
+      "passport_number": "MP5830056",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "RJ9227455 번호로 발급된 여권입니다.",
+      "passport_number": "RJ9227455",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RP7031078로 확인됩니다.",
+      "passport_number": "RP7031078",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RX6696693입니다.",
+      "passport_number": "RX6696693",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권 번호: RT4765541",
+      "passport_number": "RT4765541",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권발급번호: MN3335779",
+      "passport_number": "MN3335779",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권정보: RR7656976",
+      "passport_number": "RR7656976",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호는 R39342345입니다.",
+      "passport_number": "R39342345",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 MA8784104에 대한 재발급을 신청합니다.",
+      "passport_number": "MA8784104",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권 발급 번호: RJ8289779",
+      "passport_number": "RJ8289779",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "Korean Passport: RS6474125",
+      "passport_number": "RS6474125",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호(Ma1744524)로 조회해주세요.",
+      "passport_number": "Ma1744524",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "본인의 여권번호는 R45585252입니다.",
+      "passport_number": "R45585252",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 R44895997입니다.",
+      "passport_number": "R44895997",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: M03221648",
+      "passport_number": "M03221648",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "PASSPORT: RW1517920",
+      "passport_number": "RW1517920",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호가 MV5941875인 여권을 신청합니다.",
+      "passport_number": "MV5941875",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: Rc1645134",
+      "passport_number": "Rc1645134",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RZ2507954로 확인됩니다.",
+      "passport_number": "RZ2507954",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RZ3110034",
+      "passport_number": "RZ3110034",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 M77455062입니다.",
+      "passport_number": "M77455062",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 M71260693로 발급되었습니다.",
+      "passport_number": "M71260693",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "본인의 여권번호는 RU5346801입니다.",
+      "passport_number": "RU5346801",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 MY4718158인 여권을 신청합니다.",
+      "passport_number": "MY4718158",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호 RA4854813에 대한 재발급을 신청합니다.",
+      "passport_number": "RA4854813",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "고객님의 여권번호는 M4259754입니다.",
+      "passport_number": "M4259754",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호는 Mz1972060이며,",
+      "passport_number": "Mz1972060",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권: ML7887621",
+      "passport_number": "ML7887621",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호가 RN3333350인 여권을 신청합니다.",
+      "passport_number": "RN3333350",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "PASSPORT: R44953200",
+      "passport_number": "R44953200",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호 MH5125590에 대한 재발급을 신청합니다.",
+      "passport_number": "MH5125590",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "본인의 여권번호는 LE8963447입니다.",
+      "passport_number": "LE8963447",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권 발급 번호: MA4108117",
+      "passport_number": "MA4108117",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권정보: RC7323503",
+      "passport_number": "RC7323503",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권 번호: MU9915659",
+      "passport_number": "MU9915659",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "Korean Passport: R99297313",
+      "passport_number": "R99297313",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권발급번호: MM2128643",
+      "passport_number": "MM2128643",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권번호(RP5248997)로 조회해주세요.",
+      "passport_number": "RP5248997",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "PASSPORT NUMBER: My6201205",
+      "passport_number": "My6201205",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 M55251075로 확인됩니다.",
+      "passport_number": "M55251075",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권 발급 번호: RO5116417",
+      "passport_number": "RO5116417",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: MH3060815",
+      "passport_number": "MH3060815",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호는 RC2573177이며,",
+      "passport_number": "RC2573177",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권정보: MK7594670",
+      "passport_number": "MK7594670",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호 M07534025로 발급되었습니다.",
+      "passport_number": "M07534025",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호 RZ1812190로 발급되었습니다.",
+      "passport_number": "RZ1812190",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "Korean Passport: Mv6351656",
+      "passport_number": "Mv6351656",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "Korean Passport: MC5795200",
+      "passport_number": "MC5795200",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호(MB0566860)로 조회해주세요.",
+      "passport_number": "MB0566860",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "고객님의 여권번호는 MI3539611입니다.",
+      "passport_number": "MI3539611",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RD5518290",
+      "passport_number": "RD5518290",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RF9627985로 확인됩니다.",
+      "passport_number": "RF9627985",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: MJ6275625",
+      "passport_number": "MJ6275625",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호가 ME6708506인 여권을 신청합니다.",
+      "passport_number": "ME6708506",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "본인의 여권번호는 R79215621입니다.",
+      "passport_number": "R79215621",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RH9819395",
+      "passport_number": "RH9819395",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권: RX8301411",
+      "passport_number": "RX8301411",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호(Mw6221817)로 조회해주세요.",
+      "passport_number": "Mw6221817",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RI2314715로 확인됩니다.",
+      "passport_number": "RI2314715",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "내 여권번호는 MD0630518예요.",
+      "passport_number": "MD0630518",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호는 RI25s6211입니다.",
+      "passport_number": "RI25s6211",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권발급번호: R27395627",
+      "passport_number": "R27395627",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "Korean Passport: MQ6066716",
+      "passport_number": "MQ6066716",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권 번호: Ry4234553",
+      "passport_number": "Ry4234553",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권: MH9209261",
+      "passport_number": "MH9209261",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호(RW7424347)로 조회해주세요.",
+      "passport_number": "RW7424347",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권 번호: R25652898",
+      "passport_number": "R25652898",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "RV7522541 번호로 발급된 여권입니다.",
+      "passport_number": "RV7522541",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권정보: MS6186834",
+      "passport_number": "MS6186834",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 RU0392441입니다.",
+      "passport_number": "RU0392441",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 R92049458입니다.",
+      "passport_number": "R92049458",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RT1678954입니다.",
+      "passport_number": "RT1678954",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 MV9381479인 여권을 신청합니다.",
+      "passport_number": "MV9381479",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권 번호: ME5611209",
+      "passport_number": "ME5611209",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권 번호: RM3596248",
+      "passport_number": "RM3596248",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RJ6172400로 확인됩니다.",
+      "passport_number": "RJ6172400",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호는 RH5224489입니다.",
+      "passport_number": "RH5224489",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RB2154842입니다.",
+      "passport_number": "RB2154842",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 ML2295421에 대한 재발급을 신청합니다.",
+      "passport_number": "ML2295421",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호 EG2618890로 발급되었습니다.",
+      "passport_number": "EG2618890",
+      "is_valid": false,
+      "template": "여권번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 RQ1768289입니다.",
+      "passport_number": "RQ1768289",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 Mw9693258로 확인됩니다.",
+      "passport_number": "Mw9693258",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "본인의 여권번호는 RA7133933입니다.",
+      "passport_number": "RA7133933",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권발급번호: M78578429",
+      "passport_number": "M78578429",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권번호는 RG1732875입니다.",
+      "passport_number": "RG1732875",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 MU8241362입니다.",
+      "passport_number": "MU8241362",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 MU9034619입니다.",
+      "passport_number": "MU9034619",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: M05773479",
+      "passport_number": "M05773479",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 R68756381로 확인됩니다.",
+      "passport_number": "R68756381",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호가 RT4863670인 여권을 신청합니다.",
+      "passport_number": "RT4863670",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "고객님의 여권번호는 MH2850370입니다.",
+      "passport_number": "MH2850370",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Passport: Mu6044029",
+      "passport_number": "Mu6044029",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 번호: MS0035242",
+      "passport_number": "MS0035242",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호가 R84503081인 여권을 신청합니다.",
+      "passport_number": "R84503081",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "내 여권번호는 R19769797예요.",
+      "passport_number": "R19769797",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호는 M9254657이며,",
+      "passport_number": "M9254657",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "고객님의 여권번호는 M64540148입니다.",
+      "passport_number": "M64540148",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Passport: R51028898",
+      "passport_number": "R51028898",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호(R95492095)로 조회해주세요.",
+      "passport_number": "R95492095",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "내 여권번호는 RI1081757예요.",
+      "passport_number": "RI1081757",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "내 여권번호는 MC2548663예요.",
+      "passport_number": "MC2548663",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT NUMBER: MK3050723",
+      "passport_number": "MK3050723",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호는 MQ2342726이며,",
+      "passport_number": "MQ2342726",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "내 여권번호는 RS5382562예요.",
+      "passport_number": "RS5382562",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권 번호: RN9897807",
+      "passport_number": "RN9897807",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권 번호: MU7992533",
+      "passport_number": "MU7992533",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호 RS2170320에 대한 재발급을 신청합니다.",
+      "passport_number": "RS2170320",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MX5248077입니다.",
+      "passport_number": "MX5248077",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "내 여권번호는 RA5009959예요.",
+      "passport_number": "RA5009959",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호 Ra4045812에 대한 재발급을 신청합니다.",
+      "passport_number": "Ra4045812",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호는 M11619936이며,",
+      "passport_number": "M11619936",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "고객님의 여권번호는 MT0342547입니다.",
+      "passport_number": "MT0342547",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 R19294231인 여권을 신청합니다.",
+      "passport_number": "R19294231",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권 발급 번호: RC2203980",
+      "passport_number": "RC2203980",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: ME9793989",
+      "passport_number": "ME9793989",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "PASSPORT: RT6736372",
+      "passport_number": "RT6736372",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "PASSPORT: RL13431n4",
+      "passport_number": "RL13431n4",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "Korean Passport: MH6296230",
+      "passport_number": "MH6296230",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호(M43556500)로 조회해주세요.",
+      "passport_number": "M43556500",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RT9458420로 확인됩니다.",
+      "passport_number": "RT9458420",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "내 여권번호는 MU9824733예요.",
+      "passport_number": "MU9824733",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호가 M56696938인 여권을 신청합니다.",
+      "passport_number": "M56696938",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MF6220768입니다.",
+      "passport_number": "MF6220768",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: MB1230779",
+      "passport_number": "MB1230779",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호는 R83517171이며,",
+      "passport_number": "R83517171",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 MT9187507입니다.",
+      "passport_number": "MT9187507",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: Rc4454936",
+      "passport_number": "Rc4454936",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 번호: Mx1375146",
+      "passport_number": "Mx1375146",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 번호: RO7963156",
+      "passport_number": "RO7963156",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 Rg7160841입니다.",
+      "passport_number": "Rg7160841",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "PASSPORT: MI4073097",
+      "passport_number": "MI4073097",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: M46951913",
+      "passport_number": "M46951913",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "Korean Passport: ND7309330",
+      "passport_number": "ND7309330",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "M72774229 번호로 발급된 여권입니다.",
+      "passport_number": "M72774229",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RN8218968입니다.",
+      "passport_number": "RN8218968",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: RM804031",
+      "passport_number": "RM804031",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호가 MQ79712400인 여권을 신청합니다.",
+      "passport_number": "MQ79712400",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권발급번호: RR4229124",
+      "passport_number": "RR4229124",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: M62015486",
+      "passport_number": "M62015486",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "PASSPORT: R60361890",
+      "passport_number": "R60361890",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호는 M91515177입니다.",
+      "passport_number": "M91515177",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 M32936351인 여권을 신청합니다.",
+      "passport_number": "M32936351",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권: RR5918379",
+      "passport_number": "RR5918379",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권발급번호: Y75910982",
+      "passport_number": "Y75910982",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 M82443478이며,",
+      "passport_number": "M82443478",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "PASSPORT NUMBER: MP8495278",
+      "passport_number": "MP8495278",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호(Rb4458594)로 조회해주세요.",
+      "passport_number": "Rb4458594",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 발급 번호: ML7249386",
+      "passport_number": "ML7249386",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: M18733114",
+      "passport_number": "M18733114",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 R55272200입니다.",
+      "passport_number": "R55272200",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 R672500694입니다.",
+      "passport_number": "R672500694",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "고객님의 여권번호는 RK7534161입니다.",
+      "passport_number": "RK7534161",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: RR2563538",
+      "passport_number": "RR2563538",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "ME2r52113 번호로 발급된 여권입니다.",
+      "passport_number": "ME2r52113",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: ME3491957",
+      "passport_number": "ME3491957",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 RN0683632입니다.",
+      "passport_number": "RN0683632",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호(RK1594671)로 조회해주세요.",
+      "passport_number": "RK1594671",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권번호 MY1929232에 대한 재발급을 신청합니다.",
+      "passport_number": "MY1929232",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호 R31184154로 발급되었습니다.",
+      "passport_number": "R31184154",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RH2114901입니다.",
+      "passport_number": "RH2114901",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 RX7699533이며,",
+      "passport_number": "RX7699533",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "PASSPORT: RJ3468557",
+      "passport_number": "RJ3468557",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: M95941700",
+      "passport_number": "M95941700",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호가 MC8920223인 여권을 신청합니다.",
+      "passport_number": "MC8920223",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RA6613849입니다.",
+      "passport_number": "RA6613849",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: MO3315167",
+      "passport_number": "MO3315167",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호는 MR9450773입니다.",
+      "passport_number": "MR9450773",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 MF3471297입니다.",
+      "passport_number": "MF3471297",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 MS3136588입니다.",
+      "passport_number": "MS3136588",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: ML3062691",
+      "passport_number": "ML3062691",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권: RC5783688",
+      "passport_number": "RC5783688",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "Korean Passport: RX0278061",
+      "passport_number": "RX0278061",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호는 MA3054860이며,",
+      "passport_number": "MA3054860",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호(M67873290)로 조회해주세요.",
+      "passport_number": "M67873290",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Korean Passport: RK49108291",
+      "passport_number": "RK49108291",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RL4021643로 확인됩니다.",
+      "passport_number": "RL4021643",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호 R14132879에 대한 재발급을 신청합니다.",
+      "passport_number": "R14132879",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "본인의 여권번호는 R80353369입니다.",
+      "passport_number": "R80353369",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT: M94619032",
+      "passport_number": "M94619032",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "내 여권번호는 RC9006103예요.",
+      "passport_number": "RC9006103",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT NUMBER: MZ4317862",
+      "passport_number": "MZ4317862",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "내 여권번호는 RO5032883예요.",
+      "passport_number": "RO5032883",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권정보: RN3038507",
+      "passport_number": "RN3038507",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권정보: MJ4528862",
+      "passport_number": "MJ4528862",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MK3346839입니다.",
+      "passport_number": "MK3346839",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 RO3663027에 대한 재발급을 신청합니다.",
+      "passport_number": "RO3663027",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호는 D71724483이며,",
+      "passport_number": "D71724483",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: MO1908411",
+      "passport_number": "MO1908411",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호가 M86676430인 여권을 신청합니다.",
+      "passport_number": "M86676430",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권발급번호: R23057433",
+      "passport_number": "R23057433",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 MB998791w입니다.",
+      "passport_number": "MB998791w",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "본인의 여권번호는 R78780779입니다.",
+      "passport_number": "R78780779",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: MS3708150",
+      "passport_number": "MS3708150",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RE7512349입니다.",
+      "passport_number": "RE7512349",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 RC3105653인 여권을 신청합니다.",
+      "passport_number": "RC3105653",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호 RL6206507에 대한 재발급을 신청합니다.",
+      "passport_number": "RL6206507",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호는 ML2454372입니다.",
+      "passport_number": "ML2454372",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 RL9968990에 대한 재발급을 신청합니다.",
+      "passport_number": "RL9968990",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "R67042497 번호로 발급된 여권입니다.",
+      "passport_number": "R67042497",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "PASSPORT: RL2720207",
+      "passport_number": "RL2720207",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호 MH7708805에 대한 재발급을 신청합니다.",
+      "passport_number": "MH7708805",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "내 여권번호는 M959364779예요.",
+      "passport_number": "M959364779",
+      "is_valid": false,
+      "template": "내 여권번호는 {number}예요.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "PASSPORT: M13121587",
+      "passport_number": "M13121587",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권 번호: RW5681687",
+      "passport_number": "RW5681687",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "Korean Passport: RJ4149624",
+      "passport_number": "RJ4149624",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RK4382550로 확인됩니다.",
+      "passport_number": "RK4382550",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권 번호: RZ4648811",
+      "passport_number": "RZ4648811",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권 번호: RV686o437",
+      "passport_number": "RV686o437",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호는 MG6776783입니다.",
+      "passport_number": "MG6776783",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Passport: RK5078492",
+      "passport_number": "RK5078492",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호 MI2552871에 대한 재발급을 신청합니다.",
+      "passport_number": "MI2552871",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "Korean Passport: M74537392",
+      "passport_number": "M74537392",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "MS3487684 번호로 발급된 여권입니다.",
+      "passport_number": "MS3487684",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "본인의 여권번호는 MS7132076입니다.",
+      "passport_number": "MS7132076",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RF3277788입니다.",
+      "passport_number": "RF3277788",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT: MU0586324",
+      "passport_number": "MU0586324",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호는 R36650346입니다.",
+      "passport_number": "R36650346",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: MR0460607",
+      "passport_number": "MR0460607",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호는 RK9970864이며,",
+      "passport_number": "RK9970864",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권정보: RI7472607",
+      "passport_number": "RI7472607",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호가 RR1312340인 여권을 신청합니다.",
+      "passport_number": "RR1312340",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권발급번호: MS9515990",
+      "passport_number": "MS9515990",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권번호(O82179118)로 조회해주세요.",
+      "passport_number": "O82179118",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "본인의 여권번호는 MF0775776입니다.",
+      "passport_number": "MF0775776",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: MT4358363",
+      "passport_number": "MT4358363",
+      "is_valid": false,
+      "template": "여권정보: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권: MV6787942",
+      "passport_number": "MV6787942",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "PASSPORT: M94204227",
+      "passport_number": "M94204227",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "Korean Passport: RR7263479",
+      "passport_number": "RR7263479",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 M93030076입니다.",
+      "passport_number": "M93030076",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: RZ3037870",
+      "passport_number": "RZ3037870",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호 M15050168로 발급되었습니다.",
+      "passport_number": "M15050168",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "내 여권번호는 RR8299947예요.",
+      "passport_number": "RR8299947",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권 발급 번호: R90523457",
+      "passport_number": "R90523457",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 R31189599입니다.",
+      "passport_number": "R31189599",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 R03125134입니다.",
+      "passport_number": "R03125134",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 RN8112105로 발급되었습니다.",
+      "passport_number": "RN8112105",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호 MI6750806로 발급되었습니다.",
+      "passport_number": "MI6750806",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: MQ6549453",
+      "passport_number": "MQ6549453",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호는 RY7053468이며,",
+      "passport_number": "RY7053468",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권: RN4521817",
+      "passport_number": "RN4521817",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권발급번호: RG6595419",
+      "passport_number": "RG6595419",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권 발급 번호: RA5587079",
+      "passport_number": "RA5587079",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호가 M81596216인 여권을 신청합니다.",
+      "passport_number": "M81596216",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호 M21016141로 발급되었습니다.",
+      "passport_number": "M21016141",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "고객님의 여권번호는 MA4076957입니다.",
+      "passport_number": "MA4076957",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권발급번호: RW1878418",
+      "passport_number": "RW1878418",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "내 여권번호는 RL6168092예요.",
+      "passport_number": "RL6168092",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT NUMBER: GC5083046",
+      "passport_number": "GC5083046",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권발급번호: RT5161704",
+      "passport_number": "RT5161704",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: M54631225",
+      "passport_number": "M54631225",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호는 MJ8266182이며,",
+      "passport_number": "MJ8266182",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 RN0434290이며,",
+      "passport_number": "RN0434290",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권정보: ME2241524",
+      "passport_number": "ME2241524",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MR9855536로 확인됩니다.",
+      "passport_number": "MR9855536",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호가 MG1430165인 여권을 신청합니다.",
+      "passport_number": "MG1430165",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호는 Rd4021007이며,",
+      "passport_number": "Rd4021007",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 번호: RM7456810",
+      "passport_number": "RM7456810",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권 번호: RM3056881",
+      "passport_number": "RM3056881",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권발급번호: RN5173790",
+      "passport_number": "RN5173790",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권 번호: M59966074",
+      "passport_number": "M59966074",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: OO7238563",
+      "passport_number": "OO7238563",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호(MW4370516)로 조회해주세요.",
+      "passport_number": "MW4370516",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권 번호: M98802357",
+      "passport_number": "M98802357",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권 번호: MZ8883309",
+      "passport_number": "MZ8883309",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MM8582063로 확인됩니다.",
+      "passport_number": "MM8582063",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RB7983953로 확인됩니다.",
+      "passport_number": "RB7983953",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 Mk8986543로 확인됩니다.",
+      "passport_number": "Mk8986543",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호는 M27212073이며,",
+      "passport_number": "M27212073",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RS9255011로 확인됩니다.",
+      "passport_number": "RS9255011",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RS0246029입니다.",
+      "passport_number": "RS0246029",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RM7822736로 확인됩니다.",
+      "passport_number": "RM7822736",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호 R08094662에 대한 재발급을 신청합니다.",
+      "passport_number": "R08094662",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호 Rk3289410로 발급되었습니다.",
+      "passport_number": "Rk3289410",
+      "is_valid": false,
+      "template": "여권번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 R14442466로 확인됩니다.",
+      "passport_number": "R14442466",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 MS1337231로 확인됩니다.",
+      "passport_number": "MS1337231",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권: MM5391240",
+      "passport_number": "MM5391240",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권: RG01847306",
+      "passport_number": "RG01847306",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "PASSPORT: RM0738889",
+      "passport_number": "RM0738889",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 R01955038입니다.",
+      "passport_number": "R01955038",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 R64521100이며,",
+      "passport_number": "R64521100",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "Ru7945103 번호로 발급된 여권입니다.",
+      "passport_number": "Ru7945103",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 발급 번호: M13130554",
+      "passport_number": "M13130554",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: MD9000280",
+      "passport_number": "MD9000280",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "내 여권번호는 RZ9732612예요.",
+      "passport_number": "RZ9732612",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호 RM0838277로 발급되었습니다.",
+      "passport_number": "RM0838277",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호 R00382743로 발급되었습니다.",
+      "passport_number": "R00382743",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호 RI5649085로 발급되었습니다.",
+      "passport_number": "RI5649085",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: MJ2969241",
+      "passport_number": "MJ2969241",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 MU1315879입니다.",
+      "passport_number": "MU1315879",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: MK1689086",
+      "passport_number": "MK1689086",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "TA7664658 번호로 발급된 여권입니다.",
+      "passport_number": "TA7664658",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "PASSPORT: RI1097301",
+      "passport_number": "RI1097301",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권발급번호: MQ8528654",
+      "passport_number": "MQ8528654",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "Korean Passport: R75010772",
+      "passport_number": "R75010772",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권정보: MU8261562",
+      "passport_number": "MU8261562",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호 R71787308에 대한 재발급을 신청합니다.",
+      "passport_number": "R71787308",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권발급번호: MR334132",
+      "passport_number": "MR334132",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권 발급 번호: B65301939",
+      "passport_number": "B65301939",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 MJ8881615이며,",
+      "passport_number": "MJ8881615",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "PASSPORT: R32318424",
+      "passport_number": "R32318424",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RP6581056입니다.",
+      "passport_number": "RP6581056",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권 발급 번호: MZ7800156",
+      "passport_number": "MZ7800156",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호는 MK6615921이며,",
+      "passport_number": "MK6615921",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 MP8185409입니다.",
+      "passport_number": "MP8185409",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 RJ6006466입니다.",
+      "passport_number": "RJ6006466",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 R34097152입니다.",
+      "passport_number": "R34097152",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권발급번호: RG8248104",
+      "passport_number": "RG8248104",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권: MT6931859",
+      "passport_number": "MT6931859",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MM5152805로 확인됩니다.",
+      "passport_number": "MM5152805",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호는 M74481974입니다.",
+      "passport_number": "M74481974",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT: M54219159",
+      "passport_number": "M54219159",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권정보: R21008965",
+      "passport_number": "R21008965",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권정보: MU3127065",
+      "passport_number": "MU3127065",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호 RE0608267로 발급되었습니다.",
+      "passport_number": "RE0608267",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권 발급 번호: M93339193",
+      "passport_number": "M93339193",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호가 R53802500인 여권을 신청합니다.",
+      "passport_number": "R53802500",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호가 RI2214657인 여권을 신청합니다.",
+      "passport_number": "RI2214657",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "PASSPORT: MQ2562719",
+      "passport_number": "MQ2562719",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호 RP4922881로 발급되었습니다.",
+      "passport_number": "RP4922881",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "내 여권번호는 RI0396766예요.",
+      "passport_number": "RI0396766",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT NUMBER: MS7462148",
+      "passport_number": "MS7462148",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권 발급 번호: ME2211468",
+      "passport_number": "ME2211468",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 RD6387626입니다.",
+      "passport_number": "RD6387626",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권발급번호: Mp0662552",
+      "passport_number": "Mp0662552",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호는 RC3323703이며,",
+      "passport_number": "RC3323703",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "RM2702947 번호로 발급된 여권입니다.",
+      "passport_number": "RM2702947",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권 번호: RK0212789",
+      "passport_number": "RK0212789",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 R01977274입니다.",
+      "passport_number": "R01977274",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 M12992638에 대한 재발급을 신청합니다.",
+      "passport_number": "M12992638",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호 M37759022에 대한 재발급을 신청합니다.",
+      "passport_number": "M37759022",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "Korean Passport: MF06051215",
+      "passport_number": "MF06051215",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "PASSPORT: RN4242275",
+      "passport_number": "RN4242275",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호는 SW2609538이며,",
+      "passport_number": "SW2609538",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RR5083119로 확인됩니다.",
+      "passport_number": "RR5083119",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "M92596968 번호로 발급된 여권입니다.",
+      "passport_number": "M92596968",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "본인의 여권번호는 MI7978199입니다.",
+      "passport_number": "MI7978199",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호(R44727106)로 조회해주세요.",
+      "passport_number": "R44727106",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권번호는 MV1116219입니다.",
+      "passport_number": "MV1116219",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권: M95187367",
+      "passport_number": "M95187367",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호는 RH4605164입니다.",
+      "passport_number": "RH4605164",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "RI4628856 번호로 발급된 여권입니다.",
+      "passport_number": "RI4628856",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 RN0110442이며,",
+      "passport_number": "RN0110442",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권 발급 번호: R63478869",
+      "passport_number": "R63478869",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호는 RF5492839이며,",
+      "passport_number": "RF5492839",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권: MT5229256",
+      "passport_number": "MT5229256",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MA5124808로 확인됩니다.",
+      "passport_number": "MA5124808",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권 번호: R07182472",
+      "passport_number": "R07182472",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MR0343621로 확인됩니다.",
+      "passport_number": "MR0343621",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호 MK3631953에 대한 재발급을 신청합니다.",
+      "passport_number": "MK3631953",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "고객님의 여권번호는 R99582080입니다.",
+      "passport_number": "R99582080",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권발급번호: RI5209243",
+      "passport_number": "RI5209243",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권 발급 번호: Ma3604808",
+      "passport_number": "Ma3604808",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호는 MH4411944이며,",
+      "passport_number": "MH4411944",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권 발급 번호: R90480325",
+      "passport_number": "R90480325",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호 NI7929899로 발급되었습니다.",
+      "passport_number": "NI7929899",
+      "is_valid": false,
+      "template": "여권번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권: RJ4369442",
+      "passport_number": "RJ4369442",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호는 RO8658831이며,",
+      "passport_number": "RO8658831",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 M33280068이며,",
+      "passport_number": "M33280068",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호 Rm7329387에 대한 재발급을 신청합니다.",
+      "passport_number": "Rm7329387",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 M67568361로 확인됩니다.",
+      "passport_number": "M67568361",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권 번호: MW1590674",
+      "passport_number": "MW1590674",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호가 R50413916인 여권을 신청합니다.",
+      "passport_number": "R50413916",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호 M30043820로 발급되었습니다.",
+      "passport_number": "M30043820",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호 RB0408208로 발급되었습니다.",
+      "passport_number": "RB0408208",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "고객님의 여권번호는 MH4047167입니다.",
+      "passport_number": "MH4047167",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 MB7726122인 여권을 신청합니다.",
+      "passport_number": "MB7726122",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: MM4839899",
+      "passport_number": "MM4839899",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "MF3336814 번호로 발급된 여권입니다.",
+      "passport_number": "MF3336814",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: R95195268",
+      "passport_number": "R95195268",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "M64713009 번호로 발급된 여권입니다.",
+      "passport_number": "M64713009",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권 발급 번호: RO8975095",
+      "passport_number": "RO8975095",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: MB3148773",
+      "passport_number": "MB3148773",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호 RWq274602에 대한 재발급을 신청합니다.",
+      "passport_number": "RWq274602",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권 발급 번호: V97769343",
+      "passport_number": "V97769343",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권: MY9752463",
+      "passport_number": "MY9752463",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "MK8192875 번호로 발급된 여권입니다.",
+      "passport_number": "MK8192875",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호(RX8893510)로 조회해주세요.",
+      "passport_number": "RX8893510",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "본인의 여권번호는 OY2533550입니다.",
+      "passport_number": "OY2533550",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "PASSPORT: M82342139",
+      "passport_number": "M82342139",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권발급번호: R95877414",
+      "passport_number": "R95877414",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권: M22309682",
+      "passport_number": "M22309682",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 RO985233입니다.",
+      "passport_number": "RO985233",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호(RE1850117)로 조회해주세요.",
+      "passport_number": "RE1850117",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 FB6310766입니다.",
+      "passport_number": "FB6310766",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "MW0533508 번호로 발급된 여권입니다.",
+      "passport_number": "MW0533508",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호 Ms5958158에 대한 재발급을 신청합니다.",
+      "passport_number": "Ms5958158",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호 Rt6194843로 발급되었습니다.",
+      "passport_number": "Rt6194843",
+      "is_valid": false,
+      "template": "여권번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호가 RE5675721인 여권을 신청합니다.",
+      "passport_number": "RE5675721",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권 번호: M23604582",
+      "passport_number": "M23604582",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RD7z27678로 확인됩니다.",
+      "passport_number": "RD7z27678",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권: Rw6442310",
+      "passport_number": "Rw6442310",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RG4283266로 확인됩니다.",
+      "passport_number": "RG4283266",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권정보: M00026846",
+      "passport_number": "M00026846",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호는 MF2150306이며,",
+      "passport_number": "MF2150306",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권 발급 번호: ZR5371186",
+      "passport_number": "ZR5371186",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권: M80172442",
+      "passport_number": "M80172442",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권 발급 번호: QW7543709",
+      "passport_number": "QW7543709",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "MK8609571 번호로 발급된 여권입니다.",
+      "passport_number": "MK8609571",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 M87814d37로 확인됩니다.",
+      "passport_number": "M87814d37",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MF6967351입니다.",
+      "passport_number": "MF6967351",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 RZ2358770입니다.",
+      "passport_number": "RZ2358770",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 여권번호는 R37427884입니다.",
+      "passport_number": "R37427884",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Passport: M25812482",
+      "passport_number": "M25812482",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "RD3648895 번호로 발급된 여권입니다.",
+      "passport_number": "RD3648895",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호는 RK3699237이며,",
+      "passport_number": "RK3699237",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호 RT5414633로 발급되었습니다.",
+      "passport_number": "RT5414633",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "Korean Passport: RV2913430",
+      "passport_number": "RV2913430",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 MM2476931입니다.",
+      "passport_number": "MM2476931",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 R50883106입니다.",
+      "passport_number": "R50883106",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 RE4n87723이며,",
+      "passport_number": "RE4n87723",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호는 MJ1344661이며,",
+      "passport_number": "MJ1344661",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "M53658625 번호로 발급된 여권입니다.",
+      "passport_number": "M53658625",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 RQ0368013입니다.",
+      "passport_number": "RQ0368013",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MV6487314입니다.",
+      "passport_number": "MV6487314",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: MV9294614",
+      "passport_number": "MV9294614",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권정보: RA4819969",
+      "passport_number": "RA4819969",
+      "is_valid": false,
+      "template": "여권정보: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권발급번호: I59640895",
+      "passport_number": "I59640895",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RJ7437223로 확인됩니다.",
+      "passport_number": "RJ7437223",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호가 RH3241062인 여권을 신청합니다.",
+      "passport_number": "RH3241062",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "내 여권번호는 J07029827예요.",
+      "passport_number": "J07029827",
+      "is_valid": false,
+      "template": "내 여권번호는 {number}예요.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 R98221562이며,",
+      "passport_number": "R98221562",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 R05798167입니다.",
+      "passport_number": "R05798167",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호(M96481953)로 조회해주세요.",
+      "passport_number": "M96481953",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "PASSPORT: RC8492794",
+      "passport_number": "RC8492794",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "PASSPORT: RD6899080",
+      "passport_number": "RD6899080",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "RG2748882 번호로 발급된 여권입니다.",
+      "passport_number": "RG2748882",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RK5538444로 확인됩니다.",
+      "passport_number": "RK5538444",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권 발급 번호: M30176522",
+      "passport_number": "M30176522",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "Korean Passport: MD7436083",
+      "passport_number": "MD7436083",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호는 SW8087939입니다.",
+      "passport_number": "SW8087939",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호가 RO4638367인 여권을 신청합니다.",
+      "passport_number": "RO4638367",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호가 MU9162536인 여권을 신청합니다.",
+      "passport_number": "MU9162536",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권: RM7151861",
+      "passport_number": "RM7151861",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 RA3128203입니다.",
+      "passport_number": "RA3128203",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MV2913411입니다.",
+      "passport_number": "MV2913411",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RN6927244",
+      "passport_number": "RN6927244",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권정보: RE6176968",
+      "passport_number": "RE6176968",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 R83584049입니다.",
+      "passport_number": "R83584049",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Passport: MJ5079585",
+      "passport_number": "MJ5079585",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: ME0080787",
+      "passport_number": "ME0080787",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권 번호: MG6702087",
+      "passport_number": "MG6702087",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권: M51456355",
+      "passport_number": "M51456355",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "PASSPORT: R44191897",
+      "passport_number": "R44191897",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 RU7044974입니다.",
+      "passport_number": "RU7044974",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 M48619033에 대한 재발급을 신청합니다.",
+      "passport_number": "M48619033",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호가 MV2653094인 여권을 신청합니다.",
+      "passport_number": "MV2653094",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호 MV6863653로 발급되었습니다.",
+      "passport_number": "MV6863653",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "M18030752 번호로 발급된 여권입니다.",
+      "passport_number": "M18030752",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "JS9810229 번호로 발급된 여권입니다.",
+      "passport_number": "JS9810229",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: RY7075037",
+      "passport_number": "RY7075037",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 MY2722713입니다.",
+      "passport_number": "MY2722713",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 Mt1354714입니다.",
+      "passport_number": "Mt1354714",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호는 R74320906이며,",
+      "passport_number": "R74320906",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 MW7362292입니다.",
+      "passport_number": "MW7362292",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "고객님의 여권번호는 M68035817입니다.",
+      "passport_number": "M68035817",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RL35518j0로 확인됩니다.",
+      "passport_number": "RL35518j0",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 M98399743로 확인됩니다.",
+      "passport_number": "M98399743",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권 발급 번호: MA6466527",
+      "passport_number": "MA6466527",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권: MO8923602",
+      "passport_number": "MO8923602",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "Korean Passport: MM5600979",
+      "passport_number": "MM5600979",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "내 여권번호는 M62564243예요.",
+      "passport_number": "M62564243",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT NUMBER: RD3105409",
+      "passport_number": "RD3105409",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권 번호: MU1395497",
+      "passport_number": "MU1395497",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: MP6694985",
+      "passport_number": "MP6694985",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권: RT1394867",
+      "passport_number": "RT1394867",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호는 RN9827995입니다.",
+      "passport_number": "RN9827995",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "내 여권번호는 M74001550예요.",
+      "passport_number": "M74001550",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RV7627446입니다.",
+      "passport_number": "RV7627446",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT: O47522425",
+      "passport_number": "O47522425",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권: R087814013",
+      "passport_number": "R087814013",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MM0409223로 확인됩니다.",
+      "passport_number": "MM0409223",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "내 여권번호는 RS7426945예요.",
+      "passport_number": "RS7426945",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호는 MM5861983이며,",
+      "passport_number": "MM5861983",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호 MB9389464로 발급되었습니다.",
+      "passport_number": "MB9389464",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "본인의 여권번호는 RO8917998입니다.",
+      "passport_number": "RO8917998",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 MK7441266로 발급되었습니다.",
+      "passport_number": "MK7441266",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "본인의 여권번호는 RN8747116입니다.",
+      "passport_number": "RN8747116",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 MW7110467로 발급되었습니다.",
+      "passport_number": "MW7110467",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호 MN3125628로 발급되었습니다.",
+      "passport_number": "MN3125628",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RQ7791195",
+      "passport_number": "RQ7791195",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호가 E59572243인 여권을 신청합니다.",
+      "passport_number": "E59572243",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권 발급 번호: PG1941283",
+      "passport_number": "PG1941283",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권: RL5158948",
+      "passport_number": "RL5158948",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권: RL7715035",
+      "passport_number": "RL7715035",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RJj861925입니다.",
+      "passport_number": "RJj861925",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: R13878316",
+      "passport_number": "R13878316",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권발급번호: R32556516",
+      "passport_number": "R32556516",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권번호는 RE2512186입니다.",
+      "passport_number": "RE2512186",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "M56092051 번호로 발급된 여권입니다.",
+      "passport_number": "M56092051",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RI8659814",
+      "passport_number": "RI8659814",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권발급번호: MI9936287",
+      "passport_number": "MI9936287",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "Korean Passport: RV4914011",
+      "passport_number": "RV4914011",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 R69341189입니다.",
+      "passport_number": "R69341189",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 MX4114597로 발급되었습니다.",
+      "passport_number": "MX4114597",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권 번호: M78280009",
+      "passport_number": "M78280009",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "내 여권번호는 RI2017768예요.",
+      "passport_number": "RI2017768",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "RZ5206881 번호로 발급된 여권입니다.",
+      "passport_number": "RZ5206881",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권 번호: R89377172",
+      "passport_number": "R89377172",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권: MH4074714",
+      "passport_number": "MH4074714",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호가 RR70303q4인 여권을 신청합니다.",
+      "passport_number": "RR70303q4",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권 번호: Mk8210909",
+      "passport_number": "Mk8210909",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: AJ4044815",
+      "passport_number": "AJ4044815",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "R78491739 번호로 발급된 여권입니다.",
+      "passport_number": "R78491739",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "본인의 여권번호는 MC3037324입니다.",
+      "passport_number": "MC3037324",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RX4642773로 확인됩니다.",
+      "passport_number": "RX4642773",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "고객님의 여권번호는 MV1907033입니다.",
+      "passport_number": "MV1907033",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 여권번호는 RC0643840입니다.",
+      "passport_number": "RC0643840",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 MD8445767로 확인됩니다.",
+      "passport_number": "MD8445767",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권 번호: RY3397159",
+      "passport_number": "RY3397159",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MH2893997입니다.",
+      "passport_number": "MH2893997",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: M13482006",
+      "passport_number": "M13482006",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호 RN3891256에 대한 재발급을 신청합니다.",
+      "passport_number": "RN3891256",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호는 RO3160647이며,",
+      "passport_number": "RO3160647",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권정보: R80164541",
+      "passport_number": "R80164541",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "Korean Passport: M55907776",
+      "passport_number": "M55907776",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권: MD0696071",
+      "passport_number": "MD0696071",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권 발급 번호: R49032621",
+      "passport_number": "R49032621",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호가 RY6977923인 여권을 신청합니다.",
+      "passport_number": "RY6977923",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "PASSPORT: M33600040",
+      "passport_number": "M33600040",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권 발급 번호: MB6688333",
+      "passport_number": "MB6688333",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "내 여권번호는 RP6664p69예요.",
+      "passport_number": "RP6664p69",
+      "is_valid": false,
+      "template": "내 여권번호는 {number}예요.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "내 여권번호는 XL8158488예요.",
+      "passport_number": "XL8158488",
+      "is_valid": false,
+      "template": "내 여권번호는 {number}예요.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 R78998396입니다.",
+      "passport_number": "R78998396",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 MW2501112로 확인됩니다.",
+      "passport_number": "MW2501112",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호는 M1057660입니다.",
+      "passport_number": "M1057660",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권 번호: MX7514015",
+      "passport_number": "MX7514015",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호 HQ9286191로 발급되었습니다.",
+      "passport_number": "HQ9286191",
+      "is_valid": false,
+      "template": "여권번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권정보: M21702132",
+      "passport_number": "M21702132",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 M16735011로 확인됩니다.",
+      "passport_number": "M16735011",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PASSPORT: SK0337638",
+      "passport_number": "SK0337638",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "본인의 여권번호는 CJ8614394입니다.",
+      "passport_number": "CJ8614394",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 R89861230입니다.",
+      "passport_number": "R89861230",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RB1681062입니다.",
+      "passport_number": "RB1681062",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RS746491y입니다.",
+      "passport_number": "RS746491y",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호(MQ15761844)로 조회해주세요.",
+      "passport_number": "MQ15761844",
+      "is_valid": false,
+      "template": "여권번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권발급번호: RGz188669",
+      "passport_number": "RGz188669",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호는 MS2p31526입니다.",
+      "passport_number": "MS2p31526",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "고객님의 여권번호는 R96603591입니다.",
+      "passport_number": "R96603591",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: RR9236686",
+      "passport_number": "RR9236686",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "Korean Passport: RY5612306",
+      "passport_number": "RY5612306",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호 M5019588로 발급되었습니다.",
+      "passport_number": "M5019588",
+      "is_valid": false,
+      "template": "여권번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "해당 고객의 여권번호는 MP3436737로 확인됩니다.",
+      "passport_number": "MP3436737",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Korean Passport: RV5788291",
+      "passport_number": "RV5788291",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 M91658546입니다.",
+      "passport_number": "M91658546",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "내 여권번호는 RX8827751예요.",
+      "passport_number": "RX8827751",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권정보: RX0342588",
+      "passport_number": "RX0342588",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권 번호: M92339857",
+      "passport_number": "M92339857",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "내 여권번호는 RB6141590예요.",
+      "passport_number": "RB6141590",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RA9983538입니다.",
+      "passport_number": "RA9983538",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호가 RC6736830인 여권을 신청합니다.",
+      "passport_number": "RC6736830",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권 번호: Ry2898721",
+      "passport_number": "Ry2898721",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 번호: M28q78979",
+      "passport_number": "M28q78979",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "MO1285976 번호로 발급된 여권입니다.",
+      "passport_number": "MO1285976",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "고객님의 여권번호는 RX5342916입니다.",
+      "passport_number": "RX5342916",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 WK9581181입니다.",
+      "passport_number": "WK9581181",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 RFe087379이며,",
+      "passport_number": "RFe087379",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "M63717769 번호로 발급된 여권입니다.",
+      "passport_number": "M63717769",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "Korean Passport: ML4160640",
+      "passport_number": "ML4160640",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "내 여권번호는 MR7277006예요.",
+      "passport_number": "MR7277006",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호 RV2343921로 발급되었습니다.",
+      "passport_number": "RV2343921",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호는 RI7377513이며,",
+      "passport_number": "RI7377513",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "PASSPORT NUMBER: MF4494975",
+      "passport_number": "MF4494975",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호는 M9550289이며,",
+      "passport_number": "M9550289",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권 번호: MW0895576",
+      "passport_number": "MW0895576",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "MQ0630258 번호로 발급된 여권입니다.",
+      "passport_number": "MQ0630258",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "PASSPORT: MY6998581",
+      "passport_number": "MY6998581",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "PASSPORT: MF8446289",
+      "passport_number": "MF8446289",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호가 RS5197623인 여권을 신청합니다.",
+      "passport_number": "RS5197623",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 ML9612124로 확인됩니다.",
+      "passport_number": "ML9612124",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RP5147696입니다.",
+      "passport_number": "RP5147696",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 RU777769입니다.",
+      "passport_number": "RU777769",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권 발급 번호: MP0981065",
+      "passport_number": "MP0981065",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 M64737391입니다.",
+      "passport_number": "M64737391",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 여권번호는 M367878981입니다.",
+      "passport_number": "M367878981",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "본인의 여권번호는 RH9208896입니다.",
+      "passport_number": "RH9208896",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: MH7913391",
+      "passport_number": "MH7913391",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 MC1562114입니다.",
+      "passport_number": "MC1562114",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "내 여권번호는 MB9817149예요.",
+      "passport_number": "MB9817149",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT NUMBER: MP4444993",
+      "passport_number": "MP4444993",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "PASSPORT: ML0265862",
+      "passport_number": "ML0265862",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "PASSPORT: RU3532057",
+      "passport_number": "RU3532057",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호는 R7038426이며,",
+      "passport_number": "R7038426",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호는 Mb8539833입니다.",
+      "passport_number": "Mb8539833",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호 R00701837에 대한 재발급을 신청합니다.",
+      "passport_number": "R00701837",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호 RP8451602로 발급되었습니다.",
+      "passport_number": "RP8451602",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호는 MV8440799입니다.",
+      "passport_number": "MV8440799",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 여권번호는 RB7956636입니다.",
+      "passport_number": "RB7956636",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: MB9050810",
+      "passport_number": "MB9050810",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권: M27498086",
+      "passport_number": "M27498086",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권: RY3217992",
+      "passport_number": "RY3217992",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호가 RC3931212인 여권을 신청합니다.",
+      "passport_number": "RC3931212",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 M02452140로 확인됩니다.",
+      "passport_number": "M02452140",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권번호가 RX8713449인 여권을 신청합니다.",
+      "passport_number": "RX8713449",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호 ML2667176로 발급되었습니다.",
+      "passport_number": "ML2667176",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호가 RR3302671인 여권을 신청합니다.",
+      "passport_number": "RR3302671",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "여권번호 RE6722714에 대한 재발급을 신청합니다.",
+      "passport_number": "RE6722714",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권정보: RJ0533564",
+      "passport_number": "RJ0533564",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RS6947597로 확인됩니다.",
+      "passport_number": "RS6947597",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "여권: MI5565683",
+      "passport_number": "MI5565683",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호 Mq3307448에 대한 재발급을 신청합니다.",
+      "passport_number": "Mq3307448",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권 번호: M96912500",
+      "passport_number": "M96912500",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 M36580198입니다.",
+      "passport_number": "M36580198",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 Mw4973986로 확인됩니다.",
+      "passport_number": "Mw4973986",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권: M97897727",
+      "passport_number": "M97897727",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권 번호: Mj2651086",
+      "passport_number": "Mj2651086",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "본인의 여권번호는 M75914740입니다.",
+      "passport_number": "M75914740",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권발급번호: MF7227682",
+      "passport_number": "MF7227682",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "Korean Passport: RJ8995056",
+      "passport_number": "RJ8995056",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권발급번호: R87955519",
+      "passport_number": "R87955519",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권발급번호: M048l4369",
+      "passport_number": "M048l4369",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권정보: RI4745038",
+      "passport_number": "RI4745038",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MR1632142입니다.",
+      "passport_number": "MR1632142",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT: RA0942372",
+      "passport_number": "RA0942372",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호 RQ4410046로 발급되었습니다.",
+      "passport_number": "RQ4410046",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "고객님의 여권번호는 M59275796입니다.",
+      "passport_number": "M59275796",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: RA5368999",
+      "passport_number": "RA5368999",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 ME70103585입니다.",
+      "passport_number": "ME70103585",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호 MQ4792673에 대한 재발급을 신청합니다.",
+      "passport_number": "MQ4792673",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호가 RX5173044인 여권을 신청합니다.",
+      "passport_number": "RX5173044",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 Rr4332380로 확인됩니다.",
+      "passport_number": "Rr4332380",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권: MS1391325",
+      "passport_number": "MS1391325",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "본인의 여권번호는 RZ6580740입니다.",
+      "passport_number": "RZ6580740",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RL8842609입니다.",
+      "passport_number": "RL8842609",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "PASSPORT: MC7783344",
+      "passport_number": "MC7783344",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권 번호: MD4005651",
+      "passport_number": "MD4005651",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호 RR4301444로 발급되었습니다.",
+      "passport_number": "RR4301444",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: MR7835819",
+      "passport_number": "MR7835819",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권정보: MP6685918",
+      "passport_number": "MP6685918",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권 발급 번호: ML9681430",
+      "passport_number": "ML9681430",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "Korean Passport: M87305700",
+      "passport_number": "M87305700",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권 번호: MY6220424",
+      "passport_number": "MY6220424",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권정보: M91392730",
+      "passport_number": "M91392730",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: R964l3864",
+      "passport_number": "R964l3864",
+      "is_valid": false,
+      "template": "PASSPORT NUMBER: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "고객님의 여권번호는 MW561749입니다.",
+      "passport_number": "MW561749",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권정보: MK2443513",
+      "passport_number": "MK2443513",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MH5912174입니다.",
+      "passport_number": "MH5912174",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 MX0530948에 대한 재발급을 신청합니다.",
+      "passport_number": "MX0530948",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "PASSPORT: MQ8304036",
+      "passport_number": "MQ8304036",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호는 RX0240674이며,",
+      "passport_number": "RX0240674",
+      "is_valid": false,
+      "template": "여권번호는 {number}이며,",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권: MP2709049",
+      "passport_number": "MP2709049",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권번호는 MM2953021입니다.",
+      "passport_number": "MM2953021",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: RW4621765",
+      "passport_number": "RW4621765",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: RC8673180",
+      "passport_number": "RC8673180",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "내 여권번호는 R10545082예요.",
+      "passport_number": "R10545082",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT NUMBER: ML9534295",
+      "passport_number": "ML9534295",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 CP5748870입니다.",
+      "passport_number": "CP5748870",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "Korean Passport: MQ5448469",
+      "passport_number": "MQ5448469",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권 번호: RO1413877",
+      "passport_number": "RO1413877",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: MG136273",
+      "passport_number": "MG136273",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "본인의 여권번호는 Rd6872684입니다.",
+      "passport_number": "Rd6872684",
+      "is_valid": false,
+      "template": "본인의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "본인의 여권번호는 MP5233990입니다.",
+      "passport_number": "MP5233990",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RC1379467",
+      "passport_number": "RC1379467",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RG41x5420입니다.",
+      "passport_number": "RG41x5420",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "고객님의 여권번호는 MJ4493210입니다.",
+      "passport_number": "MJ4493210",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: M19747721",
+      "passport_number": "M19747721",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호는 RT2690663입니다.",
+      "passport_number": "RT2690663",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호(M21551314)로 조회해주세요.",
+      "passport_number": "M21551314",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "PASSPORT: M30748015",
+      "passport_number": "M30748015",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호 RQ5769686로 발급되었습니다.",
+      "passport_number": "RQ5769686",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "PASSPORT: M92492093",
+      "passport_number": "M92492093",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권발급번호: RV5w97365",
+      "passport_number": "RV5w97365",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권 발급 번호: M43122006",
+      "passport_number": "M43122006",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권정보: MI3223343",
+      "passport_number": "MI3223343",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권정보: MX5935940",
+      "passport_number": "MX5935940",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "PASSPORT: M53625287",
+      "passport_number": "M53625287",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호(RS8589740)로 조회해주세요.",
+      "passport_number": "RS8589740",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Korean Passport: R17945630",
+      "passport_number": "R17945630",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권발급번호: MO5618099",
+      "passport_number": "MO5618099",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권 발급 번호: R23q43144",
+      "passport_number": "R23q43144",
+      "is_valid": false,
+      "template": "여권 발급 번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "ML7896526 번호로 발급된 여권입니다.",
+      "passport_number": "ML7896526",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권정보: MB61q6285",
+      "passport_number": "MB61q6285",
+      "is_valid": false,
+      "template": "여권정보: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "Korean Passport: RP1534791",
+      "passport_number": "RP1534791",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권 발급 번호: RQ4573505",
+      "passport_number": "RQ4573505",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호 MU0858997에 대한 재발급을 신청합니다.",
+      "passport_number": "MU0858997",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "Korean Passport: MC1838192",
+      "passport_number": "MC1838192",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호가 RN3252682인 여권을 신청합니다.",
+      "passport_number": "RN3252682",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "Korean Passport: M16612323",
+      "passport_number": "M16612323",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호가 Mg4543839인 여권을 신청합니다.",
+      "passport_number": "Mg4543839",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권: M38858457",
+      "passport_number": "M38858457",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "여권발급번호: RK7041630",
+      "passport_number": "RK7041630",
+      "is_valid": true,
+      "template": "여권발급번호: {number}"
+    },
+    {
+      "text": "여권정보: R69068929",
+      "passport_number": "R69068929",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호가 RV9820069인 여권을 신청합니다.",
+      "passport_number": "RV9820069",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "Korean Passport: RE6710112",
+      "passport_number": "RE6710112",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호(RW5538503)로 조회해주세요.",
+      "passport_number": "RW5538503",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "여권번호는 SR9252218입니다.",
+      "passport_number": "SR9252218",
+      "is_valid": false,
+      "template": "여권번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "내 여권번호는 MJ2619780예요.",
+      "passport_number": "MJ2619780",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "여권번호는 MR2406841이며,",
+      "passport_number": "MR2406841",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권 발급 번호: R79876352",
+      "passport_number": "R79876352",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: RG9504359",
+      "passport_number": "RG9504359",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권번호(R73032398)로 조회해주세요.",
+      "passport_number": "R73032398",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "MC4155724 번호로 발급된 여권입니다.",
+      "passport_number": "MC4155724",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권번호는 M54555882이며,",
+      "passport_number": "M54555882",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권 번호: R95491632",
+      "passport_number": "R95491632",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "PASSPORT: R09075295",
+      "passport_number": "R09075295",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "여권 발급 번호: RP0624437",
+      "passport_number": "RP0624437",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호(MP6843657)로 조회해주세요.",
+      "passport_number": "MP6843657",
+      "is_valid": true,
+      "template": "여권번호({number})로 조회해주세요."
+    },
+    {
+      "text": "본인의 여권번호는 R48790775입니다.",
+      "passport_number": "R48790775",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 R38193454로 발급되었습니다.",
+      "passport_number": "R38193454",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권 번호: M83019753",
+      "passport_number": "M83019753",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "M53931342 번호로 발급된 여권입니다.",
+      "passport_number": "M53931342",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "본인의 여권번호는 MC8322924입니다.",
+      "passport_number": "MC8322924",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: R78171326",
+      "passport_number": "R78171326",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "Korean Passport: MW148w747",
+      "passport_number": "MW148w747",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "고객님의 여권번호는 MP9035951입니다.",
+      "passport_number": "MP9035951",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권번호 RV5721430로 발급되었습니다.",
+      "passport_number": "RV5721430",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "여권번호는 RL8547219입니다.",
+      "passport_number": "RL8547219",
+      "is_valid": true,
+      "template": "여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권정보: M67807967",
+      "passport_number": "M67807967",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "해당 고객의 여권번호는 RD0867922로 확인됩니다.",
+      "passport_number": "RD0867922",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "본인의 여권번호는 RL0189101입니다.",
+      "passport_number": "RL0189101",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호는 RL7002535이며,",
+      "passport_number": "RL7002535",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MZ9037477입니다.",
+      "passport_number": "MZ9037477",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RT4893121",
+      "passport_number": "RT4893121",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MQ2001861입니다.",
+      "passport_number": "MQ2001861",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "내 여권번호는 RA4857463예요.",
+      "passport_number": "RA4857463",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "PASSPORT: M590626486",
+      "passport_number": "M590626486",
+      "is_valid": false,
+      "template": "PASSPORT: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: RM4988020",
+      "passport_number": "RM4988020",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호 R99635119로 발급되었습니다.",
+      "passport_number": "R99635119",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "MJ2355903 번호로 발급된 여권입니다.",
+      "passport_number": "MJ2355903",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "본인의 여권번호는 RB0312150입니다.",
+      "passport_number": "RB0312150",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RH6206626",
+      "passport_number": "RH6206626",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권 번호: M24968375",
+      "passport_number": "M24968375",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 Rr7997888입니다.",
+      "passport_number": "Rr7997888",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_second_char_number"
+    },
+    {
+      "text": "여권번호 R29103178에 대한 재발급을 신청합니다.",
+      "passport_number": "R29103178",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 M44337876로 확인됩니다.",
+      "passport_number": "M44337876",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PASSPORT NUMBER: RA1009324",
+      "passport_number": "RA1009324",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권번호가 RX8797568인 여권을 신청합니다.",
+      "passport_number": "RX8797568",
+      "is_valid": true,
+      "template": "여권번호가 {number}인 여권을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 R16004164로 확인됩니다.",
+      "passport_number": "R16004164",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "Korean Passport: MU8027919",
+      "passport_number": "MU8027919",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "여권번호 MZ5125981로 발급되었습니다.",
+      "passport_number": "MZ5125981",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RB0888237입니다.",
+      "passport_number": "RB0888237",
+      "is_valid": true,
+      "template": "새로 발급받은 여권번호는 {number}입니다."
+    },
+    {
+      "text": "PASSPORT: M10581395",
+      "passport_number": "M10581395",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "내 여권번호는 RF7943269예요.",
+      "passport_number": "RF7943269",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "RM9760676 번호로 발급된 여권입니다.",
+      "passport_number": "RM9760676",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "R36111672 번호로 발급된 여권입니다.",
+      "passport_number": "R36111672",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 여권입니다."
+    },
+    {
+      "text": "여권: MV8467954",
+      "passport_number": "MV8467954",
+      "is_valid": true,
+      "template": "여권: {number}"
+    },
+    {
+      "text": "PASSPORT NUMBER: MA4769460",
+      "passport_number": "MA4769460",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "내 여권번호는 MN3852245예요.",
+      "passport_number": "MN3852245",
+      "is_valid": true,
+      "template": "내 여권번호는 {number}예요."
+    },
+    {
+      "text": "본인의 여권번호는 RB1513745입니다.",
+      "passport_number": "RB1513745",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 번호: RS3652964",
+      "passport_number": "RS3652964",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권번호 MV1416397로 발급되었습니다.",
+      "passport_number": "MV1416397",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 M78947555로 확인됩니다.",
+      "passport_number": "M78947555",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PASSPORT: RI6843529",
+      "passport_number": "RI6843529",
+      "is_valid": true,
+      "template": "PASSPORT: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 MF82154968입니다.",
+      "passport_number": "MF82154968",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권: MD320524",
+      "passport_number": "MD320524",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권 번호: SI1328824",
+      "passport_number": "SI1328824",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "여권번호는 RD5580280이며,",
+      "passport_number": "RD5580280",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호가 RO581195인 여권을 신청합니다.",
+      "passport_number": "RO581195",
+      "is_valid": false,
+      "template": "여권번호가 {number}인 여권을 신청합니다.",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "여권번호는 RJ2448303이며,",
+      "passport_number": "RJ2448303",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권정보: RZ3991215",
+      "passport_number": "RZ3991215",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권번호 RP9d69480에 대한 재발급을 신청합니다.",
+      "passport_number": "RP9d69480",
+      "is_valid": false,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: MV7799843",
+      "passport_number": "MV7799843",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "Korean Passport: M22368867",
+      "passport_number": "M22368867",
+      "is_valid": true,
+      "template": "Korean Passport: {number}"
+    },
+    {
+      "text": "새로 발급받은 여권번호는 RD9556888입니다.",
+      "passport_number": "RD9556888",
+      "is_valid": false,
+      "template": "새로 발급받은 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "PASSPORT NUMBER: RA5721433",
+      "passport_number": "RA5721433",
+      "is_valid": true,
+      "template": "PASSPORT NUMBER: {number}"
+    },
+    {
+      "text": "여권: TU2191243",
+      "passport_number": "TU2191243",
+      "is_valid": false,
+      "template": "여권: {number}",
+      "invalid_type": "invalid_prefix_number"
+    },
+    {
+      "text": "Korean Passport: MX891811c",
+      "passport_number": "MX891811c",
+      "is_valid": false,
+      "template": "Korean Passport: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "본인의 여권번호는 R13480522입니다.",
+      "passport_number": "R13480522",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권번호 R88796595에 대한 재발급을 신청합니다.",
+      "passport_number": "R88796595",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "여권번호 R00726440에 대한 재발급을 신청합니다.",
+      "passport_number": "R00726440",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 MF0987f92로 확인됩니다.",
+      "passport_number": "MF0987f92",
+      "is_valid": false,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호 R93353875에 대한 재발급을 신청합니다.",
+      "passport_number": "R93353875",
+      "is_valid": true,
+      "template": "여권번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "고객님의 여권번호는 MF498320f입니다.",
+      "passport_number": "MF498320f",
+      "is_valid": false,
+      "template": "고객님의 여권번호는 {number}입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호는 R22391736이며,",
+      "passport_number": "R22391736",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권번호는 RM5190831이며,",
+      "passport_number": "RM5190831",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "여권발급번호: RY532r373",
+      "passport_number": "RY532r373",
+      "is_valid": false,
+      "template": "여권발급번호: {number}",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권번호 MT0184705로 발급되었습니다.",
+      "passport_number": "MT0184705",
+      "is_valid": true,
+      "template": "여권번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "해당 고객의 여권번호는 RP9535572로 확인됩니다.",
+      "passport_number": "RP9535572",
+      "is_valid": true,
+      "template": "해당 고객의 여권번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "M4097s845 번호로 발급된 여권입니다.",
+      "passport_number": "M4097s845",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_chars_number"
+    },
+    {
+      "text": "여권 번호: ME7375574",
+      "passport_number": "ME7375574",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    },
+    {
+      "text": "여권 번호: MS267754",
+      "passport_number": "MS267754",
+      "is_valid": false,
+      "template": "여권 번호: {number}",
+      "invalid_type": "invalid_length_number"
+    },
+    {
+      "text": "본인의 여권번호는 M33720346입니다.",
+      "passport_number": "M33720346",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 여권번호는 R00661622입니다.",
+      "passport_number": "R00661622",
+      "is_valid": true,
+      "template": "본인의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: RS6504253",
+      "passport_number": "RS6504253",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권번호는 RC3019488이며,",
+      "passport_number": "RC3019488",
+      "is_valid": true,
+      "template": "여권번호는 {number}이며,"
+    },
+    {
+      "text": "MK4138339 번호로 발급된 여권입니다.",
+      "passport_number": "MK4138339",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 여권입니다.",
+      "invalid_type": "invalid_checksum_number"
+    },
+    {
+      "text": "여권정보: MI7906642",
+      "passport_number": "MI7906642",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "여권 발급 번호: MA6840480",
+      "passport_number": "MA6840480",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권정보: RD2750721",
+      "passport_number": "RD2750721",
+      "is_valid": true,
+      "template": "여권정보: {number}"
+    },
+    {
+      "text": "고객님의 여권번호는 MN1201166입니다.",
+      "passport_number": "MN1201166",
+      "is_valid": true,
+      "template": "고객님의 여권번호는 {number}입니다."
+    },
+    {
+      "text": "여권 발급 번호: ME6653163",
+      "passport_number": "ME6653163",
+      "is_valid": true,
+      "template": "여권 발급 번호: {number}"
+    },
+    {
+      "text": "여권 번호: RH9142756",
+      "passport_number": "RH9142756",
+      "is_valid": true,
+      "template": "여권 번호: {number}"
+    }
+  ]
+}

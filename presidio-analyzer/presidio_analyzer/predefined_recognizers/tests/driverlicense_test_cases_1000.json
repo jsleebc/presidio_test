@@ -1,0 +1,6232 @@
+{
+  "metadata": {
+    "total_cases": 1000,
+    "valid_cases": 800,
+    "invalid_cases": 200,
+    "template_count": 20
+  },
+  "templates": [
+    "운전면허번호는 {number}입니다.",
+    "면허번호: {number}",
+    "DRIVER LICENSE: {number}",
+    "운전면허 번호: {number}",
+    "본인의 운전면허번호는 {number}입니다.",
+    "해당 고객의 면허번호는 {number}로 확인됩니다.",
+    "면허정보: {number}",
+    "면허증번호: {number}",
+    "운전면허증 번호: {number}",
+    "LICENSE: {number}",
+    "Korean Driver License: {number}",
+    "면허번호 {number}로 발급되었습니다.",
+    "운전면허번호가 {number}인 면허증을 신청합니다.",
+    "면허번호 {number}에 대한 재발급을 신청합니다.",
+    "{number} 번호로 발급된 면허증입니다.",
+    "면허번호({number})로 조회해주세요.",
+    "고객님의 면허번호는 {number}입니다.",
+    "운전면허번호는 {number}이며,",
+    "새로 발급받은 면허번호는 {number}입니다.",
+    "Driver's License Number: {number}"
+  ],
+  "test_cases": [
+    {
+      "text": "면허정보: 21-94-925921-34",
+      "license_number": "21-94-925921-34",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허증번호: 23-10-088551-81",
+      "license_number": "23-10-088551-81",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "고객님의 면허번호는 27-61-792682-62입니다.",
+      "license_number": "27-61-792682-62",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 18-68-A66756-19입니다.",
+      "license_number": "18-68-A66756-19",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허정보: 17-73-6022133-39",
+      "license_number": "17-73-6022133-39",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허 번호: 27-91-322610-99",
+      "license_number": "27-91-322610-99",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 26-56-902859-60",
+      "license_number": "26-56-902859-60",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호 17-74-266947-56에 대한 재발급을 신청합니다.",
+      "license_number": "17-74-266947-56",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "고객님의 면허번호는 23-75-423190-08입니다.",
+      "license_number": "23-75-423190-08",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 13-39-127918-58로 확인됩니다.",
+      "license_number": "13-39-127918-58",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 11-57-175905-85입니다.",
+      "license_number": "11-57-175905-85",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 28-95-651970-33",
+      "license_number": "28-95-651970-33",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호 16-30-005530-89에 대한 재발급을 신청합니다.",
+      "license_number": "16-30-005530-89",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 14-38-193402-28입니다.",
+      "license_number": "14-38-193402-28",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 23-78-626889-50입니다.",
+      "license_number": "23-78-626889-50",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 151291892998입니다.",
+      "license_number": "151291892998",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허정보: 11-27-697805-66",
+      "license_number": "11-27-697805-66",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 14-09-276228-27로 확인됩니다.",
+      "license_number": "14-09-276228-27",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호 26-03-835468-92에 대한 재발급을 신청합니다.",
+      "license_number": "26-03-835468-92",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 22-64-694784-80로 확인됩니다.",
+      "license_number": "22-64-694784-80",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 면허번호는 15-78-659505-77입니다.",
+      "license_number": "15-78-659505-77",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 16-93-600691-27",
+      "license_number": "16-93-600691-27",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 17Y86-560341-80이며,",
+      "license_number": "17Y86-560341-80",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}이며,",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허증 번호: 21-46-597606-96",
+      "license_number": "21-46-597606-96",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 23-75-833028-59",
+      "license_number": "23-75-833028-59",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "15-74-660341-27 번호로 발급된 면허증입니다.",
+      "license_number": "15-74-660341-27",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 14-35-391767-18로 확인됩니다.",
+      "license_number": "14-35-391767-18",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "20-82-156829-20 번호로 발급된 면허증입니다.",
+      "license_number": "20-82-156829-20",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호 17-54-9344571-95에 대한 재발급을 신청합니다.",
+      "license_number": "17-54-9344571-95",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "해당 고객의 면허번호는 15-06-025721-18로 확인됩니다.",
+      "license_number": "15-06-025721-18",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허증 번호: 04-46-993288-97",
+      "license_number": "04-46-993288-97",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "13-55-136714-22 번호로 발급된 면허증입니다.",
+      "license_number": "13-55-136714-22",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허 번호: 220918993026",
+      "license_number": "220918993026",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 면허번호는 16-89-761324-01로 확인됩니다.",
+      "license_number": "16-89-761324-01",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허증번호: 24-71-869237-30",
+      "license_number": "24-71-869237-30",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 16-51-045547-00입니다.",
+      "license_number": "16-51-045547-00",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 22-47-142512-95입니다.",
+      "license_number": "22-47-142512-95",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 28-82-865845-76입니다.",
+      "license_number": "28-82-865845-76",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "17-08-713746-97 번호로 발급된 면허증입니다.",
+      "license_number": "17-08-713746-97",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "LICENSE: 285990729754",
+      "license_number": "285990729754",
+      "is_valid": false,
+      "template": "LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "28-04-336609-08 번호로 발급된 면허증입니다.",
+      "license_number": "28-04-336609-08",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호 21-63-283941-43에 대한 재발급을 신청합니다.",
+      "license_number": "21-63-283941-43",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허 번호: 21-79-570253-48",
+      "license_number": "21-79-570253-48",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 24-44-776018-09이며,",
+      "license_number": "24-44-776018-09",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "DRIVER LICENSE: 24-72-891907-15",
+      "license_number": "24-72-891907-15",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허 번호: 21-72-024243-98",
+      "license_number": "21-72-024243-98",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "LICENSE: 14-86-457344-18",
+      "license_number": "14-86-457344-18",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 28-63-955085-30",
+      "license_number": "28-63-955085-30",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허번호: 26-10-832940-51",
+      "license_number": "26-10-832940-51",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허정보: 87-45-167282-34",
+      "license_number": "87-45-167282-34",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호: 12-89-887320-56",
+      "license_number": "12-89-887320-56",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 11-55-886298-66",
+      "license_number": "11-55-886298-66",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 13-67-024677-80입니다.",
+      "license_number": "13-67-024677-80",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 15-36-139200-58",
+      "license_number": "15-36-139200-58",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "25-XX-186584-08 번호로 발급된 면허증입니다.",
+      "license_number": "25-XX-186584-08",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호는 26-69-271261-20입니다.",
+      "license_number": "26-69-271261-20",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 20-32-494674-36",
+      "license_number": "20-32-494674-36",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호는 28-48-702122-23이며,",
+      "license_number": "28-48-702122-23",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허증번호: 15-40-483139-38",
+      "license_number": "15-40-483139-38",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "28-16-268370-61 번호로 발급된 면허증입니다.",
+      "license_number": "28-16-268370-61",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허번호가 11-11-223513-58인 면허증을 신청합니다.",
+      "license_number": "11-11-223513-58",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "고객님의 면허번호는 24-58-076204-26입니다.",
+      "license_number": "24-58-076204-26",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 26-99-808941-71입니다.",
+      "license_number": "26-99-808941-71",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 28-26-916721-17",
+      "license_number": "28-26-916721-17",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호는 22-82-529697-36입니다.",
+      "license_number": "22-82-529697-36",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 23-50-497320-74",
+      "license_number": "23-50-497320-74",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호: 28-68-958855-19",
+      "license_number": "28-68-958855-19",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 17-97-942943-00입니다.",
+      "license_number": "17-97-942943-00",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 22-03-035530-10",
+      "license_number": "22-03-035530-10",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 14-32-979238-18입니다.",
+      "license_number": "14-32-979238-18",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 63-90-632103-32입니다.",
+      "license_number": "63-90-632103-32",
+      "is_valid": false,
+      "template": "고객님의 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호 23-54-476484-78에 대한 재발급을 신청합니다.",
+      "license_number": "23-54-476484-78",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허번호: 21-55-000934-27",
+      "license_number": "21-55-000934-27",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 15-71-217229-89입니다.",
+      "license_number": "15-71-217229-89",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 17-96-329506-83",
+      "license_number": "17-96-329506-83",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 235582059326",
+      "license_number": "235582059326",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허증 번호: 20-91-9000Y3-54",
+      "license_number": "20-91-9000Y3-54",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허번호(16-90-952982-95)로 조회해주세요.",
+      "license_number": "16-90-952982-95",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "해당 고객의 면허번호는 25-47-895774-67로 확인됩니다.",
+      "license_number": "25-47-895774-67",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Driver's License Number: 15-08-101656-67",
+      "license_number": "15-08-101656-67",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 12-99-392850-55",
+      "license_number": "12-99-392850-55",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 27-XX-151912-65",
+      "license_number": "27-XX-151912-65",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호는 27-89-943802-83입니다.",
+      "license_number": "27-89-943802-83",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 23-96-558970-82",
+      "license_number": "23-96-558970-82",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허번호 18-45-891063-13에 대한 재발급을 신청합니다.",
+      "license_number": "18-45-891063-13",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허증 번호: 12-32-244350-32",
+      "license_number": "12-32-244350-32",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 12-XX-227768-47",
+      "license_number": "12-XX-227768-47",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허번호: 12-74-608775-12",
+      "license_number": "12-74-608775-12",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 72-17-460746-34",
+      "license_number": "72-17-460746-34",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허증번호: 17-90-121285-01",
+      "license_number": "17-90-121285-01",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허증번호: 95-48-992187-30",
+      "license_number": "95-48-992187-30",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "Korean Driver License: 20-82-009926-76",
+      "license_number": "20-82-009926-76",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호 74-23-716044-39에 대한 재발급을 신청합니다.",
+      "license_number": "74-23-716044-39",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호 11-12-830303-24로 발급되었습니다.",
+      "license_number": "11-12-830303-24",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허 번호: 15-64-614191-20",
+      "license_number": "15-64-614191-20",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허정보: 24-04-687822-73",
+      "license_number": "24-04-687822-73",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 13-33-542424-12",
+      "license_number": "13-33-542424-12",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "운전면허번호가 28-23-743736-18인 면허증을 신청합니다.",
+      "license_number": "28-23-743736-18",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "고객님의 면허번호는 23-65-6515985-66입니다.",
+      "license_number": "23-65-6515985-66",
+      "is_valid": false,
+      "template": "고객님의 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허번호는 24-01-107649-18입니다.",
+      "license_number": "24-01-107649-18",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 277548411440",
+      "license_number": "277548411440",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "고객님의 면허번호는 245125096075입니다.",
+      "license_number": "245125096075",
+      "is_valid": false,
+      "template": "고객님의 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "LICENSE: 170685514601",
+      "license_number": "170685514601",
+      "is_valid": false,
+      "template": "LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허증 번호: 26-91-483536-92",
+      "license_number": "26-91-483536-92",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "LICENSE: 13-88-543245-48",
+      "license_number": "13-88-543245-48",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 29-52-352247-85에 대한 재발급을 신청합니다.",
+      "license_number": "29-52-352247-85",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "Korean Driver License: 27-38-152089-10",
+      "license_number": "27-38-152089-10",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호 25-94-401637-28로 발급되었습니다.",
+      "license_number": "25-94-401637-28",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "면허번호 13-26-699847-32에 대한 재발급을 신청합니다.",
+      "license_number": "13-26-699847-32",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허정보: 28-81-4Y0640-88",
+      "license_number": "28-81-4Y0640-88",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "LICENSE: 21-52-195570-51",
+      "license_number": "21-52-195570-51",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 11-35-126998-84로 확인됩니다.",
+      "license_number": "11-35-126998-84",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호 18-09-461839-03로 발급되었습니다.",
+      "license_number": "18-09-461839-03",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "고객님의 면허번호는 23-08-757629-86입니다.",
+      "license_number": "23-08-757629-86",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 26-31-266913-34입니다.",
+      "license_number": "26-31-266913-34",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(19-34-098119-02)로 조회해주세요.",
+      "license_number": "19-34-098119-02",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 19-75-387467-28입니다.",
+      "license_number": "19-75-387467-28",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 11-78-285060-79입니다.",
+      "license_number": "11-78-285060-79",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호가 21-49-177801-08인 면허증을 신청합니다.",
+      "license_number": "21-49-177801-08",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허증번호: 14-87-687843-20",
+      "license_number": "14-87-687843-20",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "14-45-803260-96 번호로 발급된 면허증입니다.",
+      "license_number": "14-45-803260-96",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "LICENSE: 12-38-859084-06",
+      "license_number": "12-38-859084-06",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "고객님의 면허번호는 27-41-963721-18입니다.",
+      "license_number": "27-41-963721-18",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 21-92-205096-11에 대한 재발급을 신청합니다.",
+      "license_number": "21-92-205096-11",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 21-XX-063396-03입니다.",
+      "license_number": "21-XX-063396-03",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호는 21-01-999505-46입니다.",
+      "license_number": "21-01-999505-46",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(18-20-609878-65)로 조회해주세요.",
+      "license_number": "18-20-609878-65",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 27-23-400820-69입니다.",
+      "license_number": "27-23-400820-69",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "LICENSE: 23-84-467311-53",
+      "license_number": "23-84-467311-53",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "LICENSE: 23-00-482960-76",
+      "license_number": "23-00-482960-76",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 25-39-018263-28입니다.",
+      "license_number": "25-39-018263-28",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 14-22-184269-36로 발급되었습니다.",
+      "license_number": "14-22-184269-36",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 25-11-855974-31",
+      "license_number": "25-11-855974-31",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허 번호: 14-35-799655-21",
+      "license_number": "14-35-799655-21",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 20-17-834192-11입니다.",
+      "license_number": "20-17-834192-11",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 15-31-702853-89입니다.",
+      "license_number": "15-31-702853-89",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 C3-15-967356-89입니다.",
+      "license_number": "C3-15-967356-89",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호는 21-81-020022-22입니다.",
+      "license_number": "21-81-020022-22",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 16-86-581268-58이며,",
+      "license_number": "16-86-581268-58",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "운전면허번호는 15-37-860723-87입니다.",
+      "license_number": "15-37-860723-87",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 16-89-120099-61입니다.",
+      "license_number": "16-89-120099-61",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 28-27-859549-26로 확인됩니다.",
+      "license_number": "28-27-859549-26",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호는 26-18-825024-85입니다.",
+      "license_number": "26-18-825024-85",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 21-69-808135-00이며,",
+      "license_number": "21-69-808135-00",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호 28-97-093341-80에 대한 재발급을 신청합니다.",
+      "license_number": "28-97-093341-80",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 16-09-8212456-76이며,",
+      "license_number": "16-09-8212456-76",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}이며,",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호(92-34-310932-15)로 조회해주세요.",
+      "license_number": "92-34-310932-15",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "운전면허증 번호: 23-15-966109-81",
+      "license_number": "23-15-966109-81",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 15-96-053009-88",
+      "license_number": "15-96-053009-88",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 14-Y4-689800-10로 확인됩니다.",
+      "license_number": "14-Y4-689800-10",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "19-11-863307-08 번호로 발급된 면허증입니다.",
+      "license_number": "19-11-863307-08",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 21-92-698622-85입니다.",
+      "license_number": "21-92-698622-85",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 18-28-130617-52로 발급되었습니다.",
+      "license_number": "18-28-130617-52",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "Korean Driver License: 15-49-442210-78",
+      "license_number": "15-49-442210-78",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허번호는 19-98-996960-22입니다.",
+      "license_number": "19-98-996960-22",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 163300568205로 발급되었습니다.",
+      "license_number": "163300568205",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Driver's License Number: 11-99-534509-71",
+      "license_number": "11-99-534509-71",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허 번호: 27-65-049408-71",
+      "license_number": "27-65-049408-71",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허정보: 21-29-341994-04",
+      "license_number": "21-29-341994-04",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "LICENSE: 22-48-782237-30",
+      "license_number": "22-48-782237-30",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 22-63-619124-13로 발급되었습니다.",
+      "license_number": "22-63-619124-13",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허번호는 16-53-3418260-89이며,",
+      "license_number": "16-53-3418260-89",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}이며,",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "고객님의 면허번호는 22-23-480459-43입니다.",
+      "license_number": "22-23-480459-43",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 28-41-862416-13로 확인됩니다.",
+      "license_number": "28-41-862416-13",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호(19-49-665432-45)로 조회해주세요.",
+      "license_number": "19-49-665432-45",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호: 28-13-835756-06",
+      "license_number": "28-13-835756-06",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 11-49-920816-84",
+      "license_number": "11-49-920816-84",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "11-87-663393-65 번호로 발급된 면허증입니다.",
+      "license_number": "11-87-663393-65",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호: 16-28-545554-90",
+      "license_number": "16-28-545554-90",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호 21-06-650094-97로 발급되었습니다.",
+      "license_number": "21-06-650094-97",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "Korean Driver License: 18-94-106927-91",
+      "license_number": "18-94-106927-91",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 25-74-102968-24입니다.",
+      "license_number": "25-74-102968-24",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 25-37-540679-32입니다.",
+      "license_number": "25-37-540679-32",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 13-52-523447-55",
+      "license_number": "13-52-523447-55",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호(14-86-489942-11)로 조회해주세요.",
+      "license_number": "14-86-489942-11",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호(13-97-253672-06)로 조회해주세요.",
+      "license_number": "13-97-253672-06",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허정보: 11-11-996293-39",
+      "license_number": "11-11-996293-39",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 15-35-378680-23",
+      "license_number": "15-35-378680-23",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 14-93-352902-92입니다.",
+      "license_number": "14-93-352902-92",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 20-09-443106-64입니다.",
+      "license_number": "20-09-443106-64",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 24-50-780643-78",
+      "license_number": "24-50-780643-78",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 51-68-734005-68",
+      "license_number": "51-68-734005-68",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "운전면허번호는 13-90-210831-80이며,",
+      "license_number": "13-90-210831-80",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "운전면허 번호: 28-78-513564-69",
+      "license_number": "28-78-513564-69",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 11-48-436129-78",
+      "license_number": "11-48-436129-78",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 17-23-985094-73입니다.",
+      "license_number": "17-23-985094-73",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 16-80-310417-37입니다.",
+      "license_number": "16-80-310417-37",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 23-40-197918-03입니다.",
+      "license_number": "23-40-197918-03",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호: 16-03-746168-02",
+      "license_number": "16-03-746168-02",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 20-31-614884-70",
+      "license_number": "20-31-614884-70",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허번호가 24-36-256373-27인 면허증을 신청합니다.",
+      "license_number": "24-36-256373-27",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허증번호: 20-83-600746-51",
+      "license_number": "20-83-600746-51",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "LICENSE: 11-83-619582-31",
+      "license_number": "11-83-619582-31",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호(11-19-311131-97)로 조회해주세요.",
+      "license_number": "11-19-311131-97",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Driver's License Number: 16-43-821123-93",
+      "license_number": "16-43-821123-93",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 27-36-586717-89로 확인됩니다.",
+      "license_number": "27-36-586717-89",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 22-26-245855-29입니다.",
+      "license_number": "22-26-245855-29",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(13-15-578269-12)로 조회해주세요.",
+      "license_number": "13-15-578269-12",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호 26-42-860869-32로 발급되었습니다.",
+      "license_number": "26-42-860869-32",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허번호는 67-06-814805-38이며,",
+      "license_number": "67-06-814805-38",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}이며,",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "LICENSE: 20-00-190837-17",
+      "license_number": "20-00-190837-17",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 123576502589입니다.",
+      "license_number": "123576502589",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허증번호: 20-94-197722-65",
+      "license_number": "20-94-197722-65",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 16-68-537519-21",
+      "license_number": "16-68-537519-21",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "Korean Driver License: 17-69-664542-10",
+      "license_number": "17-69-664542-10",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허번호는 26-10-500437-73이며,",
+      "license_number": "26-10-500437-73",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호 20-XX-863036-20로 발급되었습니다.",
+      "license_number": "20-XX-863036-20",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허번호 18-11-255813-75에 대한 재발급을 신청합니다.",
+      "license_number": "18-11-255813-75",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 16-45-220402-75로 확인됩니다.",
+      "license_number": "16-45-220402-75",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 면허번호는 22-76-139586-07입니다.",
+      "license_number": "22-76-139586-07",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "14-70-535551-10 번호로 발급된 면허증입니다.",
+      "license_number": "14-70-535551-10",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허번호는 48-60-394049-52입니다.",
+      "license_number": "48-60-394049-52",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "Driver's License Number: 14-58-192879-09",
+      "license_number": "14-58-192879-09",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허번호는 16-73-657106-13이며,",
+      "license_number": "16-73-657106-13",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "Driver's License Number: 52-20-238649-55",
+      "license_number": "52-20-238649-55",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "고객님의 면허번호는 26-65-437996-30입니다.",
+      "license_number": "26-65-437996-30",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 23-78-693596-57",
+      "license_number": "23-78-693596-57",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 17-60-611951-59이며,",
+      "license_number": "17-60-611951-59",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 면허번호는 22-69-074128-68로 확인됩니다.",
+      "license_number": "22-69-074128-68",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호 14-96-173360-93에 대한 재발급을 신청합니다.",
+      "license_number": "14-96-173360-93",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "고객님의 면허번호는 28-57-522800-66입니다.",
+      "license_number": "28-57-522800-66",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허증 번호: 17-68-936394-74",
+      "license_number": "17-68-936394-74",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "22-63-969020-2X 번호로 발급된 면허증입니다.",
+      "license_number": "22-63-969020-2X",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호는 21-81-029911-39입니다.",
+      "license_number": "21-81-029911-39",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 23-12-980796-40",
+      "license_number": "23-12-980796-40",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 21-Y7-648343-01이며,",
+      "license_number": "21-Y7-648343-01",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}이며,",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 28-87-377577-50입니다.",
+      "license_number": "28-87-377577-50",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 21-83-2939177-34",
+      "license_number": "21-83-2939177-34",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 20-XX-430778-23입니다.",
+      "license_number": "20-XX-430778-23",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허번호 28-75-703625-65로 발급되었습니다.",
+      "license_number": "28-75-703625-65",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "22-77-813910-55 번호로 발급된 면허증입니다.",
+      "license_number": "22-77-813910-55",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "LICENSE: 23-15-678952-62",
+      "license_number": "23-15-678952-62",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 26-33-101310-18로 확인됩니다.",
+      "license_number": "26-33-101310-18",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "LICENSE: 20-33-565696-54",
+      "license_number": "20-33-565696-54",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "LICENSE: 22-50-923267-78",
+      "license_number": "22-50-923267-78",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허정보: 22-99-958572-50",
+      "license_number": "22-99-958572-50",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허증번호: 25-52-266321-91",
+      "license_number": "25-52-266321-91",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 18-09-210909-54",
+      "license_number": "18-09-210909-54",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 22-39-361924-72",
+      "license_number": "22-39-361924-72",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허번호: 17-85-131532-88",
+      "license_number": "17-85-131532-88",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 24-75-895383-59",
+      "license_number": "24-75-895383-59",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허증번호: 23-28-211476-83",
+      "license_number": "23-28-211476-83",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 18-11-836853-27",
+      "license_number": "18-11-836853-27",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호(26-97-037052-31)로 조회해주세요.",
+      "license_number": "26-97-037052-31",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Korean Driver License: 12-XX-370962-34",
+      "license_number": "12-XX-370962-34",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호는 15-07-175115-36이며,",
+      "license_number": "15-07-175115-36",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "24-45-586326-02 번호로 발급된 면허증입니다.",
+      "license_number": "24-45-586326-02",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허정보: 26-81-105221-71",
+      "license_number": "26-81-105221-71",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 25-92-968146-84로 확인됩니다.",
+      "license_number": "25-92-968146-84",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "24-44-506365-65 번호로 발급된 면허증입니다.",
+      "license_number": "24-44-506365-65",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 24-58-101098-77입니다.",
+      "license_number": "24-58-101098-77",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 22-25-405079-13",
+      "license_number": "22-25-405079-13",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호가 14-52-5618264-15인 면허증을 신청합니다.",
+      "license_number": "14-52-5618264-15",
+      "is_valid": false,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허증 번호: 11-21-788824-46",
+      "license_number": "11-21-788824-46",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호 16-22-191736-06로 발급되었습니다.",
+      "license_number": "16-22-191736-06",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "면허증번호: 21-23-435236-47",
+      "license_number": "21-23-435236-47",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "고객님의 면허번호는 20-82-172577-21입니다.",
+      "license_number": "20-82-172577-21",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 25-30-315225-15이며,",
+      "license_number": "25-30-315225-15",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호(11-29-325052-31)로 조회해주세요.",
+      "license_number": "11-29-325052-31",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허증번호: 25-28-394787-32",
+      "license_number": "25-28-394787-32",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 19-56-468264-30입니다.",
+      "license_number": "19-56-468264-30",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 12-43-806379-86",
+      "license_number": "12-43-806379-86",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 21-94-568699-24입니다.",
+      "license_number": "21-94-568699-24",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "LICENSE: 20-05-946378-90",
+      "license_number": "20-05-946378-90",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허정보: 28-XX-065664-84",
+      "license_number": "28-XX-065664-84",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허증 번호: 14-04-060145-43",
+      "license_number": "14-04-060145-43",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: Y4-13-838533-29",
+      "license_number": "Y4-13-838533-29",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허증번호: 255195229096",
+      "license_number": "255195229096",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "LICENSE: 16-31-155751-07",
+      "license_number": "16-31-155751-07",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Korean Driver License: 27-20-233240-16",
+      "license_number": "27-20-233240-16",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 12-33-998152-26입니다.",
+      "license_number": "12-33-998152-26",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 12-73-666285-78",
+      "license_number": "12-73-666285-78",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허정보: 27-86-6Z9988-11",
+      "license_number": "27-86-6Z9988-11",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호가 21-45-5367931-92인 면허증을 신청합니다.",
+      "license_number": "21-45-5367931-92",
+      "is_valid": false,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호 15-17-929031-81에 대한 재발급을 신청합니다.",
+      "license_number": "15-17-929031-81",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "28-23-269938-29 번호로 발급된 면허증입니다.",
+      "license_number": "28-23-269938-29",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 23-53-413779-45",
+      "license_number": "23-53-413779-45",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허번호는 36-60-483853-94입니다.",
+      "license_number": "36-60-483853-94",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허정보: 20-07-404233-00",
+      "license_number": "20-07-404233-00",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허정보: 11-94-922658-92",
+      "license_number": "11-94-922658-92",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "LICENSE: 17-15-468943-65",
+      "license_number": "17-15-468943-65",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 10-39-368486-86",
+      "license_number": "10-39-368486-86",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "운전면허번호는 19-32-341828-68입니다.",
+      "license_number": "19-32-341828-68",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 18-94-097691-03입니다.",
+      "license_number": "18-94-097691-03",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 18-49-933883-37에 대한 재발급을 신청합니다.",
+      "license_number": "18-49-933883-37",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "Driver's License Number: 15-82-662162-16",
+      "license_number": "15-82-662162-16",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 16-75-508130-44입니다.",
+      "license_number": "16-75-508130-44",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "Driver's License Number: 26-54-014808-75",
+      "license_number": "26-54-014808-75",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "18-79-733648-15 번호로 발급된 면허증입니다.",
+      "license_number": "18-79-733648-15",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 22-01-483234-16",
+      "license_number": "22-01-483234-16",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 25-05-155304-44에 대한 재발급을 신청합니다.",
+      "license_number": "25-05-155304-44",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 20-03-190937-50로 확인됩니다.",
+      "license_number": "20-03-190937-50",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호 121898417460로 발급되었습니다.",
+      "license_number": "121898417460",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허번호는 23-20-4158043-83이며,",
+      "license_number": "23-20-4158043-83",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}이며,",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호 19-19-608288-34로 발급되었습니다.",
+      "license_number": "19-19-608288-34",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 20-53-160300-80입니다.",
+      "license_number": "20-53-160300-80",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 20-13-748695-47에 대한 재발급을 신청합니다.",
+      "license_number": "20-13-748695-47",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "LICENSE: 18-38-285354-22",
+      "license_number": "18-38-285354-22",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호가 22-85-9457683-74인 면허증을 신청합니다.",
+      "license_number": "22-85-9457683-74",
+      "is_valid": false,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허 번호: 23-92-251882-20",
+      "license_number": "23-92-251882-20",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 12-77-285016-78",
+      "license_number": "12-77-285016-78",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 11-21-050589-62",
+      "license_number": "11-21-050589-62",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허번호(22-XX-736800-87)로 조회해주세요.",
+      "license_number": "22-XX-736800-87",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "25-93-912234-90 번호로 발급된 면허증입니다.",
+      "license_number": "25-93-912234-90",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "15-40-611992-86 번호로 발급된 면허증입니다.",
+      "license_number": "15-40-611992-86",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 145708895254",
+      "license_number": "145708895254",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "DRIVER LICENSE: 254717889598",
+      "license_number": "254717889598",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "11-90-052201-78 번호로 발급된 면허증입니다.",
+      "license_number": "11-90-052201-78",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 21-18-308737-34",
+      "license_number": "21-18-308737-34",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허번호는 27-37-912950-93이며,",
+      "license_number": "27-37-912950-93",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "LICENSE: 22-68-158399-69",
+      "license_number": "22-68-158399-69",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Driver's License Number: 71-46-684592-47",
+      "license_number": "71-46-684592-47",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "본인의 운전면허번호는 16-93-047624-66입니다.",
+      "license_number": "16-93-047624-66",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 15-XX-509362-08에 대한 재발급을 신청합니다.",
+      "license_number": "15-XX-509362-08",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "해당 고객의 면허번호는 21-81-449601-17로 확인됩니다.",
+      "license_number": "21-81-449601-17",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호는 17-02-602833-98입니다.",
+      "license_number": "17-02-602833-98",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(18-59-012537-12)로 조회해주세요.",
+      "license_number": "18-59-012537-12",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허증번호: 13-05-A53962-79",
+      "license_number": "13-05-A53962-79",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "DRIVER LICENSE: 86-63-773635-69",
+      "license_number": "86-63-773635-69",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "운전면허번호가 28-53-850805-96인 면허증을 신청합니다.",
+      "license_number": "28-53-850805-96",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호 16-88-168767-34로 발급되었습니다.",
+      "license_number": "16-88-168767-34",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "고객님의 면허번호는 12-58-320215-92입니다.",
+      "license_number": "12-58-320215-92",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "26-50-328909-Z7 번호로 발급된 면허증입니다.",
+      "license_number": "26-50-328909-Z7",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 면허번호는 19-37-9000188-89로 확인됩니다.",
+      "license_number": "19-37-9000188-89",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호: 18-12-480998-40",
+      "license_number": "18-12-480998-40",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "12-XX-102112-50 번호로 발급된 면허증입니다.",
+      "license_number": "12-XX-102112-50",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "24-76-659213-13 번호로 발급된 면허증입니다.",
+      "license_number": "24-76-659213-13",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 23-84-139042-86로 확인됩니다.",
+      "license_number": "23-84-139042-86",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허증 번호: 55-27-982711-00",
+      "license_number": "55-27-982711-00",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "DRIVER LICENSE: 22-95-164901-89",
+      "license_number": "22-95-164901-89",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "고객님의 면허번호는 15-62-640789-39입니다.",
+      "license_number": "15-62-640789-39",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "LICENSE: 15-66-614244-49",
+      "license_number": "15-66-614244-49",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "LICENSE: 28-96-376391-34",
+      "license_number": "28-96-376391-34",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "11-61-772432-21 번호로 발급된 면허증입니다.",
+      "license_number": "11-61-772432-21",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 13-02-442930-60",
+      "license_number": "13-02-442930-60",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허번호는 27-XX-517697-53입니다.",
+      "license_number": "27-XX-517697-53",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 18-99-862905-21입니다.",
+      "license_number": "18-99-862905-21",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(15-38-759324-84)로 조회해주세요.",
+      "license_number": "15-38-759324-84",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "고객님의 면허번호는 24-35-400483-83입니다.",
+      "license_number": "24-35-400483-83",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 14-23-515735-77",
+      "license_number": "14-23-515735-77",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허정보: 23-79-630377-86",
+      "license_number": "23-79-630377-86",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "Korean Driver License: 25-50-754665-95",
+      "license_number": "25-50-754665-95",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 25-00-868572-05입니다.",
+      "license_number": "25-00-868572-05",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 20-24-818365-17",
+      "license_number": "20-24-818365-17",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "Driver's License Number: 19-05-7464408-72",
+      "license_number": "19-05-7464408-72",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "24-87-524236-22 번호로 발급된 면허증입니다.",
+      "license_number": "24-87-524236-22",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호 61-97-737435-52로 발급되었습니다.",
+      "license_number": "61-97-737435-52",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허정보: 18-93-622243-61",
+      "license_number": "18-93-622243-61",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "Driver's License Number: 16-35-165391-10",
+      "license_number": "16-35-165391-10",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허 번호: 26-29-500415-61",
+      "license_number": "26-29-500415-61",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 15-42-075363-72입니다.",
+      "license_number": "15-42-075363-72",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 26-50-188583-57입니다.",
+      "license_number": "26-50-188583-57",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 11-56-768969-81로 확인됩니다.",
+      "license_number": "11-56-768969-81",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호는 24-89-145655-33이며,",
+      "license_number": "24-89-145655-33",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "Driver's License Number: 20-70-6711812-06",
+      "license_number": "20-70-6711812-06",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허증번호: 28-41-239067-07",
+      "license_number": "28-41-239067-07",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 24C95-975412-30로 확인됩니다.",
+      "license_number": "24C95-975412-30",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허 번호: 17-02-729350-37",
+      "license_number": "17-02-729350-37",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "12-07-681490-09 번호로 발급된 면허증입니다.",
+      "license_number": "12-07-681490-09",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허번호는 22-99-405818-43입니다.",
+      "license_number": "22-99-405818-43",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 16-35-246462-26로 확인됩니다.",
+      "license_number": "16-35-246462-26",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호 25-23-786066-99에 대한 재발급을 신청합니다.",
+      "license_number": "25-23-786066-99",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "LICENSE: 14-01-359464-94",
+      "license_number": "14-01-359464-94",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Driver's License Number: 24-57-208508-70",
+      "license_number": "24-57-208508-70",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허번호: 14-73-291865-50",
+      "license_number": "14-73-291865-50",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호: 18-66-150595-07",
+      "license_number": "18-66-150595-07",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 13-17-021573-88",
+      "license_number": "13-17-021573-88",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 20-XX-607556-13입니다.",
+      "license_number": "20-XX-607556-13",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "고객님의 면허번호는 22-70-611766-53입니다.",
+      "license_number": "22-70-611766-53",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 14-10-191145-28에 대한 재발급을 신청합니다.",
+      "license_number": "14-10-191145-28",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허증 번호: 20-23-101566-69",
+      "license_number": "20-23-101566-69",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 27-25-9825151-69입니다.",
+      "license_number": "27-25-9825151-69",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허증번호: 19-56-933947-23",
+      "license_number": "19-56-933947-23",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 28-21-357888-66입니다.",
+      "license_number": "28-21-357888-66",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 18-23-7978483-79",
+      "license_number": "18-23-7978483-79",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "LICENSE: 16-25-772605-13",
+      "license_number": "16-25-772605-13",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 23-13-288749-36로 확인됩니다.",
+      "license_number": "23-13-288749-36",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Driver's License Number: 19-35-757931-24",
+      "license_number": "19-35-757931-24",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허번호는 27-55-765314Y29입니다.",
+      "license_number": "27-55-765314Y29",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Korean Driver License: 19-60-123686-78",
+      "license_number": "19-60-123686-78",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허번호는 13-52-386787-77입니다.",
+      "license_number": "13-52-386787-77",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 27-08-105462-75이며,",
+      "license_number": "27-08-105462-75",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "운전면허번호가 23-22-629474-11인 면허증을 신청합니다.",
+      "license_number": "23-22-629474-11",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 24-25-647532-60입니다.",
+      "license_number": "24-25-647532-60",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 22-90-197100-63로 발급되었습니다.",
+      "license_number": "22-90-197100-63",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허 번호: 20-03-064041-70",
+      "license_number": "20-03-064041-70",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허정보: 22-66-235399-84",
+      "license_number": "22-66-235399-84",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "Driver's License Number: 25-49-773360-02",
+      "license_number": "25-49-773360-02",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "LICENSE: 17-67-153697-17",
+      "license_number": "17-67-153697-17",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호가 23-96-851591-79인 면허증을 신청합니다.",
+      "license_number": "23-96-851591-79",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 82-58-360604-91입니다.",
+      "license_number": "82-58-360604-91",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "Driver's License Number: 26-54-177975-66",
+      "license_number": "26-54-177975-66",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허번호(18-XX-869550-46)로 조회해주세요.",
+      "license_number": "18-XX-869550-46",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허 번호: 21-31-3661944-20",
+      "license_number": "21-31-3661944-20",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "고객님의 면허번호는 14-34-114397-34입니다.",
+      "license_number": "14-34-114397-34",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 23-82-004949-72",
+      "license_number": "23-82-004949-72",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허번호 19-04-187874-14로 발급되었습니다.",
+      "license_number": "19-04-187874-14",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "면허증번호: 16-28-6948859-89",
+      "license_number": "16-28-6948859-89",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허번호가 13-87-967351-94인 면허증을 신청합니다.",
+      "license_number": "13-87-967351-94",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "고객님의 면허번호는 11-48-559121-97입니다.",
+      "license_number": "11-48-559121-97",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 16-27-B05556-05",
+      "license_number": "16-27-B05556-05",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 78-29-244113-33입니다.",
+      "license_number": "78-29-244113-33",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "운전면허증 번호: 19-77-234222-95",
+      "license_number": "19-77-234222-95",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호: 26-83-491167-34",
+      "license_number": "26-83-491167-34",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 14-94-718689-85입니다.",
+      "license_number": "14-94-718689-85",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 27-49-343487-21",
+      "license_number": "27-49-343487-21",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 23-24-703854-19",
+      "license_number": "23-24-703854-19",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 12-52-408391-55",
+      "license_number": "12-52-408391-55",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 14-31-965919-03에 대한 재발급을 신청합니다.",
+      "license_number": "14-31-965919-03",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허증번호: 19-64-045315-47",
+      "license_number": "19-64-045315-47",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호(16-54-894660-00)로 조회해주세요.",
+      "license_number": "16-54-894660-00",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "운전면허번호는 185602682993입니다.",
+      "license_number": "185602682993",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "고객님의 면허번호는 23-51-767495-49입니다.",
+      "license_number": "23-51-767495-49",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호가 19-26-592290-37인 면허증을 신청합니다.",
+      "license_number": "19-26-592290-37",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 16-90-650908-29입니다.",
+      "license_number": "16-90-650908-29",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(24-42-192054-72)로 조회해주세요.",
+      "license_number": "24-42-192054-72",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "본인의 운전면허번호는 24-89-602714-34입니다.",
+      "license_number": "24-89-602714-34",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "LICENSE: 20-90-070943Y21",
+      "license_number": "20-90-070943Y21",
+      "is_valid": false,
+      "template": "LICENSE: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호가 13-47-788527-64인 면허증을 신청합니다.",
+      "license_number": "13-47-788527-64",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 14-70-952618-47이며,",
+      "license_number": "14-70-952618-47",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호(18-48-343027-69)로 조회해주세요.",
+      "license_number": "18-48-343027-69",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호(27-58-510846-09)로 조회해주세요.",
+      "license_number": "27-58-510846-09",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허정보: 16-47-997738-30",
+      "license_number": "16-47-997738-30",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "LICENSE: 16-41-987764-74",
+      "license_number": "16-41-987764-74",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 25-16-165961-23입니다.",
+      "license_number": "25-16-165961-23",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 19-59-814131-07로 확인됩니다.",
+      "license_number": "19-59-814131-07",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호는 12-46-030663-61입니다.",
+      "license_number": "12-46-030663-61",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 20-32-761332-90입니다.",
+      "license_number": "20-32-761332-90",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 25-50-409469-67",
+      "license_number": "25-50-409469-67",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "LICENSE: 26-98-738861-89",
+      "license_number": "26-98-738861-89",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허 번호: 23-04-313466-97",
+      "license_number": "23-04-313466-97",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호: 28-02-680729-81",
+      "license_number": "28-02-680729-81",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 17-27-218164-20입니다.",
+      "license_number": "17-27-218164-20",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 11-28-880044-21",
+      "license_number": "11-28-880044-21",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 17-31-942596-79입니다.",
+      "license_number": "17-31-942596-79",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 270956845305입니다.",
+      "license_number": "270956845305",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허증번호: 27-63-552554-00",
+      "license_number": "27-63-552554-00",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 25-90-122511-08",
+      "license_number": "25-90-122511-08",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허증번호: 27-51-483375-13",
+      "license_number": "27-51-483375-13",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 22-56-830601-85",
+      "license_number": "22-56-830601-85",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호: 15-29-639407-46",
+      "license_number": "15-29-639407-46",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허정보: 22-21-467963-63",
+      "license_number": "22-21-467963-63",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 25-51-668085-92",
+      "license_number": "25-51-668085-92",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "Korean Driver License: 24-76-576386-69",
+      "license_number": "24-76-576386-69",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호(15-84-798920-53)로 조회해주세요.",
+      "license_number": "15-84-798920-53",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "22-17-864609-19 번호로 발급된 면허증입니다.",
+      "license_number": "22-17-864609-19",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허 번호: 17-46-937224-13",
+      "license_number": "17-46-937224-13",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호: 20-69-285504-46",
+      "license_number": "20-69-285504-46",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 17-A7-134263-05",
+      "license_number": "17-A7-134263-05",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허정보: 23-70-229077-48",
+      "license_number": "23-70-229077-48",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호는 21-59-181520-96입니다.",
+      "license_number": "21-59-181520-96",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 16-28-636211-86",
+      "license_number": "16-28-636211-86",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 23-96-195577-49로 확인됩니다.",
+      "license_number": "23-96-195577-49",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 15-41-339731-05로 확인됩니다.",
+      "license_number": "15-41-339731-05",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 22-32-078684-62",
+      "license_number": "22-32-078684-62",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "Driver's License Number: 24-22-847591-58",
+      "license_number": "24-22-847591-58",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허증번호: 19-80-949448-93",
+      "license_number": "19-80-949448-93",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호: 18-42-762969-06",
+      "license_number": "18-42-762969-06",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "14-05-676017-45 번호로 발급된 면허증입니다.",
+      "license_number": "14-05-676017-45",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허번호는 13-65-054719-52입니다.",
+      "license_number": "13-65-054719-52",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 16-24-293317-30이며,",
+      "license_number": "16-24-293317-30",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 면허번호는 12-97-593454-88로 확인됩니다.",
+      "license_number": "12-97-593454-88",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허증 번호: 229173003249",
+      "license_number": "229173003249",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허증번호: 20-90-937034-18",
+      "license_number": "20-90-937034-18",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호 14-XX-256187-44에 대한 재발급을 신청합니다.",
+      "license_number": "14-XX-256187-44",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "해당 고객의 면허번호는 26-13-114410-47로 확인됩니다.",
+      "license_number": "26-13-114410-47",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "LICENSE: 25-07-143733-41",
+      "license_number": "25-07-143733-41",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "11-58-709568-84 번호로 발급된 면허증입니다.",
+      "license_number": "11-58-709568-84",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호 27-86-310278-84에 대한 재발급을 신청합니다.",
+      "license_number": "27-86-310278-84",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 16-36-520886-79입니다.",
+      "license_number": "16-36-520886-79",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 25-19-442321-23로 발급되었습니다.",
+      "license_number": "25-19-442321-23",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "면허정보: 23-54-263499-17",
+      "license_number": "23-54-263499-17",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허증번호: 16-36-806007-07",
+      "license_number": "16-36-806007-07",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허정보: 21-51-171580-94",
+      "license_number": "21-51-171580-94",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허번호(19-53-031099-43)로 조회해주세요.",
+      "license_number": "19-53-031099-43",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "운전면허증 번호: 264053727917",
+      "license_number": "264053727917",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 21-59-746770-01입니다.",
+      "license_number": "21-59-746770-01",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허증 번호: 20-39-858503-05",
+      "license_number": "20-39-858503-05",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허증번호: 42-90-421806-84",
+      "license_number": "42-90-421806-84",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호(26-63-352989-13)로 조회해주세요.",
+      "license_number": "26-63-352989-13",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "DRIVER LICENSE: 23-92-858778-13",
+      "license_number": "23-92-858778-13",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "15-35-011658-20 번호로 발급된 면허증입니다.",
+      "license_number": "15-35-011658-20",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 14-33-073834-61",
+      "license_number": "14-33-073834-61",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호 92-83-767963-75에 대한 재발급을 신청합니다.",
+      "license_number": "92-83-767963-75",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "해당 고객의 면허번호는 90-47-364368-15로 확인됩니다.",
+      "license_number": "90-47-364368-15",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호(18-15-642140-55)로 조회해주세요.",
+      "license_number": "18-15-642140-55",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허정보: 11-52-643289-51",
+      "license_number": "11-52-643289-51",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허번호(12-59-065944-83)로 조회해주세요.",
+      "license_number": "12-59-065944-83",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "DRIVER LICENSE: 17-70-191940-70",
+      "license_number": "17-70-191940-70",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 17-28-562651-49이며,",
+      "license_number": "17-28-562651-49",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "21-94-129576-29 번호로 발급된 면허증입니다.",
+      "license_number": "21-94-129576-29",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 14-XX-130142-20",
+      "license_number": "14-XX-130142-20",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호는 18-49-106914-36입니다.",
+      "license_number": "18-49-106914-36",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 12-45-615533-48",
+      "license_number": "12-45-615533-48",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호(20-Z8-239616-46)로 조회해주세요.",
+      "license_number": "20-Z8-239616-46",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 면허번호는 23-72-287151-60입니다.",
+      "license_number": "23-72-287151-60",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호: 19-94-987866-16",
+      "license_number": "19-94-987866-16",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 14-37-156764-47입니다.",
+      "license_number": "14-37-156764-47",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 25-91-7693037-67입니다.",
+      "license_number": "25-91-7693037-67",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허증번호: 15-57-829877-34",
+      "license_number": "15-57-829877-34",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "Korean Driver License: 25-24-976677-28",
+      "license_number": "25-24-976677-28",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "Korean Driver License: 11-8Y-259642-89",
+      "license_number": "11-8Y-259642-89",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허증번호: 11-35-243452-77",
+      "license_number": "11-35-243452-77",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호: 24-10-696924-96",
+      "license_number": "24-10-696924-96",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 27-93-575489-83입니다.",
+      "license_number": "27-93-575489-83",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허정보: 12-20-890490-51",
+      "license_number": "12-20-890490-51",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 12-35-23990Z-65입니다.",
+      "license_number": "12-35-23990Z-65",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Driver's License Number: 11-97-502648-00",
+      "license_number": "11-97-502648-00",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 21-69-066B55-58로 확인됩니다.",
+      "license_number": "21-69-066B55-58",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호는 19-71-201830-35입니다.",
+      "license_number": "19-71-201830-35",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 13-38-718489-12",
+      "license_number": "13-38-718489-12",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 24-84-980943-63입니다.",
+      "license_number": "24-84-980943-63",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 14-60-898266-04입니다.",
+      "license_number": "14-60-898266-04",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 15-23-347283-43",
+      "license_number": "15-23-347283-43",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호 21-79-555036-47로 발급되었습니다.",
+      "license_number": "21-79-555036-47",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허 번호: 21-85-849925-95",
+      "license_number": "21-85-849925-95",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 15-94-163174-08",
+      "license_number": "15-94-163174-08",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "Driver's License Number: 18-26-054673-33",
+      "license_number": "18-26-054673-33",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "Korean Driver License: 18-71-192236-05",
+      "license_number": "18-71-192236-05",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "24-XX-116021-70 번호로 발급된 면허증입니다.",
+      "license_number": "24-XX-116021-70",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "DRIVER LICENSE: 19-22-356366-69",
+      "license_number": "19-22-356366-69",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 27-31-367171-33로 확인됩니다.",
+      "license_number": "27-31-367171-33",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 34-11-462581-95로 확인됩니다.",
+      "license_number": "34-11-462581-95",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "본인의 운전면허번호는 185739701823입니다.",
+      "license_number": "185739701823",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "본인의 운전면허번호는 14-97-050270-12입니다.",
+      "license_number": "14-97-050270-12",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 24-94-624312-69",
+      "license_number": "24-94-624312-69",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 20-92-264113-63이며,",
+      "license_number": "20-92-264113-63",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 면허번호는 16-74-733024-13로 확인됩니다.",
+      "license_number": "16-74-733024-13",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호는 24-62-639151-17입니다.",
+      "license_number": "24-62-639151-17",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 12-99-999999-59입니다.",
+      "license_number": "12-99-999999-59",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "LICENSE: 28-13-890539-43",
+      "license_number": "28-13-890539-43",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "고객님의 면허번호는 19-XX-300753-22입니다.",
+      "license_number": "19-XX-300753-22",
+      "is_valid": false,
+      "template": "고객님의 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허정보: 24-19-622749-12",
+      "license_number": "24-19-622749-12",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호는 14-15-Y60296-15입니다.",
+      "license_number": "14-15-Y60296-15",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Korean Driver License: 14-XX-278694-63",
+      "license_number": "14-XX-278694-63",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허정보: 19-33-574954-19",
+      "license_number": "19-33-574954-19",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호는 20-91-356176-53이며,",
+      "license_number": "20-91-356176-53",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호: 11-69-132710-26",
+      "license_number": "11-69-132710-26",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호: 18-59-705846-07",
+      "license_number": "18-59-705846-07",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 17-66-030700-34입니다.",
+      "license_number": "17-66-030700-34",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호가 13-28-936421-28인 면허증을 신청합니다.",
+      "license_number": "13-28-936421-28",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 20-48-972157-97",
+      "license_number": "20-48-972157-97",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호가 27-11-583082-37인 면허증을 신청합니다.",
+      "license_number": "27-11-583082-37",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호(11-95-616376-36)로 조회해주세요.",
+      "license_number": "11-95-616376-36",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "DRIVER LICENSE: 15-77-183233-39",
+      "license_number": "15-77-183233-39",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허 번호: 13-02-368916-33",
+      "license_number": "13-02-368916-33",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허정보: 24-80-3686307-36",
+      "license_number": "24-80-3686307-36",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "23-08-874081-96 번호로 발급된 면허증입니다.",
+      "license_number": "23-08-874081-96",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 11-06-5627065-50",
+      "license_number": "11-06-5627065-50",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허 번호: 12-15-176155-59",
+      "license_number": "12-15-176155-59",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 24-13-906210-93입니다.",
+      "license_number": "24-13-906210-93",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 16-91-771956-17입니다.",
+      "license_number": "16-91-771956-17",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 20-58-451779-44이며,",
+      "license_number": "20-58-451779-44",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허정보: 26-53-605224-31",
+      "license_number": "26-53-605224-31",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호는 12-41-793194-04이며,",
+      "license_number": "12-41-793194-04",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "LICENSE: 19-61-163225-61",
+      "license_number": "19-61-163225-61",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 20-97-588202-42",
+      "license_number": "20-97-588202-42",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "운전면허번호가 22-15-217545-19인 면허증을 신청합니다.",
+      "license_number": "22-15-217545-19",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 280327679382이며,",
+      "license_number": "280327679382",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}이며,",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허번호(11-53-198440-23)로 조회해주세요.",
+      "license_number": "11-53-198440-23",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호 27-43-578583-96에 대한 재발급을 신청합니다.",
+      "license_number": "27-43-578583-96",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "Driver's License Number: 15-98-661180-33",
+      "license_number": "15-98-661180-33",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허번호가 14-32-423170-42인 면허증을 신청합니다.",
+      "license_number": "14-32-423170-42",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허정보: 23-97-807506-37",
+      "license_number": "23-97-807506-37",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "면허번호 22-07-960927-75에 대한 재발급을 신청합니다.",
+      "license_number": "22-07-960927-75",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "Driver's License Number: 11-45-569642-34",
+      "license_number": "11-45-569642-34",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "24-71-692375-02 번호로 발급된 면허증입니다.",
+      "license_number": "24-71-692375-02",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허 번호: 25-31-574943-64",
+      "license_number": "25-31-574943-64",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "18-94-612520-38 번호로 발급된 면허증입니다.",
+      "license_number": "18-94-612520-38",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 11-84-360654-17로 확인됩니다.",
+      "license_number": "11-84-360654-17",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허증 번호: 22-93-887Y81-04",
+      "license_number": "22-93-887Y81-04",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호는 33-96-875390-44입니다.",
+      "license_number": "33-96-875390-44",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "운전면허번호가 25-62-122621-42인 면허증을 신청합니다.",
+      "license_number": "25-62-122621-42",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 17-80-674032-83로 확인됩니다.",
+      "license_number": "17-80-674032-83",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 17-39-228125-04입니다.",
+      "license_number": "17-39-228125-04",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "13-90-403905-38 번호로 발급된 면허증입니다.",
+      "license_number": "13-90-403905-38",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호 15-35-475039-59로 발급되었습니다.",
+      "license_number": "15-35-475039-59",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "LICENSE: 19-23-337906-75",
+      "license_number": "19-23-337906-75",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허 번호: 17-57-191329-55",
+      "license_number": "17-57-191329-55",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "20-09-214506-47 번호로 발급된 면허증입니다.",
+      "license_number": "20-09-214506-47",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 28-XX-275014-96로 확인됩니다.",
+      "license_number": "28-XX-275014-96",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허번호 23-XX-158676-35에 대한 재발급을 신청합니다.",
+      "license_number": "23-XX-158676-35",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허 번호: 11-11-257014-92",
+      "license_number": "11-11-257014-92",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "Korean Driver License: 123375114899",
+      "license_number": "123375114899",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허번호 27-31-013931-47에 대한 재발급을 신청합니다.",
+      "license_number": "27-31-013931-47",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허번호 13-XX-064705-59로 발급되었습니다.",
+      "license_number": "13-XX-064705-59",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호가 16-07-088091-06인 면허증을 신청합니다.",
+      "license_number": "16-07-088091-06",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 24-09-866180-66",
+      "license_number": "24-09-866180-66",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "Driver's License Number: 14-96-697007-21",
+      "license_number": "14-96-697007-21",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허번호는 26-95-860534-27이며,",
+      "license_number": "26-95-860534-27",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "LICENSE: 22-79-105998-95",
+      "license_number": "22-79-105998-95",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "LICENSE: 18-93-690596-46",
+      "license_number": "18-93-690596-46",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호: 28-80-951327-19",
+      "license_number": "28-80-951327-19",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 23-92-306567-92",
+      "license_number": "23-92-306567-92",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호 11-48-971438-06에 대한 재발급을 신청합니다.",
+      "license_number": "11-48-971438-06",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허번호 20-79-550424-81에 대한 재발급을 신청합니다.",
+      "license_number": "20-79-550424-81",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허번호가 01-89-841813-62인 면허증을 신청합니다.",
+      "license_number": "01-89-841813-62",
+      "is_valid": false,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "Korean Driver License: 23-37-6425066-30",
+      "license_number": "23-37-6425066-30",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "Korean Driver License: 20-71-170521-53",
+      "license_number": "20-71-170521-53",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 28-43-817620-58로 확인됩니다.",
+      "license_number": "28-43-817620-58",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허증번호: 12-23-345631-01",
+      "license_number": "12-23-345631-01",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "13-20-519159-89 번호로 발급된 면허증입니다.",
+      "license_number": "13-20-519159-89",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호: 18-53-256150-74",
+      "license_number": "18-53-256150-74",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "Korean Driver License: 21-81-583782-79",
+      "license_number": "21-81-583782-79",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허번호가 48-93-626433-24인 면허증을 신청합니다.",
+      "license_number": "48-93-626433-24",
+      "is_valid": false,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "12-23-752970-89 번호로 발급된 면허증입니다.",
+      "license_number": "12-23-752970-89",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허증번호: 12-46-377845-43",
+      "license_number": "12-46-377845-43",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호 13-30-027126Z09로 발급되었습니다.",
+      "license_number": "13-30-027126Z09",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "LICENSE: 26-24-476987-00",
+      "license_number": "26-24-476987-00",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Driver's License Number: 20-07-933014-59",
+      "license_number": "20-07-933014-59",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허번호: 20-36-668356-59",
+      "license_number": "20-36-668356-59",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허번호가 16-15-043868-37인 면허증을 신청합니다.",
+      "license_number": "16-15-043868-37",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "Korean Driver License: 18-71-893312-07",
+      "license_number": "18-71-893312-07",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 12-27-559424-05",
+      "license_number": "12-27-559424-05",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호(21-27-954514-76)로 조회해주세요.",
+      "license_number": "21-27-954514-76",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "운전면허 번호: 24-05-134320-69",
+      "license_number": "24-05-134320-69",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 30-16-983626-26",
+      "license_number": "30-16-983626-26",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "해당 고객의 면허번호는 25-37-496553-30로 확인됩니다.",
+      "license_number": "25-37-496553-30",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Driver's License Number: 17-94-398656-86",
+      "license_number": "17-94-398656-86",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허정보: 16-44-953137-81",
+      "license_number": "16-44-953137-81",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "Driver's License Number: 23-49-532044-36",
+      "license_number": "23-49-532044-36",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "LICENSE: 26-95-956690-97",
+      "license_number": "26-95-956690-97",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 23-26-933644-21입니다.",
+      "license_number": "23-26-933644-21",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "LICENSE: 16-53-958434-83",
+      "license_number": "16-53-958434-83",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허정보: 18-40-072032-98",
+      "license_number": "18-40-072032-98",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허번호는 26-46-946740-35이며,",
+      "license_number": "26-46-946740-35",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "DRIVER LICENSE: 12-76-928734-58",
+      "license_number": "12-76-928734-58",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호가 12-44-639678-80인 면허증을 신청합니다.",
+      "license_number": "12-44-639678-80",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "22-16-610668-78 번호로 발급된 면허증입니다.",
+      "license_number": "22-16-610668-78",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호(27-98-518279-64)로 조회해주세요.",
+      "license_number": "27-98-518279-64",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호(25-A5-289113-97)로 조회해주세요.",
+      "license_number": "25-A5-289113-97",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "DRIVER LICENSE: 25-21-341692-93",
+      "license_number": "25-21-341692-93",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 25-08-360105-92입니다.",
+      "license_number": "25-08-360105-92",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허증 번호: 23-63-538305-98",
+      "license_number": "23-63-538305-98",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "LICENSE: 23-67-692335-99",
+      "license_number": "23-67-692335-99",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 19-43-513534-84",
+      "license_number": "19-43-513534-84",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허번호: 14-96-434762-68",
+      "license_number": "14-96-434762-68",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 22-90-6761Z0-09",
+      "license_number": "22-90-6761Z0-09",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허증번호: 17-84-718775-91",
+      "license_number": "17-84-718775-91",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허번호가 23-98-403507-40인 면허증을 신청합니다.",
+      "license_number": "23-98-403507-40",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "LICENSE: 22-67-8626736-21",
+      "license_number": "22-67-8626736-21",
+      "is_valid": false,
+      "template": "LICENSE: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허 번호: 18-30-682123-44",
+      "license_number": "18-30-682123-44",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "LICENSE: 25-58-683668-62",
+      "license_number": "25-58-683668-62",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호는 18-31-548518-86입니다.",
+      "license_number": "18-31-548518-86",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(25-12-164731-36)로 조회해주세요.",
+      "license_number": "25-12-164731-36",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "본인의 운전면허번호는 15-69-248913-71입니다.",
+      "license_number": "15-69-248913-71",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 13-58-852693-02",
+      "license_number": "13-58-852693-02",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 19-00-136048-18이며,",
+      "license_number": "19-00-136048-18",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호(28-97-515718-99)로 조회해주세요.",
+      "license_number": "28-97-515718-99",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호 15-09-336703-51로 발급되었습니다.",
+      "license_number": "15-09-336703-51",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 16-93-811779-05입니다.",
+      "license_number": "16-93-811779-05",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 12-02-410529-90입니다.",
+      "license_number": "12-02-410529-90",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(21-63-772689-06)로 조회해주세요.",
+      "license_number": "21-63-772689-06",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 23A15-138354-37입니다.",
+      "license_number": "23A15-138354-37",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허번호(26-25-370925-04)로 조회해주세요.",
+      "license_number": "26-25-370925-04",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "LICENSE: 17-09-651308-26",
+      "license_number": "17-09-651308-26",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 63-50-187498-91입니다.",
+      "license_number": "63-50-187498-91",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "해당 고객의 면허번호는 23-34-317227-83로 확인됩니다.",
+      "license_number": "23-34-317227-83",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허증 번호: 14-21-1393480-31",
+      "license_number": "14-21-1393480-31",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호: 26-61-841174-71",
+      "license_number": "26-61-841174-71",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "LICENSE: 02-13-122562-56",
+      "license_number": "02-13-122562-56",
+      "is_valid": false,
+      "template": "LICENSE: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "Driver's License Number: 24-85-985522-98",
+      "license_number": "24-85-985522-98",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허번호는 24-91-256234-48입니다.",
+      "license_number": "24-91-256234-48",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 14-98-304171-28",
+      "license_number": "14-98-304171-28",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 20-67-462349-94",
+      "license_number": "20-67-462349-94",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호(13-83-824067-45)로 조회해주세요.",
+      "license_number": "13-83-824067-45",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호 17-79-512355-13로 발급되었습니다.",
+      "license_number": "17-79-512355-13",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "면허증번호: 15-73-770015-90",
+      "license_number": "15-73-770015-90",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 16-14-915679-45",
+      "license_number": "16-14-915679-45",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 27-02-091097-86",
+      "license_number": "27-02-091097-86",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허정보: 17-15-955368-42",
+      "license_number": "17-15-955368-42",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 28-85-326557-35입니다.",
+      "license_number": "28-85-326557-35",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "12-26-608712-78 번호로 발급된 면허증입니다.",
+      "license_number": "12-26-608712-78",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호: 20-83-841314-36",
+      "license_number": "20-83-841314-36",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호(14-XX-378384-40)로 조회해주세요.",
+      "license_number": "14-XX-378384-40",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호는 20-67-516778-16이며,",
+      "license_number": "20-67-516778-16",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "본인의 운전면허번호는 12-XX-686692-04입니다.",
+      "license_number": "12-XX-686692-04",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호는 257293556189입니다.",
+      "license_number": "257293556189",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허정보: 22-69-736647-41",
+      "license_number": "22-69-736647-41",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 24-3Z-680117-85",
+      "license_number": "24-3Z-680117-85",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "DRIVER LICENSE: 131520055383",
+      "license_number": "131520055383",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 면허번호는 25-81-153019-79로 확인됩니다.",
+      "license_number": "25-81-153019-79",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 19-XX-256362-16",
+      "license_number": "19-XX-256362-16",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호가 15-10-930028-33인 면허증을 신청합니다.",
+      "license_number": "15-10-930028-33",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허증번호: 21-44-3809935-31",
+      "license_number": "21-44-3809935-31",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "18-25-341293-22 번호로 발급된 면허증입니다.",
+      "license_number": "18-25-341293-22",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호 13-43-597585-41에 대한 재발급을 신청합니다.",
+      "license_number": "13-43-597585-41",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 21-88-954694-02입니다.",
+      "license_number": "21-88-954694-02",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 11-87-305689-46",
+      "license_number": "11-87-305689-46",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "22-26-795056-05 번호로 발급된 면허증입니다.",
+      "license_number": "22-26-795056-05",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 23-57-133536-13",
+      "license_number": "23-57-133536-13",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "Korean Driver License: 21-59-837207-61",
+      "license_number": "21-59-837207-61",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호: 19-64-9149855-33",
+      "license_number": "19-64-9149855-33",
+      "is_valid": false,
+      "template": "면허번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "Driver's License Number: 24-41-103482-75",
+      "license_number": "24-41-103482-75",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 13-61-256687-51입니다.",
+      "license_number": "13-61-256687-51",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 15-72-4250656-14로 확인됩니다.",
+      "license_number": "15-72-4250656-14",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허번호는 13-70-517393-08입니다.",
+      "license_number": "13-70-517393-08",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 17-64-083962-65입니다.",
+      "license_number": "17-64-083962-65",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 22-92-709908-90입니다.",
+      "license_number": "22-92-709908-90",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 23-50-555404-71",
+      "license_number": "23-50-555404-71",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "Korean Driver License: 21-27-997135-45",
+      "license_number": "21-27-997135-45",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호 21-82-410237-11로 발급되었습니다.",
+      "license_number": "21-82-410237-11",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 20-79B582356-01입니다.",
+      "license_number": "20-79B582356-01",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Driver's License Number: 22-74-638653-87",
+      "license_number": "22-74-638653-87",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "고객님의 면허번호는 22-49-014365-70입니다.",
+      "license_number": "22-49-014365-70",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호: 27-93-201807-62",
+      "license_number": "27-93-201807-62",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 22-54-224265-97",
+      "license_number": "22-54-224265-97",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 18-95-488271-41입니다.",
+      "license_number": "18-95-488271-41",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 11-82-455003-41에 대한 재발급을 신청합니다.",
+      "license_number": "11-82-455003-41",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 28-34-659281-26로 확인됩니다.",
+      "license_number": "28-34-659281-26",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "LICENSE: 17-41-370388-48",
+      "license_number": "17-41-370388-48",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 20-28-563644-83에 대한 재발급을 신청합니다.",
+      "license_number": "20-28-563644-83",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 13-98-869461-04입니다.",
+      "license_number": "13-98-869461-04",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 11-90-644785-77입니다.",
+      "license_number": "11-90-644785-77",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 25-86-661137-84",
+      "license_number": "25-86-661137-84",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 26-20-528967-31",
+      "license_number": "26-20-528967-31",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "LICENSE: 26-32-887681-68",
+      "license_number": "26-32-887681-68",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Korean Driver License: 21-97-490714-17",
+      "license_number": "21-97-490714-17",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 27-84-760349-97",
+      "license_number": "27-84-760349-97",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허증번호: 14-12-971872-82",
+      "license_number": "14-12-971872-82",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 03-13-627999-79입니다.",
+      "license_number": "03-13-627999-79",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호 16-40-448641-09에 대한 재발급을 신청합니다.",
+      "license_number": "16-40-448641-09",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허증번호: 20-51-514280-19",
+      "license_number": "20-51-514280-19",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호 25-57-051465-20에 대한 재발급을 신청합니다.",
+      "license_number": "25-57-051465-20",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허증번호: 15-35-002845-10",
+      "license_number": "15-35-002845-10",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 22-69-994567-27",
+      "license_number": "22-69-994567-27",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "Korean Driver License: 15-58-161775-20",
+      "license_number": "15-58-161775-20",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "Driver's License Number: 23-30-652804-00",
+      "license_number": "23-30-652804-00",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허 번호: 79-85-363526-45",
+      "license_number": "79-85-363526-45",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허증번호: 17-84-Z53173-83",
+      "license_number": "17-84-Z53173-83",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 18-41Z136182-52입니다.",
+      "license_number": "18-41Z136182-52",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호가 25-55-808718-64인 면허증을 신청합니다.",
+      "license_number": "25-55-808718-64",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허번호가 28-78-760722-79인 면허증을 신청합니다.",
+      "license_number": "28-78-760722-79",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호: 13-15-409268-35",
+      "license_number": "13-15-409268-35",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 24-91-192207-17이며,",
+      "license_number": "24-91-192207-17",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "운전면허 번호: 18-82-867448-07",
+      "license_number": "18-82-867448-07",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "Korean Driver License: 14-79-850295-44",
+      "license_number": "14-79-850295-44",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "LICENSE: 27-59-075732-84",
+      "license_number": "27-59-075732-84",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 1C-03-707534-56",
+      "license_number": "1C-03-707534-56",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Korean Driver License: 24-39-276127-45",
+      "license_number": "24-39-276127-45",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "22-35-492054-90 번호로 발급된 면허증입니다.",
+      "license_number": "22-35-492054-90",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허증 번호: 11-58-151836-65",
+      "license_number": "11-58-151836-65",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호 25-20-652481-98에 대한 재발급을 신청합니다.",
+      "license_number": "25-20-652481-98",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 271276901469입니다.",
+      "license_number": "271276901469",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "12-40-958417-45 번호로 발급된 면허증입니다.",
+      "license_number": "12-40-958417-45",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "운전면허번호는 11-83-140115-84이며,",
+      "license_number": "11-83-140115-84",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "운전면허번호가 22-80-642331-18인 면허증을 신청합니다.",
+      "license_number": "22-80-642331-18",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 218534827128입니다.",
+      "license_number": "218534827128",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 면허번호는 21-66-575377-60로 확인됩니다.",
+      "license_number": "21-66-575377-60",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허증 번호: 19-XX-656711-76",
+      "license_number": "19-XX-656711-76",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "Korean Driver License: 22-91-902420-28",
+      "license_number": "22-91-902420-28",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "LICENSE: 14-81-795981-76",
+      "license_number": "14-81-795981-76",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호: 24-72-1773665-33",
+      "license_number": "24-72-1773665-33",
+      "is_valid": false,
+      "template": "면허번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "해당 고객의 면허번호는 19-10-771818-57로 확인됩니다.",
+      "license_number": "19-10-771818-57",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호가 12-42-033064-38인 면허증을 신청합니다.",
+      "license_number": "12-42-033064-38",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호 16-87-122975-53에 대한 재발급을 신청합니다.",
+      "license_number": "16-87-122975-53",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허번호: 13-22-998338-74",
+      "license_number": "13-22-998338-74",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호: 22-57-816966-78",
+      "license_number": "22-57-816966-78",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호 87-37-227322-23로 발급되었습니다.",
+      "license_number": "87-37-227322-23",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "DRIVER LICENSE: 260934958161",
+      "license_number": "260934958161",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "LICENSE: 15-08-191142-79",
+      "license_number": "15-08-191142-79",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허증번호: 24-28-848534-69",
+      "license_number": "24-28-848534-69",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호: 15-81-52044A-09",
+      "license_number": "15-81-52044A-09",
+      "is_valid": false,
+      "template": "면허번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허번호 280567407569에 대한 재발급을 신청합니다.",
+      "license_number": "280567407569",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "본인의 운전면허번호는 24-10-909526-31입니다.",
+      "license_number": "24-10-909526-31",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 25-48-055156-30입니다.",
+      "license_number": "25-48-055156-30",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(08-73-266094-83)로 조회해주세요.",
+      "license_number": "08-73-266094-83",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "LICENSE: 26-97-573146-25",
+      "license_number": "26-97-573146-25",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Korean Driver License: 16-04-579483-89",
+      "license_number": "16-04-579483-89",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호(20-52-940999-99)로 조회해주세요.",
+      "license_number": "20-52-940999-99",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호 14-03-467190-65에 대한 재발급을 신청합니다.",
+      "license_number": "14-03-467190-65",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "20-62-158661-21 번호로 발급된 면허증입니다.",
+      "license_number": "20-62-158661-21",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 1A-72-963667-60",
+      "license_number": "1A-72-963667-60",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Driver's License Number: 41-30-440240-71",
+      "license_number": "41-30-440240-71",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호 13-23-048543-60로 발급되었습니다.",
+      "license_number": "13-23-048543-60",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "Korean Driver License: 14-25-008741-05",
+      "license_number": "14-25-008741-05",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호(11-17-166311-76)로 조회해주세요.",
+      "license_number": "11-17-166311-76",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호: 17-09-704345-28",
+      "license_number": "17-09-704345-28",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 14-83-976981-09",
+      "license_number": "14-83-976981-09",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "Korean Driver License: 25-61-898294-28",
+      "license_number": "25-61-898294-28",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 16-71-856269-50",
+      "license_number": "16-71-856269-50",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 28-91-6266213-12",
+      "license_number": "28-91-6266213-12",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "DRIVER LICENSE: 147352561052",
+      "license_number": "147352561052",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허번호 11-81-232117-75에 대한 재발급을 신청합니다.",
+      "license_number": "11-81-232117-75",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 13-72-388999-16입니다.",
+      "license_number": "13-72-388999-16",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 24-63-931320-49에 대한 재발급을 신청합니다.",
+      "license_number": "24-63-931320-49",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "Korean Driver License: 133531616942",
+      "license_number": "133531616942",
+      "is_valid": false,
+      "template": "Korean Driver License: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허번호는 12-19-176310-60입니다.",
+      "license_number": "12-19-176310-60",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "Korean Driver License: 17-32-224391-58",
+      "license_number": "17-32-224391-58",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 19-37-003974-66로 확인됩니다.",
+      "license_number": "19-37-003974-66",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호 21-XX-677135-68로 발급되었습니다.",
+      "license_number": "21-XX-677135-68",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "고객님의 면허번호는 13-21-192156-93입니다.",
+      "license_number": "13-21-192156-93",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "23-57-385482-35 번호로 발급된 면허증입니다.",
+      "license_number": "23-57-385482-35",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호(15-13-055677-2C)로 조회해주세요.",
+      "license_number": "15-13-055677-2C",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 면허번호는 27-31-207513-04입니다.",
+      "license_number": "27-31-207513-04",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 19-55-150451-88",
+      "license_number": "19-55-150451-88",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "운전면허번호가 27-51-965598-13인 면허증을 신청합니다.",
+      "license_number": "27-51-965598-13",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호 14-16-604957-61에 대한 재발급을 신청합니다.",
+      "license_number": "14-16-604957-61",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 17-09-088437-26입니다.",
+      "license_number": "17-09-088437-26",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 25-74-497560-01입니다.",
+      "license_number": "25-74-497560-01",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 13-00-942471-03입니다.",
+      "license_number": "13-00-942471-03",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 28-56-476485-58입니다.",
+      "license_number": "28-56-476485-58",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 16-40-001324-00로 발급되었습니다.",
+      "license_number": "16-40-001324-00",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허번호는 21-66-314723-80입니다.",
+      "license_number": "21-66-314723-80",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 22-31-583605-15입니다.",
+      "license_number": "22-31-583605-15",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호가 22-73-933093-81인 면허증을 신청합니다.",
+      "license_number": "22-73-933093-81",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호 14-94-197895-42에 대한 재발급을 신청합니다.",
+      "license_number": "14-94-197895-42",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "LICENSE: 11-47-776922-71",
+      "license_number": "11-47-776922-71",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 25-35-5908526-04로 발급되었습니다.",
+      "license_number": "25-35-5908526-04",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호 11-12-6898360-17로 발급되었습니다.",
+      "license_number": "11-12-6898360-17",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "19-91-9943984-66 번호로 발급된 면허증입니다.",
+      "license_number": "19-91-9943984-66",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 26-00-891908-31입니다.",
+      "license_number": "26-00-891908-31",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호: 25-17-617622-57",
+      "license_number": "25-17-617622-57",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호: 16-27-299797-51",
+      "license_number": "16-27-299797-51",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 22-17-267751-90입니다.",
+      "license_number": "22-17-267751-90",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 27-XX-449670-83에 대한 재발급을 신청합니다.",
+      "license_number": "27-XX-449670-83",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "21-XX-358178-40 번호로 발급된 면허증입니다.",
+      "license_number": "21-XX-358178-40",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "DRIVER LICENSE: 19-41-655577-48",
+      "license_number": "19-41-655577-48",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 23-70-006757-45로 확인됩니다.",
+      "license_number": "23-70-006757-45",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호가 11-42-449710-96인 면허증을 신청합니다.",
+      "license_number": "11-42-449710-96",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 221083619839입니다.",
+      "license_number": "221083619839",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허증번호: 222200445734",
+      "license_number": "222200445734",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "고객님의 면허번호는 19-88-722006-40입니다.",
+      "license_number": "19-88-722006-40",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 24-72-642655-74",
+      "license_number": "24-72-642655-74",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 27-85-168177-42",
+      "license_number": "27-85-168177-42",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허 번호: 16-77-3595026-49",
+      "license_number": "16-77-3595026-49",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "해당 고객의 면허번호는 13-76-7631103-50로 확인됩니다.",
+      "license_number": "13-76-7631103-50",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호: 13-79-253341-39",
+      "license_number": "13-79-253341-39",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 12-69-406858-29로 확인됩니다.",
+      "license_number": "12-69-406858-29",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허번호는 15-23-131276-96이며,",
+      "license_number": "15-23-131276-96",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "본인의 운전면허번호는 13-53-114726-73입니다.",
+      "license_number": "13-53-114726-73",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 26-17-4326939-17",
+      "license_number": "26-17-4326939-17",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호 16-72-594864-67로 발급되었습니다.",
+      "license_number": "16-72-594864-67",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허증 번호: 20-83-956562-57",
+      "license_number": "20-83-956562-57",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호: 27-27-624072-39",
+      "license_number": "27-27-624072-39",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 14-82-078153-41입니다.",
+      "license_number": "14-82-078153-41",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허 번호: 11-58-591088-35",
+      "license_number": "11-58-591088-35",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 19-33-1046086-04입니다.",
+      "license_number": "19-33-1046086-04",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호 10-59-031926-48에 대한 재발급을 신청합니다.",
+      "license_number": "10-59-031926-48",
+      "is_valid": false,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "면허번호(12-00-521090-04)로 조회해주세요.",
+      "license_number": "12-00-521090-04",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "LICENSE: 13-XX-554788-68",
+      "license_number": "13-XX-554788-68",
+      "is_valid": false,
+      "template": "LICENSE: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허증번호: 12-92-928686-87",
+      "license_number": "12-92-928686-87",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호: 14-44-494906-08",
+      "license_number": "14-44-494906-08",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 17-56-771768-03입니다.",
+      "license_number": "17-56-771768-03",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "새로 발급받은 면허번호는 13-27-191782-37입니다.",
+      "license_number": "13-27-191782-37",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허증 번호: 11-20-725167-08",
+      "license_number": "11-20-725167-08",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호: 23-03-737106-84",
+      "license_number": "23-03-737106-84",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 16-24-186109-13",
+      "license_number": "16-24-186109-13",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호 26-40-105589-48로 발급되었습니다.",
+      "license_number": "26-40-105589-48",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 11-62-298594-46",
+      "license_number": "11-62-298594-46",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "운전면허번호가 11-61-579259-32인 면허증을 신청합니다.",
+      "license_number": "11-61-579259-32",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호: 24-47-123852-94",
+      "license_number": "24-47-123852-94",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "13-66-804006-87 번호로 발급된 면허증입니다.",
+      "license_number": "13-66-804006-87",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허번호: 128129723471",
+      "license_number": "128129723471",
+      "is_valid": false,
+      "template": "면허번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허 번호: 12-38-923843-88",
+      "license_number": "12-38-923843-88",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호(20-03-947Z78-25)로 조회해주세요.",
+      "license_number": "20-03-947Z78-25",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Driver's License Number: 18-57-347676-40",
+      "license_number": "18-57-347676-40",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허증번호: 20-83-363196-94",
+      "license_number": "20-83-363196-94",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호: 26-63-754469-81",
+      "license_number": "26-63-754469-81",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호 25-55-680510-89에 대한 재발급을 신청합니다.",
+      "license_number": "25-55-680510-89",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허 번호: 18-28-964337-14",
+      "license_number": "18-28-964337-14",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호 12-48-061532-77에 대한 재발급을 신청합니다.",
+      "license_number": "12-48-061532-77",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "Korean Driver License: 27-07-848989-08",
+      "license_number": "27-07-848989-08",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 256017358681",
+      "license_number": "256017358681",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "고객님의 면허번호는 28-98-0C3361-10입니다.",
+      "license_number": "28-98-0C3361-10",
+      "is_valid": false,
+      "template": "고객님의 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "DRIVER LICENSE: 201512605566",
+      "license_number": "201512605566",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허번호가 27-51-364921-36인 면허증을 신청합니다.",
+      "license_number": "27-51-364921-36",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허정보: 254072017395",
+      "license_number": "254072017395",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허증번호: 21-97-273114-95",
+      "license_number": "21-97-273114-95",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 13-92-669593-17",
+      "license_number": "13-92-669593-17",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 111631499359로 확인됩니다.",
+      "license_number": "111631499359",
+      "is_valid": false,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허번호가 12-19-859666-61인 면허증을 신청합니다.",
+      "license_number": "12-19-859666-61",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허번호가 11-65-483459-42인 면허증을 신청합니다.",
+      "license_number": "11-65-483459-42",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "Korean Driver License: 26-90-892110-09",
+      "license_number": "26-90-892110-09",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허 번호: 12-61-359607-76",
+      "license_number": "12-61-359607-76",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 61-58-239599-24",
+      "license_number": "61-58-239599-24",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "25-41-437451-56 번호로 발급된 면허증입니다.",
+      "license_number": "25-41-437451-56",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "Korean Driver License: 25-85-213865-20",
+      "license_number": "25-85-213865-20",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "LICENSE: 15-38-312054-31",
+      "license_number": "15-38-312054-31",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Driver's License Number: 26-37-447023-78",
+      "license_number": "26-37-447023-78",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허 번호: 18-58-327540-27",
+      "license_number": "18-58-327540-27",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허번호(14-64-653051-04)로 조회해주세요.",
+      "license_number": "14-64-653051-04",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "운전면허증 번호: 114318805472",
+      "license_number": "114318805472",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허번호 17-43-731432-40로 발급되었습니다.",
+      "license_number": "17-43-731432-40",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허번호가 16-89-214708-47인 면허증을 신청합니다.",
+      "license_number": "16-89-214708-47",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 21-77-352140-08입니다.",
+      "license_number": "21-77-352140-08",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "LICENSE: 20-23-890135-37",
+      "license_number": "20-23-890135-37",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "LICENSE: 16-87-025758-01",
+      "license_number": "16-87-025758-01",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "Driver's License Number: 26-12-309301-27",
+      "license_number": "26-12-309301-27",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "Korean Driver License: 18-35-094811-30",
+      "license_number": "18-35-094811-30",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "운전면허증 번호: 13-33-665611-93",
+      "license_number": "13-33-665611-93",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허증번호: 25-55-6198908-90",
+      "license_number": "25-55-6198908-90",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "면허번호 28-43-439909-61로 발급되었습니다.",
+      "license_number": "28-43-439909-61",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허번호는 14-87-452745-06이며,",
+      "license_number": "14-87-452745-06",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호(21-43-435949-75)로 조회해주세요.",
+      "license_number": "21-43-435949-75",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호 15-03-6669671-02로 발급되었습니다.",
+      "license_number": "15-03-6669671-02",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "고객님의 면허번호는 26-18-022066-77입니다.",
+      "license_number": "26-18-022066-77",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "Driver's License Number: 17-74-657228-97",
+      "license_number": "17-74-657228-97",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "Driver's License Number: 26-XX-381284-37",
+      "license_number": "26-XX-381284-37",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허번호(25-34-448241-80)로 조회해주세요.",
+      "license_number": "25-34-448241-80",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "운전면허번호가 25-85-420670-00인 면허증을 신청합니다.",
+      "license_number": "25-85-420670-00",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허 번호: 21-33-3661770-57",
+      "license_number": "21-33-3661770-57",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허번호가 26-39-974370-72인 면허증을 신청합니다.",
+      "license_number": "26-39-974370-72",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "면허번호 27-92-904170-58에 대한 재발급을 신청합니다.",
+      "license_number": "27-92-904170-58",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "운전면허번호는 27-53-903869-86입니다.",
+      "license_number": "27-53-903869-86",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 21-81-399559-67로 발급되었습니다.",
+      "license_number": "21-81-399559-67",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "Driver's License Number: 27-20-789479-50",
+      "license_number": "27-20-789479-50",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허번호(16-35-754649-86)로 조회해주세요.",
+      "license_number": "16-35-754649-86",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "면허번호: 15-16-7228269-59",
+      "license_number": "15-16-7228269-59",
+      "is_valid": false,
+      "template": "면허번호: {number}",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허번호는 24-47-522092-44이며,",
+      "license_number": "24-47-522092-44",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "DRIVER LICENSE: 216134564786",
+      "license_number": "216134564786",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Driver's License Number: 23-87-940449-07",
+      "license_number": "23-87-940449-07",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "면허번호: 11-31-716192-40",
+      "license_number": "11-31-716192-40",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "15-XX-144520-37 번호로 발급된 면허증입니다.",
+      "license_number": "15-XX-144520-37",
+      "is_valid": false,
+      "template": "{number} 번호로 발급된 면허증입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허증 번호: 15-24-182758-36",
+      "license_number": "15-24-182758-36",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 24-77-106765-27",
+      "license_number": "24-77-106765-27",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "Driver's License Number: 17-28-967427-31",
+      "license_number": "17-28-967427-31",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "운전면허번호는 18-36-868295-14이며,",
+      "license_number": "18-36-868295-14",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 02-89-446828-23입니다.",
+      "license_number": "02-89-446828-23",
+      "is_valid": false,
+      "template": "새로 발급받은 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "Korean Driver License: 25-16-070508-10",
+      "license_number": "25-16-070508-10",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호: 23-40-639411-58",
+      "license_number": "23-40-639411-58",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 16-03-979841-08",
+      "license_number": "16-03-979841-08",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 23-33-884124-24입니다.",
+      "license_number": "23-33-884124-24",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 11-53-258274-87입니다.",
+      "license_number": "11-53-258274-87",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 39-81-644938-73입니다.",
+      "license_number": "39-81-644938-73",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "해당 고객의 면허번호는 27-16-664108-20로 확인됩니다.",
+      "license_number": "27-16-664108-20",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허번호 11-50-652276-11에 대한 재발급을 신청합니다.",
+      "license_number": "11-50-652276-11",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허번호: 16-04-900059-15",
+      "license_number": "16-04-900059-15",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허증번호: 23-28-806275-68",
+      "license_number": "23-28-806275-68",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 25-06-835806-31로 확인됩니다.",
+      "license_number": "25-06-835806-31",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "DRIVER LICENSE: 227841213262",
+      "license_number": "227841213262",
+      "is_valid": false,
+      "template": "DRIVER LICENSE: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 20-92-286329-84입니다.",
+      "license_number": "20-92-286329-84",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 22-41-693713-65로 발급되었습니다.",
+      "license_number": "22-41-693713-65",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "25-75-397282-12 번호로 발급된 면허증입니다.",
+      "license_number": "25-75-397282-12",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "LICENSE: 28-96-556449-27",
+      "license_number": "28-96-556449-27",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 12-46-720257-52로 발급되었습니다.",
+      "license_number": "12-46-720257-52",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허증 번호: 11-02-221713-40",
+      "license_number": "11-02-221713-40",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 면허번호는 14-76-950310-13로 확인됩니다.",
+      "license_number": "14-76-950310-13",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "면허증번호: 28-96-738520-95",
+      "license_number": "28-96-738520-95",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 11-46-9388381-97입니다.",
+      "license_number": "11-46-9388381-97",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_serial"
+    },
+    {
+      "text": "운전면허증 번호: 17-XX-381559-86",
+      "license_number": "17-XX-381559-86",
+      "is_valid": false,
+      "template": "운전면허증 번호: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "12-99-933217-35 번호로 발급된 면허증입니다.",
+      "license_number": "12-99-933217-35",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "면허증번호: 25-XX-120116-03",
+      "license_number": "25-XX-120116-03",
+      "is_valid": false,
+      "template": "면허증번호: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "본인의 운전면허번호는 18-02-975866-65입니다.",
+      "license_number": "18-02-975866-65",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 운전면허번호는 26-89-296286-86입니다.",
+      "license_number": "26-89-296286-86",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허증 번호: 18-59-647371-88",
+      "license_number": "18-59-647371-88",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "면허번호: 28-55-611086-29",
+      "license_number": "28-55-611086-29",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허정보: 25-16-245138-61",
+      "license_number": "25-16-245138-61",
+      "is_valid": true,
+      "template": "면허정보: {number}"
+    },
+    {
+      "text": "Driver's License Number: 20-92-993865-27",
+      "license_number": "20-92-993865-27",
+      "is_valid": true,
+      "template": "Driver's License Number: {number}"
+    },
+    {
+      "text": "Korean Driver License: 23-63-209099-67",
+      "license_number": "23-63-209099-67",
+      "is_valid": true,
+      "template": "Korean Driver License: {number}"
+    },
+    {
+      "text": "면허번호 16-XX-045786-46로 발급되었습니다.",
+      "license_number": "16-XX-045786-46",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허정보: 111193179791",
+      "license_number": "111193179791",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "면허번호 17-87-442578-76에 대한 재발급을 신청합니다.",
+      "license_number": "17-87-442578-76",
+      "is_valid": true,
+      "template": "면허번호 {number}에 대한 재발급을 신청합니다."
+    },
+    {
+      "text": "면허번호 19-70-624034-28로 발급되었습니다.",
+      "license_number": "19-70-624034-28",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "면허번호 18-53-652929-18로 발급되었습니다.",
+      "license_number": "18-53-652929-18",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "15-38-971631-97 번호로 발급된 면허증입니다.",
+      "license_number": "15-38-971631-97",
+      "is_valid": true,
+      "template": "{number} 번호로 발급된 면허증입니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 25-39-951887-04로 확인됩니다.",
+      "license_number": "25-39-951887-04",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "운전면허 번호: 23-XX-750827-53",
+      "license_number": "23-XX-750827-53",
+      "is_valid": false,
+      "template": "운전면허 번호: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허번호: 22-36-698201-59",
+      "license_number": "22-36-698201-59",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 11-37-333438-45",
+      "license_number": "11-37-333438-45",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "면허번호: 17-40-899119-71",
+      "license_number": "17-40-899119-71",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "면허번호 11-32-334857-82로 발급되었습니다.",
+      "license_number": "11-32-334857-82",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "운전면허번호는 13-20-569710-30입니다.",
+      "license_number": "13-20-569710-30",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호(27-19-344257-12)로 조회해주세요.",
+      "license_number": "27-19-344257-12",
+      "is_valid": true,
+      "template": "면허번호({number})로 조회해주세요."
+    },
+    {
+      "text": "LICENSE: 22-97-103909-86",
+      "license_number": "22-97-103909-86",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허번호 16-12-164360-90로 발급되었습니다.",
+      "license_number": "16-12-164360-90",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "고객님의 면허번호는 11-71-677057-19입니다.",
+      "license_number": "11-71-677057-19",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 26-43-589551-40입니다.",
+      "license_number": "26-43-589551-40",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "운전면허번호는 12-33-409969-56입니다.",
+      "license_number": "12-33-409969-56",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허증번호: 20-76-648142-69",
+      "license_number": "20-76-648142-69",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "Driver's License Number: 92-25-381592-90",
+      "license_number": "92-25-381592-90",
+      "is_valid": false,
+      "template": "Driver's License Number: {number}",
+      "invalid_type": "invalid_region"
+    },
+    {
+      "text": "운전면허증 번호: 11-04-806283-99",
+      "license_number": "11-04-806283-99",
+      "is_valid": true,
+      "template": "운전면허증 번호: {number}"
+    },
+    {
+      "text": "운전면허번호는 25-79-789809-63이며,",
+      "license_number": "25-79-789809-63",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "면허번호(25-35C471017-31)로 조회해주세요.",
+      "license_number": "25-35C471017-31",
+      "is_valid": false,
+      "template": "면허번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호가 13-83-682159-41인 면허증을 신청합니다.",
+      "license_number": "13-83-682159-41",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "LICENSE: 24-81-863911-01",
+      "license_number": "24-81-863911-01",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허증번호: 13-27-592725-99",
+      "license_number": "13-27-592725-99",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허증번호: 13-51-690896-55",
+      "license_number": "13-51-690896-55",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "면허번호: 22-XX-683744-00",
+      "license_number": "22-XX-683744-00",
+      "is_valid": false,
+      "template": "면허번호: {number}",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "새로 발급받은 면허번호는 25-56-481367-57입니다.",
+      "license_number": "25-56-481367-57",
+      "is_valid": true,
+      "template": "새로 발급받은 면허번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 면허번호는 276957403683입니다.",
+      "license_number": "276957403683",
+      "is_valid": false,
+      "template": "고객님의 면허번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "운전면허번호는 22-35-887088-27이며,",
+      "license_number": "22-35-887088-27",
+      "is_valid": true,
+      "template": "운전면허번호는 {number}이며,"
+    },
+    {
+      "text": "운전면허번호가 28-72-776263-53인 면허증을 신청합니다.",
+      "license_number": "28-72-776263-53",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "고객님의 면허번호는 23-10-057178-11입니다.",
+      "license_number": "23-10-057178-11",
+      "is_valid": true,
+      "template": "고객님의 면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호: 11-70-983496-81",
+      "license_number": "11-70-983496-81",
+      "is_valid": true,
+      "template": "면허번호: {number}"
+    },
+    {
+      "text": "DRIVER LICENSE: 19-11-908000-24",
+      "license_number": "19-11-908000-24",
+      "is_valid": true,
+      "template": "DRIVER LICENSE: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 14-77-993944-04입니다.",
+      "license_number": "14-77-993944-04",
+      "is_valid": true,
+      "template": "본인의 운전면허번호는 {number}입니다."
+    },
+    {
+      "text": "면허번호 17-XX-032052-75로 발급되었습니다.",
+      "license_number": "17-XX-032052-75",
+      "is_valid": false,
+      "template": "면허번호 {number}로 발급되었습니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "운전면허번호가 20-39-219366-20인 면허증을 신청합니다.",
+      "license_number": "20-39-219366-20",
+      "is_valid": true,
+      "template": "운전면허번호가 {number}인 면허증을 신청합니다."
+    },
+    {
+      "text": "운전면허 번호: 25-45-813373-64",
+      "license_number": "25-45-813373-64",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "면허정보: 13-47-8062B4-33",
+      "license_number": "13-47-8062B4-33",
+      "is_valid": false,
+      "template": "면허정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "면허증번호: 28-49-025152-26",
+      "license_number": "28-49-025152-26",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "운전면허 번호: 24-56-980053-18",
+      "license_number": "24-56-980053-18",
+      "is_valid": true,
+      "template": "운전면허 번호: {number}"
+    },
+    {
+      "text": "본인의 운전면허번호는 20-XX-023574-76입니다.",
+      "license_number": "20-XX-023574-76",
+      "is_valid": false,
+      "template": "본인의 운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    },
+    {
+      "text": "면허번호 21-89-183499-50로 발급되었습니다.",
+      "license_number": "21-89-183499-50",
+      "is_valid": true,
+      "template": "면허번호 {number}로 발급되었습니다."
+    },
+    {
+      "text": "해당 고객의 면허번호는 21-92-042091-20로 확인됩니다.",
+      "license_number": "21-92-042091-20",
+      "is_valid": true,
+      "template": "해당 고객의 면허번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "LICENSE: 11-66-006755-36",
+      "license_number": "11-66-006755-36",
+      "is_valid": true,
+      "template": "LICENSE: {number}"
+    },
+    {
+      "text": "면허증번호: 15-15-073891-82",
+      "license_number": "15-15-073891-82",
+      "is_valid": true,
+      "template": "면허증번호: {number}"
+    },
+    {
+      "text": "LICENSE: 13-59-9826Y7-47",
+      "license_number": "13-59-9826Y7-47",
+      "is_valid": false,
+      "template": "LICENSE: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "운전면허번호는 28-XX-660090-82입니다.",
+      "license_number": "28-XX-660090-82",
+      "is_valid": false,
+      "template": "운전면허번호는 {number}입니다.",
+      "invalid_type": "invalid_year"
+    }
+  ]
+}

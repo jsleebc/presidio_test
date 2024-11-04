@@ -1,0 +1,6218 @@
+{
+  "metadata": {
+    "total_cases": 998,
+    "valid_cases": 800,
+    "invalid_cases": 198,
+    "template_count": 20
+  },
+  "templates": [
+    "이메일 주소는 {email}입니다.",
+    "이메일: {email}",
+    "E-mail: {email}",
+    "메일 주소: {email}",
+    "연락처(이메일): {email}",
+    "이메일로 보내주세요: {email}",
+    "회신은 {email}로 부탁드립니다.",
+    "답장 받을 이메일: {email}",
+    "Send email to {email}",
+    "Email address: {email}",
+    "Contact via {email}",
+    "{email}로 연락주시기 바랍니다.",
+    "문의사항은 {email}로 보내주세요.",
+    "메일주소는 {email}입니다.",
+    "이메일 {email}로 보내주세요.",
+    "Contact email: {email}",
+    "Reply to: {email}",
+    "Mail to: {email}",
+    "Email me at {email}",
+    "Send your response to {email}"
+  ],
+  "test_cases": [
+    {
+      "text": "Contact email: @nate.com",
+      "email": "@nate.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "문의사항은 user226로 보내주세요.",
+      "email": "user226",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일 주소는 korean297@naver.com입니다.",
+      "email": "korean297@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "연락처(이메일): test.364@not-real-375.com",
+      "email": "test.364@not-real-375.com",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to test.379@hanmail.net",
+      "email": "test.379@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: korean335@gmail.com",
+      "email": "korean335@gmail.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send your response to uzqj7y@gmail.com",
+      "email": "uzqj7y@gmail.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일 주소: user538@hanmail.net",
+      "email": "user538@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Send your response to user171@daum.net",
+      "email": "user171@daum.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일주소는 korean247@outlook.kr입니다.",
+      "email": "korean247@outlook.kr",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Email address: user511@naver.com",
+      "email": "user511@naver.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "E-mail: korean285@nate.com",
+      "email": "korean285@nate.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Contact via 70u97ss@daum.net",
+      "email": "70u97ss@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Send email to korean286@hanmail.net",
+      "email": "korean286@hanmail.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일 user377로 보내주세요.",
+      "email": "user377",
+      "is_valid": false,
+      "template": "이메일 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "메일주소는 test.407@daum.net입니다.",
+      "email": "test.407@daum.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일: 1g0ei@gmail.com",
+      "email": "1g0ei@gmail.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "E-mail: user169@hanmail.net",
+      "email": "user169@hanmail.net",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "연락처(이메일): user680@kakao.com",
+      "email": "user680@kakao.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일 주소: .username@kakao.com",
+      "email": ".username@kakao.com",
+      "is_valid": false,
+      "template": "메일 주소: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Send email to user..name@naver.com",
+      "email": "user..name@naver.com",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Mail to: username.@daum.net",
+      "email": "username.@daum.net",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Mail to: test.347@naver.com",
+      "email": "test.347@naver.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Reply to: user601@hanmail.net",
+      "email": "user601@hanmail.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "메일 주소: test.467@gmail.com",
+      "email": "test.467@gmail.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일: korean696@kakao.com",
+      "email": "korean696@kakao.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Contact via e0qx3wzaea@gmail.com",
+      "email": "e0qx3wzaea@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "E-mail: test.604@outlook.kr",
+      "email": "test.604@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "문의사항은 korean131@nate.com로 보내주세요.",
+      "email": "korean131@nate.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: username.@outlook.kr",
+      "email": "username.@outlook.kr",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Send email to korean157@not-real-632.com",
+      "email": "korean157@not-real-632.com",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "문의사항은 korean501@nate.com로 보내주세요.",
+      "email": "korean501@nate.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: test.636@fake-outlook.kr",
+      "email": "test.636@fake-outlook.kr",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to 4ofpdl@kakao.com",
+      "email": "4ofpdl@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Reply to: user938@fake-naver.com",
+      "email": "user938@fake-naver.com",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Reply to: korean630@kakao.com",
+      "email": "korean630@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일 주소는 user653@nate.com입니다.",
+      "email": "user653@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "회신은 username.@daum.net로 부탁드립니다.",
+      "email": "username.@daum.net",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "korean236@kakao.com로 연락주시기 바랍니다.",
+      "email": "korean236@kakao.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "회신은 0e7aq2kt08@kakao.com로 부탁드립니다.",
+      "email": "0e7aq2kt08@kakao.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "메일주소는 test.182@domain.invalidtld입니다.",
+      "email": "test.182@domain.invalidtld",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): 43eknobozz@hanmail.net",
+      "email": "43eknobozz@hanmail.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "이메일 주소는 gd1amp@outlook.kr입니다.",
+      "email": "gd1amp@outlook.kr",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "답장 받을 이메일: btmc8@kakao.com",
+      "email": "btmc8@kakao.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send email to .username@gmail.com",
+      "email": ".username@gmail.com",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일: korean847@gmail.com",
+      "email": "korean847@gmail.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: test.877@invalid.domain",
+      "email": "test.877@invalid.domain",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): test.815@daum.net",
+      "email": "test.815@daum.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "회신은 korean287@@gmail.com로 부탁드립니다.",
+      "email": "korean287@@gmail.com",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Mail to: test.671@daum.net",
+      "email": "test.671@daum.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일주소는 test.318@gmail.com입니다.",
+      "email": "test.318@gmail.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "답장 받을 이메일: t8fbf@daum.net",
+      "email": "t8fbf@daum.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: ne17h9a0co@gmail.com",
+      "email": "ne17h9a0co@gmail.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "회신은 korean278@hanmail.net로 부탁드립니다.",
+      "email": "korean278@hanmail.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "메일주소는 test.386@outlook.kr입니다.",
+      "email": "test.386@outlook.kr",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "답장 받을 이메일: user144@fake-daum.net",
+      "email": "user144@fake-daum.net",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "문의사항은 test.845@daum.net로 보내주세요.",
+      "email": "test.845@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 qvrfy@nate.com로 보내주세요.",
+      "email": "qvrfy@nate.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Send your response to test.902@hanmail.net",
+      "email": "test.902@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: korean485@gmail.com",
+      "email": "korean485@gmail.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: test.460@hanmail.net",
+      "email": "test.460@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean403@입니다.",
+      "email": "korean403@",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email me at korean673@daum.net",
+      "email": "korean673@daum.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Contact via mo9ekq@nate.com",
+      "email": "mo9ekq@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "E-mail: test.228@nate.com",
+      "email": "test.228@nate.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일 test.261@gmail.com로 보내주세요.",
+      "email": "test.261@gmail.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일로 보내주세요: test.210@outlook.kr",
+      "email": "test.210@outlook.kr",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Contact email: user..name@gmail.com",
+      "email": "user..name@gmail.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일 주소는 v5zpx0pw@kakao.com입니다.",
+      "email": "v5zpx0pw@kakao.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Contact via korean758@hanmail.net",
+      "email": "korean758@hanmail.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "user770@nate.com로 연락주시기 바랍니다.",
+      "email": "user770@nate.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "이메일로 보내주세요: f8ryp14ms@invalid.domain",
+      "email": "f8ryp14ms@invalid.domain",
+      "is_valid": false,
+      "template": "이메일로 보내주세요: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "문의사항은 sm0xi@로 보내주세요.",
+      "email": "sm0xi@",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일 korean163@hanmail.net로 보내주세요.",
+      "email": "korean163@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: korean689@kakao.com",
+      "email": "korean689@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: tfp1cb1@daum.net",
+      "email": "tfp1cb1@daum.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send email to user..name@outlook.kr",
+      "email": "user..name@outlook.kr",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email me at user799@nate.com",
+      "email": "user799@nate.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "메일 주소: user198@daum.net",
+      "email": "user198@daum.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Contact via test.743@hanmail.net",
+      "email": "test.743@hanmail.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "이메일 주소는 j65s5dy@naver.com입니다.",
+      "email": "j65s5dy@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "user469@daum.net로 연락주시기 바랍니다.",
+      "email": "user469@daum.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "회신은 user230@outlook.kr로 부탁드립니다.",
+      "email": "user230@outlook.kr",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send your response to test.640@nate.com",
+      "email": "test.640@nate.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일 주소: j0inod@naver.com",
+      "email": "j0inod@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Email address: l655wnk@daum.net",
+      "email": "l655wnk@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Email me at korean945@@daum.net",
+      "email": "korean945@@daum.net",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send email to test.122@daum.net",
+      "email": "test.122@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "문의사항은 test.310.@kakao.com로 보내주세요.",
+      "email": "test.310.@kakao.com",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact via korean191@daum.net",
+      "email": "korean191@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Contact email: korean904@not-real-467.com",
+      "email": "korean904@not-real-467.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일로 보내주세요: pnkpxmm@nate.com",
+      "email": "pnkpxmm@nate.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "메일주소는 user623@naver.com입니다.",
+      "email": "user623@naver.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Reply to: user476@outlook.kr",
+      "email": "user476@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Mail to: user569@gmail.com",
+      "email": "user569@gmail.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일 주소: test.688@daum.net",
+      "email": "test.688@daum.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Reply to: test.109@naver.com",
+      "email": "test.109@naver.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email me at @gmail.com",
+      "email": "@gmail.com",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send your response to mm0c3r60po@outlook.kr",
+      "email": "mm0c3r60po@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일주소는 test.928@invalid.domain입니다.",
+      "email": "test.928@invalid.domain",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "메일주소는 l2a22@naver.com입니다.",
+      "email": "l2a22@naver.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "메일 주소: 6lypgt@naver.com",
+      "email": "6lypgt@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Reply to: user481@daum.net",
+      "email": "user481@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "메일주소는 user326@nate.com입니다.",
+      "email": "user326@nate.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Email me at schef@gmail.com",
+      "email": "schef@gmail.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Email me at korean782@hanmail.net",
+      "email": "korean782@hanmail.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Send email to korean727@daum.net",
+      "email": "korean727@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Contact email: rrze37q037@kakao.com",
+      "email": "rrze37q037@kakao.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Mail to: test.879@@nate.com",
+      "email": "test.879@@nate.com",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일 1257nyx4od@hanmail.net로 보내주세요.",
+      "email": "1257nyx4od@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일로 보내주세요: test.145@hanmail.net",
+      "email": "test.145@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: user749@daum.net",
+      "email": "user749@daum.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "메일주소는 test.995@nate.com입니다.",
+      "email": "test.995@nate.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "E-mail: test.351@naver.com",
+      "email": "test.351@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "메일 주소: test.540@hanmail.net",
+      "email": "test.540@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "문의사항은 user..name@nate.com로 보내주세요.",
+      "email": "user..name@nate.com",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일로 보내주세요: kr0g7dy93r@hanmail.net",
+      "email": "kr0g7dy93r@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일 주소는 user829@naver.com입니다.",
+      "email": "user829@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "메일 주소: korean910@naver.com",
+      "email": "korean910@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Reply to: user919@daum.net",
+      "email": "user919@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일: y4h2wv@kakao.com",
+      "email": "y4h2wv@kakao.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Email address: user343@kakao.com",
+      "email": "user343@kakao.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: test.963@fake-gmail.com",
+      "email": "test.963@fake-gmail.com",
+      "is_valid": false,
+      "template": "이메일로 보내주세요: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send email to mdb002tw@outlook.kr",
+      "email": "mdb002tw@outlook.kr",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일: user665@daum.net",
+      "email": "user665@daum.net",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "이메일 korean711@outlook.kr로 보내주세요.",
+      "email": "korean711@outlook.kr",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: korean678@invalid.domain",
+      "email": "korean678@invalid.domain",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Reply to: test.713@kakao.com",
+      "email": "test.713@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email address: user..name@kakao.com",
+      "email": "user..name@kakao.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "연락처(이메일): korean638@naver.com",
+      "email": "korean638@naver.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "답장 받을 이메일: 4996e@naver.com",
+      "email": "4996e@naver.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "문의사항은 test.553@hanmail.net로 보내주세요.",
+      "email": "test.553@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 주소는 korean763@naver.com입니다.",
+      "email": "korean763@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "메일 주소: test.293@outlook.kr",
+      "email": "test.293@outlook.kr",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.849@gmail.com",
+      "email": "test.849@gmail.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: user706@hanmail.net",
+      "email": "user706@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일 a25u6kb@@daum.net로 보내주세요.",
+      "email": "a25u6kb@@daum.net",
+      "is_valid": false,
+      "template": "이메일 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "E-mail: test.390@nate.com",
+      "email": "test.390@nate.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Contact email: korean935@hanmail.net",
+      "email": "korean935@hanmail.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.885@kakao.com",
+      "email": "test.885@kakao.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Send email to test.155@daum.net",
+      "email": "test.155@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: test.974@outlook.kr",
+      "email": "test.974@outlook.kr",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send email to jykculen@gmail.com",
+      "email": "jykculen@gmail.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Contact email: test.217@nate.com",
+      "email": "test.217@nate.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Email me at korean976@nate.com",
+      "email": "korean976@nate.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Send your response to test.190@hanmail.net",
+      "email": "test.190@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact email: user224@outlook.kr",
+      "email": "user224@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "qfy81@gmail.com로 연락주시기 바랍니다.",
+      "email": "qfy81@gmail.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Email me at user506@outlook.kr",
+      "email": "user506@outlook.kr",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "E-mail: user982@@kakao.com",
+      "email": "user982@@kakao.com",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Reply to: cuwuir3rkj@kakao.com",
+      "email": "cuwuir3rkj@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Send email to korean322@kakao.com",
+      "email": "korean322@kakao.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일: test.774@nate.com",
+      "email": "test.774@nate.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "이메일: test.615@nate.com",
+      "email": "test.615@nate.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "이메일: @kakao.com",
+      "email": "@kakao.com",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email address: user..name@gmail.com",
+      "email": "user..name@gmail.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Contact email: test.458@daum.net",
+      "email": "test.458@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Contact email: test.176@naver.com",
+      "email": "test.176@naver.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Reply to: test.244@daum.net",
+      "email": "test.244@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Reply to: gxg2rg@",
+      "email": "gxg2rg@",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "user615@outlook.kr로 연락주시기 바랍니다.",
+      "email": "user615@outlook.kr",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "test.255@gmail.com로 연락주시기 바랍니다.",
+      "email": "test.255@gmail.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "메일 주소: o2iiq6m1of@outlook.kr",
+      "email": "o2iiq6m1of@outlook.kr",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "메일주소는 username.@gmail.com입니다.",
+      "email": "username.@gmail.com",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Contact email: user641@outlook.kr",
+      "email": "user641@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "E-mail: @daum.net",
+      "email": "@daum.net",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "회신은 korean516로 부탁드립니다.",
+      "email": "korean516",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send your response to 258xoftw75@domain.invalidtld",
+      "email": "258xoftw75@domain.invalidtld",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Mail to: f45khz3eo4@gmail.com",
+      "email": "f45khz3eo4@gmail.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "문의사항은 user402@kakao.com로 보내주세요.",
+      "email": "user402@kakao.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일: tofjq1@outlook.kr",
+      "email": "tofjq1@outlook.kr",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "이메일 주소는 cm9s01@naver.com입니다.",
+      "email": "cm9s01@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: korean297@kakao.com",
+      "email": "korean297@kakao.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "E-mail: username.@daum.net",
+      "email": "username.@daum.net",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email address: 8qcfly@outlook.kr",
+      "email": "8qcfly@outlook.kr",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Email address: user926@hanmail.net",
+      "email": "user926@hanmail.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "test.457@@nate.com로 연락주시기 바랍니다.",
+      "email": "test.457@@nate.com",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email me at l3turdfmm6@gmail.com",
+      "email": "l3turdfmm6@gmail.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Mail to: sisgsczg6d@naver.com",
+      "email": "sisgsczg6d@naver.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "E-mail: user237@nate.com",
+      "email": "user237@nate.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "1evk9로 연락주시기 바랍니다.",
+      "email": "1evk9",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "문의사항은 korean129@hanmail.net로 보내주세요.",
+      "email": "korean129@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "test.319@naver.com로 연락주시기 바랍니다.",
+      "email": "test.319@naver.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "이메일: korean236@invalid.domain",
+      "email": "korean236@invalid.domain",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Contact via gwbge8@daum.net",
+      "email": "gwbge8@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "문의사항은 korean689@outlook.kr로 보내주세요.",
+      "email": "korean689@outlook.kr",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Send email to c7ociixbz@fake-hanmail.net",
+      "email": "c7ociixbz@fake-hanmail.net",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "메일주소는 cemt15n@gmail.com입니다.",
+      "email": "cemt15n@gmail.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Send email to user541@daum.net",
+      "email": "user541@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "연락처(이메일): test.845@nate.com",
+      "email": "test.845@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Mail to: kyemg8l5wk@nate.com",
+      "email": "kyemg8l5wk@nate.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "test.780@gmail.com로 연락주시기 바랍니다.",
+      "email": "test.780@gmail.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Send email to test.163@nate.com",
+      "email": "test.163@nate.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "회신은 fvv7sfv@naver.com로 부탁드립니다.",
+      "email": "fvv7sfv@naver.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Email address: user928@gmail.com",
+      "email": "user928@gmail.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact via test.882@nate.com",
+      "email": "test.882@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Send your response to user881@outlook.kr",
+      "email": "user881@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact via test.116@daum.net",
+      "email": "test.116@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Email address: test.447@daum.net",
+      "email": "test.447@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.262@kakao.com",
+      "email": "test.262@kakao.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Email address: korean192@hanmail.net",
+      "email": "korean192@hanmail.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Reply to: tkdrhlp@daum.net",
+      "email": "tkdrhlp@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email me at korean425@naver.com",
+      "email": "korean425@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Mail to: test.773@hanmail.net",
+      "email": "test.773@hanmail.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "문의사항은 test.852로 보내주세요.",
+      "email": "test.852",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send your response to korean914@nate.com",
+      "email": "korean914@nate.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "회신은 1rbrweck@gmail.com로 부탁드립니다.",
+      "email": "1rbrweck@gmail.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "test.250@hanmail.net로 연락주시기 바랍니다.",
+      "email": "test.250@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "회신은 lk798ff8q@hanmail.net로 부탁드립니다.",
+      "email": "lk798ff8q@hanmail.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send email to test.836@naver.com",
+      "email": "test.836@naver.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "E-mail: test.181@gmail.com",
+      "email": "test.181@gmail.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일 주소는 user115@not-real-116.com입니다.",
+      "email": "user115@not-real-116.com",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Contact email: zfgs5@outlook.kr",
+      "email": "zfgs5@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: korean736@naver.com",
+      "email": "korean736@naver.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send your response to 0rgxvqoc@nate.com",
+      "email": "0rgxvqoc@nate.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Reply to: !invalid@@nate.com",
+      "email": "!invalid@@nate.com",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "회신은 test.267@kakao.com로 부탁드립니다.",
+      "email": "test.267@kakao.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일 user120@not-real-989.com로 보내주세요.",
+      "email": "user120@not-real-989.com",
+      "is_valid": false,
+      "template": "이메일 {email}로 보내주세요.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "답장 받을 이메일: korean212@daum.net",
+      "email": "korean212@daum.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "연락처(이메일): user802@naver.com",
+      "email": "user802@naver.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "E-mail: korean558@outlook.kr",
+      "email": "korean558@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일: korean615@kakao.com",
+      "email": "korean615@kakao.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "E-mail: korean492@nate.com",
+      "email": "korean492@nate.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Mail to: test.707@kakao.com",
+      "email": "test.707@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Send email to user748@hanmail.net",
+      "email": "user748@hanmail.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "user616@outlook.kr로 연락주시기 바랍니다.",
+      "email": "user616@outlook.kr",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "문의사항은 korean776@kakao.com로 보내주세요.",
+      "email": "korean776@kakao.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "답장 받을 이메일: test.116@outlook.kr",
+      "email": "test.116@outlook.kr",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: 7mqab@gmail.com",
+      "email": "7mqab@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean973@nate.com입니다.",
+      "email": "korean973@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Contact via korean605.@outlook.kr",
+      "email": "korean605.@outlook.kr",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send your response to korean880@gmail.com",
+      "email": "korean880@gmail.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "문의사항은 user451@hanmail.net로 보내주세요.",
+      "email": "user451@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "연락처(이메일): 8qqs3x@nate.com",
+      "email": "8qqs3x@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Mail to: kkqcnkd@gmail.com",
+      "email": "kkqcnkd@gmail.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Contact via test.629@domain.invalidtld",
+      "email": "test.629@domain.invalidtld",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일 주소는 korean280@gmail.com입니다.",
+      "email": "korean280@gmail.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Mail to: user603@hanmail.net",
+      "email": "user603@hanmail.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Contact email: user..name@kakao.com",
+      "email": "user..name@kakao.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "문의사항은 test.455@hanmail.net로 보내주세요.",
+      "email": "test.455@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "회신은 user472@nate.com로 부탁드립니다.",
+      "email": "user472@nate.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Contact email: username.@nate.com",
+      "email": "username.@nate.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email address: user564@nate.com",
+      "email": "user564@nate.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "user748@naver.com로 연락주시기 바랍니다.",
+      "email": "user748@naver.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "E-mail: test.435@gmail.com",
+      "email": "test.435@gmail.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "메일 주소: ubprabz3@naver.com",
+      "email": "ubprabz3@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: q6oudb8yuf@kakao.com",
+      "email": "q6oudb8yuf@kakao.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send your response to korean368@hanmail.net",
+      "email": "korean368@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "이메일 test.204@outlook.kr로 보내주세요.",
+      "email": "test.204@outlook.kr",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "문의사항은 user312@gmail.com로 보내주세요.",
+      "email": "user312@gmail.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact email: test.500@nate.com",
+      "email": "test.500@nate.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "문의사항은 korean605@nate.com로 보내주세요.",
+      "email": "korean605@nate.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Email address: korean557@hanmail.net",
+      "email": "korean557@hanmail.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일 주소는 user414@invalid.domain입니다.",
+      "email": "user414@invalid.domain",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "문의사항은 user name@kakao.com로 보내주세요.",
+      "email": "user name@kakao.com",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일 주소: spcrhnovyx@daum.net",
+      "email": "spcrhnovyx@daum.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: kciaos@naver.com",
+      "email": "kciaos@naver.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "user160로 연락주시기 바랍니다.",
+      "email": "user160",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "E-mail: test.406@nate.com",
+      "email": "test.406@nate.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Email me at wk2ck1u@hanmail.net",
+      "email": "wk2ck1u@hanmail.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Send email to korean354@hanmail.net",
+      "email": "korean354@hanmail.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: ahqwg@kakao.com",
+      "email": "ahqwg@kakao.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Mail to: korean604@nate.com",
+      "email": "korean604@nate.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Reply to: user432@kakao.com",
+      "email": "user432@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean783@kakao.com입니다.",
+      "email": "korean783@kakao.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "test.155@hanmail.net로 연락주시기 바랍니다.",
+      "email": "test.155@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "user name@naver.com로 연락주시기 바랍니다.",
+      "email": "user name@naver.com",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "회신은 user819@naver.com로 부탁드립니다.",
+      "email": "user819@naver.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Contact email: test.311@outlook.kr",
+      "email": "test.311@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Send your response to user855@kakao.com",
+      "email": "user855@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Email me at .username@daum.net",
+      "email": ".username@daum.net",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "문의사항은 korean959@kakao.com로 보내주세요.",
+      "email": "korean959@kakao.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일: zak7vin@kakao.com",
+      "email": "zak7vin@kakao.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "korean438@hanmail.net로 연락주시기 바랍니다.",
+      "email": "korean438@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "이메일 3tpd60xp9@hanmail.net로 보내주세요.",
+      "email": "3tpd60xp9@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일로 보내주세요: user836@gmail.com",
+      "email": "user836@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Email address: korean175@naver.com",
+      "email": "korean175@naver.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "메일주소는 k5xn6j5mc3@gmail.com입니다.",
+      "email": "k5xn6j5mc3@gmail.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "메일 주소: test.160@gmail.com",
+      "email": "test.160@gmail.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Email address: korean663@daum.net",
+      "email": "korean663@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일 주소는 icaoa3e2@nate.com입니다.",
+      "email": "icaoa3e2@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: j63p2ft5@naver.com",
+      "email": "j63p2ft5@naver.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Email address: username.@gmail.com",
+      "email": "username.@gmail.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "문의사항은 korean716@outlook.kr로 보내주세요.",
+      "email": "korean716@outlook.kr",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Reply to: j9lpqfj3@fake-nate.com",
+      "email": "j9lpqfj3@fake-nate.com",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일로 보내주세요: test.835@hanmail.net",
+      "email": "test.835@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send your response to user455@gmail.com",
+      "email": "user455@gmail.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일주소는 korean836@hanmail.net입니다.",
+      "email": "korean836@hanmail.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "E-mail: test.988@outlook.kr",
+      "email": "test.988@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Contact email: user139@outlook.kr",
+      "email": "user139@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Contact via korean373@naver.com",
+      "email": "korean373@naver.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: 43xw2nx",
+      "email": "43xw2nx",
+      "is_valid": false,
+      "template": "이메일로 보내주세요: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "E-mail: test.178@daum.net",
+      "email": "test.178@daum.net",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일: !invalid@@outlook.kr",
+      "email": "!invalid@@outlook.kr",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일주소는 test.577@daum.net입니다.",
+      "email": "test.577@daum.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Reply to: test.270@outlook.kr",
+      "email": "test.270@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email me at korean153@naver.com",
+      "email": "korean153@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: user517@daum.net",
+      "email": "user517@daum.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean483@@daum.net입니다.",
+      "email": "korean483@@daum.net",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일: user471@daum.net",
+      "email": "user471@daum.net",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "nym1p@outlook.kr로 연락주시기 바랍니다.",
+      "email": "nym1p@outlook.kr",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Contact email: test.177@@nate.com",
+      "email": "test.177@@nate.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "user383@kakao.com로 연락주시기 바랍니다.",
+      "email": "user383@kakao.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "이메일로 보내주세요: user972@nate.com",
+      "email": "user972@nate.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일 test.885@daum.net로 보내주세요.",
+      "email": "test.885@daum.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact via zptea4lqd@kakao.com",
+      "email": "zptea4lqd@kakao.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "회신은 user160@hanmail.net로 부탁드립니다.",
+      "email": "user160@hanmail.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Reply to: test.978@hanmail.net",
+      "email": "test.978@hanmail.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일 korean108@gmail.com로 보내주세요.",
+      "email": "korean108@gmail.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: user874@naver.com",
+      "email": "user874@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "메일 주소: bki66n@nate.com",
+      "email": "bki66n@nate.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "korean205@outlook.kr로 연락주시기 바랍니다.",
+      "email": "korean205@outlook.kr",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Mail to: user488@kakao.com",
+      "email": "user488@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Mail to: user886@gmail.com",
+      "email": "user886@gmail.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일 주소: xfaa7@kakao.com",
+      "email": "xfaa7@kakao.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "문의사항은 user532@daum.net로 보내주세요.",
+      "email": "user532@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: user287@outlook.kr",
+      "email": "user287@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Contact email: user969@daum.net",
+      "email": "user969@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "연락처(이메일): 1ji5wsfdt@gmail.com",
+      "email": "1ji5wsfdt@gmail.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact via user233@kakao.com",
+      "email": "user233@kakao.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Contact email: test.629@daum.net",
+      "email": "test.629@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: username.@gmail.com",
+      "email": "username.@gmail.com",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Contact via korean626@domain.invalidtld",
+      "email": "korean626@domain.invalidtld",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "E-mail: korean355@outlook.kr",
+      "email": "korean355@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "user621@naver.com로 연락주시기 바랍니다.",
+      "email": "user621@naver.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Send your response to user539@outlook.kr",
+      "email": "user539@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Send email to korean516@daum.net",
+      "email": "korean516@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "메일주소는 korean658@outlook.kr입니다.",
+      "email": "korean658@outlook.kr",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "회신은 h75abht@outlook.kr로 부탁드립니다.",
+      "email": "h75abht@outlook.kr",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send your response to test.212@kakao.com",
+      "email": "test.212@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일 주소: test.259@not-real-584.com",
+      "email": "test.259@not-real-584.com",
+      "is_valid": false,
+      "template": "메일 주소: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): test.235@outlook.kr",
+      "email": "test.235@outlook.kr",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일 주소: user205@naver.com",
+      "email": "user205@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "문의사항은 korean791@hanmail.net로 보내주세요.",
+      "email": "korean791@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "메일주소는 user443@hanmail.net입니다.",
+      "email": "user443@hanmail.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Email address: user877@daum.net",
+      "email": "user877@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact email: test.584@outlook.kr",
+      "email": "test.584@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Mail to: 3pxs3f@hanmail.net",
+      "email": "3pxs3f@hanmail.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "이메일 주소는 a1irs9nh@kakao.com입니다.",
+      "email": "a1irs9nh@kakao.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "연락처(이메일): username.@hanmail.net",
+      "email": "username.@hanmail.net",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "답장 받을 이메일: test.521@nate.com",
+      "email": "test.521@nate.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Email me at user106@naver.com",
+      "email": "user106@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Email address: user328@gmail.com",
+      "email": "user328@gmail.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Email me at user555@naver.com",
+      "email": "user555@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "연락처(이메일): korean194@outlook.kr",
+      "email": "korean194@outlook.kr",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일 주소: test.566@nate.com",
+      "email": "test.566@nate.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Reply to: u376bi1s5@outlook.kr",
+      "email": "u376bi1s5@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "test.930@hanmail.net로 연락주시기 바랍니다.",
+      "email": "test.930@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "연락처(이메일): user479@kakao.com",
+      "email": "user479@kakao.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "문의사항은 test.719@daum.net로 보내주세요.",
+      "email": "test.719@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 test.437@naver.com로 보내주세요.",
+      "email": "test.437@naver.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Send email to korean808@naver.com",
+      "email": "korean808@naver.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Mail to: test.241@outlook.kr",
+      "email": "test.241@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일 주소: user708@hanmail.net",
+      "email": "user708@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: test.484@hanmail.net",
+      "email": "test.484@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send email to user name@hanmail.net",
+      "email": "user name@hanmail.net",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Contact email: test.758@daum.net",
+      "email": "test.758@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Reply to: korean868@gmail.com",
+      "email": "korean868@gmail.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "메일 주소: user233@daum.net",
+      "email": "user233@daum.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: korean453@nate.com",
+      "email": "korean453@nate.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Contact via korean326@not-real-651.com",
+      "email": "korean326@not-real-651.com",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Reply to: test.799@daum.net",
+      "email": "test.799@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "E-mail: axa04mmrv4@kakao.com",
+      "email": "axa04mmrv4@kakao.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "문의사항은 username.@nate.com로 보내주세요.",
+      "email": "username.@nate.com",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Reply to: korean865@hanmail.net",
+      "email": "korean865@hanmail.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "회신은 gve68bw@naver.com로 부탁드립니다.",
+      "email": "gve68bw@naver.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "회신은 korean681@@hanmail.net로 부탁드립니다.",
+      "email": "korean681@@hanmail.net",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email address: korean264@daum.net",
+      "email": "korean264@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "연락처(이메일): username.@nate.com",
+      "email": "username.@nate.com",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "문의사항은 test.696@fake-outlook.kr로 보내주세요.",
+      "email": "test.696@fake-outlook.kr",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "korean664@test.res/effective_tld_names.dat.txtx로 연락주시기 바랍니다.",
+      "email": "korean664@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일 korean250@hanmail.net로 보내주세요.",
+      "email": "korean250@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Send your response to test.701@nate.com",
+      "email": "test.701@nate.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact email: user787@outlook.kr",
+      "email": "user787@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.749@gmail.com",
+      "email": "test.749@gmail.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Email address: user348@not-real-536.com",
+      "email": "user348@not-real-536.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): test.505@naver.com",
+      "email": "test.505@naver.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Send your response to user210@outlook.kr",
+      "email": "user210@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact via test.361@nate.com",
+      "email": "test.361@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일 주소: user337@hanmail.net",
+      "email": "user337@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: user name@outlook.kr",
+      "email": "user name@outlook.kr",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Reply to: korean338@kakao.com",
+      "email": "korean338@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Contact email: test.727@@nate.com",
+      "email": "test.727@@nate.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "회신은 user626@naver.com로 부탁드립니다.",
+      "email": "user626@naver.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일 주소는 korean603@kakao.com입니다.",
+      "email": "korean603@kakao.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "user521@daum.net로 연락주시기 바랍니다.",
+      "email": "user521@daum.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "이메일로 보내주세요: !invalid@@daum.net",
+      "email": "!invalid@@daum.net",
+      "is_valid": false,
+      "template": "이메일로 보내주세요: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일주소는 user288.@nate.com입니다.",
+      "email": "user288.@nate.com",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(이메일): korean946@nate.com",
+      "email": "korean946@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact email: korean974@naver.com",
+      "email": "korean974@naver.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "메일 주소: user118@kakao.com",
+      "email": "user118@kakao.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "메일주소는 korean109@kakao.com입니다.",
+      "email": "korean109@kakao.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: test.962@gmail.com",
+      "email": "test.962@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Mail to: korean827@kakao.com",
+      "email": "korean827@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "이메일: korean410@nate.com",
+      "email": "korean410@nate.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "회신은 test.591@hanmail.net로 부탁드립니다.",
+      "email": "test.591@hanmail.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Email me at korean973@hanmail.net",
+      "email": "korean973@hanmail.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Contact email: test.761@outlook.kr",
+      "email": "test.761@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Email me at 7j27h@hanmail.net",
+      "email": "7j27h@hanmail.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Email address: 03qbujbks@naver.com",
+      "email": "03qbujbks@naver.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: test.474@kakao.com",
+      "email": "test.474@kakao.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Contact via test.360@nate.com",
+      "email": "test.360@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일 주소: user609@naver.com",
+      "email": "user609@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "메일 주소: korean131@outlook.kr",
+      "email": "korean131@outlook.kr",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일 주소는 test.981@naver.com입니다.",
+      "email": "test.981@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Mail to: user715@hanmail.net",
+      "email": "user715@hanmail.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "이메일 test.545@naver.com로 보내주세요.",
+      "email": "test.545@naver.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact email: user302@daum.net",
+      "email": "user302@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean749@hanmail.net입니다.",
+      "email": "korean749@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "회신은 user348@naver.com로 부탁드립니다.",
+      "email": "user348@naver.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send email to 3v4pna3g.@gmail.com",
+      "email": "3v4pna3g.@gmail.com",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Mail to: xmdfuawr@outlook.kr",
+      "email": "xmdfuawr@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Reply to: xgnukusa@daum.net",
+      "email": "xgnukusa@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "user228@hanmail.net로 연락주시기 바랍니다.",
+      "email": "user228@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Contact via user659@outlook.kr",
+      "email": "user659@outlook.kr",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "회신은 test.140@daum.net로 부탁드립니다.",
+      "email": "test.140@daum.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "E-mail: nluc3ka2u@gmail.com",
+      "email": "nluc3ka2u@gmail.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Contact email: 1gngip9l3@hanmail.net",
+      "email": "1gngip9l3@hanmail.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Contact via vivljsym@nate.com",
+      "email": "vivljsym@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Contact email: user914@gmail.com",
+      "email": "user914@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "메일주소는 test.683@fake-outlook.kr입니다.",
+      "email": "test.683@fake-outlook.kr",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Email address: korean921@fake-daum.net",
+      "email": "korean921@fake-daum.net",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "회신은 korean486@gmail.com로 부탁드립니다.",
+      "email": "korean486@gmail.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send your response to !invalid@@outlook.kr",
+      "email": "!invalid@@outlook.kr",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Send email to !invalid@@daum.net",
+      "email": "!invalid@@daum.net",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "회신은 test.681@gmail.com로 부탁드립니다.",
+      "email": "test.681@gmail.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Email address: korean885@outlook.kr",
+      "email": "korean885@outlook.kr",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일: korean688@outlook.kr",
+      "email": "korean688@outlook.kr",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "메일주소는 user706@kakao.com입니다.",
+      "email": "user706@kakao.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: user800@daum.net",
+      "email": "user800@daum.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Contact email: korean706@invalid.domain",
+      "email": "korean706@invalid.domain",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "메일주소는 korean418@kakao.com입니다.",
+      "email": "korean418@kakao.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "메일주소는 user254@daum.net입니다.",
+      "email": "user254@daum.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일 주소는 .username@daum.net입니다.",
+      "email": ".username@daum.net",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Send your response to user202@daum.net",
+      "email": "user202@daum.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: @hanmail.net",
+      "email": "@hanmail.net",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send email to 7h4ldx63jx@gmail.com",
+      "email": "7h4ldx63jx@gmail.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Email address: korean470@daum.net",
+      "email": "korean470@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact email: user..name@naver.com",
+      "email": "user..name@naver.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일주소는 username.@hanmail.net입니다.",
+      "email": "username.@hanmail.net",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일 주소는 s34bje@kakao.com입니다.",
+      "email": "s34bje@kakao.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Email address: ce9q9y7@invalid.domain",
+      "email": "ce9q9y7@invalid.domain",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "E-mail: korean885@naver.com",
+      "email": "korean885@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Email me at blncj",
+      "email": "blncj",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(이메일): user481@nate.com",
+      "email": "user481@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "문의사항은 p25zu@gmail.com로 보내주세요.",
+      "email": "p25zu@gmail.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: test.814@naver.com",
+      "email": "test.814@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: korean665@naver.com",
+      "email": "korean665@naver.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Mail to: test.481@nate.com",
+      "email": "test.481@nate.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean668@hanmail.net입니다.",
+      "email": "korean668@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "E-mail: korean503@gmail.com",
+      "email": "korean503@gmail.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Mail to: username.@kakao.com",
+      "email": "username.@kakao.com",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "user441@kakao.com로 연락주시기 바랍니다.",
+      "email": "user441@kakao.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "답장 받을 이메일: user151@hanmail.net",
+      "email": "user151@hanmail.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send your response to test.794@daum.net",
+      "email": "test.794@daum.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Email me at 30yj012qe0@naver.com",
+      "email": "30yj012qe0@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: 7d1b51y@outlook.kr",
+      "email": "7d1b51y@outlook.kr",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일: korean693@daum.net",
+      "email": "korean693@daum.net",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "메일주소는 test.834@daum.net입니다.",
+      "email": "test.834@daum.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Contact via .username@outlook.kr",
+      "email": ".username@outlook.kr",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "문의사항은 user508@daum.net로 보내주세요.",
+      "email": "user508@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "메일주소는 wa0mewt4x@outlook.kr입니다.",
+      "email": "wa0mewt4x@outlook.kr",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일 korean872@naver.com로 보내주세요.",
+      "email": "korean872@naver.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Send your response to korean210@kakao.com",
+      "email": "korean210@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "이메일 user934@nate.com로 보내주세요.",
+      "email": "user934@nate.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "메일 주소: korean256@daum.net",
+      "email": "korean256@daum.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Mail to: iqztb7kz9r@daum.net",
+      "email": "iqztb7kz9r@daum.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "이메일 vwbuebh@outlook.kr로 보내주세요.",
+      "email": "vwbuebh@outlook.kr",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: @nate.com",
+      "email": "@nate.com",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email me at test.596@naver.com",
+      "email": "test.596@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Reply to: user857@daum.net",
+      "email": "user857@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Send your response to korean644@naver.com",
+      "email": "korean644@naver.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact via test.673@hanmail.net",
+      "email": "test.673@hanmail.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일주소는 7tqs0q1as4@daum.net입니다.",
+      "email": "7tqs0q1as4@daum.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "답장 받을 이메일: test.794@kakao.com",
+      "email": "test.794@kakao.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "E-mail: korean446@daum.net",
+      "email": "korean446@daum.net",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Mail to: 4rx63@outlook.kr",
+      "email": "4rx63@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "연락처(이메일): 06pn4gu@nate.com",
+      "email": "06pn4gu@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일주소는 user300@kakao.com입니다.",
+      "email": "user300@kakao.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Email address: user664@kakao.com",
+      "email": "user664@kakao.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Reply to: wy8wi@naver.com",
+      "email": "wy8wi@naver.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Reply to: test.484@kakao.com",
+      "email": "test.484@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email me at user429@naver.com",
+      "email": "user429@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "E-mail: ouwd9ccor@outlook.kr",
+      "email": "ouwd9ccor@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "회신은 user..name@kakao.com로 부탁드립니다.",
+      "email": "user..name@kakao.com",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "E-mail: test.731@kakao.com",
+      "email": "test.731@kakao.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일: mm8tqu@naver.com",
+      "email": "mm8tqu@naver.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "회신은 test.435.@nate.com로 부탁드립니다.",
+      "email": "test.435.@nate.com",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일로 보내주세요: test.175@nate.com",
+      "email": "test.175@nate.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Reply to: korean835@test.res/effective_tld_names.dat.txtx",
+      "email": "korean835@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Contact via korean721@daum.net",
+      "email": "korean721@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "이메일: test.191@hanmail.net",
+      "email": "test.191@hanmail.net",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "E-mail: korean339@gmail.com",
+      "email": "korean339@gmail.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일 pjjxihwhj@kakao.com로 보내주세요.",
+      "email": "pjjxihwhj@kakao.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: korean457@kakao.com",
+      "email": "korean457@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Contact email: test.901@hanmail.net",
+      "email": "test.901@hanmail.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Send your response to korean463@hanmail.net",
+      "email": "korean463@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Send email to .username@outlook.kr",
+      "email": ".username@outlook.kr",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "E-mail: qctlr3j@naver.com",
+      "email": "qctlr3j@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Send your response to test.851@hanmail.net",
+      "email": "test.851@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일 주소: test.242.@daum.net",
+      "email": "test.242.@daum.net",
+      "is_valid": false,
+      "template": "메일 주소: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "문의사항은 korean914@outlook.kr로 보내주세요.",
+      "email": "korean914@outlook.kr",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 주소는 test.883@nate.com입니다.",
+      "email": "test.883@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Email address: test.298@outlook.kr",
+      "email": "test.298@outlook.kr",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "메일주소는 user454@outlook.kr입니다.",
+      "email": "user454@outlook.kr",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "연락처(이메일): user803@naver.com",
+      "email": "user803@naver.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact via user224@gmail.com",
+      "email": "user224@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "회신은 user646@hanmail.net로 부탁드립니다.",
+      "email": "user646@hanmail.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "회신은 o66pyw5gu@outlook.kr로 부탁드립니다.",
+      "email": "o66pyw5gu@outlook.kr",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "회신은 korean674@nate.com로 부탁드립니다.",
+      "email": "korean674@nate.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일로 보내주세요: test.816.@hanmail.net",
+      "email": "test.816.@hanmail.net",
+      "is_valid": false,
+      "template": "이메일로 보내주세요: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(이메일): korean612@nate.com",
+      "email": "korean612@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "이메일 user997@kakao.com로 보내주세요.",
+      "email": "user997@kakao.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: 1luamfiag@not-real-202.com",
+      "email": "1luamfiag@not-real-202.com",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일 test.390@daum.net로 보내주세요.",
+      "email": "test.390@daum.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "회신은 user name@outlook.kr로 부탁드립니다.",
+      "email": "user name@outlook.kr",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일로 보내주세요: bo652w6@kakao.com",
+      "email": "bo652w6@kakao.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Email me at korean333@nate.com",
+      "email": "korean333@nate.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: user904@outlook.kr",
+      "email": "user904@outlook.kr",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Contact email: test.500@gmail.com",
+      "email": "test.500@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "연락처(이메일): jfwks9ajrd@gmail.com",
+      "email": "jfwks9ajrd@gmail.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "답장 받을 이메일: iiok5nqkfn@invalid.domain",
+      "email": "iiok5nqkfn@invalid.domain",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): rq80gmh089@hanmail.net",
+      "email": "rq80gmh089@hanmail.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact email: test.285@naver.com",
+      "email": "test.285@naver.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "회신은 !invalid@@nate.com로 부탁드립니다.",
+      "email": "!invalid@@nate.com",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "회신은 user145@hanmail.net로 부탁드립니다.",
+      "email": "user145@hanmail.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일 test.132@naver.com로 보내주세요.",
+      "email": "test.132@naver.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact via korean247@daum.net",
+      "email": "korean247@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "연락처(이메일): korean575@daum.net",
+      "email": "korean575@daum.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "E-mail: korean546@kakao.com",
+      "email": "korean546@kakao.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Mail to: korean702@kakao.com",
+      "email": "korean702@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.296@test.res/effective_tld_names.dat.txtx",
+      "email": "test.296@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일: korean368@outlook.kr",
+      "email": "korean368@outlook.kr",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Send your response to 5hh8jnz@hanmail.net",
+      "email": "5hh8jnz@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "문의사항은 user952@hanmail.net로 보내주세요.",
+      "email": "user952@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "메일 주소: bm6kb@hanmail.net",
+      "email": "bm6kb@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일 test.479@outlook.kr로 보내주세요.",
+      "email": "test.479@outlook.kr",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "user227@hanmail.net로 연락주시기 바랍니다.",
+      "email": "user227@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Email me at korean101@daum.net",
+      "email": "korean101@daum.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "이메일 주소는 3uih40wxm1@kakao.com입니다.",
+      "email": "3uih40wxm1@kakao.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Email me at 2qelmgzq2b@daum.net",
+      "email": "2qelmgzq2b@daum.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Email address: ti67u2@nate.com",
+      "email": "ti67u2@nate.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact via korean170@hanmail.net",
+      "email": "korean170@hanmail.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Mail to: user119@nate.com",
+      "email": "user119@nate.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "이메일 korean989@daum.net로 보내주세요.",
+      "email": "korean989@daum.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact email: user559@outlook.kr",
+      "email": "user559@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "이메일 주소는 yxramenqym@hanmail.net입니다.",
+      "email": "yxramenqym@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Send your response to ht9hets6j9@outlook.kr",
+      "email": "ht9hets6j9@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "E-mail: test.310@naver.com",
+      "email": "test.310@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Send email to test.237@hanmail.net",
+      "email": "test.237@hanmail.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "E-mail: korean695@naver.com",
+      "email": "korean695@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일: test.274@nate.com",
+      "email": "test.274@nate.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: test.815@gmail.com",
+      "email": "test.815@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: korean534@hanmail.net",
+      "email": "korean534@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: user128@daum.net",
+      "email": "user128@daum.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send your response to !invalid@@nate.com",
+      "email": "!invalid@@nate.com",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일 주소: user684@gmail.com",
+      "email": "user684@gmail.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: user643@kakao.com",
+      "email": "user643@kakao.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Email address: test.422@naver.com",
+      "email": "test.422@naver.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean892@kakao.com입니다.",
+      "email": "korean892@kakao.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "메일 주소: 2tkljd@gmail.com",
+      "email": "2tkljd@gmail.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일 주소는 1ksg9p1ek@daum.net입니다.",
+      "email": "1ksg9p1ek@daum.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Contact via ituza@gmail.com",
+      "email": "ituza@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일 주소: test.250@gmail.com",
+      "email": "test.250@gmail.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일 test.911@kakao.com로 보내주세요.",
+      "email": "test.911@kakao.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "korean760@gmail.com로 연락주시기 바랍니다.",
+      "email": "korean760@gmail.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "이메일: user754@hanmail.net",
+      "email": "user754@hanmail.net",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Send your response to user308@",
+      "email": "user308@",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "답장 받을 이메일: yznxsm@daum.net",
+      "email": "yznxsm@daum.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "E-mail: test.126@nate.com",
+      "email": "test.126@nate.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Reply to: user..name@gmail.com",
+      "email": "user..name@gmail.com",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "korean118@kakao.com로 연락주시기 바랍니다.",
+      "email": "korean118@kakao.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "회신은 x8089ab2mm@gmail.com로 부탁드립니다.",
+      "email": "x8089ab2mm@gmail.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send email to test.417@outlook.kr",
+      "email": "test.417@outlook.kr",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "연락처(이메일): wig7ow@outlook.kr",
+      "email": "wig7ow@outlook.kr",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "E-mail: bvszq@outlook.kr",
+      "email": "bvszq@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Send email to user341.@naver.com",
+      "email": "user341.@naver.com",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(이메일): !invalid@@gmail.com",
+      "email": "!invalid@@gmail.com",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email me at test.849@outlook.kr",
+      "email": "test.849@outlook.kr",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Mail to: vmj88tk@daum.net",
+      "email": "vmj88tk@daum.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "문의사항은 korean148@daum.net로 보내주세요.",
+      "email": "korean148@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: user971@outlook.kr",
+      "email": "user971@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.221@hanmail.net",
+      "email": "test.221@hanmail.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "E-mail: test.559@outlook.kr",
+      "email": "test.559@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "회신은 !invalid@@gmail.com로 부탁드립니다.",
+      "email": "!invalid@@gmail.com",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일주소는 test.414@naver.com입니다.",
+      "email": "test.414@naver.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "답장 받을 이메일: 7ethzrpmbt@naver.com",
+      "email": "7ethzrpmbt@naver.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send your response to test.450@gmail.com",
+      "email": "test.450@gmail.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Email address: user387@hanmail.net",
+      "email": "user387@hanmail.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "연락처(이메일): user502@outlook.kr",
+      "email": "user502@outlook.kr",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "이메일 주소는 a9qdcasl@gmail.com입니다.",
+      "email": "a9qdcasl@gmail.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "E-mail: korean772@kakao.com",
+      "email": "korean772@kakao.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "연락처(이메일): korean361@naver.com",
+      "email": "korean361@naver.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Send your response to test.435@kakao.com",
+      "email": "test.435@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "E-mail: a2s9kl@daum.net",
+      "email": "a2s9kl@daum.net",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "이메일: fwnqaj@not-real-956.com",
+      "email": "fwnqaj@not-real-956.com",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to l06s520oey.@outlook.kr",
+      "email": "l06s520oey.@outlook.kr",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact email: 38xmogp0jc@fake-hanmail.net",
+      "email": "38xmogp0jc@fake-hanmail.net",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): test.651@hanmail.net",
+      "email": "test.651@hanmail.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Send email to v9ckz6ij7@daum.net",
+      "email": "v9ckz6ij7@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Reply to: gpt9cr99@nate.com",
+      "email": "gpt9cr99@nate.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Mail to: test.150@nate.com",
+      "email": "test.150@nate.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Contact via 27aj4q@",
+      "email": "27aj4q@",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일로 보내주세요: test.718@hanmail.net",
+      "email": "test.718@hanmail.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Email address: 7ew3h82k@nate.com",
+      "email": "7ew3h82k@nate.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Email address: .username@gmail.com",
+      "email": ".username@gmail.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일주소는 user490@hanmail.net입니다.",
+      "email": "user490@hanmail.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: qftfmnf2q@gmail.com",
+      "email": "qftfmnf2q@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Contact email: korean901@invalid.domain",
+      "email": "korean901@invalid.domain",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일 주소는 user495@gmail.com입니다.",
+      "email": "user495@gmail.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "메일주소는 korean599@hanmail.net입니다.",
+      "email": "korean599@hanmail.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일 주소는 korean183@naver.com입니다.",
+      "email": "korean183@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "이메일 korean309@naver.com로 보내주세요.",
+      "email": "korean309@naver.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 106yij4g@nate.com로 보내주세요.",
+      "email": "106yij4g@nate.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Email me at w8m2wpmc1j@daum.net",
+      "email": "w8m2wpmc1j@daum.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "user647@gmail.com로 연락주시기 바랍니다.",
+      "email": "user647@gmail.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Contact via x73aa@kakao.com",
+      "email": "x73aa@kakao.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "답장 받을 이메일: user412@naver.com",
+      "email": "user412@naver.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "문의사항은 user904@kakao.com로 보내주세요.",
+      "email": "user904@kakao.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: user153@nate.com",
+      "email": "user153@nate.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일 주소: test.296@kakao.com",
+      "email": "test.296@kakao.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "문의사항은 korean871@gmail.com로 보내주세요.",
+      "email": "korean871@gmail.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일: korean540@outlook.kr",
+      "email": "korean540@outlook.kr",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean394@hanmail.net입니다.",
+      "email": "korean394@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Mail to: korean433@naver.com",
+      "email": "korean433@naver.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Send email to user427@naver.com",
+      "email": "user427@naver.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일 주소는 test.633@invalid.domain입니다.",
+      "email": "test.633@invalid.domain",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send email to eysa02mf@daum.net",
+      "email": "eysa02mf@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "문의사항은 user870@nate.com로 보내주세요.",
+      "email": "user870@nate.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Send your response to korean577@kakao.com",
+      "email": "korean577@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact email: test.416@gmail.com",
+      "email": "test.416@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.733@kakao.com",
+      "email": "test.733@kakao.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일주소는 user220@nate.com입니다.",
+      "email": "user220@nate.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Contact via 6gju4mp@gmail.com",
+      "email": "6gju4mp@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "답장 받을 이메일: lf7ujnj@",
+      "email": "lf7ujnj@",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "메일 주소: .username@kakao.com",
+      "email": ".username@kakao.com",
+      "is_valid": false,
+      "template": "메일 주소: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email address: murq1kd@naver.com",
+      "email": "murq1kd@naver.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact via kr18d@nate.com",
+      "email": "kr18d@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "문의사항은 q6jz6h@kakao.com로 보내주세요.",
+      "email": "q6jz6h@kakao.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact email: o5q3xscw@hanmail.net",
+      "email": "o5q3xscw@hanmail.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "이메일: test.636.@gmail.com",
+      "email": "test.636.@gmail.com",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Reply to: user577@@nate.com",
+      "email": "user577@@nate.com",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Mail to: user534@gmail.com",
+      "email": "user534@gmail.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Mail to: test.728@naver.com",
+      "email": "test.728@naver.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "E-mail: test.820@daum.net",
+      "email": "test.820@daum.net",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Contact via user219@naver.com",
+      "email": "user219@naver.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일 주소: user207@naver.com",
+      "email": "user207@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Email me at korean561@domain.invalidtld",
+      "email": "korean561@domain.invalidtld",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "문의사항은 korean843@naver.com로 보내주세요.",
+      "email": "korean843@naver.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: test.173@outlook.kr",
+      "email": "test.173@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일 주소: test.528@gmail.com",
+      "email": "test.528@gmail.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Email address: 8vb6ds@test.res/effective_tld_names.dat.txtx",
+      "email": "8vb6ds@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일로 보내주세요: korean869@nate.com",
+      "email": "korean869@nate.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일 test.230@naver.com로 보내주세요.",
+      "email": "test.230@naver.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Send email to user name@gmail.com",
+      "email": "user name@gmail.com",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "korean643@outlook.kr로 연락주시기 바랍니다.",
+      "email": "korean643@outlook.kr",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "문의사항은 bhvyunl@gmail.com로 보내주세요.",
+      "email": "bhvyunl@gmail.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 주소는 user462@hanmail.net입니다.",
+      "email": "user462@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Reply to: test.182@outlook.kr",
+      "email": "test.182@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Reply to: 273mguh@daum.net",
+      "email": "273mguh@daum.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email me at user297@hanmail.net",
+      "email": "user297@hanmail.net",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "답장 받을 이메일: t9qqnoo",
+      "email": "t9qqnoo",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Mail to: !invalid@@gmail.com",
+      "email": "!invalid@@gmail.com",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일 주소는 3p7bsd@hanmail.net입니다.",
+      "email": "3p7bsd@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "이메일 주소는 test.119@not-real-970.com입니다.",
+      "email": "test.119@not-real-970.com",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to korean845@hanmail.net",
+      "email": "korean845@hanmail.net",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일주소는 korean802@naver.com입니다.",
+      "email": "korean802@naver.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "user310.@kakao.com로 연락주시기 바랍니다.",
+      "email": "user310.@kakao.com",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Reply to: korean975@nate.com",
+      "email": "korean975@nate.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Contact email: korean609@kakao.com",
+      "email": "korean609@kakao.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Contact via user741@kakao.com",
+      "email": "user741@kakao.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "연락처(이메일): tyl8ik6zt5@nate.com",
+      "email": "tyl8ik6zt5@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Send email to user595@nate.com",
+      "email": "user595@nate.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Email me at user139@naver.com",
+      "email": "user139@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Reply to: .username@naver.com",
+      "email": ".username@naver.com",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Send email to korean516@daum.net",
+      "email": "korean516@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일 주소는 user449@daum.net입니다.",
+      "email": "user449@daum.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Email address: user299@kakao.com",
+      "email": "user299@kakao.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Send email to user171@kakao.com",
+      "email": "user171@kakao.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "메일주소는 korean962@hanmail.net입니다.",
+      "email": "korean962@hanmail.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "답장 받을 이메일: user688.@naver.com",
+      "email": "user688.@naver.com",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(이메일): qq3ufl4@outlook.kr",
+      "email": "qq3ufl4@outlook.kr",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일 주소: korean371@hanmail.net",
+      "email": "korean371@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: test.288@gmail.com",
+      "email": "test.288@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send your response to cgpcatwsz2@outlook.kr",
+      "email": "cgpcatwsz2@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Email address: korean198@gmail.com",
+      "email": "korean198@gmail.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Email me at korean291@kakao.com",
+      "email": "korean291@kakao.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "문의사항은 user742@nate.com로 보내주세요.",
+      "email": "user742@nate.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Send email to test.448@kakao.com",
+      "email": "test.448@kakao.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일 주소는 korean664@nate.com입니다.",
+      "email": "korean664@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Reply to: user501@kakao.com",
+      "email": "user501@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "문의사항은 @outlook.kr로 보내주세요.",
+      "email": "@outlook.kr",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일: korean498@outlook.kr",
+      "email": "korean498@outlook.kr",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Contact via test.862@nate.com",
+      "email": "test.862@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "연락처(이메일): korean266@",
+      "email": "korean266@",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "E-mail: korean896@outlook.kr",
+      "email": "korean896@outlook.kr",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Send email to tqusv76@hanmail.net",
+      "email": "tqusv76@hanmail.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "omx0fn0.@naver.com로 연락주시기 바랍니다.",
+      "email": "omx0fn0.@naver.com",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일 test.463@nate.com로 보내주세요.",
+      "email": "test.463@nate.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Email address: korean954@daum.net",
+      "email": "korean954@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact via test.913@kakao.com",
+      "email": "test.913@kakao.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Contact email: ydqg7@nate.com",
+      "email": "ydqg7@nate.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "회신은 09eow@gmail.com로 부탁드립니다.",
+      "email": "09eow@gmail.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "문의사항은 korean807@hanmail.net로 보내주세요.",
+      "email": "korean807@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact email: whi43w2@daum.net",
+      "email": "whi43w2@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Send email to korean396@hanmail.net",
+      "email": "korean396@hanmail.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: 9v9jw3ea@outlook.kr",
+      "email": "9v9jw3ea@outlook.kr",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: test.966@naver.com",
+      "email": "test.966@naver.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Email address: korean355@daum.net",
+      "email": "korean355@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일 user773@daum.net로 보내주세요.",
+      "email": "user773@daum.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 15m0wfmq@hanmail.net로 보내주세요.",
+      "email": "15m0wfmq@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact via jvy7o",
+      "email": "jvy7o",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact email: korean937@gmail.com",
+      "email": "korean937@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "메일 주소: korean887@outlook.kr",
+      "email": "korean887@outlook.kr",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Reply to: 3oe6o0bx@hanmail.net",
+      "email": "3oe6o0bx@hanmail.net",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Send email to uehejp24@hanmail.net",
+      "email": "uehejp24@hanmail.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: korean585@nate.com",
+      "email": "korean585@nate.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Email address: test.379@daum.net",
+      "email": "test.379@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Mail to: test.452@daum.net",
+      "email": "test.452@daum.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일주소는 korean952@nate.com입니다.",
+      "email": "korean952@nate.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Email me at 7ub4swg3mi@outlook.kr",
+      "email": "7ub4swg3mi@outlook.kr",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Reply to: test.183@outlook.kr",
+      "email": "test.183@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean392@hanmail.net입니다.",
+      "email": "korean392@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "회신은 korean970@naver.com로 부탁드립니다.",
+      "email": "korean970@naver.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일 test.494@hanmail.net로 보내주세요.",
+      "email": "test.494@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "메일 주소: o9dq30tsq@hanmail.net",
+      "email": "o9dq30tsq@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Send email to dhdj4j@gmail.com",
+      "email": "dhdj4j@gmail.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "연락처(이메일): user999@gmail.com",
+      "email": "user999@gmail.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact email: user193@daum.net",
+      "email": "user193@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Mail to: test.335@gmail.com",
+      "email": "test.335@gmail.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "문의사항은 test.194@kakao.com로 보내주세요.",
+      "email": "test.194@kakao.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact email: test.140@gmail.com",
+      "email": "test.140@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "문의사항은 test.893@invalid.domain로 보내주세요.",
+      "email": "test.893@invalid.domain",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": ".username@hanmail.net로 연락주시기 바랍니다.",
+      "email": ".username@hanmail.net",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Mail to: 2yybk@kakao.com",
+      "email": "2yybk@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Email me at korean241@nate.com",
+      "email": "korean241@nate.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "@outlook.kr로 연락주시기 바랍니다.",
+      "email": "@outlook.kr",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email me at test.977@gmail.com",
+      "email": "test.977@gmail.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Mail to: test.535@naver.com",
+      "email": "test.535@naver.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: fop2s@gmail.com",
+      "email": "fop2s@gmail.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: korean980@naver.com",
+      "email": "korean980@naver.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send email to bas60h5lw@kakao.com",
+      "email": "bas60h5lw@kakao.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일 주소는 user205@hanmail.net입니다.",
+      "email": "user205@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Send email to test.825@domain.invalidtld",
+      "email": "test.825@domain.invalidtld",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Contact via user250@gmail.com",
+      "email": "user250@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일주소는 test.510@kakao.com입니다.",
+      "email": "test.510@kakao.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일: korean174@invalid.domain",
+      "email": "korean174@invalid.domain",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to test.905@nate.com",
+      "email": "test.905@nate.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact via vgeuu9exnl@daum.net",
+      "email": "vgeuu9exnl@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "문의사항은 korean295@@daum.net로 보내주세요.",
+      "email": "korean295@@daum.net",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send email to korean676@daum.net",
+      "email": "korean676@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Contact via fcybiuxk",
+      "email": "fcybiuxk",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Send your response to user207.@hanmail.net",
+      "email": "user207.@hanmail.net",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일: user..name@outlook.kr",
+      "email": "user..name@outlook.kr",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "답장 받을 이메일: !invalid@@nate.com",
+      "email": "!invalid@@nate.com",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email me at test.259@naver.com",
+      "email": "test.259@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: user255@gmail.com",
+      "email": "user255@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send email to yz3ams4ai@nate.com",
+      "email": "yz3ams4ai@nate.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일: korean144@naver.com",
+      "email": "korean144@naver.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "메일주소는 test.480@hanmail.net입니다.",
+      "email": "test.480@hanmail.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "연락처(이메일): korean291@outlook.kr",
+      "email": "korean291@outlook.kr",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일 주소: korean362@daum.net",
+      "email": "korean362@daum.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "연락처(이메일): kd2iinq0cx@naver.com",
+      "email": "kd2iinq0cx@naver.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일 주소: korean423@hanmail.net",
+      "email": "korean423@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일: test.281@naver.com",
+      "email": "test.281@naver.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: q8fpl.@nate.com",
+      "email": "q8fpl.@nate.com",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(이메일): korean967@outlook.kr",
+      "email": "korean967@outlook.kr",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "회신은 test.187@nate.com로 부탁드립니다.",
+      "email": "test.187@nate.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send email to test.728@kakao.com",
+      "email": "test.728@kakao.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Email me at 29208wh@naver.com",
+      "email": "29208wh@naver.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: korean354@kakao.com",
+      "email": "korean354@kakao.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Send email to test.255@outlook.kr",
+      "email": "test.255@outlook.kr",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "메일 주소: user600@outlook.kr",
+      "email": "user600@outlook.kr",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "연락처(이메일): user456@naver.com",
+      "email": "user456@naver.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Mail to: user979@kakao.com",
+      "email": "user979@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: korean539@kakao.com",
+      "email": "korean539@kakao.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일: kmecvovl54@outlook.kr",
+      "email": "kmecvovl54@outlook.kr",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Mail to: 1hf20e3u@outlook.kr",
+      "email": "1hf20e3u@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Reply to: user320@outlook.kr",
+      "email": "user320@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Reply to: korean545@naver.com",
+      "email": "korean545@naver.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "메일주소는 user name@nate.com입니다.",
+      "email": "user name@nate.com",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일 주소는 user name@naver.com입니다.",
+      "email": "user name@naver.com",
+      "is_valid": false,
+      "template": "이메일 주소는 {email}입니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "메일주소는 test.602@kakao.com입니다.",
+      "email": "test.602@kakao.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "메일주소는 yn0dkc@kakao.com입니다.",
+      "email": "yn0dkc@kakao.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "연락처(이메일): korean927@hanmail.net",
+      "email": "korean927@hanmail.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Mail to: korean715@naver.com",
+      "email": "korean715@naver.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Send email to 6i77shne2@outlook.kr",
+      "email": "6i77shne2@outlook.kr",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일 korean998@kakao.com로 보내주세요.",
+      "email": "korean998@kakao.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "메일 주소: korean662@gmail.com",
+      "email": "korean662@gmail.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일: user name@kakao.com",
+      "email": "user name@kakao.com",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "이메일로 보내주세요: user427@gmail.com",
+      "email": "user427@gmail.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "이메일: test.421@nate.com",
+      "email": "test.421@nate.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "연락처(이메일): user320@nate.com",
+      "email": "user320@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "메일 주소: test.935@naver.com",
+      "email": "test.935@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Mail to: !invalid@@hanmail.net",
+      "email": "!invalid@@hanmail.net",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Reply to: korean609@nate.com",
+      "email": "korean609@nate.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "회신은 user946@outlook.kr로 부탁드립니다.",
+      "email": "user946@outlook.kr",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일: user612@kakao.com",
+      "email": "user612@kakao.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Send your response to d5e8y@outlook.kr",
+      "email": "d5e8y@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "E-mail: @daum.net",
+      "email": "@daum.net",
+      "is_valid": false,
+      "template": "E-mail: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "이메일: dmywm7d3@kakao.com",
+      "email": "dmywm7d3@kakao.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Send email to test.627@test.res/effective_tld_names.dat.txtx",
+      "email": "test.627@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일 korean727@kakao.com로 보내주세요.",
+      "email": "korean727@kakao.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: y4wu0xybfn@gmail.com",
+      "email": "y4wu0xybfn@gmail.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일주소는 @daum.net입니다.",
+      "email": "@daum.net",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact email: korean870@fake-daum.net",
+      "email": "korean870@fake-daum.net",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "메일주소는 test.268@gmail.com입니다.",
+      "email": "test.268@gmail.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "문의사항은 korean757@gmail.com로 보내주세요.",
+      "email": "korean757@gmail.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "test.526@hanmail.net로 연락주시기 바랍니다.",
+      "email": "test.526@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Send email to korean350@invalid.domain",
+      "email": "korean350@invalid.domain",
+      "is_valid": false,
+      "template": "Send email to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일 test.968@kakao.com로 보내주세요.",
+      "email": "test.968@kakao.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "문의사항은 korean948@gmail.com로 보내주세요.",
+      "email": "korean948@gmail.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Reply to: korean224@test.res/effective_tld_names.dat.txtx",
+      "email": "korean224@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "user654@invalid.domain로 연락주시기 바랍니다.",
+      "email": "user654@invalid.domain",
+      "is_valid": false,
+      "template": "{email}로 연락주시기 바랍니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Email address: cyygqsjd.@nate.com",
+      "email": "cyygqsjd.@nate.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email me at test.421@kakao.com",
+      "email": "test.421@kakao.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "문의사항은 korean734@naver.com로 보내주세요.",
+      "email": "korean734@naver.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "문의사항은 user212@daum.net로 보내주세요.",
+      "email": "user212@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: l2ahu4oq@naver.com",
+      "email": "l2ahu4oq@naver.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "메일주소는 q79b5xdyh@gmail.com입니다.",
+      "email": "q79b5xdyh@gmail.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: user370@daum.net",
+      "email": "user370@daum.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "회신은 korean944로 부탁드립니다.",
+      "email": "korean944",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "E-mail: korean286@gmail.com",
+      "email": "korean286@gmail.com",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Send email to test.471@gmail.com",
+      "email": "test.471@gmail.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일: korean201@nate.com",
+      "email": "korean201@nate.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Contact via user364@daum.net",
+      "email": "user364@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일 주소: 4e70xt@kakao.com",
+      "email": "4e70xt@kakao.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일 주소는 korean800@outlook.kr입니다.",
+      "email": "korean800@outlook.kr",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Mail to: user102@hanmail.net",
+      "email": "user102@hanmail.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Send your response to username.@nate.com",
+      "email": "username.@nate.com",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Contact email: 6hlnajb@naver.com",
+      "email": "6hlnajb@naver.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Mail to: user761@outlook.kr",
+      "email": "user761@outlook.kr",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Email address: korean441@daum.net",
+      "email": "korean441@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "문의사항은 user626@naver.com로 보내주세요.",
+      "email": "user626@naver.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Mail to: korean958@nate.com",
+      "email": "korean958@nate.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Email address: test.357",
+      "email": "test.357",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "메일 주소: gazdf4wcd@hanmail.net",
+      "email": "gazdf4wcd@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Mail to: korean243@kakao.com",
+      "email": "korean243@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Contact via test.190@gmail.com",
+      "email": "test.190@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Contact via test.905@daum.net",
+      "email": "test.905@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Email me at user379@fake-naver.com",
+      "email": "user379@fake-naver.com",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to user178@kakao.com",
+      "email": "user178@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "연락처(이메일): korean953@",
+      "email": "korean953@",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(이메일): user146@kakao.com",
+      "email": "user146@kakao.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "문의사항은 user183@hanmail.net로 보내주세요.",
+      "email": "user183@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact via vuhzxfacv7@outlook.kr",
+      "email": "vuhzxfacv7@outlook.kr",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "답장 받을 이메일: test.946@outlook.kr",
+      "email": "test.946@outlook.kr",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send your response to korean941@outlook.kr",
+      "email": "korean941@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "문의사항은 korean645@@outlook.kr로 보내주세요.",
+      "email": "korean645@@outlook.kr",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Email address: korean797@daum.net",
+      "email": "korean797@daum.net",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "회신은 test.853@gmail.com로 부탁드립니다.",
+      "email": "test.853@gmail.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일: korean383@gmail.com",
+      "email": "korean383@gmail.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Reply to: korean882@nate.com",
+      "email": "korean882@nate.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일 user451@invalid.domain로 보내주세요.",
+      "email": "user451@invalid.domain",
+      "is_valid": false,
+      "template": "이메일 {email}로 보내주세요.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일: test.775@@gmail.com",
+      "email": "test.775@@gmail.com",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "회신은 korean104@nate.com로 부탁드립니다.",
+      "email": "korean104@nate.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Contact via korean235@outlook.kr",
+      "email": "korean235@outlook.kr",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: test.467@kakao.com",
+      "email": "test.467@kakao.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: 8fx9eiqhl.@outlook.kr",
+      "email": "8fx9eiqhl.@outlook.kr",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "메일주소는 user391@outlook.kr입니다.",
+      "email": "user391@outlook.kr",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Send your response to user507@test.res/effective_tld_names.dat.txtx",
+      "email": "user507@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to 31hfg6xi37@invalid.domain",
+      "email": "31hfg6xi37@invalid.domain",
+      "is_valid": false,
+      "template": "Send your response to {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Email me at test.720@kakao.com",
+      "email": "test.720@kakao.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "메일 주소: korean910@hanmail.net",
+      "email": "korean910@hanmail.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "문의사항은 c2f1ff@invalid.domain로 보내주세요.",
+      "email": "c2f1ff@invalid.domain",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "test.879@nate.com로 연락주시기 바랍니다.",
+      "email": "test.879@nate.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "답장 받을 이메일: korean615@nate.com",
+      "email": "korean615@nate.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Email address: korean406@kakao.com",
+      "email": "korean406@kakao.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact via test.995@gmail.com",
+      "email": "test.995@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Email address: user866@kakao.com",
+      "email": "user866@kakao.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "메일주소는 username.@outlook.kr입니다.",
+      "email": "username.@outlook.kr",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Reply to: korean168@kakao.com",
+      "email": "korean168@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "문의사항은 korean622@daum.net로 보내주세요.",
+      "email": "korean622@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "메일주소는 gz235nrfp@nate.com입니다.",
+      "email": "gz235nrfp@nate.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "Email address: test.299@not-real-739.com",
+      "email": "test.299@not-real-739.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "이메일 주소는 korean249@nate.com입니다.",
+      "email": "korean249@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: test.725@outlook.kr",
+      "email": "test.725@outlook.kr",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "메일주소는 @daum.net입니다.",
+      "email": "@daum.net",
+      "is_valid": false,
+      "template": "메일주소는 {email}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact email: user192@outlook.kr",
+      "email": "user192@outlook.kr",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Mail to: korean218@hanmail.net",
+      "email": "korean218@hanmail.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Send email to test.608@kakao.com",
+      "email": "test.608@kakao.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "연락처(이메일): user..name@hanmail.net",
+      "email": "user..name@hanmail.net",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email address: test.986@outlook.kr",
+      "email": "test.986@outlook.kr",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일 주소는 test.216@daum.net입니다.",
+      "email": "test.216@daum.net",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "이메일로 보내주세요: user871@daum.net",
+      "email": "user871@daum.net",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Reply to: user310@gmail.com",
+      "email": "user310@gmail.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Contact email: user285@gmail.com",
+      "email": "user285@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "이메일 3d0314@gmail.com로 보내주세요.",
+      "email": "3d0314@gmail.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일 주소는 korean551@nate.com입니다.",
+      "email": "korean551@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Contact email: test.830@gmail.com",
+      "email": "test.830@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "회신은 user458@hanmail.net로 부탁드립니다.",
+      "email": "user458@hanmail.net",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "Send your response to user835@gmail.com",
+      "email": "user835@gmail.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "이메일: test.416@kakao.com",
+      "email": "test.416@kakao.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "Reply to: user993@outlook.kr",
+      "email": "user993@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email address: user505@outlook.kr",
+      "email": "user505@outlook.kr",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact via korean732@outlook.kr",
+      "email": "korean732@outlook.kr",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Send email to test.645@outlook.kr",
+      "email": "test.645@outlook.kr",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Email address: korean671@kakao.com",
+      "email": "korean671@kakao.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "Contact via k013epqy@nate.com",
+      "email": "k013epqy@nate.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "메일 주소: test.275@kakao.com",
+      "email": "test.275@kakao.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Mail to: test.155@kakao.com",
+      "email": "test.155@kakao.com",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "Email me at username.@hanmail.net",
+      "email": "username.@hanmail.net",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Contact email: korean243@gmail.com",
+      "email": "korean243@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Email address: test.971@gmail.com",
+      "email": "test.971@gmail.com",
+      "is_valid": true,
+      "template": "Email address: {email}"
+    },
+    {
+      "text": "이메일 test.885@hanmail.net로 보내주세요.",
+      "email": "test.885@hanmail.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Reply to: korean945@gmail.com",
+      "email": "korean945@gmail.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: vjutttet@invalid.domain",
+      "email": "vjutttet@invalid.domain",
+      "is_valid": false,
+      "template": "이메일로 보내주세요: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send email to test.168@gmail.com",
+      "email": "test.168@gmail.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: korean984@nate.com",
+      "email": "korean984@nate.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Email me at user937@nate.com",
+      "email": "user937@nate.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "답장 받을 이메일: eshy2gnhob@",
+      "email": "eshy2gnhob@",
+      "is_valid": false,
+      "template": "답장 받을 이메일: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "test.591@gmail.com로 연락주시기 바랍니다.",
+      "email": "test.591@gmail.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "이메일 주소는 test.593@naver.com입니다.",
+      "email": "test.593@naver.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "Send your response to user565@outlook.kr",
+      "email": "user565@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Contact email: test.638@gmail.com",
+      "email": "test.638@gmail.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Reply to: user570@fake-kakao.com",
+      "email": "user570@fake-kakao.com",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "답장 받을 이메일: 95yap4yn0m@kakao.com",
+      "email": "95yap4yn0m@kakao.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Email me at test.598@outlook.kr",
+      "email": "test.598@outlook.kr",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "Contact email: user680@fake-gmail.com",
+      "email": "user680@fake-gmail.com",
+      "is_valid": false,
+      "template": "Contact email: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): test.157@daum.net",
+      "email": "test.157@daum.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact via user249@daum.net",
+      "email": "user249@daum.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Send your response to user214@outlook.kr",
+      "email": "user214@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "메일 주소: user name@outlook.kr",
+      "email": "user name@outlook.kr",
+      "is_valid": false,
+      "template": "메일 주소: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Send email to korean494@outlook.kr",
+      "email": "korean494@outlook.kr",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "문의사항은 user635@gmail.com로 보내주세요.",
+      "email": "user635@gmail.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일로 보내주세요: lod8kuuo7@outlook.kr",
+      "email": "lod8kuuo7@outlook.kr",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "Mail to: user510@invalid.domain",
+      "email": "user510@invalid.domain",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "답장 받을 이메일: korean415@nate.com",
+      "email": "korean415@nate.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.329@not-real-928.com",
+      "email": "test.329@not-real-928.com",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Reply to: user882@gmail.com",
+      "email": "user882@gmail.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Contact email: korean548@daum.net",
+      "email": "korean548@daum.net",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "문의사항은 5yiynt7y@naver.com로 보내주세요.",
+      "email": "5yiynt7y@naver.com",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "답장 받을 이메일: i1n0ns4@hanmail.net",
+      "email": "i1n0ns4@hanmail.net",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "Send email to dor5mnx@gmail.com",
+      "email": "dor5mnx@gmail.com",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일로 보내주세요: u0dqx95@kakao.com",
+      "email": "u0dqx95@kakao.com",
+      "is_valid": true,
+      "template": "이메일로 보내주세요: {email}"
+    },
+    {
+      "text": "문의사항은 czdnhmbc@fake-daum.net로 보내주세요.",
+      "email": "czdnhmbc@fake-daum.net",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "연락처(이메일): h5qqzl9p@daum.net",
+      "email": "h5qqzl9p@daum.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Send your response to test.825@kakao.com",
+      "email": "test.825@kakao.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "회신은 test.639@test.res/effective_tld_names.dat.txtx로 부탁드립니다.",
+      "email": "test.639@test.res/effective_tld_names.dat.txtx",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "문의사항은 user767@outlook.kr로 보내주세요.",
+      "email": "user767@outlook.kr",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "Email me at test.671",
+      "email": "test.671",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Reply to: korean187@kakao.com",
+      "email": "korean187@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "문의사항은 .username@daum.net로 보내주세요.",
+      "email": ".username@daum.net",
+      "is_valid": false,
+      "template": "문의사항은 {email}로 보내주세요.",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Reply to: user549@@daum.net",
+      "email": "user549@@daum.net",
+      "is_valid": false,
+      "template": "Reply to: {email}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "메일 주소: test.190@daum.net",
+      "email": "test.190@daum.net",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "이메일 user428@nate.com로 보내주세요.",
+      "email": "user428@nate.com",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "Contact via user..name@daum.net",
+      "email": "user..name@daum.net",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Reply to: lwjmy@outlook.kr",
+      "email": "lwjmy@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Contact via korean349@hanmail.net",
+      "email": "korean349@hanmail.net",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "연락처(이메일): user565@nate.com",
+      "email": "user565@nate.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "이메일: korean308@naver.com",
+      "email": "korean308@naver.com",
+      "is_valid": true,
+      "template": "이메일: {email}"
+    },
+    {
+      "text": "메일 주소: korean480@naver.com",
+      "email": "korean480@naver.com",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Mail to: username.@daum.net",
+      "email": "username.@daum.net",
+      "is_valid": false,
+      "template": "Mail to: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Contact email: test.206@kakao.com",
+      "email": "test.206@kakao.com",
+      "is_valid": true,
+      "template": "Contact email: {email}"
+    },
+    {
+      "text": "Send your response to test.373@outlook.kr",
+      "email": "test.373@outlook.kr",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "Mail to: test.669@hanmail.net",
+      "email": "test.669@hanmail.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "연락처(이메일): test.541@hanmail.net",
+      "email": "test.541@hanmail.net",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact via korean781@gmail.com",
+      "email": "korean781@gmail.com",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Reply to: user774@gmail.com",
+      "email": "user774@gmail.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "문의사항은 korean476@outlook.kr로 보내주세요.",
+      "email": "korean476@outlook.kr",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "이메일: test.715@not-real-944.com",
+      "email": "test.715@not-real-944.com",
+      "is_valid": false,
+      "template": "이메일: {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Send your response to n25y2@nate.com",
+      "email": "n25y2@nate.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "답장 받을 이메일: korean962@nate.com",
+      "email": "korean962@nate.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "연락처(이메일): user..name@outlook.kr",
+      "email": "user..name@outlook.kr",
+      "is_valid": false,
+      "template": "연락처(이메일): {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "연락처(이메일): 261jssi@gmail.com",
+      "email": "261jssi@gmail.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Contact via user105@outlook.kr",
+      "email": "user105@outlook.kr",
+      "is_valid": true,
+      "template": "Contact via {email}"
+    },
+    {
+      "text": "Reply to: test.804@kakao.com",
+      "email": "test.804@kakao.com",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "Email me at user175@invalid.domain",
+      "email": "user175@invalid.domain",
+      "is_valid": false,
+      "template": "Email me at {email}",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "회신은 test.218@domain.invalidtld로 부탁드립니다.",
+      "email": "test.218@domain.invalidtld",
+      "is_valid": false,
+      "template": "회신은 {email}로 부탁드립니다.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "f8cg0ejwgx@hanmail.net로 연락주시기 바랍니다.",
+      "email": "f8cg0ejwgx@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "메일주소는 user359@naver.com입니다.",
+      "email": "user359@naver.com",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "user531@kakao.com로 연락주시기 바랍니다.",
+      "email": "user531@kakao.com",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Send email to user680@outlook.kr",
+      "email": "user680@outlook.kr",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "Contact via .username@nate.com",
+      "email": ".username@nate.com",
+      "is_valid": false,
+      "template": "Contact via {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Email me at test.569@kakao.com",
+      "email": "test.569@kakao.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "메일 주소: korean483@outlook.kr",
+      "email": "korean483@outlook.kr",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "Reply to: test.510@outlook.kr",
+      "email": "test.510@outlook.kr",
+      "is_valid": true,
+      "template": "Reply to: {email}"
+    },
+    {
+      "text": "이메일 user960@domain.invalidtld로 보내주세요.",
+      "email": "user960@domain.invalidtld",
+      "is_valid": false,
+      "template": "이메일 {email}로 보내주세요.",
+      "invalid_type": "invalid_domain"
+    },
+    {
+      "text": "Email address: user name@kakao.com",
+      "email": "user name@kakao.com",
+      "is_valid": false,
+      "template": "Email address: {email}",
+      "invalid_type": "invalid_username"
+    },
+    {
+      "text": "Send email to user390@daum.net",
+      "email": "user390@daum.net",
+      "is_valid": true,
+      "template": "Send email to {email}"
+    },
+    {
+      "text": "이메일 주소는 2lvp7ca0lb@nate.com입니다.",
+      "email": "2lvp7ca0lb@nate.com",
+      "is_valid": true,
+      "template": "이메일 주소는 {email}입니다."
+    },
+    {
+      "text": "문의사항은 korean278@daum.net로 보내주세요.",
+      "email": "korean278@daum.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "연락처(이메일): test.235@kakao.com",
+      "email": "test.235@kakao.com",
+      "is_valid": true,
+      "template": "연락처(이메일): {email}"
+    },
+    {
+      "text": "Email me at korean837@nate.com",
+      "email": "korean837@nate.com",
+      "is_valid": true,
+      "template": "Email me at {email}"
+    },
+    {
+      "text": "메일 주소: test.608@outlook.kr",
+      "email": "test.608@outlook.kr",
+      "is_valid": true,
+      "template": "메일 주소: {email}"
+    },
+    {
+      "text": "답장 받을 이메일: wqcjcz@outlook.kr",
+      "email": "wqcjcz@outlook.kr",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    },
+    {
+      "text": "문의사항은 test.694@hanmail.net로 보내주세요.",
+      "email": "test.694@hanmail.net",
+      "is_valid": true,
+      "template": "문의사항은 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: g3jjy61oz8@hanmail.net",
+      "email": "g3jjy61oz8@hanmail.net",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "user942@daum.net로 연락주시기 바랍니다.",
+      "email": "user942@daum.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "회신은 test.468@outlook.kr로 부탁드립니다.",
+      "email": "test.468@outlook.kr",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "이메일 korean274@daum.net로 보내주세요.",
+      "email": "korean274@daum.net",
+      "is_valid": true,
+      "template": "이메일 {email}로 보내주세요."
+    },
+    {
+      "text": "E-mail: slxld2f5m@daum.net",
+      "email": "slxld2f5m@daum.net",
+      "is_valid": true,
+      "template": "E-mail: {email}"
+    },
+    {
+      "text": "Mail to: korean741@daum.net",
+      "email": "korean741@daum.net",
+      "is_valid": true,
+      "template": "Mail to: {email}"
+    },
+    {
+      "text": "메일주소는 korean845@daum.net입니다.",
+      "email": "korean845@daum.net",
+      "is_valid": true,
+      "template": "메일주소는 {email}입니다."
+    },
+    {
+      "text": "test.387@hanmail.net로 연락주시기 바랍니다.",
+      "email": "test.387@hanmail.net",
+      "is_valid": true,
+      "template": "{email}로 연락주시기 바랍니다."
+    },
+    {
+      "text": "Send your response to test.284@gmail.com",
+      "email": "test.284@gmail.com",
+      "is_valid": true,
+      "template": "Send your response to {email}"
+    },
+    {
+      "text": "회신은 g1i4bh5p@nate.com로 부탁드립니다.",
+      "email": "g1i4bh5p@nate.com",
+      "is_valid": true,
+      "template": "회신은 {email}로 부탁드립니다."
+    },
+    {
+      "text": "답장 받을 이메일: user750@kakao.com",
+      "email": "user750@kakao.com",
+      "is_valid": true,
+      "template": "답장 받을 이메일: {email}"
+    }
+  ]
+}

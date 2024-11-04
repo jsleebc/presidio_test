@@ -1,0 +1,6232 @@
+{
+  "metadata": {
+    "total_cases": 1000,
+    "valid_cases": 800,
+    "invalid_cases": 200,
+    "template_count": 20
+  },
+  "templates": [
+    "전화번호는 {number}입니다.",
+    "연락처: {number}",
+    "PHONE NUMBER: {number}",
+    "전화: {number}",
+    "연락처는 {number}입니다.",
+    "해당 고객의 전화번호는 {number}로 확인됩니다.",
+    "전화정보: {number}",
+    "Phone: {number}",
+    "전화번호 {number}로 연락주세요.",
+    "연락처({number})로 문의해주세요.",
+    "고객님의 전화번호는 {number}입니다.",
+    "연락받으실 번호: {number}",
+    "Contact Number: {number}",
+    "전화번호 확인: {number}",
+    "등록된 연락처: {number}",
+    "통화가능 번호: {number}",
+    "전화번호 입력: {number}",
+    "연락 가능 번호: {number}",
+    "Tel: {number}",
+    "연락정보: {number}"
+  ],
+  "test_cases": [
+    {
+      "text": "Tel: 052-463-76A0",
+      "phone_number": "052-463-76A0",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처(061-958-2557)로 문의해주세요.",
+      "phone_number": "061-958-2557",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "고객님의 전화번호는 011-6256-2876입니다.",
+      "phone_number": "011-6256-2876",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락 가능 번호: 0623337049",
+      "phone_number": "0623337049",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호 입력: 055-816-1109",
+      "phone_number": "055-816-1109",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호 010-5745-1771로 연락주세요.",
+      "phone_number": "010-5745-1771",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락정보: 02-1900-6013",
+      "phone_number": "02-1900-6013",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "Contact Number: 017-5791-3534",
+      "phone_number": "017-5791-3534",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "Phone: 019-5987-2426",
+      "phone_number": "019-5987-2426",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "등록된 연락처: 033-442-2578",
+      "phone_number": "033-442-2578",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 032-596-6458",
+      "phone_number": "032-596-6458",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "등록된 연락처: 019-6147-0901",
+      "phone_number": "019-6147-0901",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "연락처: 062-829-0252",
+      "phone_number": "062-829-0252",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 061-265-6895입니다.",
+      "phone_number": "061-265-6895",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 010-8414-4472로 연락주세요.",
+      "phone_number": "010-8414-4472",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "해당 고객의 전화번호는 016-7877-5774로 확인됩니다.",
+      "phone_number": "016-7877-5774",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처는 018-8711-1568입니다.",
+      "phone_number": "018-8711-1568",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "고객님의 전화번호는 02-6455-7340입니다.",
+      "phone_number": "02-6455-7340",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 053-017-7951",
+      "phone_number": "053-017-7951",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 033-601-6745로 연락주세요.",
+      "phone_number": "033-601-6745",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "등록된 연락처: 044-675-4238",
+      "phone_number": "044-675-4238",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호 019-7911-7212로 연락주세요.",
+      "phone_number": "019-7911-7212",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 052-170-2645로 연락주세요.",
+      "phone_number": "052-170-2645",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Contact Number: 061-609-9608",
+      "phone_number": "061-609-9608",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 033-356-5193",
+      "phone_number": "033-356-5193",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 011-6759-05T5",
+      "phone_number": "011-6759-05T5",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화정보: J62-559-9003",
+      "phone_number": "J62-559-9003",
+      "is_valid": false,
+      "template": "전화정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락받으실 번호: 010-2974-1947",
+      "phone_number": "010-2974-1947",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처(010-4578-6532)로 문의해주세요.",
+      "phone_number": "010-4578-6532",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "통화가능 번호: 061-42955-877",
+      "phone_number": "061-42955-877",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "PHONE NUMBER: 017-4635-6469",
+      "phone_number": "017-4635-6469",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "등록된 연락처: 01177493560",
+      "phone_number": "01177493560",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화정보: 032-164-1170",
+      "phone_number": "032-164-1170",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 016-2834-7754로 연락주세요.",
+      "phone_number": "016-2834-7754",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락정보: 055-080-5873",
+      "phone_number": "055-080-5873",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 064-24227-258",
+      "phone_number": "064-24227-258",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "통화가능 번호: 062-447-9880",
+      "phone_number": "062-447-9880",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화: 011-3961-9499",
+      "phone_number": "011-3961-9499",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락정보: 018-0386-0437",
+      "phone_number": "018-0386-0437",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 016-6483-0837입니다.",
+      "phone_number": "016-6483-0837",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처(054-776-8614)로 문의해주세요.",
+      "phone_number": "054-776-8614",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "연락처(062-942-8335)로 문의해주세요.",
+      "phone_number": "062-942-8335",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 확인: 053-044-3364",
+      "phone_number": "053-044-3364",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 033-032-7545로 확인됩니다.",
+      "phone_number": "033-032-7545",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "전화정보: 0339376315",
+      "phone_number": "0339376315",
+      "is_valid": false,
+      "template": "전화정보: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락받으실 번호: 010-1200-6811",
+      "phone_number": "010-1200-6811",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처(061-827-8713)로 문의해주세요.",
+      "phone_number": "061-827-8713",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 입력: 033-239-9285",
+      "phone_number": "033-239-9285",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "통화가능 번호: 017-9571-5609",
+      "phone_number": "017-9571-5609",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 011-8501-2486",
+      "phone_number": "011-8501-2486",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 031-931-2973",
+      "phone_number": "031-931-2973",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 011-1206-5590입니다.",
+      "phone_number": "011-1206-5590",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 011-9935-0486",
+      "phone_number": "011-9935-0486",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "Tel: 061-775-9856",
+      "phone_number": "061-775-9856",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "등록된 연락처: 063-827-2423",
+      "phone_number": "063-827-2423",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 069-5126-3481",
+      "phone_number": "069-5126-3481",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "해당 고객의 전화번호는 051-616-4303로 확인됩니다.",
+      "phone_number": "051-616-4303",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Contact Number: 041-641-1683",
+      "phone_number": "041-641-1683",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 입력: 055-168-9280",
+      "phone_number": "055-168-9280",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락처는 052-901-0775입니다.",
+      "phone_number": "052-901-0775",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 전화번호는 053-907-7761로 확인됩니다.",
+      "phone_number": "053-907-7761",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "전화번호는 011-7289-6193입니다.",
+      "phone_number": "011-7289-6193",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화: 016-1210-5489",
+      "phone_number": "016-1210-5489",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "Phone: 055-791-6143",
+      "phone_number": "055-791-6143",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "Phone: 054-102-8843",
+      "phone_number": "054-102-8843",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화번호는 032-939-5134입니다.",
+      "phone_number": "032-939-5134",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "Phone: 043-77669-602",
+      "phone_number": "043-77669-602",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락정보: 063-574-1065",
+      "phone_number": "063-574-1065",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 016-6411-8658",
+      "phone_number": "016-6411-8658",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 019-7206-5705",
+      "phone_number": "019-7206-5705",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 031-062-4812로 확인됩니다.",
+      "phone_number": "031-062-4812",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락 가능 번호: 051-931-1268",
+      "phone_number": "051-931-1268",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화번호는 02-6216-9527입니다.",
+      "phone_number": "02-6216-9527",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 019-0392-1329",
+      "phone_number": "019-0392-1329",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호는 010-7636-4104입니다.",
+      "phone_number": "010-7636-4104",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 062-28786-277로 연락주세요.",
+      "phone_number": "062-28786-277",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "고객님의 전화번호는 018-8439-0804입니다.",
+      "phone_number": "018-8439-0804",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락 가능 번호: 032-976-5066",
+      "phone_number": "032-976-5066",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "통화가능 번호: 054-659-8621",
+      "phone_number": "054-659-8621",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Tel: 011-1375-1278",
+      "phone_number": "011-1375-1278",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화: 061-729-0484",
+      "phone_number": "061-729-0484",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화: 016-8571-7883",
+      "phone_number": "016-8571-7883",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "Phone: 017-8588-9168",
+      "phone_number": "017-8588-9168",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 044-366-3420",
+      "phone_number": "044-366-3420",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화정보: 017-2787-9383",
+      "phone_number": "017-2787-9383",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처: 017-8368-5125",
+      "phone_number": "017-8368-5125",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호 확인: 043-268-8594",
+      "phone_number": "043-268-8594",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "Contact Number: 01679225289",
+      "phone_number": "01679225289",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호 입력: 018-4919-2770",
+      "phone_number": "018-4919-2770",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화정보: 017-0751-7440",
+      "phone_number": "017-0751-7440",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 확인: 019-564g-1125",
+      "phone_number": "019-564g-1125",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처는 061-653-2183입니다.",
+      "phone_number": "061-653-2183",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "Contact Number: 042-857-6030",
+      "phone_number": "042-857-6030",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 044-291-2045",
+      "phone_number": "044-291-2045",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처(033-906-8300)로 문의해주세요.",
+      "phone_number": "033-906-8300",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화: 016-9271-5949",
+      "phone_number": "016-9271-5949",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화정보: 031-869-6329",
+      "phone_number": "031-869-6329",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처(063-501-0678)로 문의해주세요.",
+      "phone_number": "063-501-0678",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "Tel: 010-1716-22M5",
+      "phone_number": "010-1716-22M5",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 입력: 02-3926-9388",
+      "phone_number": "02-3926-9388",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 062-819-2240",
+      "phone_number": "062-819-2240",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 입력: 0527532397",
+      "phone_number": "0527532397",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호 확인: 010-6702-3580",
+      "phone_number": "010-6702-3580",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처(063-711-9941)로 문의해주세요.",
+      "phone_number": "063-711-9941",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "고객님의 전화번호는 031-821-2653입니다.",
+      "phone_number": "031-821-2653",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 입력: 01713390707",
+      "phone_number": "01713390707",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락정보: 010-9890-1342",
+      "phone_number": "010-9890-1342",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 041-079-3006로 연락주세요.",
+      "phone_number": "041-079-3006",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 063-894-6988로 연락주세요.",
+      "phone_number": "063-894-6988",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호는 055-615-2265입니다.",
+      "phone_number": "055-615-2265",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 019-6616-9055",
+      "phone_number": "019-6616-9055",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 032-009-4759로 확인됩니다.",
+      "phone_number": "032-009-4759",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락 가능 번호: 010-7761-0723",
+      "phone_number": "010-7761-0723",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 0332539531로 확인됩니다.",
+      "phone_number": "0332539531",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처: 042-806-3591",
+      "phone_number": "042-806-3591",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "Contact Number: 044-778-2477",
+      "phone_number": "044-778-2477",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 확인: 018-7240-0847",
+      "phone_number": "018-7240-0847",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "Contact Number: 019-7967-9942",
+      "phone_number": "019-7967-9942",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 확인: 043-550-5047",
+      "phone_number": "043-550-5047",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화: 011-0481-2373",
+      "phone_number": "011-0481-2373",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화: 011-05c5-6550",
+      "phone_number": "011-05c5-6550",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처: 062-797-9542",
+      "phone_number": "062-797-9542",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화: 054-008-1u96",
+      "phone_number": "054-008-1u96",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Contact Number: 018-9172-7968",
+      "phone_number": "018-9172-7968",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 확인: 052-048-2475",
+      "phone_number": "052-048-2475",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "등록된 연락처: 01679589700",
+      "phone_number": "01679589700",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처는 010-7927-5334입니다.",
+      "phone_number": "010-7927-5334",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "등록된 연락처: 0537310470",
+      "phone_number": "0537310470",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락정보: 010-6908-3559",
+      "phone_number": "010-6908-3559",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 041-839-1835로 확인됩니다.",
+      "phone_number": "041-839-1835",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락 가능 번호: 042-712-1063",
+      "phone_number": "042-712-1063",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화번호는 020-3055-2977입니다.",
+      "phone_number": "020-3055-2977",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락처: 010-6714-8655",
+      "phone_number": "010-6714-8655",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호 입력: 043-143-6548",
+      "phone_number": "043-143-6548",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 01686373041",
+      "phone_number": "01686373041",
+      "is_valid": false,
+      "template": "연락받으실 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(016-0499-2663)로 문의해주세요.",
+      "phone_number": "016-0499-2663",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "Contact Number: 044-301-0082",
+      "phone_number": "044-301-0082",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "통화가능 번호: 044-258-6833",
+      "phone_number": "044-258-6833",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화: 052-271-7890",
+      "phone_number": "052-271-7890",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락처: 041-733-6195",
+      "phone_number": "041-733-6195",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 042-146-8679",
+      "phone_number": "042-146-8679",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호 확인: 010-4938-3975",
+      "phone_number": "010-4938-3975",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 0624053502",
+      "phone_number": "0624053502",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호는 016-5663-4107입니다.",
+      "phone_number": "016-5663-4107",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호는 063-706-2389입니다.",
+      "phone_number": "063-706-2389",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 전화번호는 011-9234-7474로 확인됩니다.",
+      "phone_number": "011-9234-7474",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락받으실 번호: 018-6848-4741",
+      "phone_number": "018-6848-4741",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락정보: 010-8210-5117",
+      "phone_number": "010-8210-5117",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 018-4238-5924로 연락주세요.",
+      "phone_number": "018-4238-5924",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락 가능 번호: 019-9047-3147",
+      "phone_number": "019-9047-3147",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 042-741-9381",
+      "phone_number": "042-741-9381",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 041-394-1026입니다.",
+      "phone_number": "041-394-1026",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 041-1577-3047로 연락주세요.",
+      "phone_number": "041-1577-3047",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 전화번호는 061-75875-815입니다.",
+      "phone_number": "061-75875-815",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처: 062-117-0901",
+      "phone_number": "062-117-0901",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화정보: 041-374-6112",
+      "phone_number": "041-374-6112",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 053-730-8298로 확인됩니다.",
+      "phone_number": "053-730-8298",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처는 089-4790-5291입니다.",
+      "phone_number": "089-4790-5291",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 연락처: 016-8419-0004",
+      "phone_number": "016-8419-0004",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화정보: 042-83632-196",
+      "phone_number": "042-83632-196",
+      "is_valid": false,
+      "template": "전화정보: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Phone: 010-4684-7900",
+      "phone_number": "010-4684-7900",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화번호는 017-0205-1316입니다.",
+      "phone_number": "017-0205-1316",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 018-1098-1492",
+      "phone_number": "018-1098-1492",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락정보: 064-136-0225",
+      "phone_number": "064-136-0225",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 032-186-6709",
+      "phone_number": "032-186-6709",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락정보: 041-346-1078",
+      "phone_number": "041-346-1078",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락처는 051-590-4310입니다.",
+      "phone_number": "051-590-4310",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락처(010-8251-0446)로 문의해주세요.",
+      "phone_number": "010-8251-0446",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "Contact Number: 044-284-9400",
+      "phone_number": "044-284-9400",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 확인: 011-2501-0098",
+      "phone_number": "011-2501-0098",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처: 044-974-2628",
+      "phone_number": "044-974-2628",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호 입력: 010-4840-4912",
+      "phone_number": "010-4840-4912",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 052-835-1000",
+      "phone_number": "052-835-1000",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처는 010-2316-7294입니다.",
+      "phone_number": "010-2316-7294",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "Phone: 011-9158V2397",
+      "phone_number": "011-9158V2397",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 입력: 055-059-7818",
+      "phone_number": "055-059-7818",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 042-122-9419",
+      "phone_number": "042-122-9419",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "Tel: 016-0492-9050",
+      "phone_number": "016-0492-9050",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "등록된 연락처: 011-9452-8833",
+      "phone_number": "011-9452-8833",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 041-235-9629로 확인됩니다.",
+      "phone_number": "041-235-9629",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Tel: 016-9978-9707",
+      "phone_number": "016-9978-9707",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화번호 019-9056-2105로 연락주세요.",
+      "phone_number": "019-9056-2105",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "고객님의 전화번호는 061-897-2845입니다.",
+      "phone_number": "061-897-2845",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처는 031-916-7374입니다.",
+      "phone_number": "031-916-7374",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "전화번호 064-797-9130로 연락주세요.",
+      "phone_number": "064-797-9130",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Contact Number: 032-217-6455",
+      "phone_number": "032-217-6455",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "Phone: 043-006-8174",
+      "phone_number": "043-006-8174",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락정보: 053-505-5793",
+      "phone_number": "053-505-5793",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 입력: 011-5567-0592",
+      "phone_number": "011-5567-0592",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "Tel: 055-131A1896",
+      "phone_number": "055-131A1896",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "PHONE NUMBER: 042-276-6862",
+      "phone_number": "042-276-6862",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "등록된 연락처: 010-4431-0550",
+      "phone_number": "010-4431-0550",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "등록된 연락처: 053-685-7649",
+      "phone_number": "053-685-7649",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "연락처: 011-0697-1974",
+      "phone_number": "011-0697-1974",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 011-6824-7745",
+      "phone_number": "011-6824-7745",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락정보: 017-5234-580Q",
+      "phone_number": "017-5234-580Q",
+      "is_valid": false,
+      "template": "연락정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 전화번호는 01g-3984-9847로 확인됩니다.",
+      "phone_number": "01g-3984-9847",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 전화번호는 041-513-2836입니다.",
+      "phone_number": "041-513-2836",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 054-472-6077",
+      "phone_number": "054-472-6077",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 확인: 016-9157-0116",
+      "phone_number": "016-9157-0116",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 016-3741-8131로 연락주세요.",
+      "phone_number": "016-3741-8131",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "고객님의 전화번호는 064-44014-540입니다.",
+      "phone_number": "064-44014-540",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처: 041-394-9435",
+      "phone_number": "041-394-9435",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 061-173-9736",
+      "phone_number": "061-173-9736",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호 확인: 0432472889",
+      "phone_number": "0432472889",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화: 01w-6251-3198",
+      "phone_number": "01w-6251-3198",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처는 02-4688-0845입니다.",
+      "phone_number": "02-4688-0845",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "Tel: 051-657-3903",
+      "phone_number": "051-657-3903",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화: 032-324-5533",
+      "phone_number": "032-324-5533",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락처: 018-1704-7143",
+      "phone_number": "018-1704-7143",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호 입력: 017-8348-8874",
+      "phone_number": "017-8348-8874",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락처는 01903889199입니다.",
+      "phone_number": "01903889199",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 전화번호는 018-4007-5194로 확인됩니다.",
+      "phone_number": "018-4007-5194",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 전화번호는 063-53883-450입니다.",
+      "phone_number": "063-53883-450",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "등록된 연락처: 053-360-3079",
+      "phone_number": "053-360-3079",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 010-0036-6144",
+      "phone_number": "010-0036-6144",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호는 010-3546-8746입니다.",
+      "phone_number": "010-3546-8746",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화정보: 016-5831-7838",
+      "phone_number": "016-5831-7838",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "Phone: 062-162-7391",
+      "phone_number": "062-162-7391",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 019-2259-3965",
+      "phone_number": "019-2259-3965",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 063-735-3709로 확인됩니다.",
+      "phone_number": "063-735-3709",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "전화번호 확인: 011-v623-2379",
+      "phone_number": "011-v623-2379",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Tel: 064-169-0744",
+      "phone_number": "064-169-0744",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화정보: 016-4720-4727",
+      "phone_number": "016-4720-4727",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "Contact Number: 041-789-9425",
+      "phone_number": "041-789-9425",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 입력: 011-6115-3523",
+      "phone_number": "011-6115-3523",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호 확인: 064-721-0292",
+      "phone_number": "064-721-0292",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "등록된 연락처: 019-4807-4976",
+      "phone_number": "019-4807-4976",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "Contact Number: 010-5306-7275",
+      "phone_number": "010-5306-7275",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "Phone: 059-1481-4772",
+      "phone_number": "059-1481-4772",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화: 018-4384-3667",
+      "phone_number": "018-4384-3667",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화: 030-0646-6890",
+      "phone_number": "030-0646-6890",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 전화번호는 051-043-7658입니다.",
+      "phone_number": "051-043-7658",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 032-940-8877",
+      "phone_number": "032-940-8877",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락정보: 043-767-5610",
+      "phone_number": "043-767-5610",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화정보: 019-1139-6454",
+      "phone_number": "019-1139-6454",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화: 016-4821-9743",
+      "phone_number": "016-4821-9743",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화번호 016-0746-1684로 연락주세요.",
+      "phone_number": "016-0746-1684",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호는 051-988-3538입니다.",
+      "phone_number": "051-988-3538",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 연락처: 064-321-3446",
+      "phone_number": "064-321-3446",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호는 011-2349-8095입니다.",
+      "phone_number": "011-2349-8095",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호는 071-6888-3405입니다.",
+      "phone_number": "071-6888-3405",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Contact Number: 019-2524-0897",
+      "phone_number": "019-2524-0897",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락처: 097-6843-8931",
+      "phone_number": "097-6843-8931",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Tel: 011-2146-1112",
+      "phone_number": "011-2146-1112",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "통화가능 번호: 010-6613-5050",
+      "phone_number": "010-6613-5050",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 061-519-2571",
+      "phone_number": "061-519-2571",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락처: 055-209-0151",
+      "phone_number": "055-209-0151",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "Contact Number: 018-1285-8126",
+      "phone_number": "018-1285-8126",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 확인: 01127831490",
+      "phone_number": "01127831490",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락정보: 052-7035-5570",
+      "phone_number": "052-7035-5570",
+      "is_valid": false,
+      "template": "연락정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 확인: 017-9495-9945",
+      "phone_number": "017-9495-9945",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "등록된 연락처: 042-870-2239",
+      "phone_number": "042-870-2239",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "통화가능 번호: 018-7285-5437",
+      "phone_number": "018-7285-5437",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락처는 033-435-5260입니다.",
+      "phone_number": "033-435-5260",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "고객님의 전화번호는 064-62463-606입니다.",
+      "phone_number": "064-62463-606",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처(052-108-6936)로 문의해주세요.",
+      "phone_number": "052-108-6936",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 확인: 032-739-2464",
+      "phone_number": "032-739-2464",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처(061-437-0379)로 문의해주세요.",
+      "phone_number": "061-437-0379",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "PHONE NUMBER: 051-05259-179",
+      "phone_number": "051-05259-179",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "고객님의 전화번호는 033-133-9808입니다.",
+      "phone_number": "033-133-9808",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "PHONE NUMBER: 010-0645-5782",
+      "phone_number": "010-0645-5782",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호는 019-0130-8082입니다.",
+      "phone_number": "019-0130-8082",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "Phone: 010-6010-5646",
+      "phone_number": "010-6010-5646",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 02-9071-0308입니다.",
+      "phone_number": "02-9071-0308",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화정보: 018-8180-9884",
+      "phone_number": "018-8180-9884",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처(0529995404)로 문의해주세요.",
+      "phone_number": "0529995404",
+      "is_valid": false,
+      "template": "연락처({number})로 문의해주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화정보: 017-8697-3739",
+      "phone_number": "017-8697-3739",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 011-1799-6506로 확인됩니다.",
+      "phone_number": "011-1799-6506",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "등록된 연락처: 032-746-5862",
+      "phone_number": "032-746-5862",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화: 042-803-8715",
+      "phone_number": "042-803-8715",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락처는 052-459-1861입니다.",
+      "phone_number": "052-459-1861",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "Phone: 019-88089-171",
+      "phone_number": "019-88089-171",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화: 052-1994-1696",
+      "phone_number": "052-1994-1696",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 연락처: 010-7432-1690",
+      "phone_number": "010-7432-1690",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호 확인: 017-6449-7312",
+      "phone_number": "017-6449-7312",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 017-6308-3583",
+      "phone_number": "017-6308-3583",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화정보: 033-982-4763",
+      "phone_number": "033-982-4763",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 010-4524-7051로 확인됩니다.",
+      "phone_number": "010-4524-7051",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Phone: 060-1031-3859",
+      "phone_number": "060-1031-3859",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 032-636-8671로 연락주세요.",
+      "phone_number": "032-636-8671",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화정보: 043-6487-0125",
+      "phone_number": "043-6487-0125",
+      "is_valid": false,
+      "template": "전화정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락받으실 번호: 053-749-6835",
+      "phone_number": "053-749-6835",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 061-080-4686",
+      "phone_number": "061-080-4686",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 064-391-9589",
+      "phone_number": "064-391-9589",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 019-0213-0410",
+      "phone_number": "019-0213-0410",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "통화가능 번호: 051-355t5849",
+      "phone_number": "051-355t5849",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "통화가능 번호: 043-402-4318",
+      "phone_number": "043-402-4318",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락처(016-6077-2032)로 문의해주세요.",
+      "phone_number": "016-6077-2032",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "해당 고객의 전화번호는 053-535-4103로 확인됩니다.",
+      "phone_number": "053-535-4103",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Tel: 02-9484-1362",
+      "phone_number": "02-9484-1362",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 032-347-6664",
+      "phone_number": "032-347-6664",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "통화가능 번호: 062-315-5088",
+      "phone_number": "062-315-5088",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 017-0478-8520",
+      "phone_number": "017-0478-8520",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "연락정보: 017-5973-4952",
+      "phone_number": "017-5973-4952",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락처(010-0013-3350)로 문의해주세요.",
+      "phone_number": "010-0013-3350",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "통화가능 번호: 019-7733-6726",
+      "phone_number": "019-7733-6726",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 입력: 010-0488-9536",
+      "phone_number": "010-0488-9536",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "Contact Number: 011-0126-2762",
+      "phone_number": "011-0126-2762",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 019-5706-7845",
+      "phone_number": "019-5706-7845",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "Tel: 044-502-6333",
+      "phone_number": "044-502-6333",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "통화가능 번호: 053-843-304i",
+      "phone_number": "053-843-304i",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "등록된 연락처: 043-566-3617",
+      "phone_number": "043-566-3617",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호는 042-235-1248입니다.",
+      "phone_number": "042-235-1248",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락받으실 번호: 010-7287-0028",
+      "phone_number": "010-7287-0028",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 017-6852-0399입니다.",
+      "phone_number": "017-6852-0399",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화: 044-32113-017",
+      "phone_number": "044-32113-017",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화번호 확인: 018-9208-0613",
+      "phone_number": "018-9208-0613",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "Tel: 063-70210-388",
+      "phone_number": "063-70210-388",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화: 061-160-2728",
+      "phone_number": "061-160-2728",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 010-2053-3409입니다.",
+      "phone_number": "010-2053-3409",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 031-95586-312",
+      "phone_number": "031-95586-312",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처: 051-833-1608",
+      "phone_number": "051-833-1608",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화: 041-630-7634",
+      "phone_number": "041-630-7634",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "Phone: 011-5209-2964",
+      "phone_number": "011-5209-2964",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락정보: 016-1697-4796",
+      "phone_number": "016-1697-4796",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "Tel: 01685308838",
+      "phone_number": "01685308838",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Phone: 089-5608-8743",
+      "phone_number": "089-5608-8743",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화: 063-47048-588",
+      "phone_number": "063-47048-588",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화번호 확인: 011-4465-4379",
+      "phone_number": "011-4465-4379",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 입력: 051-153-3103",
+      "phone_number": "051-153-3103",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 016-7466-2854",
+      "phone_number": "016-7466-2854",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처: 010-8641-6930",
+      "phone_number": "010-8641-6930",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 0427136363",
+      "phone_number": "0427136363",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact Number: 016-8961-2448",
+      "phone_number": "016-8961-2448",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 010-3186-4757입니다.",
+      "phone_number": "010-3186-4757",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "Phone: 061-773-3429",
+      "phone_number": "061-773-3429",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락처(018-9811-1400)로 문의해주세요.",
+      "phone_number": "018-9811-1400",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "Contact Number: 063-177-4620",
+      "phone_number": "063-177-4620",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 011-7970-4276입니다.",
+      "phone_number": "011-7970-4276",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 확인: 010-4197-2269",
+      "phone_number": "010-4197-2269",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화정보: 018-6543-9802",
+      "phone_number": "018-6543-9802",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "Tel: 017-6044-6961",
+      "phone_number": "017-6044-6961",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 044-648-6604입니다.",
+      "phone_number": "044-648-6604",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락받으실 번호: 01079122744",
+      "phone_number": "01079122744",
+      "is_valid": false,
+      "template": "연락받으실 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호 입력: 031-4009-1166",
+      "phone_number": "031-4009-1166",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 043-156-2287로 연락주세요.",
+      "phone_number": "043-156-2287",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락처: 016-71z5-8295",
+      "phone_number": "016-71z5-8295",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Phone: 011-0904-8187",
+      "phone_number": "011-0904-8187",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "등록된 연락처: 031-315-061U",
+      "phone_number": "031-315-061U",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "해당 고객의 전화번호는 055-746-3622로 확인됩니다.",
+      "phone_number": "055-746-3622",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처(01073991785)로 문의해주세요.",
+      "phone_number": "01073991785",
+      "is_valid": false,
+      "template": "연락처({number})로 문의해주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호는 051-367-2351입니다.",
+      "phone_number": "051-367-2351",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 010-9631-6866로 연락주세요.",
+      "phone_number": "010-9631-6866",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Contact Number: 018-8042-4918",
+      "phone_number": "018-8042-4918",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 019-0171-9388",
+      "phone_number": "019-0171-9388",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "Phone: 019-0498-2864",
+      "phone_number": "019-0498-2864",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화번호 확인: 064-428-3180",
+      "phone_number": "064-428-3180",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처(018-7815-7003)로 문의해주세요.",
+      "phone_number": "018-7815-7003",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화: 017-4072-2513",
+      "phone_number": "017-4072-2513",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 018-1236-8860",
+      "phone_number": "018-1236-8860",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호는 042-096-3524입니다.",
+      "phone_number": "042-096-3524",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 018-3424-8850로 연락주세요.",
+      "phone_number": "018-3424-8850",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락 가능 번호: 016-1941-3245",
+      "phone_number": "016-1941-3245",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "통화가능 번호: 017-4417-5502",
+      "phone_number": "017-4417-5502",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락처는 041-176-2414입니다.",
+      "phone_number": "041-176-2414",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "전화번호는 017-3493-1787입니다.",
+      "phone_number": "017-3493-1787",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화정보: 054-464-4496",
+      "phone_number": "054-464-4496",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처(018-5159-4659)로 문의해주세요.",
+      "phone_number": "018-5159-4659",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "등록된 연락처: 011-2379-6191",
+      "phone_number": "011-2379-6191",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "연락처: 052-695-9552",
+      "phone_number": "052-695-9552",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 063-814-7157로 확인됩니다.",
+      "phone_number": "063-814-7157",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "등록된 연락처: 055-54545-419",
+      "phone_number": "055-54545-419",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "등록된 연락처: 032-578-5532",
+      "phone_number": "032-578-5532",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 028-9381-5955",
+      "phone_number": "028-9381-5955",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "해당 고객의 전화번호는 019-18477-939로 확인됩니다.",
+      "phone_number": "019-18477-939",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "해당 고객의 전화번호는 052-124-2619로 확인됩니다.",
+      "phone_number": "052-124-2619",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "전화번호 입력: 032-761-6552",
+      "phone_number": "032-761-6552",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "Phone: 054-057-3581",
+      "phone_number": "054-057-3581",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 042-474-9385",
+      "phone_number": "042-474-9385",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처: 010-9876-4466",
+      "phone_number": "010-9876-4466",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 042-365-3817로 확인됩니다.",
+      "phone_number": "042-365-3817",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 전화번호는 017-0148-5996로 확인됩니다.",
+      "phone_number": "017-0148-5996",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락정보: 052-870-9503",
+      "phone_number": "052-870-9503",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "등록된 연락처: 018-1989-6760",
+      "phone_number": "018-1989-6760",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호 입력: 043-327-6058",
+      "phone_number": "043-327-6058",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화정보: 010-6826-7814",
+      "phone_number": "010-6826-7814",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "Phone: 016-5475-5974",
+      "phone_number": "016-5475-5974",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 01788571622",
+      "phone_number": "01788571622",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Phone: 011-8390-7811",
+      "phone_number": "011-8390-7811",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "통화가능 번호: 011-2019S4660",
+      "phone_number": "011-2019S4660",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호는 031-018-7128입니다.",
+      "phone_number": "031-018-7128",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 입력: 017-4077-0078",
+      "phone_number": "017-4077-0078",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호는 011-4341-6654입니다.",
+      "phone_number": "011-4341-6654",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 019-7718-8537",
+      "phone_number": "019-7718-8537",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 054-653-6148",
+      "phone_number": "054-653-6148",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 01823809163",
+      "phone_number": "01823809163",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락받으실 번호: 017-4301-5402",
+      "phone_number": "017-4301-5402",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처는 0257510665입니다.",
+      "phone_number": "0257510665",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처는 027-9996-8215입니다.",
+      "phone_number": "027-9996-8215",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Tel: 032-784-1516",
+      "phone_number": "032-784-1516",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락정보: 054-397-9977",
+      "phone_number": "054-397-9977",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 확인: 019-4602-1060",
+      "phone_number": "019-4602-1060",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "등록된 연락처: 033-15173-089",
+      "phone_number": "033-15173-089",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Phone: 018-6Q60-3114",
+      "phone_number": "018-6Q60-3114",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 입력: 01077408740",
+      "phone_number": "01077408740",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 전화번호는 0446107005로 확인됩니다.",
+      "phone_number": "0446107005",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락받으실 번호: 010-8114-9353",
+      "phone_number": "010-8114-9353",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 051-489-7097",
+      "phone_number": "051-489-7097",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락처는 018-9852-8557입니다.",
+      "phone_number": "018-9852-8557",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락 가능 번호: 051-558-9617",
+      "phone_number": "051-558-9617",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Phone: 062-686-2348",
+      "phone_number": "062-686-2348",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "통화가능 번호: 02-7046-2876",
+      "phone_number": "02-7046-2876",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화: 017-0029-2388",
+      "phone_number": "017-0029-2388",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "등록된 연락처: 051-406-5003",
+      "phone_number": "051-406-5003",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "Contact Number: 052-724-7946",
+      "phone_number": "052-724-7946",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 입력: 052-201-3139",
+      "phone_number": "052-201-3139",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 018-3303-7984",
+      "phone_number": "018-3303-7984",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 017-3859-3963",
+      "phone_number": "017-3859-3963",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 019-7870-7239",
+      "phone_number": "019-7870-7239",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "Phone: 01857312461",
+      "phone_number": "01857312461",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "고객님의 전화번호는 018-5318-2480입니다.",
+      "phone_number": "018-5318-2480",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 전화번호는 053-157-5323입니다.",
+      "phone_number": "053-157-5323",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 017-2424-6725",
+      "phone_number": "017-2424-6725",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "Tel: 043-801-37R6",
+      "phone_number": "043-801-37R6",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화: 02-82480-967",
+      "phone_number": "02-82480-967",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화번호 확인: 016-7529-8191",
+      "phone_number": "016-7529-8191",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 019-2482-7529",
+      "phone_number": "019-2482-7529",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Tel: 043-210-0206",
+      "phone_number": "043-210-0206",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 017-2542-3068",
+      "phone_number": "017-2542-3068",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처: 016-1685-9352",
+      "phone_number": "016-1685-9352",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "Tel: 016-4708-2163",
+      "phone_number": "016-4708-2163",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 064-302-0853로 확인됩니다.",
+      "phone_number": "064-302-0853",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "전화번호 확인: 010-5124-0466",
+      "phone_number": "010-5124-0466",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 031-669-2022로 연락주세요.",
+      "phone_number": "031-669-2022",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락처: 064-637-0564",
+      "phone_number": "064-637-0564",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "등록된 연락처: 041-185-5S25",
+      "phone_number": "041-185-5S25",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락받으실 번호: 044-459-3645",
+      "phone_number": "044-459-3645",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처(02-6473-7245)로 문의해주세요.",
+      "phone_number": "02-6473-7245",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 입력: 044-851-0787",
+      "phone_number": "044-851-0787",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락처는 032-01735-013입니다.",
+      "phone_number": "032-01735-013",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처(062-592-2867)로 문의해주세요.",
+      "phone_number": "062-592-2867",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화: 017-54355-028",
+      "phone_number": "017-54355-028",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "통화가능 번호: 051-266-7921",
+      "phone_number": "051-266-7921",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호는 085-1158-9197입니다.",
+      "phone_number": "085-1158-9197",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화: 011-8606-7534",
+      "phone_number": "011-8606-7534",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 052-350-4062로 확인됩니다.",
+      "phone_number": "052-350-4062",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Phone: 011-7835-5265",
+      "phone_number": "011-7835-5265",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 097-2562-2044",
+      "phone_number": "097-2562-2044",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "PHONE NUMBER: 043-173-9737",
+      "phone_number": "043-173-9737",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호 010-10639-675로 연락주세요.",
+      "phone_number": "010-10639-675",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화번호 확인: 010-9481-5004",
+      "phone_number": "010-9481-5004",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처: 016-9952h2516",
+      "phone_number": "016-9952h2516",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처(055-622-7305)로 문의해주세요.",
+      "phone_number": "055-622-7305",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호는 041-01938-399입니다.",
+      "phone_number": "041-01938-399",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화: 062-671-2266",
+      "phone_number": "062-671-2266",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 02-3219-0858",
+      "phone_number": "02-3219-0858",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 042-295-4867",
+      "phone_number": "042-295-4867",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호는 041-305-2836입니다.",
+      "phone_number": "041-305-2836",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락 가능 번호: 010-7370-4166",
+      "phone_number": "010-7370-4166",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 043-771-5592",
+      "phone_number": "043-771-5592",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 065-0452-1860로 확인됩니다.",
+      "phone_number": "065-0452-1860",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Tel: 019-1309-2913",
+      "phone_number": "019-1309-2913",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "통화가능 번호: 054-575-5169",
+      "phone_number": "054-575-5169",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Tel: 02-4770-3423",
+      "phone_number": "02-4770-3423",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 010-9630-1812로 확인됩니다.",
+      "phone_number": "010-9630-1812",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PHONE NUMBER: 053-14r-9077",
+      "phone_number": "053-14r-9077",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 입력: 011-2919-1915",
+      "phone_number": "011-2919-1915",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락처(017-8213-8714)로 문의해주세요.",
+      "phone_number": "017-8213-8714",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "고객님의 전화번호는 031-369-3136입니다.",
+      "phone_number": "031-369-3136",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 확인: 01734394297",
+      "phone_number": "01734394297",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처: 016-8849-7202",
+      "phone_number": "016-8849-7202",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락처: 019-4814-7686",
+      "phone_number": "019-4814-7686",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "통화가능 번호: 031-647-2273",
+      "phone_number": "031-647-2273",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락정보: 061-214-5090",
+      "phone_number": "061-214-5090",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 입력: 054-873-3923",
+      "phone_number": "054-873-3923",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 010-5988-2509로 확인됩니다.",
+      "phone_number": "010-5988-2509",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처(043-048-3691)로 문의해주세요.",
+      "phone_number": "043-048-3691",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "Tel: 01959744969",
+      "phone_number": "01959744969",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화정보: 061-388-6366",
+      "phone_number": "061-388-6366",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처는 031-71871-011입니다.",
+      "phone_number": "031-71871-011",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Contact Number: 0q4-528-3178",
+      "phone_number": "0q4-528-3178",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Phone: 042-046-5301",
+      "phone_number": "042-046-5301",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "Tel: 011-4699-5660",
+      "phone_number": "011-4699-5660",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락처(078-2328-3559)로 문의해주세요.",
+      "phone_number": "078-2328-3559",
+      "is_valid": false,
+      "template": "연락처({number})로 문의해주세요.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Tel: 011-1343-7694",
+      "phone_number": "011-1343-7694",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화번호 019-9211-5273로 연락주세요.",
+      "phone_number": "019-9211-5273",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "등록된 연락처: 031-418-1068",
+      "phone_number": "031-418-1068",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호 입력: 041-201-0022",
+      "phone_number": "041-201-0022",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화정보: 053-412-2306",
+      "phone_number": "053-412-2306",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 확인: 064-172-7434",
+      "phone_number": "064-172-7434",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 입력: 019-8047-7344",
+      "phone_number": "019-8047-7344",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "통화가능 번호: 011-6843-0896",
+      "phone_number": "011-6843-0896",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락처: V43-832-3179",
+      "phone_number": "V43-832-3179",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락정보: 043-905-0406",
+      "phone_number": "043-905-0406",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 019-7490-R932",
+      "phone_number": "019-7490-R932",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락정보: 054-379-8111",
+      "phone_number": "054-379-8111",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화: 0649137399",
+      "phone_number": "0649137399",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 전화번호는 016-5840-2472로 확인됩니다.",
+      "phone_number": "016-5840-2472",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "전화: 063-670-0563",
+      "phone_number": "063-670-0563",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락처(043-107-6738)로 문의해주세요.",
+      "phone_number": "043-107-6738",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "해당 고객의 전화번호는 010-7032-8236로 확인됩니다.",
+      "phone_number": "010-7032-8236",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처는 017-7960-2500입니다.",
+      "phone_number": "017-7960-2500",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "등록된 연락처: 011-7994-7859",
+      "phone_number": "011-7994-7859",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "통화가능 번호: 062-849-4475",
+      "phone_number": "062-849-4475",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 063-487-1005",
+      "phone_number": "063-487-1005",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호 053-578-3352로 연락주세요.",
+      "phone_number": "053-578-3352",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 입력: 032-23384-651",
+      "phone_number": "032-23384-651",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Contact Number: 090-3534-2750",
+      "phone_number": "090-3534-2750",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Tel: 031-298-9358",
+      "phone_number": "031-298-9358",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 02-97978-300",
+      "phone_number": "02-97978-300",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락정보: 064-439-8477",
+      "phone_number": "064-439-8477",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "Contact Number: 018-1672-9725",
+      "phone_number": "018-1672-9725",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 016-5436-5778입니다.",
+      "phone_number": "016-5436-5778",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락 가능 번호: 044-622-5394",
+      "phone_number": "044-622-5394",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "연락처(042-526-3645)로 문의해주세요.",
+      "phone_number": "042-526-3645",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화정보: 061-741-0660",
+      "phone_number": "061-741-0660",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "등록된 연락처: 010-5026-0864",
+      "phone_number": "010-5026-0864",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 031-427-9878",
+      "phone_number": "031-427-9878",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호 입력: 054-497-6073",
+      "phone_number": "054-497-6073",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락처: 017-8160-4349",
+      "phone_number": "017-8160-4349",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락처는 054-57959-831입니다.",
+      "phone_number": "054-57959-831",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "고객님의 전화번호는 051-339-9772입니다.",
+      "phone_number": "051-339-9772",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 052-785-4687",
+      "phone_number": "052-785-4687",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 02-3109-0367로 확인됩니다.",
+      "phone_number": "02-3109-0367",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락 가능 번호: 016-8826-4167",
+      "phone_number": "016-8826-4167",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "연락처: 017-3655-9401",
+      "phone_number": "017-3655-9401",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화정보: 054-6784-3582",
+      "phone_number": "054-6784-3582",
+      "is_valid": false,
+      "template": "전화정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락 가능 번호: 019-7645-4821",
+      "phone_number": "019-7645-4821",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화번호는 018-9646-3045입니다.",
+      "phone_number": "018-9646-3045",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 02-14336-728",
+      "phone_number": "02-14336-728",
+      "is_valid": false,
+      "template": "연락정보: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처(010-6160-2878)로 문의해주세요.",
+      "phone_number": "010-6160-2878",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화정보: 064-178-4933",
+      "phone_number": "064-178-4933",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처는 017-1233-7038입니다.",
+      "phone_number": "017-1233-7038",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락 가능 번호: 011-0762-2234",
+      "phone_number": "011-0762-2234",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 확인: 010-0338-8873",
+      "phone_number": "010-0338-8873",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처는 062-60528-932입니다.",
+      "phone_number": "062-60528-932",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화번호 061-281-2578로 연락주세요.",
+      "phone_number": "061-281-2578",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "해당 고객의 전화번호는 043-557-8870로 확인됩니다.",
+      "phone_number": "043-557-8870",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락 가능 번호: 011-9938-3228",
+      "phone_number": "011-9938-3228",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "연락처는 062-517-7378입니다.",
+      "phone_number": "062-517-7378",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락받으실 번호: 041-1203-8316",
+      "phone_number": "041-1203-8316",
+      "is_valid": false,
+      "template": "연락받으실 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 019-0504-3299로 연락주세요.",
+      "phone_number": "019-0504-3299",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화: 054-238-4028",
+      "phone_number": "054-238-4028",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "통화가능 번호: 062-222-7724",
+      "phone_number": "062-222-7724",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 018-7404-2955",
+      "phone_number": "018-7404-2955",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "연락정보: 010-3572-0869",
+      "phone_number": "010-3572-0869",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "통화가능 번호: 055-288-2478",
+      "phone_number": "055-288-2478",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 017-4109-4649",
+      "phone_number": "017-4109-4649",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 017-5810-3582로 연락주세요.",
+      "phone_number": "017-5810-3582",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락정보: 019-0908-0136",
+      "phone_number": "019-0908-0136",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락처: 016-0264-3028",
+      "phone_number": "016-0264-3028",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 044-778-6648",
+      "phone_number": "044-778-6648",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락처(031-361-1178)로 문의해주세요.",
+      "phone_number": "031-361-1178",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 017-9896-8934로 연락주세요.",
+      "phone_number": "017-9896-8934",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 입력: 043-949-2953",
+      "phone_number": "043-949-2953",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호 확인: 041-799-2221",
+      "phone_number": "041-799-2221",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처: 051-855-6514",
+      "phone_number": "051-855-6514",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "등록된 연락처: 061-69467-221",
+      "phone_number": "061-69467-221",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Contact Number: 018-6082-0352",
+      "phone_number": "018-6082-0352",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "등록된 연락처: 016-6120-5876",
+      "phone_number": "016-6120-5876",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호는 017-6038-9464입니다.",
+      "phone_number": "017-6038-9464",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 확인: 016-6805-7042",
+      "phone_number": "016-6805-7042",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화정보: 016-1594-5531",
+      "phone_number": "016-1594-5531",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 017-6738-0275로 연락주세요.",
+      "phone_number": "017-6738-0275",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락 가능 번호: 010-9096-6412",
+      "phone_number": "010-9096-6412",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화정보: 055-459-9006",
+      "phone_number": "055-459-9006",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 061-149-0952로 확인됩니다.",
+      "phone_number": "061-149-0952",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "통화가능 번호: 016-4588-8499",
+      "phone_number": "016-4588-8499",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화: 041-610-7385",
+      "phone_number": "041-610-7385",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "등록된 연락처: 031-063-9755",
+      "phone_number": "031-063-9755",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화정보: 078-0429-2887",
+      "phone_number": "078-0429-2887",
+      "is_valid": false,
+      "template": "전화정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "통화가능 번호: 032-888-3233",
+      "phone_number": "032-888-3233",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화: 064-038-3991",
+      "phone_number": "064-038-3991",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "Tel: 018-5c46-2340",
+      "phone_number": "018-5c46-2340",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 017-1979-7383로 연락주세요.",
+      "phone_number": "017-1979-7383",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Tel: 017-9343-0781",
+      "phone_number": "017-9343-0781",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락정보: 010-6615-5706",
+      "phone_number": "010-6615-5706",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호는 031-293-9469입니다.",
+      "phone_number": "031-293-9469",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호는 044-713-7712입니다.",
+      "phone_number": "044-713-7712",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 입력: 01880602807",
+      "phone_number": "01880602807",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처: 033-571-2743",
+      "phone_number": "033-571-2743",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호 010-7286-8149로 연락주세요.",
+      "phone_number": "010-7286-8149",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Contact Number: 010-2568-0074",
+      "phone_number": "010-2568-0074",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락처: 044-299-5999",
+      "phone_number": "044-299-5999",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호 입력: 01636894418",
+      "phone_number": "01636894418",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 전화번호는 042-528-1313로 확인됩니다.",
+      "phone_number": "042-528-1313",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Tel: 055-970-3523",
+      "phone_number": "055-970-3523",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 055-923-3884로 확인됩니다.",
+      "phone_number": "055-923-3884",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 전화번호는 017-5644-2326입니다.",
+      "phone_number": "017-5644-2326",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 0630332810",
+      "phone_number": "0630332810",
+      "is_valid": false,
+      "template": "연락정보: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호 입력: 033-390-5105",
+      "phone_number": "033-390-5105",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호는 064-0021-5309입니다.",
+      "phone_number": "064-0021-5309",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "PHONE NUMBER: 019-3359-1600",
+      "phone_number": "019-3359-1600",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호 확인: 032-834-5229",
+      "phone_number": "032-834-5229",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 011-8663-4685",
+      "phone_number": "011-8663-4685",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 017-1470-6393",
+      "phone_number": "017-1470-6393",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화: 031-568-9369",
+      "phone_number": "031-568-9369",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화번호는 019-3294-0513입니다.",
+      "phone_number": "019-3294-0513",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "통화가능 번호: 019-4737-5931",
+      "phone_number": "019-4737-5931",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 입력: 044-329-5036",
+      "phone_number": "044-329-5036",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "Contact Number: 063-513-4330",
+      "phone_number": "063-513-4330",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 입력: 016-1213-5102",
+      "phone_number": "016-1213-5102",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호는 063-898-0720입니다.",
+      "phone_number": "063-898-0720",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호는 018-0494-5673입니다.",
+      "phone_number": "018-0494-5673",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 전화번호는 041-139-8811입니다.",
+      "phone_number": "041-139-8811",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "통화가능 번호: 064-995-6125",
+      "phone_number": "064-995-6125",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호는 054-334-2304입니다.",
+      "phone_number": "054-334-2304",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처(011-2826-7865)로 문의해주세요.",
+      "phone_number": "011-2826-7865",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "등록된 연락처: 055-551-2478",
+      "phone_number": "055-551-2478",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화: 019-9452-8624",
+      "phone_number": "019-9452-8624",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 016-6191-0151",
+      "phone_number": "016-6191-0151",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화정보: 018-6582-2292",
+      "phone_number": "018-6582-2292",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 041-686-8880",
+      "phone_number": "041-686-8880",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 054-753-6943",
+      "phone_number": "054-753-6943",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호 확인: 018-2540-4615",
+      "phone_number": "018-2540-4615",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 확인: 010-6492-8970",
+      "phone_number": "010-6492-8970",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 062-685-4416로 연락주세요.",
+      "phone_number": "062-685-4416",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "PHONE NUMBER: 017-2702-4443",
+      "phone_number": "017-2702-4443",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "Phone: 016-75N8-5881",
+      "phone_number": "016-75N8-5881",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 전화번호는 018-4152-4981입니다.",
+      "phone_number": "018-4152-4981",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "통화가능 번호: 053-451-6353",
+      "phone_number": "053-451-6353",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 018-2561-0570로 확인됩니다.",
+      "phone_number": "018-2561-0570",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Tel: 02-9442-2219",
+      "phone_number": "02-9442-2219",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 031-648-0152",
+      "phone_number": "031-648-0152",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "Contact Number: 053-642-6455",
+      "phone_number": "053-642-6455",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 018-6287-4499로 확인됩니다.",
+      "phone_number": "018-6287-4499",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Contact Number: 01140298761",
+      "phone_number": "01140298761",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(016-3137-4096)로 문의해주세요.",
+      "phone_number": "016-3137-4096",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호는 017-5690-4913입니다.",
+      "phone_number": "017-5690-4913",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 확인: 011-6111-0688",
+      "phone_number": "011-6111-0688",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처: 033-521-7678",
+      "phone_number": "033-521-7678",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락정보: 02-0415-9502",
+      "phone_number": "02-0415-9502",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화: 042-93145-373",
+      "phone_number": "042-93145-373",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화번호는 041-433-3322입니다.",
+      "phone_number": "041-433-3322",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 전화번호는 042-473-8587입니다.",
+      "phone_number": "042-473-8587",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호는 017-0281-4871입니다.",
+      "phone_number": "017-0281-4871",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "Tel: 051-697-3132",
+      "phone_number": "051-697-3132",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락정보: 087-2177-8149",
+      "phone_number": "087-2177-8149",
+      "is_valid": false,
+      "template": "연락정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Contact Number: 016-1544-1517",
+      "phone_number": "016-1544-1517",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락처는 051-373-6115입니다.",
+      "phone_number": "051-373-6115",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "전화번호 016-4608-9440로 연락주세요.",
+      "phone_number": "016-4608-9440",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Tel: 010-7701-1936",
+      "phone_number": "010-7701-1936",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "Phone: 018-8977-9108",
+      "phone_number": "018-8977-9108",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락처는 016-296I-7896입니다.",
+      "phone_number": "016-296I-7896",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처(051-543-1421)로 문의해주세요.",
+      "phone_number": "051-543-1421",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화: 017-0892-1282",
+      "phone_number": "017-0892-1282",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "Tel: 0622836908",
+      "phone_number": "0622836908",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "통화가능 번호: 011-8056-3489",
+      "phone_number": "011-8056-3489",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화: 0411142730",
+      "phone_number": "0411142730",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact Number: 016-6112-7221",
+      "phone_number": "016-6112-7221",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락처는 019-9799-1263입니다.",
+      "phone_number": "019-9799-1263",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "고객님의 전화번호는 019-8525-4698입니다.",
+      "phone_number": "019-8525-4698",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "Phone: 0631587210",
+      "phone_number": "0631587210",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화번호 입력: 019-5288-2447",
+      "phone_number": "019-5288-2447",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호는 053-788-X110입니다.",
+      "phone_number": "053-788-X110",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처: 0329181445",
+      "phone_number": "0329181445",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처는 062-10938-169입니다.",
+      "phone_number": "062-10938-169",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Phone: 016-2265-5162",
+      "phone_number": "016-2265-5162",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락처는 016-5749-5056입니다.",
+      "phone_number": "016-5749-5056",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락받으실 번호: 016-5250-2115",
+      "phone_number": "016-5250-2115",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호 018-4488-7Q99로 연락주세요.",
+      "phone_number": "018-4488-7Q99",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 016-0694-9776로 연락주세요.",
+      "phone_number": "016-0694-9776",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화정보: 051-059-7279",
+      "phone_number": "051-059-7279",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락정보: 031-295-0519",
+      "phone_number": "031-295-0519",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호는 032-815-8630입니다.",
+      "phone_number": "032-815-8630",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 087-4776-0127",
+      "phone_number": "087-4776-0127",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "PHONE NUMBER: 010-9058-3411",
+      "phone_number": "010-9058-3411",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "통화가능 번호: 043-692-7007",
+      "phone_number": "043-692-7007",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 023-6547-2341",
+      "phone_number": "023-6547-2341",
+      "is_valid": false,
+      "template": "연락받으실 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 043-836-5686로 연락주세요.",
+      "phone_number": "043-836-5686",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "통화가능 번호: 011-1320-2296",
+      "phone_number": "011-1320-2296",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 확인: 041-22612-157",
+      "phone_number": "041-22612-157",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화: 01032841403",
+      "phone_number": "01032841403",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Contact Number: 017-8766-8888",
+      "phone_number": "017-8766-8888",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "통화가능 번호: 018-0809-5891",
+      "phone_number": "018-0809-5891",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락처: 064-885-9302",
+      "phone_number": "064-885-9302",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화정보: 055-678-1379",
+      "phone_number": "055-678-1379",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처: 019-3173-8443",
+      "phone_number": "019-3173-8443",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 051-24031-935",
+      "phone_number": "051-24031-935",
+      "is_valid": false,
+      "template": "PHONE NUMBER: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처: 019-4404-9498",
+      "phone_number": "019-4404-9498",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락정보: 041-281-8586",
+      "phone_number": "041-281-8586",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 입력: 018-9616-6513",
+      "phone_number": "018-9616-6513",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "통화가능 번호: 016-0775-4669",
+      "phone_number": "016-0775-4669",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 031-950-1202",
+      "phone_number": "031-950-1202",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화정보: 019-0228-3342",
+      "phone_number": "019-0228-3342",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처: 0318894779",
+      "phone_number": "0318894779",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "통화가능 번호: 080-1590-7629",
+      "phone_number": "080-1590-7629",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락받으실 번호: 042-515-0241",
+      "phone_number": "042-515-0241",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 043-238-2342",
+      "phone_number": "043-238-2342",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 확인: 016-5533-9111",
+      "phone_number": "016-5533-9111",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처는 041-038-0782입니다.",
+      "phone_number": "041-038-0782",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "전화번호 019-1810-5Q36로 연락주세요.",
+      "phone_number": "019-1810-5Q36",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락 가능 번호: 011-0504-8283",
+      "phone_number": "011-0504-8283",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화: 011-9608-2c86",
+      "phone_number": "011-9608-2c86",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화: 010-0556-5859",
+      "phone_number": "010-0556-5859",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락처: 018-6580-4752",
+      "phone_number": "018-6580-4752",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 02-5068-5418",
+      "phone_number": "02-5068-5418",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 011-9480-3539",
+      "phone_number": "011-9480-3539",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락처는 063-253-7470입니다.",
+      "phone_number": "063-253-7470",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "등록된 연락처: 031-3226-6389",
+      "phone_number": "031-3226-6389",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락받으실 번호: 051-876-6804",
+      "phone_number": "051-876-6804",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화: 063-750-3926",
+      "phone_number": "063-750-3926",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "Phone: 062-038-0118",
+      "phone_number": "062-038-0118",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 051-237-0919로 확인됩니다.",
+      "phone_number": "051-237-0919",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처(011-9091-4968)로 문의해주세요.",
+      "phone_number": "011-9091-4968",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 입력: 041-883-8694",
+      "phone_number": "041-883-8694",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호 019-4373-0780로 연락주세요.",
+      "phone_number": "019-4373-0780",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 확인: 019-0982-9438",
+      "phone_number": "019-0982-9438",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처(011-9367-5533)로 문의해주세요.",
+      "phone_number": "011-9367-5533",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화정보: 010-6764-8997",
+      "phone_number": "010-6764-8997",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 011-2787-7626입니다.",
+      "phone_number": "011-2787-7626",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처(063-840-2650)로 문의해주세요.",
+      "phone_number": "063-840-2650",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화: 081-2649-1374",
+      "phone_number": "081-2649-1374",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 연락처: 0T1-876-4233",
+      "phone_number": "0T1-876-4233",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 확인: 019-0616-7061",
+      "phone_number": "019-0616-7061",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호는 081-3073-3856입니다.",
+      "phone_number": "081-3073-3856",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 입력: 044-053-2794",
+      "phone_number": "044-053-2794",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "등록된 연락처: 022-4317-4230",
+      "phone_number": "022-4317-4230",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락처(064-335-8471)로 문의해주세요.",
+      "phone_number": "064-335-8471",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "Tel: 051-299-3521",
+      "phone_number": "051-299-3521",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "Tel: 017-0019-2595",
+      "phone_number": "017-0019-2595",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락처: 051-13150-480",
+      "phone_number": "051-13150-480",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Phone: 032-247-5362",
+      "phone_number": "032-247-5362",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "Tel: 044-960-2333",
+      "phone_number": "044-960-2333",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 033t240-7649로 확인됩니다.",
+      "phone_number": "033t240-7649",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락정보: 064-323-9883",
+      "phone_number": "064-323-9883",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 052-074-9059",
+      "phone_number": "052-074-9059",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호는 0u1-7896-6798입니다.",
+      "phone_number": "0u1-7896-6798",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 전화번호는 01806116618입니다.",
+      "phone_number": "01806116618",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Tel: 017-4290-9024",
+      "phone_number": "017-4290-9024",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "등록된 연락처: 041-009-0489",
+      "phone_number": "041-009-0489",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "연락처(061-9i4-2395)로 문의해주세요.",
+      "phone_number": "061-9i4-2395",
+      "is_valid": false,
+      "template": "연락처({number})로 문의해주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락정보: 051-222-1603",
+      "phone_number": "051-222-1603",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 017-6398-0831",
+      "phone_number": "017-6398-0831",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호는 011-5296-6739입니다.",
+      "phone_number": "011-5296-6739",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화정보: 018-8815-0875",
+      "phone_number": "018-8815-0875",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "통화가능 번호: 062-373-4977",
+      "phone_number": "062-373-4977",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 016-4979-4643",
+      "phone_number": "016-4979-4643",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "Phone: 033-69383-573",
+      "phone_number": "033-69383-573",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "등록된 연락처: 018-9772-1026",
+      "phone_number": "018-9772-1026",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화정보: 041-256-6537",
+      "phone_number": "041-256-6537",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 019-0067-7095",
+      "phone_number": "019-0067-7095",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 011-9769-0135",
+      "phone_number": "011-9769-0135",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "Contact Number: 017o5938-9795",
+      "phone_number": "017o5938-9795",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 062-245-1000로 연락주세요.",
+      "phone_number": "062-245-1000",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락처는 016-7187-8025입니다.",
+      "phone_number": "016-7187-8025",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락받으실 번호: 017-4288-7066",
+      "phone_number": "017-4288-7066",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 059-6065-5304입니다.",
+      "phone_number": "059-6065-5304",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 확인: 032-463-0287",
+      "phone_number": "032-463-0287",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처: 032-662-6920",
+      "phone_number": "032-662-6920",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "통화가능 번호: 054-921-8937",
+      "phone_number": "054-921-8937",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 입력: 0U7-5787-6599",
+      "phone_number": "0U7-5787-6599",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락정보: 018-4634-5854",
+      "phone_number": "018-4634-5854",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락처는 017-2792-9021입니다.",
+      "phone_number": "017-2792-9021",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락처: 017-0270-1888",
+      "phone_number": "017-0270-1888",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 010-1412-3098",
+      "phone_number": "010-1412-3098",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화번호 N32-797-8824로 연락주세요.",
+      "phone_number": "N32-797-8824",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호는 044-077-1850입니다.",
+      "phone_number": "044-077-1850",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 051-165-9971로 연락주세요.",
+      "phone_number": "051-165-9971",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Tel: 053-909-2006",
+      "phone_number": "053-909-2006",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화: 019-4655-7404",
+      "phone_number": "019-4655-7404",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "등록된 연락처: 016-0294-0364",
+      "phone_number": "016-0294-0364",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "Tel: 019-7645-3835",
+      "phone_number": "019-7645-3835",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화정보: 031-479-4250",
+      "phone_number": "031-479-4250",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 064-631-9409로 연락주세요.",
+      "phone_number": "064-631-9409",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 010-8629-0931로 연락주세요.",
+      "phone_number": "010-8629-0931",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화: 018-1139-8291",
+      "phone_number": "018-1139-8291",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화번호 입력: 051-940-5951",
+      "phone_number": "051-940-5951",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "Tel: 0549298278",
+      "phone_number": "0549298278",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "전화정보: 044-139-1244",
+      "phone_number": "044-139-1244",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 입력: 031-550-4994",
+      "phone_number": "031-550-4994",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호 052-214-9868로 연락주세요.",
+      "phone_number": "052-214-9868",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 031-190-3204로 연락주세요.",
+      "phone_number": "031-190-3204",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "해당 고객의 전화번호는 018-0408-3982로 확인됩니다.",
+      "phone_number": "018-0408-3982",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Phone: 019-4999-2497",
+      "phone_number": "019-4999-2497",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화: 0429461460",
+      "phone_number": "0429461460",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처(033-468-1313)로 문의해주세요.",
+      "phone_number": "033-468-1313",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 016-12147-760로 연락주세요.",
+      "phone_number": "016-12147-760",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "고객님의 전화번호는 01953419919입니다.",
+      "phone_number": "01953419919",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 전화번호는 010-1091-3087로 확인됩니다.",
+      "phone_number": "010-1091-3087",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락정보: 053-169-3473",
+      "phone_number": "053-169-3473",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "Phone: 062-433-7083",
+      "phone_number": "062-433-7083",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화: 038-1597-3485",
+      "phone_number": "038-1597-3485",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화: 070-6650-6333",
+      "phone_number": "070-6650-6333",
+      "is_valid": false,
+      "template": "전화: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 확인: 02-6512-5772",
+      "phone_number": "02-6512-5772",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 062-606-5108로 연락주세요.",
+      "phone_number": "062-606-5108",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호는 031-815-4168입니다.",
+      "phone_number": "031-815-4168",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 033-245-3952",
+      "phone_number": "033-245-3952",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "연락처는 016-4917-8905입니다.",
+      "phone_number": "016-4917-8905",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "통화가능 번호: 016-0789-0688",
+      "phone_number": "016-0789-0688",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락처(042-940-5982)로 문의해주세요.",
+      "phone_number": "042-940-5982",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "연락정보: 043-8222-5709",
+      "phone_number": "043-8222-5709",
+      "is_valid": false,
+      "template": "연락정보: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 입력: 011-8554-5523",
+      "phone_number": "011-8554-5523",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "통화가능 번호: 070-0947-2031",
+      "phone_number": "070-0947-2031",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호 입력: 016-27000-274",
+      "phone_number": "016-27000-274",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Contact Number: 02-5949-3804",
+      "phone_number": "02-5949-3804",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 051-205-4450입니다.",
+      "phone_number": "051-205-4450",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 확인: 054-308-4724",
+      "phone_number": "054-308-4724",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화정보: 063-027-8732",
+      "phone_number": "063-027-8732",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 091-8970-7746",
+      "phone_number": "091-8970-7746",
+      "is_valid": false,
+      "template": "연락받으실 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "통화가능 번호: 019-4325-4131",
+      "phone_number": "019-4325-4131",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 019-9311-5528입니다.",
+      "phone_number": "019-9311-5528",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "Tel: 019-9063-d352",
+      "phone_number": "019-9063-d352",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화번호 018-0834-3174로 연락주세요.",
+      "phone_number": "018-0834-3174",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호 입력: 018-2928-6333",
+      "phone_number": "018-2928-6333",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락처: 018-0016-1361",
+      "phone_number": "018-0016-1361",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 010-5408-7478입니다.",
+      "phone_number": "010-5408-7478",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락받으실 번호: 033-869-0950",
+      "phone_number": "033-869-0950",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "전화정보: 016-3508-3062",
+      "phone_number": "016-3508-3062",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호는 054-992-4982입니다.",
+      "phone_number": "054-992-4982",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락정보: 018-0954-5596",
+      "phone_number": "018-0954-5596",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "등록된 연락처: 031-970-2006",
+      "phone_number": "031-970-2006",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "Tel: 011-6039-8962",
+      "phone_number": "011-6039-8962",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "Tel: 051-155-7437",
+      "phone_number": "051-155-7437",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화: 017-8718-9346",
+      "phone_number": "017-8718-9346",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "등록된 연락처: 01658551072",
+      "phone_number": "01658551072",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Tel: 042-181-5296",
+      "phone_number": "042-181-5296",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "통화가능 번호: 010-6733-8984",
+      "phone_number": "010-6733-8984",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Tel: 062-242-5895",
+      "phone_number": "062-242-5895",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 010-6879-1241",
+      "phone_number": "010-6879-1241",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "Phone: 054-551-4050",
+      "phone_number": "054-551-4050",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 033-365-0926입니다.",
+      "phone_number": "033-365-0926",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "PHONE NUMBER: 054-185-3314",
+      "phone_number": "054-185-3314",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 043-659-0764",
+      "phone_number": "043-659-0764",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "연락처(019-2593-1003)로 문의해주세요.",
+      "phone_number": "019-2593-1003",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "연락처(051-605-8720)로 문의해주세요.",
+      "phone_number": "051-605-8720",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "전화번호 064-497-4041로 연락주세요.",
+      "phone_number": "064-497-4041",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락받으실 번호: 062-94568-872",
+      "phone_number": "062-94568-872",
+      "is_valid": false,
+      "template": "연락받으실 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Tel: 092-2345-2892",
+      "phone_number": "092-2345-2892",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 전화번호는 044-986-4603입니다.",
+      "phone_number": "044-986-4603",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "Contact Number: 010-8365d4543",
+      "phone_number": "010-8365d4543",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "고객님의 전화번호는 017-0623-5731입니다.",
+      "phone_number": "017-0623-5731",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "등록된 연락처: 01900852150",
+      "phone_number": "01900852150",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "Tel: 016-1165-5909",
+      "phone_number": "016-1165-5909",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락처: 01149998430",
+      "phone_number": "01149998430",
+      "is_valid": false,
+      "template": "연락처: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처: 016-1622-9543",
+      "phone_number": "016-1622-9543",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화번호 확인: 063-536-5514",
+      "phone_number": "063-536-5514",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 입력: 017-3643-8150",
+      "phone_number": "017-3643-8150",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "Tel: 053-30495-585",
+      "phone_number": "053-30495-585",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락 가능 번호: 061-330-6828",
+      "phone_number": "061-330-6828",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "등록된 연락처: 054-967-11Y8",
+      "phone_number": "054-967-11Y8",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락처: 031-379-6823",
+      "phone_number": "031-379-6823",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 018-9306-7096",
+      "phone_number": "018-9306-7096",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 055-203-7988로 확인됩니다.",
+      "phone_number": "055-203-7988",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Contact Number: 011-5669-9823",
+      "phone_number": "011-5669-9823",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 044-2930-5354",
+      "phone_number": "044-2930-5354",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화정보: 031-942-5637",
+      "phone_number": "031-942-5637",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "통화가능 번호: 055-911-8153",
+      "phone_number": "055-911-8153",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 055-237-7609",
+      "phone_number": "055-237-7609",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락처(06J-491-9945)로 문의해주세요.",
+      "phone_number": "06J-491-9945",
+      "is_valid": false,
+      "template": "연락처({number})로 문의해주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락 가능 번호: 063-321-5400",
+      "phone_number": "063-321-5400",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 041-298-5317",
+      "phone_number": "041-298-5317",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 062-374-5524로 연락주세요.",
+      "phone_number": "062-374-5524",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "통화가능 번호: 01139504873",
+      "phone_number": "01139504873",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "통화가능 번호: 052-375-4275",
+      "phone_number": "052-375-4275",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 061-123-2248",
+      "phone_number": "061-123-2248",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "등록된 연락처: 033-584-0852",
+      "phone_number": "033-584-0852",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "전화번호는 032-900-4588입니다.",
+      "phone_number": "032-900-4588",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 전화번호는 011-9222-2665로 확인됩니다.",
+      "phone_number": "011-9222-2665",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Tel: 043-626-7619",
+      "phone_number": "043-626-7619",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "전화정보: 019-0842-6045",
+      "phone_number": "019-0842-6045",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호는 041-493-5400입니다.",
+      "phone_number": "041-493-5400",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화정보: 055-528-1257",
+      "phone_number": "055-528-1257",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락처는 018-59244-444입니다.",
+      "phone_number": "018-59244-444",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Contact Number: 017-8632-0564",
+      "phone_number": "017-8632-0564",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 018-3925-1102로 연락주세요.",
+      "phone_number": "018-3925-1102",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "연락처: 010-5017-4328",
+      "phone_number": "010-5017-4328",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "Contact Number: 044-424-9522",
+      "phone_number": "044-424-9522",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "Phone: 042-945-7508",
+      "phone_number": "042-945-7508",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락처: 02-8711-7247",
+      "phone_number": "02-8711-7247",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 0444280098",
+      "phone_number": "0444280098",
+      "is_valid": false,
+      "template": "연락받으실 번호: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "고객님의 전화번호는 018-7332-8297입니다.",
+      "phone_number": "018-7332-8297",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락처: 044-399-1871",
+      "phone_number": "044-399-1871",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "Phone: 01136849686",
+      "phone_number": "01136849686",
+      "is_valid": false,
+      "template": "Phone: {number}",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락 가능 번호: 017-6395-7876",
+      "phone_number": "017-6395-7876",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 016-4251-0578로 연락주세요.",
+      "phone_number": "016-4251-0578",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "Contact Number: 031-559-6339",
+      "phone_number": "031-559-6339",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 01f-8082-0853",
+      "phone_number": "01f-8082-0853",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "등록된 연락처: 095-0509-8716",
+      "phone_number": "095-0509-8716",
+      "is_valid": false,
+      "template": "등록된 연락처: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락정보: 011-3298-1378",
+      "phone_number": "011-3298-1378",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "통화가능 번호: 018-7145-7830",
+      "phone_number": "018-7145-7830",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 입력: 011-4581-1994",
+      "phone_number": "011-4581-1994",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "전화번호 043-93081-798로 연락주세요.",
+      "phone_number": "043-93081-798",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Phone: 017-3898-5112",
+      "phone_number": "017-3898-5112",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "Contact Number: 010-7401-9226",
+      "phone_number": "010-7401-9226",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 확인: 016-6297-4870",
+      "phone_number": "016-6297-4870",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 입력: 036-7357-0423",
+      "phone_number": "036-7357-0423",
+      "is_valid": false,
+      "template": "전화번호 입력: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "연락 가능 번호: 016-8537-1372",
+      "phone_number": "016-8537-1372",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 062-204-8060",
+      "phone_number": "062-204-8060",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "Phone: 011-8425-2048",
+      "phone_number": "011-8425-2048",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화번호 043-458-6816로 연락주세요.",
+      "phone_number": "043-458-6816",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화번호는 033-31956-770입니다.",
+      "phone_number": "033-31956-770",
+      "is_valid": false,
+      "template": "전화번호는 {number}입니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "Phone: 011-2245-4844",
+      "phone_number": "011-2245-4844",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화번호 입력: 010-4776-5180",
+      "phone_number": "010-4776-5180",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 010-9785-738c",
+      "phone_number": "010-9785-738c",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "Phone: 019-1840-3344",
+      "phone_number": "019-1840-3344",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화번호는 010-4033-7669입니다.",
+      "phone_number": "010-4033-7669",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "연락받으실 번호: 043-065-1352",
+      "phone_number": "043-065-1352",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 054-085-6388입니다.",
+      "phone_number": "054-085-6388",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 010-0419-5518로 연락주세요.",
+      "phone_number": "010-0419-5518",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "전화: 043-855-2420",
+      "phone_number": "043-855-2420",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 054-126-3438로 확인됩니다.",
+      "phone_number": "054-126-3438",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Tel: 017-4269-2999",
+      "phone_number": "017-4269-2999",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락처(016-3072-5420)로 문의해주세요.",
+      "phone_number": "016-3072-5420",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "통화가능 번호: 043-516-0163",
+      "phone_number": "043-516-0163",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Phone: 055-059-7040",
+      "phone_number": "055-059-7040",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화정보: 010-1151-6039",
+      "phone_number": "010-1151-6039",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 확인: 010-0141-8133",
+      "phone_number": "010-0141-8133",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 054-07055-471",
+      "phone_number": "054-07055-471",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락받으실 번호: 054-236-0253",
+      "phone_number": "054-236-0253",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처(043-143-7100)로 문의해주세요.",
+      "phone_number": "043-143-7100",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "통화가능 번호: 044-57053-338",
+      "phone_number": "044-57053-338",
+      "is_valid": false,
+      "template": "통화가능 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화: 011-3689-4874",
+      "phone_number": "011-3689-4874",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "전화: 055-036-0404",
+      "phone_number": "055-036-0404",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 055-696-1230",
+      "phone_number": "055-696-1230",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락받으실 번호: 010-0798-1828",
+      "phone_number": "010-0798-1828",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 033-881-0718로 확인됩니다.",
+      "phone_number": "033-881-0718",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 전화번호는 052-190-8709로 확인됩니다.",
+      "phone_number": "052-190-8709",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 전화번호는 061-882Q2162로 확인됩니다.",
+      "phone_number": "061-882Q2162",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화: 016-3860-5323",
+      "phone_number": "016-3860-5323",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "연락정보: 064-905-5023",
+      "phone_number": "064-905-5023",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호 059-9365-5492로 연락주세요.",
+      "phone_number": "059-9365-5492",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Tel: 02-7672-3944",
+      "phone_number": "02-7672-3944",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락정보: 018-5959-9958",
+      "phone_number": "018-5959-9958",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "Tel: 019-0059-4315",
+      "phone_number": "019-0059-4315",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "연락처: 016-3665-3249",
+      "phone_number": "016-3665-3249",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "전화정보: 019-9278-4210",
+      "phone_number": "019-9278-4210",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 018-7818-2004로 확인됩니다.",
+      "phone_number": "018-7818-2004",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "통화가능 번호: 010-3613-3714",
+      "phone_number": "010-3613-3714",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "전화번호 확인: 042-374-7813",
+      "phone_number": "042-374-7813",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락처는 061-277-5409입니다.",
+      "phone_number": "061-277-5409",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락처는 01176099242입니다.",
+      "phone_number": "01176099242",
+      "is_valid": false,
+      "template": "연락처는 {number}입니다.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "해당 고객의 전화번호는 031-666-4420로 확인됩니다.",
+      "phone_number": "031-666-4420",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처는 054-535-9733입니다.",
+      "phone_number": "054-535-9733",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "전화번호 확인: 011-35635-701",
+      "phone_number": "011-35635-701",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "연락처는 063-865-8591입니다.",
+      "phone_number": "063-865-8591",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "전화번호 017-4237-3829로 연락주세요.",
+      "phone_number": "017-4237-3829",
+      "is_valid": true,
+      "template": "전화번호 {number}로 연락주세요."
+    },
+    {
+      "text": "등록된 연락처: 054-497-1767",
+      "phone_number": "054-497-1767",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "Phone: 011-2646-3593",
+      "phone_number": "011-2646-3593",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락처: 010-9368-5931",
+      "phone_number": "010-9368-5931",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 019-1992-0145입니다.",
+      "phone_number": "019-1992-0145",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화정보: 016-2675-793h",
+      "phone_number": "016-2675-793h",
+      "is_valid": false,
+      "template": "전화정보: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "전화: 053-205-3100",
+      "phone_number": "053-205-3100",
+      "is_valid": true,
+      "template": "전화: {number}"
+    },
+    {
+      "text": "등록된 연락처: 031-325-9385",
+      "phone_number": "031-325-9385",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 018-7610-9024",
+      "phone_number": "018-7610-9024",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호 033-96178-207로 연락주세요.",
+      "phone_number": "033-96178-207",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "전화번호 확인: 011-3537-0506",
+      "phone_number": "011-3537-0506",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 입력: 041-473-8608",
+      "phone_number": "041-473-8608",
+      "is_valid": true,
+      "template": "전화번호 입력: {number}"
+    },
+    {
+      "text": "연락처는 041-929-4733입니다.",
+      "phone_number": "041-929-4733",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "연락 가능 번호: 079-2776-6793",
+      "phone_number": "079-2776-6793",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화번호는 063-760-8050입니다.",
+      "phone_number": "063-760-8050",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 019N4150-3850로 연락주세요.",
+      "phone_number": "019N4150-3850",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락 가능 번호: 065-9844-3119",
+      "phone_number": "065-9844-3119",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "등록된 연락처: 02-3154-4785",
+      "phone_number": "02-3154-4785",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "Phone: 051-572-1330",
+      "phone_number": "051-572-1330",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "연락처(010-2173-1131)로 문의해주세요.",
+      "phone_number": "010-2173-1131",
+      "is_valid": true,
+      "template": "연락처({number})로 문의해주세요."
+    },
+    {
+      "text": "통화가능 번호: 018-4445-2863",
+      "phone_number": "018-4445-2863",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "Contact Number: 018-0844-0004",
+      "phone_number": "018-0844-0004",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "전화번호 확인: 019-6500-1899",
+      "phone_number": "019-6500-1899",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "Contact Number: 043-709-0961",
+      "phone_number": "043-709-0961",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "Contact Number: 031-618-8665",
+      "phone_number": "031-618-8665",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "연락처: 017-4148-5835",
+      "phone_number": "017-4148-5835",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "등록된 연락처: 019-3780-3792",
+      "phone_number": "019-3780-3792",
+      "is_valid": true,
+      "template": "등록된 연락처: {number}"
+    },
+    {
+      "text": "Tel: 036-7180-7475",
+      "phone_number": "036-7180-7475",
+      "is_valid": false,
+      "template": "Tel: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "PHONE NUMBER: 052-718-3603",
+      "phone_number": "052-718-3603",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 011-1349-4118",
+      "phone_number": "011-1349-4118",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    },
+    {
+      "text": "전화정보: 018-7809-1331",
+      "phone_number": "018-7809-1331",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 063-148-3854로 확인됩니다.",
+      "phone_number": "063-148-3854",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처는 042-917-4305입니다.",
+      "phone_number": "042-917-4305",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "통화가능 번호: 043-268-4657",
+      "phone_number": "043-268-4657",
+      "is_valid": true,
+      "template": "통화가능 번호: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 051-56187-358",
+      "phone_number": "051-56187-358",
+      "is_valid": false,
+      "template": "연락 가능 번호: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "해당 고객의 전화번호는 016-1087-0633로 확인됩니다.",
+      "phone_number": "016-1087-0633",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PHONE NUMBER: 064-056-0656",
+      "phone_number": "064-056-0656",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "연락처는 011-7983-2143입니다.",
+      "phone_number": "011-7983-2143",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "Contact Number: 043-861-5470",
+      "phone_number": "043-861-5470",
+      "is_valid": true,
+      "template": "Contact Number: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 018-6887-8393",
+      "phone_number": "018-6887-8393",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화정보: 010-9190-8004",
+      "phone_number": "010-9190-8004",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "연락정보: 019-7129-6899",
+      "phone_number": "019-7129-6899",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "전화번호는 064-078-9249입니다.",
+      "phone_number": "064-078-9249",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화정보: 016-7169-1248",
+      "phone_number": "016-7169-1248",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 031-04672-423로 확인됩니다.",
+      "phone_number": "031-04672-423",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "PHONE NUMBER: 051-579-8762",
+      "phone_number": "051-579-8762",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "Tel: 033-129-2261",
+      "phone_number": "033-129-2261",
+      "is_valid": true,
+      "template": "Tel: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 016-9864-2593로 확인됩니다.",
+      "phone_number": "016-9864-2593",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "전화번호 확인: 011-2424-3360",
+      "phone_number": "011-2424-3360",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "전화번호 01661327514로 연락주세요.",
+      "phone_number": "01661327514",
+      "is_valid": false,
+      "template": "전화번호 {number}로 연락주세요.",
+      "invalid_type": "invalid_format"
+    },
+    {
+      "text": "연락처: 017-8420-3388",
+      "phone_number": "017-8420-3388",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "Phone: 016-2134-1491",
+      "phone_number": "016-2134-1491",
+      "is_valid": true,
+      "template": "Phone: {number}"
+    },
+    {
+      "text": "전화번호 확인: 064-391-8551",
+      "phone_number": "064-391-8551",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "PHONE NUMBER: 042-815-5612",
+      "phone_number": "042-815-5612",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "전화번호는 042-449-8443입니다.",
+      "phone_number": "042-449-8443",
+      "is_valid": true,
+      "template": "전화번호는 {number}입니다."
+    },
+    {
+      "text": "Contact Number: 018T4806-5703",
+      "phone_number": "018T4806-5703",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_chars"
+    },
+    {
+      "text": "연락받으실 번호: 010-4636-8628",
+      "phone_number": "010-4636-8628",
+      "is_valid": true,
+      "template": "연락받으실 번호: {number}"
+    },
+    {
+      "text": "연락처는 041-960-3575입니다.",
+      "phone_number": "041-960-3575",
+      "is_valid": true,
+      "template": "연락처는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 전화번호는 054-688-7772로 확인됩니다.",
+      "phone_number": "054-688-7772",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "PHONE NUMBER: 051-043-3002",
+      "phone_number": "051-043-3002",
+      "is_valid": true,
+      "template": "PHONE NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 전화번호는 085-5832-2326로 확인됩니다.",
+      "phone_number": "085-5832-2326",
+      "is_valid": false,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "고객님의 전화번호는 042-310-4521입니다.",
+      "phone_number": "042-310-4521",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 전화번호는 051-144-7756입니다.",
+      "phone_number": "051-144-7756",
+      "is_valid": true,
+      "template": "고객님의 전화번호는 {number}입니다."
+    },
+    {
+      "text": "전화번호 확인: 010-1102-9968",
+      "phone_number": "010-1102-9968",
+      "is_valid": true,
+      "template": "전화번호 확인: {number}"
+    },
+    {
+      "text": "연락정보: 011-7338-5980",
+      "phone_number": "011-7338-5980",
+      "is_valid": true,
+      "template": "연락정보: {number}"
+    },
+    {
+      "text": "고객님의 전화번호는 053-2277-9686입니다.",
+      "phone_number": "053-2277-9686",
+      "is_valid": false,
+      "template": "고객님의 전화번호는 {number}입니다.",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "Contact Number: 092-4091-4359",
+      "phone_number": "092-4091-4359",
+      "is_valid": false,
+      "template": "Contact Number: {number}",
+      "invalid_type": "invalid_prefix"
+    },
+    {
+      "text": "전화정보: 032-590-2067",
+      "phone_number": "032-590-2067",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화정보: 010-3658-9775",
+      "phone_number": "010-3658-9775",
+      "is_valid": true,
+      "template": "전화정보: {number}"
+    },
+    {
+      "text": "전화번호 확인: 062-36316-227",
+      "phone_number": "062-36316-227",
+      "is_valid": false,
+      "template": "전화번호 확인: {number}",
+      "invalid_type": "invalid_length"
+    },
+    {
+      "text": "해당 고객의 전화번호는 044-827-0099로 확인됩니다.",
+      "phone_number": "044-827-0099",
+      "is_valid": true,
+      "template": "해당 고객의 전화번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "연락처: 041-745-8679",
+      "phone_number": "041-745-8679",
+      "is_valid": true,
+      "template": "연락처: {number}"
+    },
+    {
+      "text": "연락 가능 번호: 018-5487-8667",
+      "phone_number": "018-5487-8667",
+      "is_valid": true,
+      "template": "연락 가능 번호: {number}"
+    }
+  ]
+}

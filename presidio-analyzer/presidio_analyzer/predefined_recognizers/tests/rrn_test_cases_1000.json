@@ -1,0 +1,6232 @@
+{
+  "metadata": {
+    "total_cases": 1000,
+    "valid_cases": 800,
+    "invalid_cases": 200,
+    "template_count": 20
+  },
+  "templates": [
+    "주민등록번호는 {number}입니다.",
+    "내 주민등록번호는 {number}예요.",
+    "주민번호: {number}",
+    "RRN: {number}",
+    "주민등록번호: {number}",
+    "본인의 주민등록번호는 {number}입니다.",
+    "해당 고객의 주민등록번호는 {number}로 확인됩니다.",
+    "주민정보: {number}",
+    "주민등록정보: {number}",
+    "주민등록 번호: {number}",
+    "RRN NUMBER: {number}",
+    "Korean RRN: {number}",
+    "주민번호 {number}로 등록되어 있습니다.",
+    "주민등록번호가 {number}인 회원입니다.",
+    "주민등록번호 {number}에 대한 정보입니다.",
+    "{number} 번호로 등록된 정보입니다.",
+    "주민등록번호({number})로 조회해주세요.",
+    "고객님의 주민등록번호는 {number}입니다.",
+    "주민등록번호는 {number}이며,",
+    "확인된 주민등록번호는 {number}입니다."
+  ],
+  "test_cases": [
+    {
+      "text": "주민번호 3306026581736로 등록되어 있습니다.",
+      "rrn": "3306026581736",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민정보: 8303265683694",
+      "rrn": "8303265683694",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 8310061587457입니다.",
+      "rrn": "8310061587457",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 3608272457982입니다.",
+      "rrn": "3608272457982",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "8105202996696 번호로 등록된 정보입니다.",
+      "rrn": "8105202996696",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "고객님의 주민등록번호는 1902276523664입니다.",
+      "rrn": "1902276523664",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 0910246370645",
+      "rrn": "0910246370645",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 8601132845015이며,",
+      "rrn": "8601132845015",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민정보: 7511245308668",
+      "rrn": "7511245308668",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 3207132446359입니다.",
+      "rrn": "3207132446359",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 2912154434720",
+      "rrn": "2912154434720",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호(3307037168548)로 조회해주세요.",
+      "rrn": "3307037168548",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 1903281657499입니다.",
+      "rrn": "1903281657499",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 7805075226992",
+      "rrn": "7805075226992",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민번호: 5306302872956",
+      "rrn": "5306302872956",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 9308216643735입니다.",
+      "rrn": "9308216643735",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 0709166492899입니다.",
+      "rrn": "0709166492899",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 4411311555230입니다.",
+      "rrn": "4411311555230",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민번호 8601011029344로 등록되어 있습니다.",
+      "rrn": "8601011029344",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 4109272599926입니다.",
+      "rrn": "4109272599926",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 4811272944390",
+      "rrn": "4811272944390",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호가 1611068979380인 회원입니다.",
+      "rrn": "1611068979380",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "고객님의 주민등록번호는 3208267590186입니다.",
+      "rrn": "3208267590186",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "Korean RRN: 2405302771655",
+      "rrn": "2405302771655",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호는 9110251608007이며,",
+      "rrn": "9110251608007",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 1910294252728로 확인됩니다.",
+      "rrn": "1910294252728",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "RRN NUMBER: 3411142953981",
+      "rrn": "3411142953981",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "Korean RRN: 8302296643957",
+      "rrn": "8302296643957",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 9502252891608로 확인됩니다.",
+      "rrn": "9502252891608",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민번호 6402011512606로 등록되어 있습니다.",
+      "rrn": "6402011512606",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 2509297312732로 확인됩니다.",
+      "rrn": "2509297312732",
+      "is_valid": false,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "RRN NUMBER: 0911292250106",
+      "rrn": "0911292250106",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호는 2403206994423이며,",
+      "rrn": "2403206994423",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}이며,",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민정보: 2411247529961",
+      "rrn": "2411247529961",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호: 1212171216719",
+      "rrn": "1212171216719",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 8412011866305입니다.",
+      "rrn": "8412011866305",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 4602286675791",
+      "rrn": "4602286675791",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호는 3910105114310이며,",
+      "rrn": "3910105114310",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}이며,",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "8607235301665 번호로 등록된 정보입니다.",
+      "rrn": "8607235301665",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 1508303390431",
+      "rrn": "1508303390431",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호(3605013782609)로 조회해주세요.",
+      "rrn": "3605013782609",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "RRN NUMBER: 9903092805047",
+      "rrn": "9903092805047",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "9308306766692 번호로 등록된 정보입니다.",
+      "rrn": "9308306766692",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 6912175530858",
+      "rrn": "6912175530858",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록번호: 1305074280206",
+      "rrn": "1305074280206",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호 1112204205274에 대한 정보입니다.",
+      "rrn": "1112204205274",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록 번호: 2406225251112",
+      "rrn": "2406225251112",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민정보: 7309275271624",
+      "rrn": "7309275271624",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 8706172509320이며,",
+      "rrn": "8706172509320",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "1707283956624 번호로 등록된 정보입니다.",
+      "rrn": "1707283956624",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 2707031256882입니다.",
+      "rrn": "2707031256882",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 0607257782481로 등록되어 있습니다.",
+      "rrn": "0607257782481",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호: 0304258590069",
+      "rrn": "0304258590069",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호 3211162455674에 대한 정보입니다.",
+      "rrn": "3211162455674",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록정보: 8507036513931",
+      "rrn": "8507036513931",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록번호가 3406296528488인 회원입니다.",
+      "rrn": "3406296528488",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 1607022722701입니다.",
+      "rrn": "1607022722701",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록정보: 1208284537411",
+      "rrn": "1208284537411",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 2008287684804예요.",
+      "rrn": "2008287684804",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "4906065927891 번호로 등록된 정보입니다.",
+      "rrn": "4906065927891",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호 6804315725672에 대한 정보입니다.",
+      "rrn": "6804315725672",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "내 주민등록번호는 8210255994904예요.",
+      "rrn": "8210255994904",
+      "is_valid": false,
+      "template": "내 주민등록번호는 {number}예요.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "1209265951956 번호로 등록된 정보입니다.",
+      "rrn": "1209265951956",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 3211096562916입니다.",
+      "rrn": "3211096562916",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 0610091990610로 등록되어 있습니다.",
+      "rrn": "0610091990610",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호(6003046773564)로 조회해주세요.",
+      "rrn": "6003046773564",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록정보: 0306257029350",
+      "rrn": "0306257029350",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민정보: 1511318115707",
+      "rrn": "1511318115707",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민정보: 3501244730521",
+      "rrn": "3501244730521",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "고객님의 주민등록번호는 2104113474261입니다.",
+      "rrn": "2104113474261",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 0508193668319에 대한 정보입니다.",
+      "rrn": "0508193668319",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 8602281916928입니다.",
+      "rrn": "8602281916928",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 7503266304637",
+      "rrn": "7503266304637",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 5502112299276",
+      "rrn": "5502112299276",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호는 2504046150766이며,",
+      "rrn": "2504046150766",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록정보: 2606021401750",
+      "rrn": "2606021401750",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 1702173467220이며,",
+      "rrn": "1702173467220",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호가 9411122322397인 회원입니다.",
+      "rrn": "9411122322397",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 9504012693151입니다.",
+      "rrn": "9504012693151",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 9102235197679로 확인됩니다.",
+      "rrn": "9102235197679",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호가 5507298577262인 회원입니다.",
+      "rrn": "5507298577262",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "내 주민등록번호는 9003016343843예요.",
+      "rrn": "9003016343843",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호는 8909042130791이며,",
+      "rrn": "8909042130791",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호: 8312092255847",
+      "rrn": "8312092255847",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호: 2510245947556",
+      "rrn": "2510245947556",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 3906272118428",
+      "rrn": "3906272118428",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 5001306348420",
+      "rrn": "5001306348420",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호는 1710285675109입니다.",
+      "rrn": "1710285675109",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 3806146415248",
+      "rrn": "3806146415248",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 4208105657567로 확인됩니다.",
+      "rrn": "4208105657567",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 8810056344510입니다.",
+      "rrn": "8810056344510",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 3211223115141입니다.",
+      "rrn": "3211223115141",
+      "is_valid": false,
+      "template": "확인된 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록 번호: 4311316090184",
+      "rrn": "4311316090184",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민정보: 6610186711771",
+      "rrn": "6610186711771",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호가 2307224426774인 회원입니다.",
+      "rrn": "2307224426774",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 3107054571958입니다.",
+      "rrn": "3107054571958",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호는 2407036456979입니다.",
+      "rrn": "2407036456979",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 5706191377801입니다.",
+      "rrn": "5706191377801",
+      "is_valid": false,
+      "template": "확인된 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호(6407226119700)로 조회해주세요.",
+      "rrn": "6407226119700",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호 0709203805537에 대한 정보입니다.",
+      "rrn": "0709203805537",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민번호: 7012092414034",
+      "rrn": "7012092414034",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 5312112421073",
+      "rrn": "5312112421073",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민번호 0308297074846로 등록되어 있습니다.",
+      "rrn": "0308297074846",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호 4406281094153에 대한 정보입니다.",
+      "rrn": "4406281094153",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "확인된 주민등록번호는 1402244885634입니다.",
+      "rrn": "1402244885634",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 0604201953834입니다.",
+      "rrn": "0604201953834",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 3106214325192입니다.",
+      "rrn": "3106214325192",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민번호 7901166351741로 등록되어 있습니다.",
+      "rrn": "7901166351741",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 8008206171977로 확인됩니다.",
+      "rrn": "8008206171977",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "2705266454357 번호로 등록된 정보입니다.",
+      "rrn": "2705266454357",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "2309202045920 번호로 등록된 정보입니다.",
+      "rrn": "2309202045920",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 0710241581485입니다.",
+      "rrn": "0710241581485",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 0606153557821",
+      "rrn": "0606153557821",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 2501276307987입니다.",
+      "rrn": "2501276307987",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "내 주민등록번호는 5201191918457예요.",
+      "rrn": "5201191918457",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "Korean RRN: 9002261249219",
+      "rrn": "9002261249219",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 1404057163432입니다.",
+      "rrn": "1404057163432",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민정보: 6903085914013",
+      "rrn": "6903085914013",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 8305292197189입니다.",
+      "rrn": "8305292197189",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 3307094359586입니다.",
+      "rrn": "3307094359586",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민번호: 9702112449575",
+      "rrn": "9702112449575",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 6210045495701",
+      "rrn": "6210045495701",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "Korean RRN: 0603127186531",
+      "rrn": "0603127186531",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 1312153436868입니다.",
+      "rrn": "1312153436868",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 1209288113163",
+      "rrn": "1209288113163",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 9807312036358입니다.",
+      "rrn": "9807312036358",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호: 0009122117583",
+      "rrn": "0009122117583",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 2507035034382입니다.",
+      "rrn": "2507035034382",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN: 0807258584842",
+      "rrn": "0807258584842",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록번호: 5706105970012",
+      "rrn": "5706105970012",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록정보: 2512034871850",
+      "rrn": "2512034871850",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록정보: 4009176123259",
+      "rrn": "4009176123259",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록번호가 2406084650154인 회원입니다.",
+      "rrn": "2406084650154",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록 번호: 6108305242953",
+      "rrn": "6108305242953",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 8704278864487입니다.",
+      "rrn": "8704278864487",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호 1102131436271에 대한 정보입니다.",
+      "rrn": "1102131436271",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 2306185308338로 확인됩니다.",
+      "rrn": "2306185308338",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "Korean RRN: 0408193772984",
+      "rrn": "0408193772984",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민번호 5505042615635로 등록되어 있습니다.",
+      "rrn": "5505042615635",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호가 9805242478920인 회원입니다.",
+      "rrn": "9805242478920",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 0311082276851입니다.",
+      "rrn": "0311082276851",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호(0309038755158)로 조회해주세요.",
+      "rrn": "0309038755158",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록 번호: 6206056800491",
+      "rrn": "6206056800491",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호(0608254232584)로 조회해주세요.",
+      "rrn": "0608254232584",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호: 1509173645754",
+      "rrn": "1509173645754",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "RRN: 0008097685787",
+      "rrn": "0008097685787",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 9105202168637입니다.",
+      "rrn": "9105202168637",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 9707102637286로 등록되어 있습니다.",
+      "rrn": "9707102637286",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민정보: 1108143303665",
+      "rrn": "1108143303665",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민번호 3210305407839로 등록되어 있습니다.",
+      "rrn": "3210305407839",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호 8211315171801에 대한 정보입니다.",
+      "rrn": "8211315171801",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "내 주민등록번호는 1302064928687예요.",
+      "rrn": "1302064928687",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "8409312428194 번호로 등록된 정보입니다.",
+      "rrn": "8409312428194",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호: 2409151055076",
+      "rrn": "2409151055076",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호: 1406071323301",
+      "rrn": "1406071323301",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호 0109128639358에 대한 정보입니다.",
+      "rrn": "0109128639358",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 9310102753680이며,",
+      "rrn": "9310102753680",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민정보: 8108145316439",
+      "rrn": "8108145316439",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민번호: 0305178009145",
+      "rrn": "0305178009145",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호: 5602266069471",
+      "rrn": "5602266069471",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 0803177973291",
+      "rrn": "0803177973291",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "RRN: 2308194569462",
+      "rrn": "2308194569462",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 1112244941025로 확인됩니다.",
+      "rrn": "1112244941025",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호가 0803261177147인 회원입니다.",
+      "rrn": "0803261177147",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "내 주민등록번호는 8811052885646예요.",
+      "rrn": "8811052885646",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호(1909245607322)로 조회해주세요.",
+      "rrn": "1909245607322",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호(0001256074625)로 조회해주세요.",
+      "rrn": "0001256074625",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민번호: 7509162116082",
+      "rrn": "7509162116082",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록정보: 2901214118153",
+      "rrn": "2901214118153",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호는 9007032123654입니다.",
+      "rrn": "9007032123654",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 8303312184227",
+      "rrn": "8303312184227",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민번호 1910173425878로 등록되어 있습니다.",
+      "rrn": "1910173425878",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 4001296539102입니다.",
+      "rrn": "4001296539102",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 2912317550610입니다.",
+      "rrn": "2912317550610",
+      "is_valid": false,
+      "template": "확인된 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호가 5602306263160인 회원입니다.",
+      "rrn": "5602306263160",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호 5708315521801에 대한 정보입니다.",
+      "rrn": "5708315521801",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호는 1601292532893입니다.",
+      "rrn": "1601292532893",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 1905146415270이며,",
+      "rrn": "1905146415270",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 8404206275816로 확인됩니다.",
+      "rrn": "8404206275816",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록 번호: 6509041381448",
+      "rrn": "6509041381448",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "1401064501338 번호로 등록된 정보입니다.",
+      "rrn": "1401064501338",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호가 1803303570022인 회원입니다.",
+      "rrn": "1803303570022",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록 번호: 2011293728966",
+      "rrn": "2011293728966",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민번호: 1903194722572",
+      "rrn": "1903194722572",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호가 0708156753661인 회원입니다.",
+      "rrn": "0708156753661",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록 번호: 1004252387560",
+      "rrn": "1004252387560",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록정보: 8612295520061",
+      "rrn": "8612295520061",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 5112036395612로 확인됩니다.",
+      "rrn": "5112036395612",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민번호 9511072105272로 등록되어 있습니다.",
+      "rrn": "9511072105272",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호: 1812081927933",
+      "rrn": "1812081927933",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민번호: 6505071418880",
+      "rrn": "6505071418880",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 1802297342407예요.",
+      "rrn": "1802297342407",
+      "is_valid": false,
+      "template": "내 주민등록번호는 {number}예요.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민번호: 3104182056242",
+      "rrn": "3104182056242",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 4106166604102",
+      "rrn": "4106166604102",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록 번호: 2402181927861",
+      "rrn": "2402181927861",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "0701128483089 번호로 등록된 정보입니다.",
+      "rrn": "0701128483089",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민정보: 0811306930155",
+      "rrn": "0811306930155",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 6505015214407이며,",
+      "rrn": "6505015214407",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "내 주민등록번호는 1101192739171예요.",
+      "rrn": "1101192739171",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민정보: 8407238466923",
+      "rrn": "8407238466923",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 8911315721224입니다.",
+      "rrn": "8911315721224",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "고객님의 주민등록번호는 3503172828252입니다.",
+      "rrn": "3503172828252",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 5401235832344",
+      "rrn": "5401235832344",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 6107231164632입니다.",
+      "rrn": "6107231164632",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 8402221086400인 회원입니다.",
+      "rrn": "8402221086400",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민정보: 1012104743558",
+      "rrn": "1012104743558",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민번호 1705038663316로 등록되어 있습니다.",
+      "rrn": "1705038663316",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호는 0802098365401이며,",
+      "rrn": "0802098365401",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민번호 3307042772858로 등록되어 있습니다.",
+      "rrn": "3307042772858",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 9711196848966입니다.",
+      "rrn": "9711196848966",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 1211086762931",
+      "rrn": "1211086762931",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호가 3806031775930인 회원입니다.",
+      "rrn": "3806031775930",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록정보: 4703051034666",
+      "rrn": "4703051034666",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "1003211545035 번호로 등록된 정보입니다.",
+      "rrn": "1003211545035",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 2808071413415",
+      "rrn": "2808071413415",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 4403065950914입니다.",
+      "rrn": "4403065950914",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 2709257142999",
+      "rrn": "2709257142999",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "RRN NUMBER: 1102288027401",
+      "rrn": "1102288027401",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민정보: 1205171114023",
+      "rrn": "1205171114023",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록 번호: 0912288297454",
+      "rrn": "0912288297454",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 1102251824311",
+      "rrn": "1102251824311",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민번호: 7902145141397",
+      "rrn": "7902145141397",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 3702065468770로 확인됩니다.",
+      "rrn": "3702065468770",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "RRN NUMBER: 3812051539432",
+      "rrn": "3812051539432",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민번호: 2009021050972",
+      "rrn": "2009021050972",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민정보: 1012301808630",
+      "rrn": "1012301808630",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 7802295438461입니다.",
+      "rrn": "7802295438461",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "RRN: 4407161957835",
+      "rrn": "4407161957835",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록정보: 0506234426126",
+      "rrn": "0506234426126",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민번호 4103014819731로 등록되어 있습니다.",
+      "rrn": "4103014819731",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 0005154050023입니다.",
+      "rrn": "0005154050023",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "0703042077144 번호로 등록된 정보입니다.",
+      "rrn": "0703042077144",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 4411302461104입니다.",
+      "rrn": "4411302461104",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민정보: 3910251077143",
+      "rrn": "3910251077143",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민번호: 9206121563904",
+      "rrn": "9206121563904",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "4501272242305 번호로 등록된 정보입니다.",
+      "rrn": "4501272242305",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 5710276879374입니다.",
+      "rrn": "5710276879374",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 1903312116423",
+      "rrn": "1903312116423",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호(3503046863392)로 조회해주세요.",
+      "rrn": "3503046863392",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민번호: 9004291841351",
+      "rrn": "9004291841351",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "RRN: 5506051081392",
+      "rrn": "5506051081392",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록정보: 2901278348160",
+      "rrn": "2901278348160",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 2305167969900입니다.",
+      "rrn": "2305167969900",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록정보: 7101191878251",
+      "rrn": "7101191878251",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록번호 0301035544568에 대한 정보입니다.",
+      "rrn": "0301035544568",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록정보: 2209271139522",
+      "rrn": "2209271139522",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 1308106024621",
+      "rrn": "1308106024621",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록 번호: 5911145230494",
+      "rrn": "5911145230494",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 6704035449294이며,",
+      "rrn": "6704035449294",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민번호: 8702216832406",
+      "rrn": "8702216832406",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 5712072890152",
+      "rrn": "5712072890152",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 3510275897122입니다.",
+      "rrn": "3510275897122",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 3611052354570",
+      "rrn": "3611052354570",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 2404066544881이며,",
+      "rrn": "2404066544881",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호는 2408246470650입니다.",
+      "rrn": "2408246470650",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민정보: 9901061448221",
+      "rrn": "9901061448221",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "Korean RRN: 3906205075890",
+      "rrn": "3906205075890",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록번호는 6408111032866이며,",
+      "rrn": "6408111032866",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 1705105192880로 확인됩니다.",
+      "rrn": "1705105192880",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호는 7804156079544이며,",
+      "rrn": "7804156079544",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}이며,",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "0502271643908 번호로 등록된 정보입니다.",
+      "rrn": "0502271643908",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "RRN NUMBER: 7401151835199",
+      "rrn": "7401151835199",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호 0609167923024에 대한 정보입니다.",
+      "rrn": "0609167923024",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "RRN NUMBER: 7702192149317",
+      "rrn": "7702192149317",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 9012121055030로 확인됩니다.",
+      "rrn": "9012121055030",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "1904234115003 번호로 등록된 정보입니다.",
+      "rrn": "1904234115003",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민번호 7708196050130로 등록되어 있습니다.",
+      "rrn": "7708196050130",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호(1609302230912)로 조회해주세요.",
+      "rrn": "1609302230912",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "RRN: 8004201742788",
+      "rrn": "8004201742788",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록 번호: 8102062659446",
+      "rrn": "8102062659446",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민정보: 2308081973468",
+      "rrn": "2308081973468",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "고객님의 주민등록번호는 1306108707921입니다.",
+      "rrn": "1306108707921",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호 2811135340506에 대한 정보입니다.",
+      "rrn": "2811135340506",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록정보: 9510115072976",
+      "rrn": "9510115072976",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 5210216999007입니다.",
+      "rrn": "5210216999007",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호(7702215863017)로 조회해주세요.",
+      "rrn": "7702215863017",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "RRN NUMBER: 0405198643363",
+      "rrn": "0405198643363",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 0602133415726예요.",
+      "rrn": "0602133415726",
+      "is_valid": false,
+      "template": "내 주민등록번호는 {number}예요.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 8902262825282입니다.",
+      "rrn": "8902262825282",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 1901282537034입니다.",
+      "rrn": "1901282537034",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "내 주민등록번호는 3503112468903예요.",
+      "rrn": "3503112468903",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호(6905161964470)로 조회해주세요.",
+      "rrn": "6905161964470",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "확인된 주민등록번호는 0911018547854입니다.",
+      "rrn": "0911018547854",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 5405056037216",
+      "rrn": "5405056037216",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민번호 3004276552572로 등록되어 있습니다.",
+      "rrn": "3004276552572",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "RRN NUMBER: 2305157444262",
+      "rrn": "2305157444262",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민번호: 6901171878990",
+      "rrn": "6901171878990",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 5211236365528입니다.",
+      "rrn": "5211236365528",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 6005076859000에 대한 정보입니다.",
+      "rrn": "6005076859000",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호: 4702056375883",
+      "rrn": "4702056375883",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 0305032946974입니다.",
+      "rrn": "0305032946974",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 8402276153780",
+      "rrn": "8402276153780",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록정보: 4707095775923",
+      "rrn": "4707095775923",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록 번호: 2905132313763",
+      "rrn": "2905132313763",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 9807091749759입니다.",
+      "rrn": "9807091749759",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 1506257686847로 등록되어 있습니다.",
+      "rrn": "1506257686847",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "RRN: 0105018357718",
+      "rrn": "0105018357718",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "6506276530729 번호로 등록된 정보입니다.",
+      "rrn": "6506276530729",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 8608261712546",
+      "rrn": "8608261712546",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록번호는 0412298006826이며,",
+      "rrn": "0412298006826",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "RRN NUMBER: 1407175867671",
+      "rrn": "1407175867671",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 2805192615427입니다.",
+      "rrn": "2805192615427",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록정보: 0106123661674",
+      "rrn": "0106123661674",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호: 0308128977158",
+      "rrn": "0308128977158",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호는 9008286685757이며,",
+      "rrn": "9008286685757",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "1003153663284 번호로 등록된 정보입니다.",
+      "rrn": "1003153663284",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호가 2410177098804인 회원입니다.",
+      "rrn": "2410177098804",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민번호: 1507042119410",
+      "rrn": "1507042119410",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "2303188653847 번호로 등록된 정보입니다.",
+      "rrn": "2303188653847",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 4402202384702로 확인됩니다.",
+      "rrn": "4402202384702",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 5003146581687입니다.",
+      "rrn": "5003146581687",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 2409292987528",
+      "rrn": "2409292987528",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록정보: 3512022215078",
+      "rrn": "3512022215078",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민정보: 6403266219148",
+      "rrn": "6403266219148",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "RRN: 0405012936469",
+      "rrn": "0405012936469",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "RRN: 0109147567121",
+      "rrn": "0109147567121",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록 번호: 4410292775294",
+      "rrn": "4410292775294",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 9210281328742입니다.",
+      "rrn": "9210281328742",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 7704155973921",
+      "rrn": "7704155973921",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 6909016807489로 확인됩니다.",
+      "rrn": "6909016807489",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호가 1909166026214인 회원입니다.",
+      "rrn": "1909166026214",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 9001201081319입니다.",
+      "rrn": "9001201081319",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 1408141923674",
+      "rrn": "1408141923674",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 8007292427027입니다.",
+      "rrn": "8007292427027",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 8208151797743",
+      "rrn": "8208151797743",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "7610311581036 번호로 등록된 정보입니다.",
+      "rrn": "7610311581036",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호가 2812275310691인 회원입니다.",
+      "rrn": "2812275310691",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "내 주민등록번호는 6102246658172예요.",
+      "rrn": "6102246658172",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "RRN: 7309226300520",
+      "rrn": "7309226300520",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록 번호: 3311045920195",
+      "rrn": "3311045920195",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호 7908166590510에 대한 정보입니다.",
+      "rrn": "7908166590510",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "RRN NUMBER: 4108271857381",
+      "rrn": "4108271857381",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 5303075054105",
+      "rrn": "5303075054105",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민정보: 1903061386286",
+      "rrn": "1903061386286",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민번호: 1311178430282",
+      "rrn": "1311178430282",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민번호: 6907136648785",
+      "rrn": "6907136648785",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 0812123974431입니다.",
+      "rrn": "0812123974431",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민번호: 4011021288936",
+      "rrn": "4011021288936",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호 2203074659161에 대한 정보입니다.",
+      "rrn": "2203074659161",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호: 2310032698163",
+      "rrn": "2310032698163",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록 번호: 3311252341283",
+      "rrn": "3311252341283",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 0112187947147",
+      "rrn": "0112187947147",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록정보: 3109068430075",
+      "rrn": "3109068430075",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호는 6305191888951이며,",
+      "rrn": "6305191888951",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호(8404061051746)로 조회해주세요.",
+      "rrn": "8404061051746",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호: 1807133273038",
+      "rrn": "1807133273038",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 5208181419605이며,",
+      "rrn": "5208181419605",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "RRN: 8211095935165",
+      "rrn": "8211095935165",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록번호 6308225808349에 대한 정보입니다.",
+      "rrn": "6308225808349",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호: 1309064352638",
+      "rrn": "1309064352638",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민번호: 8204236570645",
+      "rrn": "8204236570645",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호 2104045238063에 대한 정보입니다.",
+      "rrn": "2104045238063",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 2008316871810입니다.",
+      "rrn": "2008316871810",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 7404061191534입니다.",
+      "rrn": "7404061191534",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN: 0310016795727",
+      "rrn": "0310016795727",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록번호: 6602174433201",
+      "rrn": "6602174433201",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호: 7909312749241",
+      "rrn": "7909312749241",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민번호 0311043656211로 등록되어 있습니다.",
+      "rrn": "0311043656211",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호는 9012195442988입니다.",
+      "rrn": "9012195442988",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 2612132731776인 회원입니다.",
+      "rrn": "2612132731776",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 5710121142461입니다.",
+      "rrn": "5710121142461",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "3509262442161 번호로 등록된 정보입니다.",
+      "rrn": "3509262442161",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 3810061476182",
+      "rrn": "3810061476182",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민번호: 7807021704716",
+      "rrn": "7807021704716",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 0408106371970이며,",
+      "rrn": "0408106371970",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "Korean RRN: 1507036802928",
+      "rrn": "1507036802928",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 2711176550742입니다.",
+      "rrn": "2711176550742",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 3410228448925인 회원입니다.",
+      "rrn": "3410228448925",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호: 6207228569324",
+      "rrn": "6207228569324",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록 번호: 1801041578650",
+      "rrn": "1801041578650",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "4902015197622 번호로 등록된 정보입니다.",
+      "rrn": "4902015197622",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호: 8103291449356",
+      "rrn": "8103291449356",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "고객님의 주민등록번호는 0903106053074입니다.",
+      "rrn": "0903106053074",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 5506315042082에 대한 정보입니다.",
+      "rrn": "5506315042082",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "4709272672209 번호로 등록된 정보입니다.",
+      "rrn": "4709272672209",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "1512151909309 번호로 등록된 정보입니다.",
+      "rrn": "1512151909309",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 2609118129157로 확인됩니다.",
+      "rrn": "2609118129157",
+      "is_valid": false,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호: 0306135355743",
+      "rrn": "0306135355743",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 0804038556701예요.",
+      "rrn": "0804038556701",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민번호: 2801103875844",
+      "rrn": "2801103875844",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호(6404011207780)로 조회해주세요.",
+      "rrn": "6404011207780",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호: 7005115029431",
+      "rrn": "7005115029431",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 6609171390163",
+      "rrn": "6609171390163",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호(4701011820673)로 조회해주세요.",
+      "rrn": "4701011820673",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Korean RRN: 6604166540250",
+      "rrn": "6604166540250",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "0903106177365 번호로 등록된 정보입니다.",
+      "rrn": "0903106177365",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "RRN NUMBER: 2702026546172",
+      "rrn": "2702026546172",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록정보: 0502231287822",
+      "rrn": "0502231287822",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "Korean RRN: 8901156385685",
+      "rrn": "8901156385685",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "5904292995658 번호로 등록된 정보입니다.",
+      "rrn": "5904292995658",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민정보: 0702237237586",
+      "rrn": "0702237237586",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 2106265801019입니다.",
+      "rrn": "2106265801019",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 1608268706208로 등록되어 있습니다.",
+      "rrn": "1608268706208",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호가 0209264454019인 회원입니다.",
+      "rrn": "0209264454019",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호는 1809246844476이며,",
+      "rrn": "1809246844476",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호: 8002275231864",
+      "rrn": "8002275231864",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민번호 7106065423488로 등록되어 있습니다.",
+      "rrn": "7106065423488",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민정보: 7007275756475",
+      "rrn": "7007275756475",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록 번호: 7010176822581",
+      "rrn": "7010176822581",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "9402086771299 번호로 등록된 정보입니다.",
+      "rrn": "9402086771299",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 4507246046462",
+      "rrn": "4507246046462",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "3408068413969 번호로 등록된 정보입니다.",
+      "rrn": "3408068413969",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록정보: 5411202939409",
+      "rrn": "5411202939409",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 8904136658117입니다.",
+      "rrn": "8904136658117",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 9802036287539입니다.",
+      "rrn": "9802036287539",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 3001136075048",
+      "rrn": "3001136075048",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 7908096717562",
+      "rrn": "7908096717562",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호가 0009236893930인 회원입니다.",
+      "rrn": "0009236893930",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "고객님의 주민등록번호는 6002225424776입니다.",
+      "rrn": "6002225424776",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 9403027709580로 등록되어 있습니다.",
+      "rrn": "9403027709580",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "1309152726565 번호로 등록된 정보입니다.",
+      "rrn": "1309152726565",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "Korean RRN: 9110262233922",
+      "rrn": "9110262233922",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 1510265153321로 확인됩니다.",
+      "rrn": "1510265153321",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록정보: 0805033001567",
+      "rrn": "0805033001567",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록번호가 0903143202188인 회원입니다.",
+      "rrn": "0903143202188",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호가 8010282497772인 회원입니다.",
+      "rrn": "8010282497772",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호 8010225416711에 대한 정보입니다.",
+      "rrn": "8010225416711",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 3307046615059",
+      "rrn": "3307046615059",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 0509193216007예요.",
+      "rrn": "0509193216007",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호는 0501121692298이며,",
+      "rrn": "0501121692298",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "Korean RRN: 0411308229359",
+      "rrn": "0411308229359",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민번호 7105042968672로 등록되어 있습니다.",
+      "rrn": "7105042968672",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록 번호: 6411301657036",
+      "rrn": "6411301657036",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 3401271161991입니다.",
+      "rrn": "3401271161991",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 0703043406780",
+      "rrn": "0703043406780",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 4709212606945로 확인됩니다.",
+      "rrn": "4709212606945",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호: 6509075054852",
+      "rrn": "6509075054852",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 1201073487053입니다.",
+      "rrn": "1201073487053",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 7202051284663로 확인됩니다.",
+      "rrn": "7202051284663",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호는 7910066734798입니다.",
+      "rrn": "7910066734798",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 0801292046131입니다.",
+      "rrn": "0801292046131",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 0108248078892인 회원입니다.",
+      "rrn": "0108248078892",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호는 3108151173887입니다.",
+      "rrn": "3108151173887",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 1004222871108입니다.",
+      "rrn": "1004222871108",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 5407101006132이며,",
+      "rrn": "5407101006132",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호가 9304055995651인 회원입니다.",
+      "rrn": "9304055995651",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 2906252537567로 확인됩니다.",
+      "rrn": "2906252537567",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민번호: 3506211894855",
+      "rrn": "3506211894855",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민번호: 5704236289011",
+      "rrn": "5704236289011",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 0804155352487입니다.",
+      "rrn": "0804155352487",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "내 주민등록번호는 9904182918115예요.",
+      "rrn": "9904182918115",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "본인의 주민등록번호는 6602172727494입니다.",
+      "rrn": "6602172727494",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "3406151020147 번호로 등록된 정보입니다.",
+      "rrn": "3406151020147",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민번호 3306042710448로 등록되어 있습니다.",
+      "rrn": "3306042710448",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 2403243560504입니다.",
+      "rrn": "2403243560504",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 7210031802891이며,",
+      "rrn": "7210031802891",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "9004132166727 번호로 등록된 정보입니다.",
+      "rrn": "9004132166727",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 1403083919748입니다.",
+      "rrn": "1403083919748",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 0103281252345",
+      "rrn": "0103281252345",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민정보: 6410226850740",
+      "rrn": "6410226850740",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호(3702065330440)로 조회해주세요.",
+      "rrn": "3702065330440",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록 번호: 3507145184451",
+      "rrn": "3507145184451",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 7701226603933입니다.",
+      "rrn": "7701226603933",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 9901195394553",
+      "rrn": "9901195394553",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 0403141269828",
+      "rrn": "0403141269828",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "RRN: 6901281037395",
+      "rrn": "6901281037395",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록번호: 5108135445719",
+      "rrn": "5108135445719",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호(0103016151709)로 조회해주세요.",
+      "rrn": "0103016151709",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "RRN: 2902075736019",
+      "rrn": "2902075736019",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록 번호: 0706275461881",
+      "rrn": "0706275461881",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 7005295487847입니다.",
+      "rrn": "7005295487847",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "Korean RRN: 6803315047194",
+      "rrn": "6803315047194",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 9301232642651입니다.",
+      "rrn": "9301232642651",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 5409071020671입니다.",
+      "rrn": "5409071020671",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "내 주민등록번호는 2606016610824예요.",
+      "rrn": "2606016610824",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호 6404162120843에 대한 정보입니다.",
+      "rrn": "6404162120843",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 0101131551410입니다.",
+      "rrn": "0101131551410",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 8212215360857",
+      "rrn": "8212215360857",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "RRN: 5609276214930",
+      "rrn": "5609276214930",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "RRN: 0006307158049",
+      "rrn": "0006307158049",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록번호는 1808276721541이며,",
+      "rrn": "1808276721541",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민번호: 3009132848518",
+      "rrn": "3009132848518",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민번호: 9309192415062",
+      "rrn": "9309192415062",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호 3006272309607에 대한 정보입니다.",
+      "rrn": "3006272309607",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 0204244512761",
+      "rrn": "0204244512761",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민정보: 3610235236913",
+      "rrn": "3610235236913",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "RRN: 2001076877535",
+      "rrn": "2001076877535",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "RRN: 1606203698895",
+      "rrn": "1606203698895",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록번호가 3408206441614인 회원입니다.",
+      "rrn": "3408206441614",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "6412122372090 번호로 등록된 정보입니다.",
+      "rrn": "6412122372090",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 2704262830255입니다.",
+      "rrn": "2704262830255",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "내 주민등록번호는 4809291031652예요.",
+      "rrn": "4809291031652",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "RRN: 1202146170899",
+      "rrn": "1202146170899",
+      "is_valid": false,
+      "template": "RRN: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 0501082027917로 확인됩니다.",
+      "rrn": "0501082027917",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호가 3004104382947인 회원입니다.",
+      "rrn": "3004104382947",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "내 주민등록번호는 3310317169443예요.",
+      "rrn": "3310317169443",
+      "is_valid": false,
+      "template": "내 주민등록번호는 {number}예요.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "내 주민등록번호는 2012316855202예요.",
+      "rrn": "2012316855202",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "3909191728402 번호로 등록된 정보입니다.",
+      "rrn": "3909191728402",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 0905295534293이며,",
+      "rrn": "0905295534293",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "Korean RRN: 2505018297067",
+      "rrn": "2505018297067",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민번호 7602281991929로 등록되어 있습니다.",
+      "rrn": "7602281991929",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록 번호: 6911097887629",
+      "rrn": "6911097887629",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민정보: 2703016418911",
+      "rrn": "2703016418911",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호가 2403161235191인 회원입니다.",
+      "rrn": "2403161235191",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 1307107631874입니다.",
+      "rrn": "1307107631874",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 3605306644381에 대한 정보입니다.",
+      "rrn": "3605306644381",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "확인된 주민등록번호는 7503142369310입니다.",
+      "rrn": "7503142369310",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 4204132730216로 확인됩니다.",
+      "rrn": "4204132730216",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "4901225026051 번호로 등록된 정보입니다.",
+      "rrn": "4901225026051",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호 2301168017412에 대한 정보입니다.",
+      "rrn": "2301168017412",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 1211052860211로 확인됩니다.",
+      "rrn": "1211052860211",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 7510042593393로 확인됩니다.",
+      "rrn": "7510042593393",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호: 0507304174515",
+      "rrn": "0507304174515",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민정보: 1309306880949",
+      "rrn": "1309306880949",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호가 5311206620131인 회원입니다.",
+      "rrn": "5311206620131",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "내 주민등록번호는 4502216075386예요.",
+      "rrn": "4502216075386",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "Korean RRN: 7205235836812",
+      "rrn": "7205235836812",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록 번호: 9403201161106",
+      "rrn": "9403201161106",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 0506228206651예요.",
+      "rrn": "0506228206651",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록 번호: 9905065519310",
+      "rrn": "9905065519310",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "5001082193111 번호로 등록된 정보입니다.",
+      "rrn": "5001082193111",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 7909155566315입니다.",
+      "rrn": "7909155566315",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "내 주민등록번호는 2802152794772예요.",
+      "rrn": "2802152794772",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "확인된 주민등록번호는 8603202167322입니다.",
+      "rrn": "8603202167322",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 2809205720209인 회원입니다.",
+      "rrn": "2809205720209",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호는 5001296853211입니다.",
+      "rrn": "5001296853211",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 3207043047345에 대한 정보입니다.",
+      "rrn": "3207043047345",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호는 9507316516963입니다.",
+      "rrn": "9507316516963",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 8410191780382입니다.",
+      "rrn": "8410191780382",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 7510191867939에 대한 정보입니다.",
+      "rrn": "7510191867939",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민정보: 9111021974688",
+      "rrn": "9111021974688",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "고객님의 주민등록번호는 5805222482808입니다.",
+      "rrn": "5805222482808",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록정보: 8509086825595",
+      "rrn": "8509086825595",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민번호 0106146992731로 등록되어 있습니다.",
+      "rrn": "0106146992731",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호 2106285798531에 대한 정보입니다.",
+      "rrn": "2106285798531",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민번호: 2212045538815",
+      "rrn": "2212045538815",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 8503051403730이며,",
+      "rrn": "8503051403730",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민정보: 2303092930249",
+      "rrn": "2303092930249",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 0605131347334로 확인됩니다.",
+      "rrn": "0605131347334",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "내 주민등록번호는 0909306970521예요.",
+      "rrn": "0909306970521",
+      "is_valid": false,
+      "template": "내 주민등록번호는 {number}예요.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록 번호: 5301022821202",
+      "rrn": "5301022821202",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "RRN: 3712286968519",
+      "rrn": "3712286968519",
+      "is_valid": false,
+      "template": "RRN: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "Korean RRN: 8903195866840",
+      "rrn": "8903195866840",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록 번호: 0307065359521",
+      "rrn": "0307065359521",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호 2306128642414에 대한 정보입니다.",
+      "rrn": "2306128642414",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호(7201061193731)로 조회해주세요.",
+      "rrn": "7201061193731",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호 6307175120961에 대한 정보입니다.",
+      "rrn": "6307175120961",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록 번호: 1506035626671",
+      "rrn": "1506035626671",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "확인된 주민등록번호는 1601011877028입니다.",
+      "rrn": "1601011877028",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 0304298926581",
+      "rrn": "0304298926581",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호 3206316500715에 대한 정보입니다.",
+      "rrn": "3206316500715",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호는 0804046572023이며,",
+      "rrn": "0804046572023",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}이며,",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 3302135029446이며,",
+      "rrn": "3302135029446",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호(2207121831641)로 조회해주세요.",
+      "rrn": "2207121831641",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "확인된 주민등록번호는 0705302101402입니다.",
+      "rrn": "0705302101402",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 8906181498169",
+      "rrn": "8906181498169",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호는 6208072362110이며,",
+      "rrn": "6208072362110",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민정보: 5402132960557",
+      "rrn": "5402132960557",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "3202252372021 번호로 등록된 정보입니다.",
+      "rrn": "3202252372021",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 0111262014100입니다.",
+      "rrn": "0111262014100",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN: 8304086721001",
+      "rrn": "8304086721001",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록번호: 0901183703882",
+      "rrn": "0901183703882",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 0106301948709로 확인됩니다.",
+      "rrn": "0106301948709",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "RRN: 2101242339602",
+      "rrn": "2101242339602",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민번호 5605111510133로 등록되어 있습니다.",
+      "rrn": "5605111510133",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호가 0712197721460인 회원입니다.",
+      "rrn": "0712197721460",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호는 6211226205061이며,",
+      "rrn": "6211226205061",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호: 8706226995899",
+      "rrn": "8706226995899",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 5711105638443로 확인됩니다.",
+      "rrn": "5711105638443",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민번호 8004131603126로 등록되어 있습니다.",
+      "rrn": "8004131603126",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민번호: 8212042077576",
+      "rrn": "8212042077576",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 9209046120834입니다.",
+      "rrn": "9209046120834",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 3205282479271",
+      "rrn": "3205282479271",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "Korean RRN: 2703017244317",
+      "rrn": "2703017244317",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호 0702231008162에 대한 정보입니다.",
+      "rrn": "0702231008162",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "RRN: 1909211115507",
+      "rrn": "1909211115507",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민번호 7512201269977로 등록되어 있습니다.",
+      "rrn": "7512201269977",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "8909285350313 번호로 등록된 정보입니다.",
+      "rrn": "8909285350313",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록 번호: 0912013642253",
+      "rrn": "0912013642253",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "1811188274805 번호로 등록된 정보입니다.",
+      "rrn": "1811188274805",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 1505034708554입니다.",
+      "rrn": "1505034708554",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 2607265161711에 대한 정보입니다.",
+      "rrn": "2607265161711",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호가 5511211201903인 회원입니다.",
+      "rrn": "5511211201903",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "Korean RRN: 3409166693289",
+      "rrn": "3409166693289",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 2104314021360입니다.",
+      "rrn": "2104314021360",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호는 5306075887438입니다.",
+      "rrn": "5306075887438",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 0005133008452로 확인됩니다.",
+      "rrn": "0005133008452",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 1302122146668로 확인됩니다.",
+      "rrn": "1302122146668",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "RRN NUMBER: 0402191155356",
+      "rrn": "0402191155356",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "RRN: 4612101806570",
+      "rrn": "4612101806570",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 7205291587271입니다.",
+      "rrn": "7205291587271",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 0706296942139입니다.",
+      "rrn": "0706296942139",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록정보: 0803173631604",
+      "rrn": "0803173631604",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "0005131723049 번호로 등록된 정보입니다.",
+      "rrn": "0005131723049",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "0912092556388 번호로 등록된 정보입니다.",
+      "rrn": "0912092556388",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 4703196924186이며,",
+      "rrn": "4703196924186",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호는 6908196030486입니다.",
+      "rrn": "6908196030486",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 5708116881515입니다.",
+      "rrn": "5708116881515",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 5505301212579입니다.",
+      "rrn": "5505301212579",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호(2909236580413)로 조회해주세요.",
+      "rrn": "2909236580413",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호 9811311350768에 대한 정보입니다.",
+      "rrn": "9811311350768",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호(9306156726609)로 조회해주세요.",
+      "rrn": "9306156726609",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록정보: 1204271366079",
+      "rrn": "1204271366079",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 0210058321474입니다.",
+      "rrn": "0210058321474",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 4310052061129",
+      "rrn": "4310052061129",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 6802212416951",
+      "rrn": "6802212416951",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민번호: 8807016349053",
+      "rrn": "8807016349053",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호가 2103227168490인 회원입니다.",
+      "rrn": "2103227168490",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "RRN: 3402225872998",
+      "rrn": "3402225872998",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 0210254831118예요.",
+      "rrn": "0210254831118",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호: 1701025396719",
+      "rrn": "1701025396719",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민번호: 1302205852868",
+      "rrn": "1302205852868",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 2101092198683이며,",
+      "rrn": "2101092198683",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록 번호: 3709312934487",
+      "rrn": "3709312934487",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "Korean RRN: 1510282287401",
+      "rrn": "1510282287401",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 8102152238361입니다.",
+      "rrn": "8102152238361",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 6208132396909입니다.",
+      "rrn": "6208132396909",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 2509244113787",
+      "rrn": "2509244113787",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호(1902041684381)로 조회해주세요.",
+      "rrn": "1902041684381",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "고객님의 주민등록번호는 2205266950740입니다.",
+      "rrn": "2205266950740",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 2012041610961",
+      "rrn": "2012041610961",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민정보: 4710296487684",
+      "rrn": "4710296487684",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민정보: 7408241119317",
+      "rrn": "7408241119317",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민번호: 4803212284756",
+      "rrn": "4803212284756",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민번호: 0409036399934",
+      "rrn": "0409036399934",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호: 6110195540220",
+      "rrn": "6110195540220",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민번호 2101162522001로 등록되어 있습니다.",
+      "rrn": "2101162522001",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "RRN NUMBER: 4202085377757",
+      "rrn": "4202085377757",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호가 8609201254761인 회원입니다.",
+      "rrn": "8609201254761",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호 5910092893571에 대한 정보입니다.",
+      "rrn": "5910092893571",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 7011012826958입니다.",
+      "rrn": "7011012826958",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 5512135800953입니다.",
+      "rrn": "5512135800953",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "8004286948996 번호로 등록된 정보입니다.",
+      "rrn": "8004286948996",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 8108041254375입니다.",
+      "rrn": "8108041254375",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 9601152141916입니다.",
+      "rrn": "9601152141916",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 3506226414246",
+      "rrn": "3506226414246",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "RRN: 2007106328513",
+      "rrn": "2007106328513",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "5009312921984 번호로 등록된 정보입니다.",
+      "rrn": "5009312921984",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호는 0006278513953입니다.",
+      "rrn": "0006278513953",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN: 5312106273741",
+      "rrn": "5312106273741",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민번호 4609031833107로 등록되어 있습니다.",
+      "rrn": "4609031833107",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "RRN NUMBER: 1005152181404",
+      "rrn": "1005152181404",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 3708031056290입니다.",
+      "rrn": "3708031056290",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 6505192930283로 등록되어 있습니다.",
+      "rrn": "6505192930283",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록정보: 0912282666726",
+      "rrn": "0912282666726",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 8803126367868",
+      "rrn": "8803126367868",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호(4411282100821)로 조회해주세요.",
+      "rrn": "4411282100821",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "RRN: 5708051934834",
+      "rrn": "5708051934834",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민등록정보: 3508308002554",
+      "rrn": "3508308002554",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민번호: 9610151417513",
+      "rrn": "9610151417513",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호(4709278475230)로 조회해주세요.",
+      "rrn": "4709278475230",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "Korean RRN: 1502163235986",
+      "rrn": "1502163235986",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록번호는 1108043725820이며,",
+      "rrn": "1108043725820",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민번호 4202201535292로 등록되어 있습니다.",
+      "rrn": "4202201535292",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호가 8107172376087인 회원입니다.",
+      "rrn": "8107172376087",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "RRN: 0804142832238",
+      "rrn": "0804142832238",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 5507306544236로 확인됩니다.",
+      "rrn": "5507306544236",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "6004012696493 번호로 등록된 정보입니다.",
+      "rrn": "6004012696493",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민정보: 3509061867570",
+      "rrn": "3509061867570",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 3106302218303로 확인됩니다.",
+      "rrn": "3106302218303",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 0208312508954입니다.",
+      "rrn": "0208312508954",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "2108225282748 번호로 등록된 정보입니다.",
+      "rrn": "2108225282748",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 9604232264652입니다.",
+      "rrn": "9604232264652",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 0605092447726인 회원입니다.",
+      "rrn": "0605092447726",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민번호 5304092806621로 등록되어 있습니다.",
+      "rrn": "5304092806621",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호가 5501316446266인 회원입니다.",
+      "rrn": "5501316446266",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "Korean RRN: 2504064502134",
+      "rrn": "2504064502134",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호 8001302325201에 대한 정보입니다.",
+      "rrn": "8001302325201",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 8506103071679",
+      "rrn": "8506103071679",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 5505042563479입니다.",
+      "rrn": "5505042563479",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 8511151842503입니다.",
+      "rrn": "8511151842503",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 0008248208316로 등록되어 있습니다.",
+      "rrn": "0008248208316",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민번호 2106251674964로 등록되어 있습니다.",
+      "rrn": "2106251674964",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민번호: 1403128826066",
+      "rrn": "1403128826066",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호: 5607105768288",
+      "rrn": "5607105768288",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 1409215052111",
+      "rrn": "1409215052111",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민번호: 8912185493697",
+      "rrn": "8912185493697",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호(1611266962246)로 조회해주세요.",
+      "rrn": "1611266962246",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록정보: 6504025643687",
+      "rrn": "6504025643687",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "확인된 주민등록번호는 1309254215833입니다.",
+      "rrn": "1309254215833",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 7206032324684입니다.",
+      "rrn": "7206032324684",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN: 6901245473709",
+      "rrn": "6901245473709",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민정보: 9805013865699",
+      "rrn": "9805013865699",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "0410304820301 번호로 등록된 정보입니다.",
+      "rrn": "0410304820301",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민정보: 6311282758543",
+      "rrn": "6311282758543",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록정보: 1407228634911",
+      "rrn": "1407228634911",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민번호: 0102181427996",
+      "rrn": "0102181427996",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호: 7004106806607",
+      "rrn": "7004106806607",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 1601093033047",
+      "rrn": "1601093033047",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 5707065581877",
+      "rrn": "5707065581877",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 3406058031862입니다.",
+      "rrn": "3406058031862",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록 번호: 1304114274252",
+      "rrn": "1304114274252",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민번호 9807182833336로 등록되어 있습니다.",
+      "rrn": "9807182833336",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민번호: 5712215003500",
+      "rrn": "5712215003500",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록정보: 6509031454438",
+      "rrn": "6509031454438",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록 번호: 1509187717250",
+      "rrn": "1509187717250",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Korean RRN: 3805021048753",
+      "rrn": "3805021048753",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록정보: 9111271468715",
+      "rrn": "9111271468715",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록번호(0207285831662)로 조회해주세요.",
+      "rrn": "0207285831662",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "4901302302318 번호로 등록된 정보입니다.",
+      "rrn": "4901302302318",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민번호 1806307300557로 등록되어 있습니다.",
+      "rrn": "1806307300557",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호 5311182952471에 대한 정보입니다.",
+      "rrn": "5311182952471",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록번호는 8609081689621이며,",
+      "rrn": "8609081689621",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록 번호: 5511254052825",
+      "rrn": "5511254052825",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록정보: 6307075329102",
+      "rrn": "6307075329102",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 1406303734488이며,",
+      "rrn": "1406303734488",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호는 8709165312548입니다.",
+      "rrn": "8709165312548",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "3703052898712 번호로 등록된 정보입니다.",
+      "rrn": "3703052898712",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 0904096294248입니다.",
+      "rrn": "0904096294248",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 0301307949234",
+      "rrn": "0301307949234",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 1610235728725입니다.",
+      "rrn": "1610235728725",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 4611254393034",
+      "rrn": "4611254393034",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "고객님의 주민등록번호는 5106086938186입니다.",
+      "rrn": "5106086938186",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 5009248244181",
+      "rrn": "5009248244181",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "고객님의 주민등록번호는 1008298528057입니다.",
+      "rrn": "1008298528057",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 4507241352619",
+      "rrn": "4507241352619",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민번호 3710301465342로 등록되어 있습니다.",
+      "rrn": "3710301465342",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호: 3205051545646",
+      "rrn": "3205051545646",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호 3109045427553에 대한 정보입니다.",
+      "rrn": "3109045427553",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호가 0912082504006인 회원입니다.",
+      "rrn": "0912082504006",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록 번호: 6908232294175",
+      "rrn": "6908232294175",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 6002075020667입니다.",
+      "rrn": "6002075020667",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 2905098497027",
+      "rrn": "2905098497027",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "Korean RRN: 4310066726760",
+      "rrn": "4310066726760",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민번호 8806101939870로 등록되어 있습니다.",
+      "rrn": "8806101939870",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "RRN NUMBER: 9711115103071",
+      "rrn": "9711115103071",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록 번호: 6809256882778",
+      "rrn": "6809256882778",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 2412123849282입니다.",
+      "rrn": "2412123849282",
+      "is_valid": false,
+      "template": "확인된 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록 번호: 5606265379063",
+      "rrn": "5606265379063",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 1912011230464입니다.",
+      "rrn": "1912011230464",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 6602256506801",
+      "rrn": "6602256506801",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호가 0607243119473인 회원입니다.",
+      "rrn": "0607243119473",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호(2906182699569)로 조회해주세요.",
+      "rrn": "2906182699569",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "RRN: 1108137282521",
+      "rrn": "1108137282521",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민번호 0506074049190로 등록되어 있습니다.",
+      "rrn": "0506074049190",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록정보: 8701292250580",
+      "rrn": "8701292250580",
+      "is_valid": false,
+      "template": "주민등록정보: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "확인된 주민등록번호는 5301085090667입니다.",
+      "rrn": "5301085090667",
+      "is_valid": false,
+      "template": "확인된 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록 번호: 0704143798596",
+      "rrn": "0704143798596",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민번호: 0803265068582",
+      "rrn": "0803265068582",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "0403276536756 번호로 등록된 정보입니다.",
+      "rrn": "0403276536756",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호 5110246515724에 대한 정보입니다.",
+      "rrn": "5110246515724",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민번호 0012064935188로 등록되어 있습니다.",
+      "rrn": "0012064935188",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록 번호: 4411201042734",
+      "rrn": "4411201042734",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 9006201611687입니다.",
+      "rrn": "9006201611687",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 8303191970994",
+      "rrn": "8303191970994",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "본인의 주민등록번호는 2212284890220입니다.",
+      "rrn": "2212284890220",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 9405062381311",
+      "rrn": "9405062381311",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록 번호: 3311156849108",
+      "rrn": "3311156849108",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록 번호: 3401096736041",
+      "rrn": "3401096736041",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호: 7110042556047",
+      "rrn": "7110042556047",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호: 3206111894801",
+      "rrn": "3206111894801",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 0004294160604",
+      "rrn": "0004294160604",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 8511146910137입니다.",
+      "rrn": "8511146910137",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 3009308037624입니다.",
+      "rrn": "3009308037624",
+      "is_valid": false,
+      "template": "확인된 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "고객님의 주민등록번호는 9912105960523입니다.",
+      "rrn": "9912105960523",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "본인의 주민등록번호는 0008318580980입니다.",
+      "rrn": "0008318580980",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Korean RRN: 7603065468328",
+      "rrn": "7603065468328",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 1012227650691",
+      "rrn": "1012227650691",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민정보: 2811097104382",
+      "rrn": "2811097104382",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "내 주민등록번호는 2104194532289예요.",
+      "rrn": "2104194532289",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호 1104024544419에 대한 정보입니다.",
+      "rrn": "1104024544419",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "Korean RRN: 6803242345674",
+      "rrn": "6803242345674",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 0912206695731예요.",
+      "rrn": "0912206695731",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "내 주민등록번호는 5606276681177예요.",
+      "rrn": "5606276681177",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호 3009077597819에 대한 정보입니다.",
+      "rrn": "3009077597819",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호가 2809227518575인 회원입니다.",
+      "rrn": "2809227518575",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 5005051458896입니다.",
+      "rrn": "5005051458896",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 0609068334971",
+      "rrn": "0609068334971",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 3910072631539입니다.",
+      "rrn": "3910072631539",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 5202043773941",
+      "rrn": "5202043773941",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민번호 3708042789280로 등록되어 있습니다.",
+      "rrn": "3708042789280",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호: 2508203677386",
+      "rrn": "2508203677386",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 1405208274561로 확인됩니다.",
+      "rrn": "1405208274561",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록 번호: 0308231455115",
+      "rrn": "0308231455115",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 0112195516694입니다.",
+      "rrn": "0112195516694",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호(1910138765123)로 조회해주세요.",
+      "rrn": "1910138765123",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호 1207058520764에 대한 정보입니다.",
+      "rrn": "1207058520764",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 5707132790013입니다.",
+      "rrn": "5707132790013",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 9612212093472",
+      "rrn": "9612212093472",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 8809242607072로 확인됩니다.",
+      "rrn": "8809242607072",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "RRN NUMBER: 1207316347650",
+      "rrn": "1207316347650",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호: 3609265643055",
+      "rrn": "3609265643055",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "7903271981011 번호로 등록된 정보입니다.",
+      "rrn": "7903271981011",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록 번호: 4603201363337",
+      "rrn": "4603201363337",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 3401071857158",
+      "rrn": "3401071857158",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "RRN: 8606241075455",
+      "rrn": "8606241075455",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민번호 0005084989799로 등록되어 있습니다.",
+      "rrn": "0005084989799",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호 3506302911848에 대한 정보입니다.",
+      "rrn": "3506302911848",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 5102126676816입니다.",
+      "rrn": "5102126676816",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 1108042574533",
+      "rrn": "1108042574533",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 2703184659966입니다.",
+      "rrn": "2703184659966",
+      "is_valid": false,
+      "template": "고객님의 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록정보: 1701053920067",
+      "rrn": "1701053920067",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 0607147767872입니다.",
+      "rrn": "0607147767872",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 1307216051930",
+      "rrn": "1307216051930",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록번호는 2004118510742입니다.",
+      "rrn": "2004118510742",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 7406311305657인 회원입니다.",
+      "rrn": "7406311305657",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민번호 9302205703720로 등록되어 있습니다.",
+      "rrn": "9302205703720",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록 번호: 9610255306665",
+      "rrn": "9610255306665",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록번호(1703072875575)로 조회해주세요.",
+      "rrn": "1703072875575",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호 2203293955390에 대한 정보입니다.",
+      "rrn": "2203293955390",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "Korean RRN: 8411063714283",
+      "rrn": "8411063714283",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "본인의 주민등록번호는 9404206970532입니다.",
+      "rrn": "9404206970532",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "RRN: 6704284753353",
+      "rrn": "6704284753353",
+      "is_valid": false,
+      "template": "RRN: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "내 주민등록번호는 4607195683735예요.",
+      "rrn": "4607195683735",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호: 3811046918467",
+      "rrn": "3811046918467",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 4010311202110입니다.",
+      "rrn": "4010311202110",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "RRN NUMBER: 5212305818161",
+      "rrn": "5212305818161",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "Korean RRN: 0311088937813",
+      "rrn": "0311088937813",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록정보: 4310161499770",
+      "rrn": "4310161499770",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 7802211465208입니다.",
+      "rrn": "7802211465208",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 1611071725349로 등록되어 있습니다.",
+      "rrn": "1611071725349",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민정보: 3412301610946",
+      "rrn": "3412301610946",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 0004232945825로 확인됩니다.",
+      "rrn": "0004232945825",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호 2401111211571에 대한 정보입니다.",
+      "rrn": "2401111211571",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호 1705164340866에 대한 정보입니다.",
+      "rrn": "1705164340866",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "내 주민등록번호는 2108163068405예요.",
+      "rrn": "2108163068405",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호는 1210275619247입니다.",
+      "rrn": "1210275619247",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN: 6706306186392",
+      "rrn": "6706306186392",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "RRN: 1005223226067",
+      "rrn": "1005223226067",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민번호 1603023604827로 등록되어 있습니다.",
+      "rrn": "1603023604827",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "RRN NUMBER: 9012241015510",
+      "rrn": "9012241015510",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민번호: 0611037940281",
+      "rrn": "0611037940281",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록정보: 3411201847945",
+      "rrn": "3411201847945",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 4912262239144입니다.",
+      "rrn": "4912262239144",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 8303035151974입니다.",
+      "rrn": "8303035151974",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 0009268745441",
+      "rrn": "0009268745441",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 2107131691109로 확인됩니다.",
+      "rrn": "2107131691109",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "7911295190277 번호로 등록된 정보입니다.",
+      "rrn": "7911295190277",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "1811078096797 번호로 등록된 정보입니다.",
+      "rrn": "1811078096797",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민번호: 0607104061532",
+      "rrn": "0607104061532",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민정보: 2104024428053",
+      "rrn": "2104024428053",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호: 0207185122893",
+      "rrn": "0207185122893",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 3403024865787입니다.",
+      "rrn": "3403024865787",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민정보: 5111302473011",
+      "rrn": "5111302473011",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록 번호: 4511045747305",
+      "rrn": "4511045747305",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민번호 2711312074472로 등록되어 있습니다.",
+      "rrn": "2711312074472",
+      "is_valid": false,
+      "template": "주민번호 {number}로 등록되어 있습니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 9006086269219입니다.",
+      "rrn": "9006086269219",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 1002198897718입니다.",
+      "rrn": "1002198897718",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 2310177865741",
+      "rrn": "2310177865741",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "RRN: 2408185315967",
+      "rrn": "2408185315967",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "주민번호: 3902096665577",
+      "rrn": "3902096665577",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호는 8611041429419입니다.",
+      "rrn": "8611041429419",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 7806065841724",
+      "rrn": "7806065841724",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록 번호: 1908148163267",
+      "rrn": "1908148163267",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 6404222650527",
+      "rrn": "6404222650527",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 0302053964548입니다.",
+      "rrn": "0302053964548",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "1705191566493 번호로 등록된 정보입니다.",
+      "rrn": "1705191566493",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호: 0908144618151",
+      "rrn": "0908144618151",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 1303014960931",
+      "rrn": "1303014960931",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "Korean RRN: 2007125104920",
+      "rrn": "2007125104920",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민등록번호는 0404186958897입니다.",
+      "rrn": "0404186958897",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호(5807142254438)로 조회해주세요.",
+      "rrn": "5807142254438",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민번호: 0703248569925",
+      "rrn": "0703248569925",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록정보: 2706102597720",
+      "rrn": "2706102597720",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 4701025002581예요.",
+      "rrn": "4701025002581",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "RRN NUMBER: 1007075117486",
+      "rrn": "1007075117486",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호(1405131053919)로 조회해주세요.",
+      "rrn": "1405131053919",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호(1305164100626)로 조회해주세요.",
+      "rrn": "1305164100626",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호: 4504276210686",
+      "rrn": "4504276210686",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 1606085411112입니다.",
+      "rrn": "1606085411112",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 1608087051497",
+      "rrn": "1608087051497",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "Korean RRN: 2911272009863",
+      "rrn": "2911272009863",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민정보: 2111156627729",
+      "rrn": "2111156627729",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호(9807121157628)로 조회해주세요.",
+      "rrn": "9807121157628",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록 번호: 2301116171806",
+      "rrn": "2301116171806",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "RRN: 0811236150250",
+      "rrn": "0811236150250",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 8311045136648입니다.",
+      "rrn": "8311045136648",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 1105308530978에 대한 정보입니다.",
+      "rrn": "1105308530978",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민번호 0103286863943로 등록되어 있습니다.",
+      "rrn": "0103286863943",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민번호 7409286769500로 등록되어 있습니다.",
+      "rrn": "7409286769500",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "내 주민등록번호는 0507235763434예요.",
+      "rrn": "0507235763434",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호는 0603267312815입니다.",
+      "rrn": "0603267312815",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 2710295487051인 회원입니다.",
+      "rrn": "2710295487051",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "고객님의 주민등록번호는 0509301740695입니다.",
+      "rrn": "0509301740695",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "1802113776653 번호로 등록된 정보입니다.",
+      "rrn": "1802113776653",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 7405115108779입니다.",
+      "rrn": "7405115108779",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 6011096125645입니다.",
+      "rrn": "6011096125645",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 7104056827568로 확인됩니다.",
+      "rrn": "7104056827568",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "내 주민등록번호는 9812311567111예요.",
+      "rrn": "9812311567111",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "RRN: 4809085435156",
+      "rrn": "4809085435156",
+      "is_valid": false,
+      "template": "RRN: {number}",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "확인된 주민등록번호는 1010248779150입니다.",
+      "rrn": "1010248779150",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호 7001096799184로 등록되어 있습니다.",
+      "rrn": "7001096799184",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "RRN: 3312173712739",
+      "rrn": "3312173712739",
+      "is_valid": false,
+      "template": "RRN: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민번호: 5908286267217",
+      "rrn": "5908286267217",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민번호 3405185670925로 등록되어 있습니다.",
+      "rrn": "3405185670925",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "RRN: 1009194477774",
+      "rrn": "1009194477774",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 1206165259828입니다.",
+      "rrn": "1206165259828",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호는 1606166984313이며,",
+      "rrn": "1606166984313",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}이며,",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호: 8409092328461",
+      "rrn": "8409092328461",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록번호(4001066258772)로 조회해주세요.",
+      "rrn": "4001066258772",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 7507101088734로 확인됩니다.",
+      "rrn": "7507101088734",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 2206177187482로 확인됩니다.",
+      "rrn": "2206177187482",
+      "is_valid": false,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록 번호: 0405178738959",
+      "rrn": "0405178738959",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 2512113584822",
+      "rrn": "2512113584822",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호는 9302246471264이며,",
+      "rrn": "9302246471264",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민번호 5010316591321로 등록되어 있습니다.",
+      "rrn": "5010316591321",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호(6707181936634)로 조회해주세요.",
+      "rrn": "6707181936634",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "RRN NUMBER: 1008143193192",
+      "rrn": "1008143193192",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 0712106789302",
+      "rrn": "0712106789302",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호 9802036112811에 대한 정보입니다.",
+      "rrn": "9802036112811",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 1609196092984입니다.",
+      "rrn": "1609196092984",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 9708211667827",
+      "rrn": "9708211667827",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "주민등록정보: 1103267219447",
+      "rrn": "1103267219447",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록정보: 1501195295950",
+      "rrn": "1501195295950",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록정보: 0006305390452",
+      "rrn": "0006305390452",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민번호: 3002097548744",
+      "rrn": "3002097548744",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "내 주민등록번호는 1704266469940예요.",
+      "rrn": "1704266469940",
+      "is_valid": false,
+      "template": "내 주민등록번호는 {number}예요.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "Korean RRN: 8507075968280",
+      "rrn": "8507075968280",
+      "is_valid": false,
+      "template": "Korean RRN: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 9711262106537로 확인됩니다.",
+      "rrn": "9711262106537",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록번호가 2201181193752인 회원입니다.",
+      "rrn": "2201181193752",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호 2810016837412에 대한 정보입니다.",
+      "rrn": "2810016837412",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록 번호: 1302115374666",
+      "rrn": "1302115374666",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 5311051707041로 확인됩니다.",
+      "rrn": "5311051707041",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "내 주민등록번호는 6401231483267예요.",
+      "rrn": "6401231483267",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록 번호: 0711152989579",
+      "rrn": "0711152989579",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호는 0208243405686입니다.",
+      "rrn": "0208243405686",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호 6002195097716에 대한 정보입니다.",
+      "rrn": "6002195097716",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "본인의 주민등록번호는 2911275150052입니다.",
+      "rrn": "2911275150052",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 3012312429351인 회원입니다.",
+      "rrn": "3012312429351",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록 번호: 6107131965991",
+      "rrn": "6107131965991",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "Korean RRN: 1901231850877",
+      "rrn": "1901231850877",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 2409217910379입니다.",
+      "rrn": "2409217910379",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 2512242337362",
+      "rrn": "2512242337362",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 6709162005583예요.",
+      "rrn": "6709162005583",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 9608216039586로 확인됩니다.",
+      "rrn": "9608216039586",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록정보: 5511165126038",
+      "rrn": "5511165126038",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민정보: 2208256161813",
+      "rrn": "2208256161813",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호가 3212075007312인 회원입니다.",
+      "rrn": "3212075007312",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "6403295983964 번호로 등록된 정보입니다.",
+      "rrn": "6403295983964",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민등록번호(6301315081219)로 조회해주세요.",
+      "rrn": "6301315081219",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 4501071289081입니다.",
+      "rrn": "4501071289081",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN: 3309076348691",
+      "rrn": "3309076348691",
+      "is_valid": true,
+      "template": "RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 6606035751524입니다.",
+      "rrn": "6606035751524",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 5206022303836로 확인됩니다.",
+      "rrn": "5206022303836",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "내 주민등록번호는 8606302005648예요.",
+      "rrn": "8606302005648",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민번호 6708026407992로 등록되어 있습니다.",
+      "rrn": "6708026407992",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호는 4611236854468입니다.",
+      "rrn": "4611236854468",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "확인된 주민등록번호는 0605213126761입니다.",
+      "rrn": "0605213126761",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "RRN NUMBER: 2006177140984",
+      "rrn": "2006177140984",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호는 0703061592697입니다.",
+      "rrn": "0703061592697",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "Korean RRN: 9604032634016",
+      "rrn": "9604032634016",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 6305271738727",
+      "rrn": "6305271738727",
+      "is_valid": true,
+      "template": "RRN NUMBER: {number}"
+    },
+    {
+      "text": "주민등록번호(3101226563230)로 조회해주세요.",
+      "rrn": "3101226563230",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민등록번호 7007306482092에 대한 정보입니다.",
+      "rrn": "7007306482092",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호가 6901196949132인 회원입니다.",
+      "rrn": "6901196949132",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "2308072849945 번호로 등록된 정보입니다.",
+      "rrn": "2308072849945",
+      "is_valid": false,
+      "template": "{number} 번호로 등록된 정보입니다.",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 2804055711834이며,",
+      "rrn": "2804055711834",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민정보: 2008082048779",
+      "rrn": "2008082048779",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 9909151945996입니다.",
+      "rrn": "9909151945996",
+      "is_valid": true,
+      "template": "확인된 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민번호: 0906085685714",
+      "rrn": "0906085685714",
+      "is_valid": false,
+      "template": "주민번호: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호가 4206055611291인 회원입니다.",
+      "rrn": "4206055611291",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호 6005275070819에 대한 정보입니다.",
+      "rrn": "6005275070819",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호: 0803311837741",
+      "rrn": "0803311837741",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 3103085238989",
+      "rrn": "3103085238989",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민번호 8905121294127로 등록되어 있습니다.",
+      "rrn": "8905121294127",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록정보: 8707116159905",
+      "rrn": "8707116159905",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민등록 번호: 2602263306377",
+      "rrn": "2602263306377",
+      "is_valid": false,
+      "template": "주민등록 번호: {number}",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호(0603152220111)로 조회해주세요.",
+      "rrn": "0603152220111",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "Korean RRN: 0305124675743",
+      "rrn": "0305124675743",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "주민번호: 6508152112866",
+      "rrn": "6508152112866",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "내 주민등록번호는 2608226512082예요.",
+      "rrn": "2608226512082",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "주민등록번호는 1310137380434입니다.",
+      "rrn": "1310137380434",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "내 주민등록번호는 4506235273766예요.",
+      "rrn": "4506235273766",
+      "is_valid": true,
+      "template": "내 주민등록번호는 {number}예요."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 8606112282473로 확인됩니다.",
+      "rrn": "8606112282473",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 5502162454765로 확인됩니다.",
+      "rrn": "5502162454765",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민번호: 1202255683420",
+      "rrn": "1202255683420",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "RRN NUMBER: 2306102979411",
+      "rrn": "2306102979411",
+      "is_valid": false,
+      "template": "RRN NUMBER: {number}",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "주민정보: 0506101604764",
+      "rrn": "0506101604764",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "확인된 주민등록번호는 1802298155432입니다.",
+      "rrn": "1802298155432",
+      "is_valid": false,
+      "template": "확인된 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호는 2204016553827입니다.",
+      "rrn": "2204016553827",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록 번호: 0706302324121",
+      "rrn": "0706302324121",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록 번호: 3908276225961",
+      "rrn": "3908276225961",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "주민등록 번호: 5911076908052",
+      "rrn": "5911076908052",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 2905207491534입니다.",
+      "rrn": "2905207491534",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "9401026520167 번호로 등록된 정보입니다.",
+      "rrn": "9401026520167",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 1408314814662이며,",
+      "rrn": "1408314814662",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "주민등록번호가 3509011833809인 회원입니다.",
+      "rrn": "3509011833809",
+      "is_valid": true,
+      "template": "주민등록번호가 {number}인 회원입니다."
+    },
+    {
+      "text": "주민등록번호(6309206963365)로 조회해주세요.",
+      "rrn": "6309206963365",
+      "is_valid": false,
+      "template": "주민등록번호({number})로 조회해주세요.",
+      "invalid_type": "invalid_region_code"
+    },
+    {
+      "text": "6004235894690 번호로 등록된 정보입니다.",
+      "rrn": "6004235894690",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호 1003222479290에 대한 정보입니다.",
+      "rrn": "1003222479290",
+      "is_valid": false,
+      "template": "주민등록번호 {number}에 대한 정보입니다.",
+      "invalid_type": "invalid_checksum"
+    },
+    {
+      "text": "주민등록정보: 7111296937897",
+      "rrn": "7111296937897",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민정보: 1110015804776",
+      "rrn": "1110015804776",
+      "is_valid": false,
+      "template": "주민정보: {number}",
+      "invalid_type": "invalid_gender_year"
+    },
+    {
+      "text": "주민등록번호는 3101188348975입니다.",
+      "rrn": "3101188348975",
+      "is_valid": false,
+      "template": "주민등록번호는 {number}입니다.",
+      "invalid_type": "future_date"
+    },
+    {
+      "text": "주민등록번호(7509132417518)로 조회해주세요.",
+      "rrn": "7509132417518",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "0006217511195 번호로 등록된 정보입니다.",
+      "rrn": "0006217511195",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민번호 0602141520588로 등록되어 있습니다.",
+      "rrn": "0602141520588",
+      "is_valid": true,
+      "template": "주민번호 {number}로 등록되어 있습니다."
+    },
+    {
+      "text": "주민등록번호는 8509046230230입니다.",
+      "rrn": "8509046230230",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "7203185609050 번호로 등록된 정보입니다.",
+      "rrn": "7203185609050",
+      "is_valid": true,
+      "template": "{number} 번호로 등록된 정보입니다."
+    },
+    {
+      "text": "주민등록번호는 6107046152227입니다.",
+      "rrn": "6107046152227",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호(3701221072211)로 조회해주세요.",
+      "rrn": "3701221072211",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "고객님의 주민등록번호는 0803206071073입니다.",
+      "rrn": "0803206071073",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 3109192356158",
+      "rrn": "3109192356158",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "Korean RRN: 7410011692270",
+      "rrn": "7410011692270",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "해당 고객의 주민등록번호는 0410075702455로 확인됩니다.",
+      "rrn": "0410075702455",
+      "is_valid": true,
+      "template": "해당 고객의 주민등록번호는 {number}로 확인됩니다."
+    },
+    {
+      "text": "주민등록정보: 9701296947862",
+      "rrn": "9701296947862",
+      "is_valid": true,
+      "template": "주민등록정보: {number}"
+    },
+    {
+      "text": "주민번호: 1711213455694",
+      "rrn": "1711213455694",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록번호 3207152850001에 대한 정보입니다.",
+      "rrn": "3207152850001",
+      "is_valid": true,
+      "template": "주민등록번호 {number}에 대한 정보입니다."
+    },
+    {
+      "text": "주민등록번호(0212254790332)로 조회해주세요.",
+      "rrn": "0212254790332",
+      "is_valid": true,
+      "template": "주민등록번호({number})로 조회해주세요."
+    },
+    {
+      "text": "주민번호: 9010196311671",
+      "rrn": "9010196311671",
+      "is_valid": true,
+      "template": "주민번호: {number}"
+    },
+    {
+      "text": "주민등록 번호: 8407066126248",
+      "rrn": "8407066126248",
+      "is_valid": true,
+      "template": "주민등록 번호: {number}"
+    },
+    {
+      "text": "본인의 주민등록번호는 2012314443441입니다.",
+      "rrn": "2012314443441",
+      "is_valid": false,
+      "template": "본인의 주민등록번호는 {number}입니다.",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "주민등록번호: 3206311255371",
+      "rrn": "3206311255371",
+      "is_valid": false,
+      "template": "주민등록번호: {number}",
+      "invalid_type": "invalid_date"
+    },
+    {
+      "text": "본인의 주민등록번호는 7810206541541입니다.",
+      "rrn": "7810206541541",
+      "is_valid": true,
+      "template": "본인의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호: 2906091169166",
+      "rrn": "2906091169166",
+      "is_valid": true,
+      "template": "주민등록번호: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 6202281917909입니다.",
+      "rrn": "6202281917909",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민정보: 2802175011458",
+      "rrn": "2802175011458",
+      "is_valid": true,
+      "template": "주민정보: {number}"
+    },
+    {
+      "text": "주민등록번호는 6804025282345이며,",
+      "rrn": "6804025282345",
+      "is_valid": true,
+      "template": "주민등록번호는 {number}이며,"
+    },
+    {
+      "text": "Korean RRN: 6207102734451",
+      "rrn": "6207102734451",
+      "is_valid": true,
+      "template": "Korean RRN: {number}"
+    },
+    {
+      "text": "고객님의 주민등록번호는 0106025702660입니다.",
+      "rrn": "0106025702660",
+      "is_valid": true,
+      "template": "고객님의 주민등록번호는 {number}입니다."
+    },
+    {
+      "text": "주민등록번호가 4611252749441인 회원입니다.",
+      "rrn": "4611252749441",
+      "is_valid": false,
+      "template": "주민등록번호가 {number}인 회원입니다.",
+      "invalid_type": "invalid_checksum"
+    }
+  ]
+}
