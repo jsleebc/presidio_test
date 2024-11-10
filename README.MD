@@ -54,10 +54,10 @@ python kr_run_all_evaluations.py
 ```
 
 ## 결과 확인
-모든 테스트는 presidio_analyzer/predefined_recognizers 디렉토리에서 실행되어야 합니다:
-```bash
+모든 테스트는 `presidio_analyzer/predefined_recognizers` 디렉토리에서 실행되어야 합니다:
+\```bash
 cd ~/presidio_test/presidio-analyzer/presidio_analyzer/predefined_recognizers
-```
+\```
 - 각 테스트의 결과는 `tests` 디렉토리 아래에 JSON 파일로 저장됩니다.
 - 전체 평가 결과는 `evaluation_summary.json` 파일에서 확인할 수 있습니다.
 - 결과에는 다음과 같은 메트릭이 포함됩니다:
@@ -66,12 +66,15 @@ cd ~/presidio_test/presidio-analyzer/presidio_analyzer/predefined_recognizers
   - Recall (재현율)
   - F1 Score
 
-Recognizer	Accuracy	Precision	Recall	F1
-driverlicense	0.9000	0.8333	1.0000	0.9091
-name	0.8961	0.8973	0.8933	0.8948
-passport	1.0000	1.0000	1.0000	1.0000
-email	0.9569	0.9490	1.0000	0.9738
-creditcard	0.9349	0.8850	1.0000	0.9390
-rrn	0.9640	0.9569	1.0000	0.9780
-phone	0.9180	0.9264	0.9750	0.9501
-평균	0.9386	0.9211	0.9812	0.9493
+### 전체 평가 결과
+
+| Recognizer       | Accuracy | Precision | Recall | F1     |
+|------------------|----------|-----------|--------|--------|
+| driverlicense    | 0.9000   | 0.8333    | 1.0000 | 0.9091 |
+| name             | 0.8961   | 0.8973    | 0.8933 | 0.8948 |
+| passport         | 1.0000   | 1.0000    | 1.0000 | 1.0000 |
+| email            | 0.9569   | 0.9490    | 1.0000 | 0.9738 |
+| creditcard       | 0.9349   | 0.8850    | 1.0000 | 0.9390 |
+| rrn              | 0.9640   | 0.9569    | 1.0000 | 0.9780 |
+| phone            | 0.9180   | 0.9264    | 0.9750 | 0.9501 |
+| **평균**         | **0.9386** | **0.9211** | **0.9812** | **0.9493** |
