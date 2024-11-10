@@ -1,0 +1,10 @@
+{
+    "total_samples": 10965,
+    "average_confidence": 0.9032966428024825,
+    "label_distribution": {
+        "false": 6186,
+        "true": 4779
+    },
+    "high_confidence_predictions": 8272,
+    "low_confidence_predictions": 0
+}
