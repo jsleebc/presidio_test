@@ -90,12 +90,12 @@ class DriverLicenseTestGenerator:
         os.makedirs(self.test_dir, exist_ok=True)
 
     def generate_test_cases(self, num_cases: int = 1000) -> List[Dict]:
-        """테스트 케이스 생성 (80% valid, 20% invalid)"""
+        """테스트 케이스 생성 (50% valid, 50% invalid - 각 유형별 10%)"""
         test_cases = []
         print(f"총 {num_cases}개의 테스트 케이스 생성 시작...")
 
-        # 유효한 케이스 (80%)
-        valid_cases_count = int(num_cases * 0.8)
+        # 유효한 케이스 (50%)
+        valid_cases_count = int(num_cases * 0.5)
         print(f"유효한 면허번호 생성 중... (목표: {valid_cases_count}개)")
         
         for i in range(valid_cases_count):
@@ -113,7 +113,7 @@ class DriverLicenseTestGenerator:
                 "template": template
             })
 
-        # 유효하지 않은 케이스 (20%)
+        # 유효하지 않은 케이스 (50%, 각 유형별 10%)
         invalid_generators = [
             (self.license_generator._generate_invalid_region_license, "invalid_region"),
             (self.license_generator._generate_invalid_issue_year_license, "invalid_year"),
@@ -122,8 +122,8 @@ class DriverLicenseTestGenerator:
             (self.license_generator._generate_invalid_chars_license, "invalid_chars")
         ]
 
-        invalid_cases_count = num_cases - valid_cases_count
-        cases_per_type = invalid_cases_count // len(invalid_generators)
+        cases_per_type = int(num_cases * 0.1)  # 각 유형별 10%
+        print(f"유효하지 않은 면허번호 생성 중... (유형별 {cases_per_type}개)")
         
         for generator, invalid_type in invalid_generators:
             for _ in range(cases_per_type):

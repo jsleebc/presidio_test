@@ -1,10 +1,10 @@
 {
   "individual_metrics": [
     {
-      "accuracy": 0.96,
-      "precision": 0.9523809523809523,
+      "accuracy": 0.9,
+      "precision": 0.8333333333333334,
       "recall": 1.0,
-      "f1": 0.975609756097561,
+      "f1": 0.9090909090909091,
       "recognizer": "driverlicense"
     },
     {
@@ -34,10 +34,10 @@
       "recognizer": "email"
     },
     {
-      "accuracy": 1.0,
-      "precision": 1.0,
+      "accuracy": 0.934934934934935,
+      "precision": 0.8849557522123894,
       "recall": 1.0,
-      "f1": 1.0,
+      "f1": 0.9389671361502347,
       "recognizer": "creditcard"
     },
     {
@@ -61,9 +61,9 @@
     }
   ],
   "average_metrics": {
-    "accuracy": 0.9564339798090089,
-    "precision": 0.9545717642480428,
+    "accuracy": 0.938567541942571,
+    "precision": 0.9211300689858672,
     "recall": 0.9811855825649622,
-    "f1": 0.9674755780260954
+    "f1": 0.9492539050466072
   }
 }

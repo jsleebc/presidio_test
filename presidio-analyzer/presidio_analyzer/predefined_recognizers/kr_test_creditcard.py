@@ -58,6 +58,7 @@ def evaluate_creditcard_recognizer(test_file: str = 'creditcard_test_cases_1000.
         )
 
         # 분석 결과 처리
+
         found_valid_card = False
         detected_card = None
         score = 0.0
@@ -66,17 +67,20 @@ def evaluate_creditcard_recognizer(test_file: str = 'creditcard_test_cases_1000.
             result = results[0]  # 첫 번째 결과 사용
             detected_text = text[result.start:result.end]
             
-            # Recognizer를 통한 직접 검증
-            card_valid = (
-                recognizer._validate_format(card_number) and
-                recognizer._validate_checksum(card_number) and
-                recognizer._validate_issuer(card_number)
-            )
-
-            if card_valid:
-                score = result.score
-                detected_card = detected_text
-                found_valid_card = result.score >= 0.6 and card_valid
+            # 오탐 여부 확인을 위한 검증
+            format_valid = recognizer._validate_format(card_number)
+            checksum_valid = recognizer._validate_checksum(card_number)
+            issuer_valid = recognizer._validate_issuer(card_number)
+            
+            score = result.score
+            detected_card = detected_text
+            
+            # 실제로는 유효하지 않은 카드번호인데 유효하다고 판단한 경우를 오탐으로 체크
+            if not is_valid and score >= 0.6 and (format_valid or checksum_valid or issuer_valid):
+                found_valid_card = True
+            # 실제로 유효한 카드번호이고 정상적으로 감지한 경우
+            elif is_valid and score >= 0.6 and format_valid and checksum_valid and issuer_valid:
+                found_valid_card = True
 
         # 결과 저장
         y_true.append(is_valid)
@@ -90,21 +94,13 @@ def evaluate_creditcard_recognizer(test_file: str = 'creditcard_test_cases_1000.
             "predicted_valid": found_valid_card,
             "correct_prediction": is_valid == found_valid_card,
             "detected_card": detected_card,
-            "score": score
+            "score": score,
+            "validation_details": {
+                "format_valid": format_valid if results else False,
+                "checksum_valid": checksum_valid if results else False,
+                "issuer_valid": issuer_valid if results else False
+            }
         }
-
-        if case.get('invalid_type'):
-            result_detail["type"] = case['invalid_type']
-
-        if not is_valid == found_valid_card:
-            error_logs.append({
-                "case": result_detail,
-                "validation_details": {
-                    "format_valid": recognizer._validate_format(card_number),
-                    "checksum_valid": recognizer._validate_checksum(card_number),
-                    "issuer_valid": recognizer._validate_issuer(card_number)
-                }
-            })
 
         detailed_results.append(result_detail)
 

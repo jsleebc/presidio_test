@@ -67,6 +67,33 @@ class KoreanCreditCardNumberGenerator:
         total = sum(digits)
         return (10 - (total % 10)) % 10
 
+    def _generate_valid_looking_number(self):
+        """유효해 보이지만 실제로는 유효하지 않은 번호 생성"""
+        # 실제 카드 prefix와 비슷하지만 다른 번호 생성
+        similar_prefixes = ['90', '96', '97', '98', '99', '50', '56', '57', '58', '59']
+        prefix = random.choice(similar_prefixes)
+        rest = ''.join([str(random.randint(0, 9)) for _ in range(14)])
+        return prefix + rest
+
+    def _generate_pattern_number(self):
+        """패턴이 있는 번호 생성 (연속된 숫자나 반복된 숫자)"""
+        patterns = [
+            ''.join(str(i) for i in range(4)) * 4,  # 0123012301230123
+            ''.join(str(i) * 4 for i in range(4)),  # 0000111122223333
+            str(random.randint(0, 9)) * 16,         # 같은 숫자 반복
+        ]
+        return random.choice(patterns)
+
+    def _generate_similar_format_number(self):
+        """비슷한 형식의 다른 종류의 번호 생성"""
+        # 전화번호나 계좌번호 형식
+        formats = [
+            f"010{random.randint(10000000, 99999999)}",  # 휴대폰 번호
+            f"02{random.randint(10000000, 99999999)}",   # 서울 전화번호
+            f"1{random.randint(1000000000000000, 9999999999999999)}"  # 계좌번호 형식
+        ]
+        return random.choice(formats)
+
 class CreditCardTestGenerator:
     """신용카드 번호 테스트 케이스 생성기"""
     
@@ -99,22 +126,19 @@ class CreditCardTestGenerator:
         os.makedirs(self.test_dir, exist_ok=True)
 
     def generate_test_cases(self, num_cases: int = 1000) -> List[Dict]:
-        """테스트 케이스 생성 (80% valid, 20% invalid)"""
+        """테스트 케이스 생성"""
         test_cases = []
         print(f"총 {num_cases}개의 테스트 케이스 생성 시작...")
 
-        # 유효한 케이스 (80%)
-        valid_cases_count = int(num_cases * 0.8)
+        # 유효한 케이스 (50%)
+        valid_cases_count = int(num_cases * 0.50)
         print(f"유효한 카드번호 생성 중... (목표: {valid_cases_count}개)")
-        
         for i in range(valid_cases_count):
             if i % 100 == 0:
                 print(f"- {i}/{valid_cases_count} 완료")
-            
             card_number = self.card_generator._generate_valid_card_number()
             template = random.choice(self.templates)
             text = template.format(number=card_number)
-            
             test_cases.append({
                 "text": text,
                 "card_number": card_number,
@@ -122,23 +146,37 @@ class CreditCardTestGenerator:
                 "template": template
             })
 
-        # 유효하지 않은 케이스 (20%)
-        invalid_generators = [
-            (self.card_generator._generate_invalid_checksum_number, "invalid_checksum"),
-            (self.card_generator._generate_invalid_length_number, "invalid_length"),
-            (self.card_generator._generate_invalid_prefix_number, "invalid_prefix"),
-            (self.card_generator._generate_invalid_chars_number, "invalid_chars")
-        ]
+        # invalid_prefix 케이스 (25%)
+        invalid_prefix_count = int(num_cases * 0.25)
+        print("유효하지 않은 prefix 케이스 생성 중...")
+        for _ in range(invalid_prefix_count):
+            card_number = self.card_generator._generate_invalid_prefix_number()
+            template = random.choice(self.templates)
+            text = template.format(number=card_number)
+            test_cases.append({
+                "text": text,
+                "card_number": card_number,
+                "is_valid": False,
+                "template": template,
+                "invalid_type": "invalid_prefix"
+            })
 
-        invalid_cases_count = num_cases - valid_cases_count
-        cases_per_type = invalid_cases_count // len(invalid_generators)
+        # tricky cases (25%)
+        tricky_generators = [
+            (self.card_generator._generate_valid_looking_number, "valid_looking"),
+            (self.card_generator._generate_pattern_number, "pattern_number"),
+            (self.card_generator._generate_similar_format_number, "similar_format")
+        ]
         
-        for generator, invalid_type in invalid_generators:
-            for _ in range(cases_per_type):
+        remaining_cases = num_cases - valid_cases_count - invalid_prefix_count
+        cases_per_tricky_type = remaining_cases // len(tricky_generators)
+        print(f"Tricky 케이스 생성 중... (유형별 {cases_per_tricky_type}개)")
+        
+        for generator, invalid_type in tricky_generators:
+            for _ in range(cases_per_tricky_type):
                 card_number = generator()
                 template = random.choice(self.templates)
                 text = template.format(number=card_number)
-                
                 test_cases.append({
                     "text": text,
                     "card_number": card_number,
